@@ -1,15 +1,15 @@
 #Bourbon-WP (aka Bourbon-Chef-Site-2.0)
 
-##INITIALIZE
-###1. Fresh WordPress install  
-###2. Import [Test Data](http://wptest.io/). ([GitHub link](https://github.com/poststatus))  
+##1. INITIALIZE
+###a. Fresh WordPress install  
+###b. Import [Test Data](http://wptest.io/). ([GitHub link](https://github.com/poststatus))  
 
-##TESTED 3 STARTER/BLANK THEMES  
+##2. TESTED 3 STARTER/BLANK THEMES  
 
-###1. [Bones](http://themble.com/bones/) starter theme. ([GitHub link](https://github.com/eddiemachado/bones))  
+###a. [Bones](http://themble.com/bones/) starter theme. ([GitHub link](https://github.com/eddiemachado/bones))  
 No need for test as it is an out of the box theme.  It has no frontend development packages or dependencies.  It's syntax, markup and symantic layout will be something I will surely reference.
 
-###2. [HTML5 Blank](http://html5blank.com/) starter theme. ([GitHub link](https://github.com/toddmotto/html5blank))  
+###b. [HTML5 Blank](http://html5blank.com/) starter theme. ([GitHub link](https://github.com/toddmotto/html5blank))  
 Easy to follow set up instructions. Note the following...   
 
 ####Issue:
@@ -19,7 +19,7 @@ Livereload not working.
 Inserted the following snippet just before the closing body tag in footer.php in the theme root:  `<script>document.write('<script src="http://' + (location.host || 'localhost').split(':')[0] + ':35729/livereload.js?snipver=1"></' + 'script>')</script>`
 
 
-### 3. [Some-like-it-neat](https://github.com/digisavvy/some-like-it-neat)  
+###c. [Some-like-it-neat](https://github.com/digisavvy/some-like-it-neat)  
 Easy to follow set up instructions. Note the following...  
 
 ####Issue:  
@@ -49,12 +49,14 @@ BrowserSync working ([thanks for the 3001 test (issue #65)](https://github.com/d
 Ensured both the `var project` and `var url` were correct, and the same in my case.  Maybe an issue with running WAMP?  
 
 ###3. Bourbon-Chef-Site Implementation
-####3.1 - Use Bones as starting point  
-- renamed bones-master to bourbon-wp
-- edit .gitignore to include scss, node_modules, APIs, etc.  
-- change _library_ directory name to _src_ (formally _app_ in Bourbon-Chef-Site)  
-- change _js_ to _script_ to match Bourbon-Chef-Site directory  
-- change _sass_ directory name to _scss_ - ensure gulp.js paths are updated  
+####a. Use Bones as starting point  
++ renamed bones-master to bourbon-wp
++ overwrite _.gitignore_ with Bourbon-Chef-Site copy
++ replace _library_ and contents with _app_ and contents from Bourbon-Chef-Site
++ change _app_ directory name to _src_  
++ change _sass_ directory name to _scss_
++ copy _package.json_ and _gulpfile.js_ from Bourbon-Chef-Site
 - change instances of above changes in gulpfile.js  
+- run `npm install` from within _bourbon-wp_ theme root
 - copy _index.php_ from Bourbon-Chef-Site and rename it landing  
   - will use it as home page when site is appropriately converted into the WordPress structure
