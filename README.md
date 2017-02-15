@@ -51,8 +51,10 @@ Ensured both the `var project` and `var url` were correct, and the same in my ca
 ###3. Bourbon-Chef-Site Implementation
 ####3.1 - Use Bones as starting point  
 - renamed bones-master to bourbon-wp
-- edit .gitignore to include scss, node_modules, APIs, etc.
-- change _library_ directory name to _src_ (formally _app_ in Bourbon-Chef-Site)
-- change _js_ to _script_ to match Bourbon-Chef-Site directory
-- change _sass_ directory name to _scss_ - ensure gulp.js paths are updated
-- change instances of above changes in gulpfile.js
+- edit .gitignore to include scss, node_modules, APIs, etc.  
+- change _library_ directory name to _src_ (formally _app_ in Bourbon-Chef-Site)  
+- change _js_ to _script_ to match Bourbon-Chef-Site directory  
+- change _sass_ directory name to _scss_ - ensure gulp.js paths are updated  
+- change instances of above changes in gulpfile.js  
+- copy _index.php_ from Bourbon-Chef-Site and rename it landing  
+  - will use it as home page when site is appropriately converted into the WordPress structure
