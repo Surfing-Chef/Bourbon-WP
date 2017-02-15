@@ -70,21 +70,27 @@ From:
 ```php
 // modernizr (without media query polyfill)
 wp_register_script( 'bones-modernizr', '', array(), '2.5.3', false );
-
-...
-
-
 ```
 
 To:  
 ```php
 // modernizr (without media query polyfill)
 wp_register_script( 'bones-modernizr', 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', array(), '2.5.3', false );
-
-...
-
-
 ```
+
+and added:   
+```php
+// adding jquery
+wp_deregister_script('jquery');
+wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', false);
+```  
+just before:    
+```php
+// adding scripts file in the footer
+wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/src/js/script.js', array( 'jquery' ), '', true );
+```  
+
+Opening the developer tools and looking at the js console should reveal no errors.  
 
 - run `npm install` from within _bourbon-wp_ theme root
 - copy _index.php_ from Bourbon-Chef-Site and rename it landing  
