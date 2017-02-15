@@ -49,14 +49,43 @@ BrowserSync working ([thanks for the 3001 test (issue #65)](https://github.com/d
 Ensured both the `var project` and `var url` were correct, and the same in my case.  Maybe an issue with running WAMP?  
 
 ###3. Bourbon-Chef-Site Implementation
-####a. Use Bones as starting point  
+####a. Use Bones as starting point:  
++ **IMPORTANT NOTE**: Attempts to load the theme into WordPress before completing these steps will throw errors.  
 + renamed bones-master to bourbon-wp
-+ overwrite _.gitignore_ with Bourbon-Chef-Site copy
-+ replace _library_ and contents with _app_ and contents from Bourbon-Chef-Site
-+ change _app_ directory name to _src_  
-+ change _sass_ directory name to _scss_
-+ copy _package.json_ and _gulpfile.js_ from Bourbon-Chef-Site
-- change instances of above changes in gulpfile.js  
++ ammended _.gitignore_ with Bourbon-Chef-Site copy
++ copied _library_ as _src_ and changed _library_ to _library.bones_ for use as reference  
++ deleted all the copied files and folders within the new _src_ folder, **Except bones.php and custom-post-type.php**  
++ changed _src/sass_ to  _src/scss_
++ copied _package.json_ and _gulpfile.js_ from Bourbon-Chef-Site
++ ensured the following files have paths appropriately adjusted (ie _library_ changed to _src_, _app_ changed to _src_, _sass_ changed to _scss_):  
+  + gulpfile.js   
+  + bones.js
+  + all files in _src/js/_  
+  + all files in _src/scss/_  
+
+A bare, yet functioning theme is available in a browser at this point.
+
++ adjusted bones.php.   
+From:
+```php
+// modernizr (without media query polyfill)
+wp_register_script( 'bones-modernizr', '', array(), '2.5.3', false );
+
+...
+
+
+```
+
+To:  
+```php
+// modernizr (without media query polyfill)
+wp_register_script( 'bones-modernizr', 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', array(), '2.5.3', false );
+
+...
+
+
+```
+
 - run `npm install` from within _bourbon-wp_ theme root
 - copy _index.php_ from Bourbon-Chef-Site and rename it landing  
   - will use it as home page when site is appropriately converted into the WordPress structure
