@@ -61,10 +61,12 @@ Ensured both the `var project` and `var url` were correct, and the same in my ca
   - will use it as home page when site is appropriately converted into the WordPress structure
 + copied _package.json_ and _gulpfile.js_ from Bourbon-Chef-Site
 + ensured the following files have paths appropriately adjusted (ie _library_ changed to _src_, _app_ changed to _src_, _sass_ changed to _scss_):  
-  + gulpfile.js   
+  + gulpfile.js  
   + bones.js
   + all files in _src/js/_  
   + all files in _src/scss/_  
++ Changed `proxy   : "http://localhost/Bourbon/src"` in _gulpfile.js_ to `proxy   : "http://localhost/bourbon-wp"`  
+
 
 A bare, yet functioning theme is available in a browser at this point.
 
@@ -93,6 +95,6 @@ just before:
 wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/src/js/script.js', array( 'jquery' ), '', true );
 ```  
 
-Opening the developer tools and looking at the js console should reveal no errors.  
+Opening the developer tools and looking at the javascript console should reveal no errors.  
 
 - run `npm install` from within _bourbon-wp_ theme root
