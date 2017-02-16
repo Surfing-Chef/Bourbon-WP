@@ -57,7 +57,7 @@ Ensured both the `var project` and `var url` were correct, and the same in my ca
 + deleted all the copied files and folders within the new _src_ folder, **Except bones.php and custom-post-type.php**  
 + copied all files and folders in _app_ from Bourbon-Chef-Site into _bourbon-wp/src_
 + changed _src/sass_ to _src/scss_
-- renamed _index.php_ copied from _app_ from Bourbon-Chef-Site to landing and moved it to  the root of bourbon-wp
+- renamed _index.php_ copied from _app_ from Bourbon-Chef-Site to _landing_ and moved it to the root of bourbon-wp
   - will use it as home page when site is appropriately converted into the WordPress structure
 + copied _package.json_ and _gulpfile.js_ from Bourbon-Chef-Site
 + ensured the following files have paths appropriately adjusted (ie _library_ changed to _src_, _app_ changed to _src_, _sass_ changed to _scss_):  
@@ -97,4 +97,36 @@ wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/src/js/script
 
 Opening the developer tools and looking at the javascript console should reveal no errors.  
 
-- run `npm install` from within _bourbon-wp_ theme root
++ ran `npm install` from within _bourbon-wp_ theme root
++ adjusted _// Sass Task - development css - nested/readable/mappedgulpfile.js_ as follows:
+```javascript
+// Sass Task - development css - nested/readable/mapped
+gulp.task('sass', function() {      // RENAMED TASK
+  gulp.src('src/scss/**/*.scss')
+  .pipe(plumber())
+  // .pipe(rename({suffix:'.dev'})) // DELETED
+  .pipe(sourcemaps.init())
+    .pipe(sass({sourceComments: 'map', sourceMap: 'sass', outputStyle: 'nested'}))
+    .pipe(autoprefixer('last 2 versions'))
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest('src/css/'))
+  .pipe(sass({outputStyle: 'compressed'}))  // ADDED
+  .pipe(gulp.dest('./'))  // ADDED
+  .pipe(browserSync.stream());
+});
+```   
++ Deleted sassDep task  
++ Adjusted _// Server Task - Asynchronous browser syncing..._
+```javascript
+gulp.task('serve', function(){
+  browserSync.init({
+    proxy   : "http://localhost/bourbon-wp"
+  });
+
+  gulp.watch('src/js/**/*.js', ['scripts']);
+  gulp.watch('src/scss/**/*.scss', ['sass']);  // CALLED TASK NAME CHANGE sassDev to sass
+  // gulp.watch('src/scss/**/*.scss', ['sassDep']); // DELETED
+  gulp.watch('**/*.html').on('change', browserSync.reload);
+  gulp.watch('**/*.php').on('change', browserSync.reload);
+});
+```
