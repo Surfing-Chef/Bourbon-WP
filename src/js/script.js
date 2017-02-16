@@ -1,6 +1,5 @@
 // DOCUMENT READY
 $(document).ready(function() {
-
   // BACK TO TOP BUTTON
   //----------------------------------------------
   var offset = 100;
@@ -314,5 +313,4 @@ $(function(){
     String.prototype.ucfirst = function() {
         return this.charAt(0).toUpperCase() + this.slice(1);
     };
-
 });
