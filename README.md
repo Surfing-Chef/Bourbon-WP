@@ -129,4 +129,11 @@ gulp.task('serve', function(){
   gulp.watch('**/*.html').on('change', browserSync.reload);
   gulp.watch('**/*.php').on('change', browserSync.reload);
 });
-```
+```  
+
++ style layout parts
+  + header
+    + navigation
+    + parallax
+  + main content
+  + footer
