@@ -131,7 +131,7 @@ gulp.task('serve', function(){
 });
 ```  
 
-+ style layout parts
++ scss-style layout parts:
   + header
     + navigation
     + parallax
