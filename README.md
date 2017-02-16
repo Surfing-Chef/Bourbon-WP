@@ -55,7 +55,10 @@ Ensured both the `var project` and `var url` were correct, and the same in my ca
 + ammended _.gitignore_ with Bourbon-Chef-Site copy
 + copied _library_ as _src_ and changed _library_ to _library.bones_ for use as reference  
 + deleted all the copied files and folders within the new _src_ folder, **Except bones.php and custom-post-type.php**  
-+ changed _src/sass_ to  _src/scss_
++ copied all files and folders in _app_ from Bourbon-Chef-Site into _bourbon-wp/src_
++ changed _src/sass_ to _src/scss_
+- renamed _index.php_ copied from _app_ from Bourbon-Chef-Site to landing and moved it to  the root of bourbon-wp
+  - will use it as home page when site is appropriately converted into the WordPress structure
 + copied _package.json_ and _gulpfile.js_ from Bourbon-Chef-Site
 + ensured the following files have paths appropriately adjusted (ie _library_ changed to _src_, _app_ changed to _src_, _sass_ changed to _scss_):  
   + gulpfile.js   
@@ -93,5 +96,3 @@ wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/src/js/script
 Opening the developer tools and looking at the js console should reveal no errors.  
 
 - run `npm install` from within _bourbon-wp_ theme root
-- copy _index.php_ from Bourbon-Chef-Site and rename it landing  
-  - will use it as home page when site is appropriately converted into the WordPress structure
