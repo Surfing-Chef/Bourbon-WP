@@ -29,7 +29,7 @@ gulp.task('sass', function() {
   gulp.src('src/scss/**/*.scss')
   .pipe(plumber())
   .pipe(sourcemaps.init())
-    .pipe(sass({sourceComments: 'map', sourceMap: 'sass', outputStyle: 'nested'}))
+    .pipe(sass({sourceComments: 'map', sourceMap: 'sass', outputStyle: 'expanded'}))
     .pipe(autoprefixer('last 2 versions'))
   .pipe(sourcemaps.write())
   .pipe(gulp.dest('src/css/'))
