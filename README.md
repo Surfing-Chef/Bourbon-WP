@@ -116,7 +116,7 @@ gulp.task('sass', function() {      // RENAMED TASK
 });
 ```   
 + Deleted sassDep task  
-+ Adjusted _// Server Task - Asynchronous browser syncing..._
++ Adjusted _// Server Task - Asynchronous browser syncing..._ as follows:  
 ```javascript
 gulp.task('serve', function(){
   browserSync.init({
