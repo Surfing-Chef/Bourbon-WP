@@ -132,10 +132,37 @@ gulp.task('serve', function(){
 ```  
 ###WORDPRESS:
 + Make bourbon-wp the current theme  
-+ Emulate Bourbon-Chef-Site menu choices to structure menu
-  + Ensure the menu name in WordPress is the same as the id in landing.php (`id="js-centered-navigation-menu"`)  
-  - Match ids and classes between WordPress and bourbon-wp  
-  - [link](https://wordimpress.com/adding-custom-classes-to-wordpress-wp_nav_menu/)
++ Emulate Bourbon-Chef-Site menu choices to structure menu  
+  + Inserted `register_nav_menus()` function in _functions.php_:
+  ```php
+  register_nav_menus( array(
+  	'landing_menu' => 'Landing Menu',
+
+  ) );  
+  ```
+  + Adjusted menu array in header.php:
+  ```php
+  <?php wp_nav_menu(array(
+    'theme_location'  => 'landing_menu',
+    'menu'            => '',
+    'container'       => '',
+    'container_class' => '',
+    'container_id'    => '',
+    'menu_class'      => 'centered-navigation-menu show',
+    'menu_id'         => 'js-centered-navigation-menu',
+    'echo'            => true,
+    'fallback_cb'     => 'wp_page_menu',
+    'before'          => '',
+    'after'           => '',
+    'link_before'     => '',
+    'link_after'      => '',
+    'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+    'depth'           => 0,
+    'walker'          => ''
+  )); ?>
+  ```
+  + In **WordPress Admin Menu Panel**, created Landing Menu by adding **Custom Links**, containing the menu items from _landing.php_ (home, welcome, etc.)
+    + Added the class _nav-menu_ to each item (click **Screen Options** tab at top of screen to show the **CSS Classes** option)  
   - Note that the collapsed menu is normal, is not inline on full screen.  Where is this set or not set?  
     - compare page-source from bourbon-wp and borbon-chef-site to see where there might be differences
 - scss-style layout parts:
@@ -144,3 +171,6 @@ gulp.task('serve', function(){
     - parallax
   - main content
   - footer
+
+  ####Notes and Links
+  - [link](https://wordimpress.com/adding-custom-classes-to-wordpress-wp_nav_menu/)
