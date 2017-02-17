@@ -151,10 +151,15 @@
     }
   }
 
-  .logo img {
-    margin-bottom: -$centered-navigation-logo-height / 3;
+  .logo img, .nav-link a img {
+    margin-bottom: -$centered-navigation-logo-height / 1.5;
     max-height: $centered-navigation-logo-height * 1.5;
+    max-width: $centered-navigation-logo-height * 1.5;
     opacity: 0.6;
+  }
+
+  .nav-link:nth-child(4)>a>span {
+    display: none;
   }
 
   // Sub menus
