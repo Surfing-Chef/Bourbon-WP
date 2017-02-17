@@ -244,4 +244,15 @@ function bones_fonts() {
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
 
+/*
+This adds a class to menu items
+*/
+function bwp_menu_classes($classes, $item) {
+
+    $classes[] = 'nav-item';
+
+  return $classes;
+}
+add_filter('nav_menu_css_class','bwp_menu_classes',1,2);
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>
