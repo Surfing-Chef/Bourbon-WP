@@ -163,8 +163,9 @@ gulp.task('serve', function(){
   ```
   + In **WordPress Admin Menu Panel**, created Landing Menu by adding **Custom Links**, containing the menu items from _landing.php_ (home, welcome, etc.)
     + Added the class _nav-menu_ to each item (click **Screen Options** tab at top of screen to show the **CSS Classes** option)  
-  - Note that the collapsed menu is normal, is not inline on full screen.  Where is this set or not set?  
-    - compare page-source from bourbon-wp and borbon-chef-site to see where there might be differences
+  + Installed [Menu Image](https://wordpress.org/plugins/menu-image/)
+  + Uploaded logo to WordPress and used it as image on logo menu
+  
 - scss-style layout parts:
   - header
     - navigation
