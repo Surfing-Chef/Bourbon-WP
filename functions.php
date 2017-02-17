@@ -245,14 +245,11 @@ function bones_fonts() {
 add_action('wp_enqueue_scripts', 'bones_fonts');
 
 /*
-This adds a class to menu items
+This adds custom menus
 */
-function bwp_menu_classes($classes, $item) {
+register_nav_menus( array(
+	'landing_menu' => 'Landing Menu',
 
-    $classes[] = 'nav-item';
-
-  return $classes;
-}
-add_filter('nav_menu_css_class','bwp_menu_classes',1,2);
+) );
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
