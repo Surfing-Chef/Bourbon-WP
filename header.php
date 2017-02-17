@@ -65,18 +65,38 @@
 							<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 
 								<?php wp_nav_menu(array(
-									'container' => true,                           				// remove nav container
-									//'container_class' => 'centered-navigation-wrapper',  // class of container (should you choose to use it)
-									//'menu' => __( 'js-centered-navigation-menu' ), 			 // nav name
-									'menu_class' => 'centered-navigation-menu',  	 // adding custom nav class
-									'menu_id' => 'js-centered-navigation-menu',
-									//'theme_location' => 'main-nav',                			 // where it's located in the theme
-									//'before' => '',                                			 // before the menu
-							     //'after' => '',                                  // after the menu
+									'theme_location'  => 'landing_menu',
+									'menu'            => '',
+									'container'       => '',
+									'container_class' => '',
+									'container_id'    => '',
+									'menu_class'      => 'centered-navigation-menu show',
+									'menu_id'         => 'js-centered-navigation-menu',
+									'echo'            => true,
+									'fallback_cb'     => 'wp_page_menu',
+									'before'          => '',
+									'after'           => '',
+									'link_before'     => '',
+									'link_after'      => '',
+									'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+									'depth'           => 0,
+									'walker'          => ''
+
+
+									//'container' => true,                           				// remove nav container
+									// 'container_class' => 'centered-navigation-wrapper',  // class of container (should you choose to use it)
+									// 'menu' => __( 'js-centered-navigation-menu' ), 			 // nav name
+									// 'menu_class' => 'centered-navigation-menu',  	 // adding custom nav class
+									// 'menu_id' => 'js-centered-navigation-menu',
+									// 'menu' => __( 'The Main Menu', 'bonestheme' ),
+									// 'theme_location' => 'The Main Menu',
+									// 'main-nav'  => '',                			 // where it's located in the theme
+									// 'before' => '',                                			 // before the menu
+							    //  'after' => '',                                  // after the menu
 							    // 'link_before' => '',                            // before each link
 							    // 'link_after' => '',                             // after each link
 							    // 'depth' => 0,                                   // limit the depth of the nav
-									//'fallback_cb' => ''                           			  // fallback function (if there is one)
+									// 'fallback_cb' => ''                           			  // fallback function (if there is one)
 								)); ?>
 
 							</nav>
