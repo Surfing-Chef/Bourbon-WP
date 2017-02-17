@@ -130,10 +130,17 @@ gulp.task('serve', function(){
   gulp.watch('**/*.php').on('change', browserSync.reload);
 });
 ```  
-
-+ scss-style layout parts:
-  + header
-    + navigation
-    + parallax
-  + main content
-  + footer
+###WORDPRESS:
++ Make bourbon-wp the current theme  
++ Emulate Bourbon-Chef-Site menu choices to structure menu
+  + Ensure the menu name in WordPress is the same as the id in landing.php (`id="js-centered-navigation-menu"`)  
+  - Match ids and classes between WordPress and bourbon-wp  
+  - [link](https://wordimpress.com/adding-custom-classes-to-wordpress-wp_nav_menu/)
+  - Note that the collapsed menu is normal, is not inline on full screen.  Where is this set or not set?  
+    - compare page-source from bourbon-wp and borbon-chef-site to see where there might be differences
+- scss-style layout parts:
+  - header
+    - navigation
+    - parallax
+  - main content
+  - footer
