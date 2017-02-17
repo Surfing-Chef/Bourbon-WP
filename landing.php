@@ -1,4 +1,10 @@
-<!--<?php session_start() ?>-->
+<?php
+/*
+ Template Name: Landing Page
+*/
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,11 +19,11 @@
 
   <link href='//fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="css/font-awesome.css" />
+  <!-- <link rel="stylesheet" href="css/font-awesome.css" /> -->
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/src/css/style.css">
 
 
   <title>Bourbon-Chef 1.6</title>
@@ -27,7 +33,7 @@
   <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
-  
+
   <!-- HEADER -->
   <header  id="js-parallax-window" class="parallax-window">
 
@@ -43,30 +49,38 @@
     </div>
 
     <!-- centered-navigation -->
-    <section class="centered-navigation" role="banner">
-      <div class="centered-navigation-wrapper">
-        <a href="javascript:void(0)" class="mobile-logo">
-          <img src="images/mountain.svg" alt="Logo image">
-        </a>
-        <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
-        <nav role="navigation">
-          <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
-            <li class="nav-link"><a href="javascript:void(0)">Home</a></li>
-            <li class="nav-link"><a href="#welcome">Welcome</a></li>
-            <li class="nav-link"><a href="#culinary">Culinaria</a></li>
-            <li class="nav-link logo">
-              <a href="javascript:void(0)" class="logo">
-                <img src="images/mountain.svg" alt="Logo image">
-              </a>
-            </li>
-            <li class="nav-link"><a href="#coding">Coding</a></li>
-            <li class="nav-link"><a href="#blog">Blog</a></li>
-            <li class="nav-link"><a href="#contacts">Contacts</a></li>
-          </ul>
-        </nav>
-      </div>
-    </section>
-    <!-- End centered-navigation -->
+			<section class="centered-navigation" role="banner">
+				<div class="centered-navigation-wrapper">
+			    <a href="javascript:void(0)" class="mobile-logo">
+			      <img src="<?php echo get_template_directory_uri(); ?>/src/images/mountain.svg" alt="Logo image">
+			    </a>
+			    <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
+
+					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+
+						<?php wp_nav_menu(array(
+							'theme_location'  => 'landing_menu',
+							'menu'            => '',
+							'container'       => '',
+							'container_class' => '',
+							'container_id'    => '',
+							'menu_class'      => 'centered-navigation-menu show',
+							'menu_id'         => 'js-centered-navigation-menu',
+							'echo'            => true,
+							'fallback_cb'     => 'wp_page_menu',
+							'before'          => '',
+							'after'           => '',
+							'link_before'     => '',
+							'link_after'      => '',
+							'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+							'depth'           => 0,
+							'walker'          => ''
+						)); ?>
+
+					</nav>
+
+				</div><!-- End centered-navigation-wrapper -->
+			</section><!-- End centered-navigation -->
 
     <div id="js-parallax-background" class="parallax-background"></div>
   </header>
@@ -266,11 +280,6 @@
           <?php unset($_SESSION['cf_returndata']); ?>
         </section>
 
-        <!-- <aside>
-          <div class="gitHub"><a href="https://github.com/Surfing-Chef" target="_blank"><img src="images/github-sociocon.png" alt=""></a></div>
-          <div class="Pinterest"><a href="https://www.pinterest.com/SurfingChef/" target="_blank"><img src="images/pinterest-sociocon.png" alt=""></a></div>
-        </aside> -->
-
       </div>
     </article>
     <!-- End Contacts -->
@@ -282,13 +291,13 @@
   <footer>
     <div class="footer-container">
       <section class="sociocon">
-        <img class="icon" src="images/pinterest-sociocon.png" alt="link to Surfing Chef on Pinterest">
+        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/src/images/pinterest-sociocon.png" alt="link to Surfing Chef on Pinterest">
       </section>
       <section class="sociocon">
-        <img class="icon" src="images/github-sociocon.png" alt="link to Surfing Chef on GitHub">
+        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/src/images/github-sociocon.png" alt="link to Surfing Chef on GitHub">
       </section>
       <section class="sociocon">
-        <img class="icon" src="images/email-sociocon.png" alt="email Surfing Chef">
+        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/src/images/email-sociocon.png" alt="email Surfing Chef">
       </section>
       <section>
         <p>Powered by WordPress. Maintained with love. Copyright 2017 Surfing-Chef</p>
@@ -312,7 +321,7 @@
     <!-- +++++ All SCRIPTS AFTER THIS COMMENT +++++ -->
 
     <!-- IMPORTS -->
-    <script src="js/script.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/src/js/script.min.js"></script>
 
     <!-- CUSTOM -->
 
