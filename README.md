@@ -131,7 +131,8 @@ gulp.task('serve', function(){
 });
 ```  
 ###WORDPRESS:
-+ Make bourbon-wp the current theme  
++ Make bourbon-wp the current theme
+####Navigation (Landing and Main)
 + Emulate Bourbon-Chef-Site menu choices to structure menu  
   + Inserted `register_nav_menus()` function in _functions.php_:
   ```php
@@ -162,10 +163,11 @@ gulp.task('serve', function(){
   )); ?>
   ```
   + In **WordPress Admin Menu Panel**, created Landing Menu by adding **Custom Links**, containing the menu items from _landing.php_ (home, welcome, etc.)
-    + Added the class _nav-menu_ to each item (click **Screen Options** tab at top of screen to show the **CSS Classes** option)  
+    + Added the class _nav-menu_ to each item (click **Screen Options** tab at top of screen to show the **CSS Classes** option)
+  + Selected _Landing Menu_ and _The Main Menu_ under **Menu Settings**
   + Installed [Menu Image](https://wordpress.org/plugins/menu-image/)
-  + Uploaded logo to WordPress and used it as image on logo menu
-  
+  + Uploaded a logo to WordPress and used it as image on _logo_ menu item
+  + Added a dark, transparent background to navigation
 - scss-style layout parts:
   - header
     - navigation

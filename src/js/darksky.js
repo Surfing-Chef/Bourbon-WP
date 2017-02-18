@@ -3,9 +3,10 @@
 // Powered by Dark Sky
 //------------------------------------------------------------------//
 
+var srcBase = "http://localhost:3000/bourbon-wp/wp-content/themes/bourbon-wp/src/";
 // Load api
 $.ajax({
-   url: './darksky.json',
+   url: srcBase + 'darksky.json',
    async: false,
    dataType: 'json',
    success: function (data) {
@@ -71,7 +72,7 @@ function weatherData(json) {
   target.innerHTML =
     "<span class=\"gps\">"+latitude+", "+longitude+"</span>"+
     "<span>Backcountry. Nakusp, British Columbia</span>"+
-    "<img src=\"images/"+currently_icon+".png\" alt=\""+currently_icon+"\">"+
+    "<img src=\""+srcBase+"images/"+currently_icon+".png\" alt=\""+currently_icon+"\">"+
     "<span class=\"currently\">"+currently+"</span>"+
     "<span class=\"cur-temp\">Temperature is: "+currently_temp+"</span>"+
     "<span class=\"app-temp\">Feels Like: "+apparent_temp+"</span>"+

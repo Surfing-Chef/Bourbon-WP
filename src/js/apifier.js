@@ -6,7 +6,7 @@
 
 // Load Apifier API
 $.ajax({
-   url: './apifier.json',
+   url: 'http://localhost:3000/bourbon-wp/wp-content/themes/bourbon-wp/src/apifier.json',
    async: false,
    dataType: 'json',
    success: function (data) {
