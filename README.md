@@ -164,7 +164,7 @@ gulp.task('serve', function(){
   )); ?>
   ```
   + In **WordPress Admin Menu Panel**, created Landing Menu by adding **Custom Links**, containing the menu items from _landing.php_ (home, welcome, etc.)
-    + Added the class _nav-menu_ to each item (click **Screen Options** tab at top of screen to show the **CSS Classes** option)
+    + Added the class _nav-link_ to each item (click **Screen Options** tab at top of screen to show the **CSS Classes** option)
   + Selected _Landing Menu_ and _The Main Menu_ under **Menu Settings**
   + Installed [Menu Image](https://wordpress.org/plugins/menu-image/)
   + Uploaded a logo to WordPress and used it as image on _logo_ menu item
@@ -184,4 +184,4 @@ gulp.task('serve', function(){
   - footer
 
   ####Notes and Links
-  - [link](https://wordimpress.com/adding-custom-classes-to-wordpress-wp_nav_menu/)
+  
