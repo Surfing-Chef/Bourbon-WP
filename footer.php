@@ -26,7 +26,8 @@
 
 		<!-- </div> -->
 
-		<?php // all js scripts are loaded in library/bones.php ?>
+		<?php // all js scripts are loaded in src/bones.php ?>
+		<script>var templateDir = "<?php bloginfo('template_directory') ?>";</script>
 		<?php wp_footer(); ?>
 
 	</body>

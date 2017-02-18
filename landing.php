@@ -317,6 +317,7 @@ session_start();
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script>var templateDir = "<?php bloginfo('template_directory') ?>";</script>
 
     <!-- +++++ All SCRIPTS AFTER THIS COMMENT +++++ -->
 
