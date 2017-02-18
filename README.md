@@ -169,7 +169,8 @@ gulp.task('serve', function(){
   + Installed [Menu Image](https://wordpress.org/plugins/menu-image/)
   + Uploaded a logo to WordPress and used it as image on _logo_ menu item
   + Added a dark, transparent background to navigation  
-  
+
+####Template Directory Path Available in Javascript/jQuery    
 + Added the following script just after _TweenMax_ CDN loads in footer of _landing.php_ and just before `<?php wp_footer(); ?>` in _footer.php_:  
 ```html5blank
 <script>var templateDir = "<?php bloginfo('template_directory') ?>";</script>
