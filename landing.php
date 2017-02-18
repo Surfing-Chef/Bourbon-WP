@@ -209,7 +209,7 @@ session_start();
     <article id="blog">
       <div class="article-content">
 
-        <h1>Blog</h1>
+        <h1>Recent Blog</h1>
         <section>
           <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, perferendis! Odit quisquam <code>code block</code> dicta illum ipsa quod natus iure aliquid necessitatibus veritatis, itaque magnam aliquam, dolorum nostrum nemo, explicabo perspiciatis nobis!</h2>
 
