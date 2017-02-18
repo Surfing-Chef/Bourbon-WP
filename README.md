@@ -164,10 +164,17 @@ gulp.task('serve', function(){
   )); ?>
   ```
   + In **WordPress Admin Menu Panel**, created Landing Menu by adding **Custom Links**, containing the menu items from _landing.php_ (home, welcome, etc.)
-    + Added the class _nav-link_ to each item (click **Screen Options** tab at top of screen to show the **CSS Classes** option)
-  + Selected _Landing Menu_ and _The Main Menu_ under **Menu Settings**
-  + Installed [Menu Image](https://wordpress.org/plugins/menu-image/)
-  + Uploaded a logo to WordPress and used it as image on _logo_ menu item
+    + Added the class _nav-link_ to each item (click **Screen Options** tab at top of screen to show the **CSS Classes** option)  
+  + Selected _Landing Menu_ and _The Main Menu_ under **Menu Settings**  
+  + Installed [Menu Image](https://wordpress.org/plugins/menu-image/)  
+  + Uploaded a logo to WordPress and used it as image on _logo_ menu item  
+  + Created a duplicate menu called Bourbon Menu with the following differences:  
+    + Home and Logo links remain the same: `/bourbon-wp`  
+    + Culinary in Landing Menu: `#culinary`, in Bourbon Menu `/bourbon-wp`  
+    + No Welcome link  
+    + Coding in Landing Menu: `#coding`, in Bourbon Menu `/bourbon-wp`  
+    + Contacts in Landing Menu: `#contacts`, in Bourbon Menu `/bourbon-wp`  
+
   + Added a dark, transparent background to navigation  
 
 ####Template Directory Path Available in Javascript/jQuery    
@@ -184,4 +191,3 @@ gulp.task('serve', function(){
   - footer
 
   ####Notes and Links
-  
