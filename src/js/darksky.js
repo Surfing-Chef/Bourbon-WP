@@ -71,7 +71,7 @@ function weatherData(json) {
   // Create Weather Widget
   target.innerHTML =
     "<span class=\"gps\">"+latitude+", "+longitude+"</span>"+
-    "<span>Backcountry. Nakusp, British Columbia</span>"+
+    "<span>Backcountry Near Nakusp, British Columbia</span>"+
     "<img src=\""+srcBase+"images/"+currently_icon+".png\" alt=\""+currently_icon+"\">"+
     "<span class=\"currently\">"+currently+"</span>"+
     "<span class=\"cur-temp\">Temperature is: "+currently_temp+"</span>"+
