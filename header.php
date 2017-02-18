@@ -54,10 +54,10 @@
 			    </a>
 			    <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
 
-					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<nav class="nav-menu nav-main" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 
 						<?php wp_nav_menu(array(
-							'theme_location'  => 'landing_menu',
+							'theme_location'  => 'main-nav',
 							'menu'            => '',
 							'container'       => '',
 							'container_class' => '',
