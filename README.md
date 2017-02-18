@@ -131,7 +131,8 @@ gulp.task('serve', function(){
 });
 ```  
 ###WORDPRESS:
-+ Make bourbon-wp the current theme
++ Make bourbon-wp the current theme  
+
 ####Navigation (Landing and Main)
 + Emulate Bourbon-Chef-Site menu choices to structure menu  
   + Inserted `register_nav_menus()` function in _functions.php_:
@@ -167,7 +168,8 @@ gulp.task('serve', function(){
   + Selected _Landing Menu_ and _The Main Menu_ under **Menu Settings**
   + Installed [Menu Image](https://wordpress.org/plugins/menu-image/)
   + Uploaded a logo to WordPress and used it as image on _logo_ menu item
-  + Added a dark, transparent background to navigation
+  + Added a dark, transparent background to navigation  
+  
 + Added the following script just after _TweenMax_ CDN loads in footer of _landing.php_ and just before `<?php wp_footer(); ?>` in _footer.php_:  
 ```html5blank
 <script>var templateDir = "<?php bloginfo('template_directory') ?>";</script>
