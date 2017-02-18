@@ -115,18 +115,14 @@ body.home {
     // culinaria
     #culinary {
       .accordion-tabs {
+        p {
+          @include span-columns(12);
+        }
+
         @include media(min-width 320px max-width 900px) {
           @include span-columns(12);
         }
       }
-
-      p {
-        @include span-columns(12);
-
-        @include media(min-width 320px max-width 900px) {
-          @include span-columns(12);
-        }
-      } //p:nth-child(2)
 
       .article-content {
         @include media(min-width 320px max-width 900px) {
