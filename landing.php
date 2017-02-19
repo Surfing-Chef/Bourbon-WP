@@ -26,7 +26,7 @@ session_start();
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/src/css/style.css">
 
 
-  <title>Bourbon-Chef 1.6</title>
+  <title><?php wp_title(''); ?></title>
 
 </head>
 <body class="home type-system-geometric">
