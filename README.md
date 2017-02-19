@@ -183,6 +183,11 @@ gulp.task('serve', function(){
 <script>var templateDir = "<?php bloginfo('template_directory') ?>";</script>
 ```
   + This allows darksky.js and apifier.js to dynamically access the template directory path.
+
+####WORDPRESS PLUGINS
++ Installed Jetpack plugin  
++ Installed Jetpack plugin  Simple Image Sizes
+
 - scss-style layout parts:
   - header
     - navigation

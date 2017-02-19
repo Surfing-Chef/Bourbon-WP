@@ -252,4 +252,10 @@ register_nav_menus( array(
 
 ) );
 
+/*
+This enables Featured Images
+*/
+add_theme_support( 'post-thumbnails' );
+
+
 /* DON'T DELETE THIS CLOSING TAG */ ?>
