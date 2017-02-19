@@ -38,9 +38,15 @@
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
 
+		<?php // drop Google Fonts ?>
+		<link href='//fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+		<link href='//fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
+		<?php // end fonts ?>
+
 	</head>
 
-	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+	<!-- body class sets Bourbon Refills type system as ' type-system-geometric' or similar -->
+	<body <?php echo 'class="' . join( ' ', get_body_class( $class ) ) . ' type-system-geometric"'; ?> itemscope itemtype="http://schema.org/WebPage">
 
 		<!-- <div id="container"> -->
 
