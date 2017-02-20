@@ -186,7 +186,30 @@ gulp.task('serve', function(){
 
 ####WORDPRESS PLUGINS
 + Installed Jetpack plugin  
-+ Installed Jetpack plugin  Simple Image Sizes
++ Installed Jetpack plugin Simple Image Sizes   
+  + Shows all available images sizes and allows setting of custom sizes and classes.  Allows for implementation of feature image sizing in index.php post content:  
+  ```php
+  <?php
+    // check if the post or page has a Featured Image assigned to it.
+    if ( has_post_thumbnail() ) {
+        the_post_thumbnail('full');
+    }
+  ?>
+  ```
+
+####WORDPRESS STYLE  
++ created a WordPress module to define WordPress specific classes
+  + image alignment classes:
+  ```css
+  .wp-caption.alignright {float:right; margin:0 0 1em 1em}
+  .wp-caption.alignleft {float:left; margin:0 1em 1em 0}
+  .wp-caption.aligncenter {display: block; margin-left: auto; margin-right: auto}img.alignright {float:right; margin:0 0 1em 1em}
+  img.alignleft {float:left; margin:0 1em 1em 0}
+  img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+  a img.alignright {float:right; margin:0 0 1em 1em}
+  a img.alignleft {float:left; margin:0 1em 1em 0}
+  a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
+  ```
 
 - scss-style layout parts:
   - header
