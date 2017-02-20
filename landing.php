@@ -95,12 +95,15 @@ session_start();
 
         <h1>Welcome</h1>
         <section>
-          <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, perferendis! Odit quisquam <code>code block</code> dicta illum ipsa quod natus iure aliquid necessitatibus veritatis, itaque magnam aliquam, dolorum nostrum nemo, explicabo perspiciatis nobis!</h2>
+          <h2>Surfing-Chef.com is many things: repository, blog, reference, archive, experiment, et al. The design and development of the site itself stands as narrative to the ebb and flow of it's author's whims. Perhaps visitors will find value in its content in one manner or another.</h2>
 
-          <p class="date">30 Mar 2014</p>
-          <p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
-            <a href="javascript:void(0)" class="read-more">Read More <span>&rsaquo;</span></a>
+          <p class="date">19 Feb 2017</p>
+
+          <p>Much of my life involves the past, present and upcoming weather conditions. I spend a lot of time here between work and play, so it made sense to have a weather snapshot. This site was designed with WordPress as its framework from the start, and so I could easily have just installed a weather widget. I also could have just used a WordPress theme. But knowing how websites work is my thing.</p>
+          <p>Surfing-Chef.com's HTML is not symantically perfect. You will not find beautifully crafted CSS or Javascript here. However, the fact that you are here with me means that I did something right. I like to design and develop web applications.  But I am truly passionate about learning the concepts involved and how to make them do the things I want them to.
           </p>
+          <p>All the content on this website is simply a notebook of links, notes, thoughts and bookmarks that make up Surfing-Chef. Work. Play. Sleep. Repeat. Doesn't get any simpler than that.</p>
+
         </section>
 
         <aside>
@@ -125,7 +128,8 @@ session_start();
 
         <h1>Culinaria</h1>
 
-        <p>Offered here are some of the resources that I tend to frequent while surfing the web.  So much information is available today from so many different sources.  The list of links off to the side are some bookmarks I find useful and below are some of the more content rich sites I visit often.</p>
+        <p>With so much information available today from so many different sources, offered here are some of the web-resources that I tend to frequent. The links in the sidebar are some bookmarks I find useful and below are some of the more content-rich sites I visit often.</p>
+        <p>Cookbooks are something of an addiction - unless I have a few hours to kill, I need to steer clear of Chapters. A few of my favourites include any work of <strong>America's Test Kitchen</strong>, the classic <strong>Joy of Cooking</strong>, and <strong>Modernist Cuisine</strong> by Nathan Myhrvold, Chris Young, and Maxime Bilet. I also subscribe to 2 publications: the bi-monthly <strong>Cook's Illustrated</strong>, and quarterly <strong>Lucky Peach</strong>.</p>
 
         <ul class="accordion-tabs">
           <li class="tab-header-and-content">
