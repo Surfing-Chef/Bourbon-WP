@@ -115,6 +115,7 @@ body {
     // culinaria
     #culinary {
       .accordion-tabs {
+
         p {
           @include span-columns(12);
         }
@@ -139,7 +140,18 @@ body {
       .is-active {
         color: $base-font-color;
       }
+      .tab-content {
+        position: relative;
 
+        img {
+          position: absolute;
+          left: 10%;
+          bottom: 10%;
+          width: 80%;
+          height: auto;
+          opacity: 0.3;
+        }
+      }
     }
 
     // contact form

@@ -1,22 +1,17 @@
 /*! *************************************************************
 Theme Name: Bourbon-WP
-Theme URI: http://localhost/bourbon-wp
-Description: This site was built using the Bones Development Theme.
-Author: Surfing-Chef
-Author URI: http://www.surfing-chef.com
+Theme URI: https://github.com/Surfing-Chef/Bourbon-WP
+Description: This site was built using the Bones Development Theme,
+  Bourbon, Neat, Bitters and Refills.
 Version: 2.0
-Tags: responsive-layout, Bourbon, Bitters, Neat, Sass, parallax,
-      landing page
+Author: Surfing-Chef
+Author URI: https://github.com/Surfing-Chef
+Tags: Responsive, Bourbon, Bitters, Neat, Sass, parallax
+
 ******************************************************************/
 
 /*--------------------------------------------------------------
->>> TABLE OF CONTENTS:
-----------------------------------------------------------------
-# Plugins
---------------------------------------------------------------*/
-
-/*--------------------------------------------------------------
-# Plugins
+# Imports
 --------------------------------------------------------------*/
 @import "0-plugins/dir-plugins";
 @import "1-base/dir-base";
