@@ -244,9 +244,7 @@ function bones_fonts() {
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
 
-/*
-CUSTOM MENUS
-*/
+/* CUSTOM MENUS */
 function register_bcbp_menus(){
   register_nav_menus( array(
   	'landing_menu' => __('Landing Menu'),
@@ -255,11 +253,9 @@ function register_bcbp_menus(){
     )
   );
 }
-add_action('init', 'register_bcbp_menus'); 
+add_action('init', 'register_bcbp_menus');
 
-/*
-This enables Featured Images
-*/
+/* ENABLE FEATURE IMAGES */
 add_theme_support( 'post-thumbnails' );
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>
