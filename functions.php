@@ -245,17 +245,21 @@ function bones_fonts() {
 add_action('wp_enqueue_scripts', 'bones_fonts');
 
 /*
-This adds custom menus
+CUSTOM MENUS
 */
-register_nav_menus( array(
-	'landing_menu' => 'Landing Menu',
-
-) );
+function register_bcbp_menus(){
+  register_nav_menus( array(
+  	'landing_menu' => __('Landing Menu'),
+    'culinary_menu' => __('Culinary Menu'),
+    'coding_menu' => __('Coding Menu')
+    )
+  );
+}
+add_action('init', 'register_bcbp_menus'); 
 
 /*
 This enables Featured Images
 */
 add_theme_support( 'post-thumbnails' );
-
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

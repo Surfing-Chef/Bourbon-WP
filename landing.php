@@ -65,16 +65,7 @@ session_start();
 							'container_class' => '',
 							'container_id'    => '',
 							'menu_class'      => 'centered-navigation-menu show',
-							'menu_id'         => 'js-centered-navigation-menu',
-							'echo'            => true,
-							'fallback_cb'     => 'wp_page_menu',
-							'before'          => '',
-							'after'           => '',
-							'link_before'     => '',
-							'link_after'      => '',
-							'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-							'depth'           => 0,
-							'walker'          => ''
+							'menu_id'         => 'js-centered-navigation-menu'
 						)); ?>
 
 					</nav>
@@ -171,14 +162,16 @@ session_start();
         </ul>
 
         <aside>
-          <h3>Of Interest</h3>
-          <ul>
-            <li><a href="#">A Link</a></li>
-            <li><a href="#">A Link</a></li>
-            <li><a href="#">A Link</a></li>
-            <li><a href="#">A Link</a></li>
-            <li><a href="#">A Link</a></li>
-          </ul>
+          <h3>Library of Culinaria</h3>
+          <?php wp_nav_menu(array(
+            'theme_location'  => 'culinary_menu',
+            'menu'            => '',
+            'container'       => '',
+            'container_class' => '',
+            'container_id'    => '',
+            'menu_class'      => 'aside-menu',
+            'menu_id'         => 'culinary-links'
+          )); ?>
         </aside>
 
       </div>
@@ -200,14 +193,16 @@ session_start();
         </section>
 
         <aside>
-          <h3>Bookmarks</h3>
-          <ul>
-            <li><a href="#">A Link</a></li>
-            <li><a href="#">A Link</a></li>
-            <li><a href="#">A Link</a></li>
-            <li><a href="#">A Link</a></li>
-            <li><a href="#">A Link</a></li>
-          </ul>
+          <h3>Forgotten Rememebered Fors</h3>
+          <?php wp_nav_menu(array(
+            'theme_location'  => 'coding_menu',
+            'menu'            => '',
+            'container'       => '',
+            'container_class' => '',
+            'container_id'    => '',
+            'menu_class'      => 'aside-menu',
+            'menu_id'         => 'coding-links'
+          )); ?>
         </aside>
 
       </div>

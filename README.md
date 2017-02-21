@@ -174,8 +174,8 @@ gulp.task('serve', function(){
     + No Welcome link  
     + Coding in Landing Menu: `#coding`, in Bourbon Menu `/bourbon-wp`  
     + Contacts in Landing Menu: `#contacts`, in Bourbon Menu `/bourbon-wp`  
-
-  + Added a dark, transparent background to navigation  
+  + Added a dark, transparent background to navigation
+  + Simplified additions of **Bourbon Chef WP Custom Menus** outlined Below
 
 ####Template Directory Path Available in Javascript/jQuery    
 + Added the following script just after _TweenMax_ CDN loads in footer of _landing.php_ and just before `<?php wp_footer(); ?>` in _footer.php_:  
@@ -196,7 +196,6 @@ gulp.task('serve', function(){
     }
   ?>
   ```
-
 ####WORDPRESS STYLE  
 + created a WordPress module to define WordPress specific classes
   + image alignment classes:
@@ -211,11 +210,9 @@ gulp.task('serve', function(){
   a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
   ```
 
-- scss-style layout parts:
-  - header
-    - navigation
-    - parallax
-  - main content
-  - footer
+####WORDPRESS CUSTOM WIDGETS
++ [Creating Custom Widgets](https://premium.wpmudev.org/blog/create-custom-wordpress-widget)   
++ [More on Custom Widgets](https://www.templatemonster.com/blog/add-widget-areas-to-wordpress-guide/)   
 
-  ####Notes and Links
+####WORDPRESS CUSTOM MENUS _(Bourbon Chef WP Custom Menus)_
++ [Simplified Custom Menus](https://premium.wpmudev.org/blog/add-menus-to-wordpress/?utm_expid=3606929-97.J2zL7V7mQbSNQDPrXwvBgQ.0&utm_referrer=https%3A%2F%2Fwww.google.ca%2F)
