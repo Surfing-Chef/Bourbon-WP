@@ -195,7 +195,8 @@ gulp.task('serve', function(){
         the_post_thumbnail('full');
     }
   ?>
-  ```
+  ```  
++ Rather than a plugin to [toggle the admin bar](https://en-ca.wordpress.org/plugins/auto-hide-admin-bar/), this [Chrome extention](https://chrome.google.com/webstore/detail/wordpress-admin-bar-contr/joldejophkhmeajgjenfnfdpfjkalckn/related) works fine.
 ####WORDPRESS STYLE  
 + created a WordPress module to define WordPress specific classes
   + image alignment classes:
@@ -209,10 +210,21 @@ gulp.task('serve', function(){
   a img.alignleft {float:left; margin:0 1em 1em 0}
   a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
   ```
+- Note the **importance** of style, structure and appropriate implementation of _post formats_ in the _post-formats_ directory
 
-####WORDPRESS CUSTOM WIDGETS
+####TIPS TRICKS AND LINKS
+
+####WordPress Custom Widgets
 + [Creating Custom Widgets](https://premium.wpmudev.org/blog/create-custom-wordpress-widget)   
 + [More on Custom Widgets](https://www.templatemonster.com/blog/add-widget-areas-to-wordpress-guide/)   
 
-####WORDPRESS CUSTOM MENUS _(Bourbon Chef WP Custom Menus)_
-+ [Simplified Custom Menus](https://premium.wpmudev.org/blog/add-menus-to-wordpress/?utm_expid=3606929-97.J2zL7V7mQbSNQDPrXwvBgQ.0&utm_referrer=https%3A%2F%2Fwww.google.ca%2F)
+####WordPress Custom Menus _(Bourbon Chef WP Custom Menus)_  
++ [Simplified Custom Menus](https://premium.wpmudev.org/blog/add-menus-to-wordpress/?utm_expid=3606929-97.J2zL7V7mQbSNQDPrXwvBgQ.0&utm_referrer=https%3A%2F%2Fwww.google.ca%2F)  
+
+####Cheatsheets
+[Theme Guide](https://premium.wpmudev.org/blog/free-wordpress-themes-ultimate-guide/?utm_expid=3606929-97.J2zL7V7mQbSNQDPrXwvBgQ.0)    
+
+####BOURBON CHEF TO DO's
+- Culinaria feeds Food52, Epicurious, and Lucky Peach are not very dynamic.  Change apifier setups.
+- Working on article footers. (Feb21)
+  - edit option if logged in
