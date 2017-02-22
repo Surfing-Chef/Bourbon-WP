@@ -1,9 +1,9 @@
 <?php get_header(); ?>
-			<div id="content">
+			<main id="content" class="main">
 
 				<div id="inner-content" class="wrap cf">
 
-						<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+						<main id="main" class="main m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
 
 							<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
@@ -12,6 +12,15 @@
 								<header class="article-header">
 
 									<h1 class="h2 entry-title"><a href="<?php the_permalink() ?>" rel="bookmark" title="<?php the_title_attribute(); ?>"><?php the_title(); ?></a></h1>
+
+									<div class="">
+										<?php
+										// check if the post or page has a Featured Image assigned to it.
+										if ( has_post_thumbnail() ) {
+										    the_post_thumbnail('full');
+										}
+										?>
+									</div>
 									<p class="byline entry-meta vcard">
                                                                         <?php printf( __( 'Posted', 'bonestheme' ).' %1$s %2$s',
                        								/* the time the post was published */
@@ -44,7 +53,7 @@
 
 							<?php endwhile; ?>
 
-									<?php bones_page_navi(); ?>
+									<!-- <?php bones_page_navi(); ?> -->
 
 							<?php else : ?>
 
@@ -65,11 +74,11 @@
 
 						</main>
 
-					<?php get_sidebar(); ?>
+					<!-- <?php get_sidebar(); ?> -->
 
 				</div>
 
-			</div>
+			</main>
 
 
 <?php get_footer(); ?>

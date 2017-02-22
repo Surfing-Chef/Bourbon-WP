@@ -6,7 +6,7 @@
 
 // Load Apifier API
 $.ajax({
-   url: './apifier.json',
+   url: templateDir + '/src/apifier.json',
    async: false,
    dataType: 'json',
    success: function (data) {

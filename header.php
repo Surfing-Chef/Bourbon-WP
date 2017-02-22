@@ -38,53 +38,57 @@
 		<?php // drop Google Analytics Here ?>
 		<?php // end analytics ?>
 
+		<?php // drop Google Fonts ?>
+		<link href='//fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+		<link href='//fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
+		<?php // end fonts ?>
+
 	</head>
 
-	<body <?php body_class(); ?> itemscope itemtype="http://schema.org/WebPage">
+	<!-- body class sets Bourbon Refills type system as ' type-system-geometric' or similar -->
+	<body <?php echo 'class="' . join( ' ', get_body_class( $class ) ) . ' type-system-geometric"'; ?> itemscope itemtype="http://schema.org/WebPage">
 
 		<!-- <div id="container"> -->
 
-			<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
+		<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
 
-				<!-- <div id="inner-header" class="wrap cf"> -->
+		<!-- centered-navigation -->
+			<section class="centered-navigation" role="banner">
+				<div class="centered-navigation-wrapper">
+			    <a href="javascript:void(0)" class="mobile-logo">
+			      <img src="<?php echo get_template_directory_uri(); ?>/src/images/mountain.svg" alt="Logo image">
+			    </a>
+			    <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
 
-					<?php // to use a image just replace the bloginfo('name') with your img src and remove the surrounding <p> ?>
-					<!-- <p id="logo" class="h1" itemscope itemtype="http://schema.org/Organization"><a href="<?php echo home_url(); ?>" rel="nofollow"><?php bloginfo('name'); ?></a></p> -->
+					<nav class="nav-menu nav-main" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 
-					<?php // if you'd like to use the site description you can un-comment it below ?>
-					<?php // bloginfo('description'); ?>
+						<?php wp_nav_menu(array(
+							'theme_location'  => 'main-nav',
+							'menu'            => '',
+							'container'       => '',
+							'container_class' => '',
+							'container_id'    => '',
+							'menu_class'      => 'centered-navigation-menu show',
+							'menu_id'         => 'js-centered-navigation-menu',
+							'echo'            => true,
+							'fallback_cb'     => 'wp_page_menu',
+							'before'          => '',
+							'after'           => '',
+							'link_before'     => '',
+							'link_after'      => '',
+							'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
+							'depth'           => 0,
+							'walker'          => ''
+						)); ?>
 
-					<!-- centered-navigation -->
-					<section class="centered-navigation" role="banner">
-						<div class="centered-navigation-wrapper">
-			        <a href="javascript:void(0)" class="mobile-logo">
-			          <img src="<?php echo get_template_directory_uri(); ?>/src/images/mountain.svg" alt="Logo image">
-			        </a>
-			        <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
+					</nav>
 
-							<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+				</div><!-- End centered-navigation-wrapper -->
+			</section><!-- End centered-navigation -->
 
-								<?php wp_nav_menu(array(
-									'container' => true,                           				// remove nav container
-									//'container_class' => 'centered-navigation-wrapper',  // class of container (should you choose to use it)
-									//'menu' => __( 'js-centered-navigation-menu' ), 			 // nav name
-									'menu_class' => 'centered-navigation-menu',  	 // adding custom nav class
-									'menu_id' => 'js-centered-navigation-menu',
-									//'theme_location' => 'main-nav',                			 // where it's located in the theme
-									//'before' => '',                                			 // before the menu
-							     //'after' => '',                                  // after the menu
-							    // 'link_before' => '',                            // before each link
-							    // 'link_after' => '',                             // after each link
-							    // 'depth' => 0,                                   // limit the depth of the nav
-									//'fallback_cb' => ''                           			  // fallback function (if there is one)
-								)); ?>
+			<!-- Parallax background if on landing page -->
+			<!-- PHP code here to ensure this header is displayed only on landing page -->
 
-							</nav>
 
-						</div><!-- End centered-navigation-wrapper -->
-					</section>
-					<!-- End centered-navigation -->
-
-				<!-- </div> -->
-
-			</header>
+		</header>
+		<!-- END HEADER -->

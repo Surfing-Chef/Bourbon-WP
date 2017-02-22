@@ -244,15 +244,19 @@ function bones_fonts() {
 
 add_action('wp_enqueue_scripts', 'bones_fonts');
 
-/*
-This adds a class to menu items
-*/
-function bwp_menu_classes($classes, $item) {
-
-    $classes[] = 'nav-item';
-
-  return $classes;
+/* CUSTOM MENUS */
+function register_bcbp_menus(){
+  register_nav_menus( array(
+  	'landing_menu' => __('Landing Menu'),
+    'culinary_menu' => __('Culinary Menu'),
+    'blog_menu' => __('Blog Roll'),
+    'coding_menu' => __('Coding Menu')
+    )
+  );
 }
-add_filter('nav_menu_css_class','bwp_menu_classes',1,2);
+add_action('init', 'register_bcbp_menus');
+
+/* ENABLE FEATURE IMAGES */
+add_theme_support( 'post-thumbnails' );
 
 /* DON'T DELETE THIS CLOSING TAG */ ?>

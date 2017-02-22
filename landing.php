@@ -1,4 +1,10 @@
-<!--<?php session_start() ?>-->
+<?php
+/*
+ Template Name: Landing Page
+*/
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,21 +19,20 @@
 
   <link href='//fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
 
-  <link rel="stylesheet" href="css/font-awesome.css" />
+  <!-- <link rel="stylesheet" href="css/font-awesome.css" /> -->
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
-  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/src/css/style.css">
 
-
-  <title>Bourbon-Chef 1.6</title>
+  <title><?php wp_title(''); ?></title>
 
 </head>
 <body class="home type-system-geometric">
   <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
-  
+
   <!-- HEADER -->
   <header  id="js-parallax-window" class="parallax-window">
 
@@ -43,30 +48,29 @@
     </div>
 
     <!-- centered-navigation -->
-    <section class="centered-navigation" role="banner">
-      <div class="centered-navigation-wrapper">
-        <a href="javascript:void(0)" class="mobile-logo">
-          <img src="images/mountain.svg" alt="Logo image">
-        </a>
-        <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
-        <nav role="navigation">
-          <ul id="js-centered-navigation-menu" class="centered-navigation-menu show">
-            <li class="nav-link"><a href="javascript:void(0)">Home</a></li>
-            <li class="nav-link"><a href="#welcome">Welcome</a></li>
-            <li class="nav-link"><a href="#culinary">Culinaria</a></li>
-            <li class="nav-link logo">
-              <a href="javascript:void(0)" class="logo">
-                <img src="images/mountain.svg" alt="Logo image">
-              </a>
-            </li>
-            <li class="nav-link"><a href="#coding">Coding</a></li>
-            <li class="nav-link"><a href="#blog">Blog</a></li>
-            <li class="nav-link"><a href="#contacts">Contacts</a></li>
-          </ul>
-        </nav>
-      </div>
-    </section>
-    <!-- End centered-navigation -->
+			<section class="centered-navigation" role="banner">
+				<div class="centered-navigation-wrapper">
+			    <a href="javascript:void(0)" class="mobile-logo">
+			      <img src="<?php echo get_template_directory_uri(); ?>/src/images/mountain.svg" alt="Logo image">
+			    </a>
+			    <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
+
+					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+
+						<?php wp_nav_menu(array(
+							'theme_location'  => 'landing_menu',
+							'menu'            => '',
+							'container'       => '',
+							'container_class' => '',
+							'container_id'    => '',
+							'menu_class'      => 'centered-navigation-menu show',
+							'menu_id'         => 'js-centered-navigation-menu'
+						)); ?>
+
+					</nav>
+
+				</div><!-- End centered-navigation-wrapper -->
+			</section><!-- End centered-navigation -->
 
     <div id="js-parallax-background" class="parallax-background"></div>
   </header>
@@ -81,12 +85,15 @@
 
         <h1>Welcome</h1>
         <section>
-          <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, perferendis! Odit quisquam <code>code block</code> dicta illum ipsa quod natus iure aliquid necessitatibus veritatis, itaque magnam aliquam, dolorum nostrum nemo, explicabo perspiciatis nobis!</h2>
+          <h2>Surfing-Chef.com is many things: repository, blog, reference, archive, experiment, et al. The design and development of the site itself stands as narrative to the ebb and flow of it's author's whims. Perhaps visitors will find value in its content in one manner or another.</h2>
 
-          <p class="date">30 Mar 2014</p>
-          <p><span>Lorem ipsum dolor sit amet</span>, consectetur adipisicing elit. Consequatur a, ullam, voluptatum incidunt neque doloremque vel inventore distinctio laudantium harum</a> illo quam nulla dolor alias iure impedit! Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit.
-            <a href="javascript:void(0)" class="read-more">Read More <span>&rsaquo;</span></a>
+          <p class="date">19 Feb 2017</p>
+
+          <p>Much of my life involves the past, present and upcoming weather conditions. I spend a lot of time here between work and play, so it made sense to have a weather snapshot. This site was designed with WordPress as its framework from the start, and so I could easily have just installed a weather widget. I also could have just used a WordPress theme. But knowing how websites work is my thing.</p>
+          <p>Surfing-Chef.com's HTML is not symantically perfect. You will not find beautifully crafted CSS or Javascript here. However, the fact that you are here with me means that I did something right. I like to design and develop web applications.  But I am truly passionate about learning the concepts involved and how to make them do the things I want them to.
           </p>
+          <p>All the content on this website is simply a notebook of links, notes, thoughts and bookmarks that make up Surfing-Chef. Work. Play. Sleep. Repeat. Doesn't get any simpler than that.</p>
+
         </section>
 
         <aside>
@@ -111,36 +118,42 @@
 
         <h1>Culinaria</h1>
 
-        <p>Offered here are some of the resources that I tend to frequent while surfing the web.  So much information is available today from so many different sources.  The list of links off to the side are some bookmarks I find useful and below are some of the more content rich sites I visit often.</p>
+        <p>With so much information available today from so many different sources, offered here are some of the web-resources that I tend to frequent. The links in the sidebar are some bookmarks I find useful and below are some of the more content-rich sites I visit often.</p>
+        <p>Cookbooks are something of an addiction - unless I have a few hours to kill, I need to steer clear of Chapters. A few of my favourites include any work of <strong>America's Test Kitchen</strong>, the classic <strong>Joy of Cooking</strong>, and <strong>Modernist Cuisine</strong> by Nathan Myhrvold, Chris Young, and Maxime Bilet. I also subscribe to 2 publications: the bi-monthly <strong>Cook's Illustrated</strong>, and quarterly <strong>Lucky Peach</strong>.</p>
 
         <ul class="accordion-tabs">
           <li class="tab-header-and-content">
             <a href="javascript:void(0)" class="is-active tab-link">Food 52</a>
             <div class="tab-content" id="food52">
+              <img src="<?php echo get_template_directory_uri(); ?>/src/images/food52.png" alt="Food52 Logo">
               <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.</p>
             </div>
           </li>
           <li class="tab-header-and-content">
             <a href="javascript:void(0)" class="tab-link">Epicurious</a>
             <div class="tab-content"  id="epicurious">
+              <img src="<?php echo get_template_directory_uri(); ?>/src/images/epicurious.png" alt="Epicurious Logo">
               <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque. Sed imperdiet, nibh ut vestibulum tempor, nibh dui volutpat lacus, vel gravida magna justo sit amet quam. Quisque tincidunt ligula at nisl imperdiet sagittis. Morbi rutrum tempor arcu, non ultrices sem semper a. Aliquam quis sem mi.</p>
             </div>
           </li>
           <li class="tab-header-and-content">
             <a href="javascript:void(0)" class="tab-link">Lucky Peach</a>
             <div class="tab-content"  id="luckypeach">
+              <img src="<?php echo get_template_directory_uri(); ?>/src/images/luckypeach.png" alt="Lucky Peach Logo">
               <p>Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.</p>
             </div>
           </li>
           <li class="tab-header-and-content">
             <a href="javascript:void(0)" class="tab-link">Saveur</a>
             <div class="tab-content"  id="saveur">
+              <img src="<?php echo get_template_directory_uri(); ?>/src/images/saveur.png" alt="Saveur Logo">
               <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna.</p>
             </div>
           </li>
           <li class="tab-header-and-content">
             <a href="javascript:void(0)" class="tab-link">Food &amp; Wine</a>
             <div class="tab-content"  id="foodandwine">
+              <img src="<?php echo get_template_directory_uri(); ?>/src/images/foodandwine.png" alt="Food and Wine Logo">
               <p>Four dollar toast bespoke snackwave mumblecore. Schlitz iceland lo-fi, echo park art party microdosing farm-to-table lyft tattooed. Poke chicharrones DIY, affogato brunch aesthetic paleo jianbing meditation lomo. Dreamcatcher poutine cred chia vexillologist, salvia ethical ramps lyft PBR&B cliche plaid wolf skateboard. Kitsch dreamcatcher tumeric, stumptown viral lo-fi man braid cred direct trade green juice williamsburg celiac bushwick taxidermy. Authentic microdosing bitters, pour-over disrupt pop-up chillwave chicharrones tote bag freegan banh mi franzen. Umami gluten-free sartorial, chicharrones distillery ennui ramps kale chips vinyl flexitarian farm-to-table synth waistcoat tumblr.</p>
             </div>
           </li>
@@ -148,14 +161,16 @@
         </ul>
 
         <aside>
-          <h3>Of Interest</h3>
-          <ul>
-            <li><a href="#">A Link</a></li>
-            <li><a href="#">A Link</a></li>
-            <li><a href="#">A Link</a></li>
-            <li><a href="#">A Link</a></li>
-            <li><a href="#">A Link</a></li>
-          </ul>
+          <h3>Library of Culinaria</h3>
+          <?php wp_nav_menu(array(
+            'theme_location'  => 'culinary_menu',
+            'menu'            => '',
+            'container'       => '',
+            'container_class' => '',
+            'container_id'    => '',
+            'menu_class'      => 'aside-menu',
+            'menu_id'         => 'culinary-links'
+          )); ?>
         </aside>
 
       </div>
@@ -177,14 +192,16 @@
         </section>
 
         <aside>
-          <h3>Bookmarks</h3>
-          <ul>
-            <li><a href="#">A Link</a></li>
-            <li><a href="#">A Link</a></li>
-            <li><a href="#">A Link</a></li>
-            <li><a href="#">A Link</a></li>
-            <li><a href="#">A Link</a></li>
-          </ul>
+          <h3>Forgotten Rememebered Fors</h3>
+          <?php wp_nav_menu(array(
+            'theme_location'  => 'coding_menu',
+            'menu'            => '',
+            'container'       => '',
+            'container_class' => '',
+            'container_id'    => '',
+            'menu_class'      => 'aside-menu',
+            'menu_id'         => 'coding-links'
+          )); ?>
         </aside>
 
       </div>
@@ -195,7 +212,7 @@
     <article id="blog">
       <div class="article-content">
 
-        <h1>Blog</h1>
+        <h1>Recent Blog</h1>
         <section>
           <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor, perferendis! Odit quisquam <code>code block</code> dicta illum ipsa quod natus iure aliquid necessitatibus veritatis, itaque magnam aliquam, dolorum nostrum nemo, explicabo perspiciatis nobis!</h2>
 
@@ -206,9 +223,16 @@
         </section>
 
         <aside>
-          <h3>Recent Posts</h3>
-          <p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.</p>
-          <p class="author">Author Name</p>
+          <h3>Blog Roll</h3>
+          <?php wp_nav_menu(array(
+            'theme_location'  => 'blog_menu',
+            'menu'            => '',
+            'container'       => '',
+            'container_class' => '',
+            'container_id'    => '',
+            'menu_class'      => 'aside-menu',
+            'menu_id'         => 'coding-links'
+          )); ?>
         </aside>
 
       </div>
@@ -266,11 +290,6 @@
           <?php unset($_SESSION['cf_returndata']); ?>
         </section>
 
-        <!-- <aside>
-          <div class="gitHub"><a href="https://github.com/Surfing-Chef" target="_blank"><img src="images/github-sociocon.png" alt=""></a></div>
-          <div class="Pinterest"><a href="https://www.pinterest.com/SurfingChef/" target="_blank"><img src="images/pinterest-sociocon.png" alt=""></a></div>
-        </aside> -->
-
       </div>
     </article>
     <!-- End Contacts -->
@@ -282,13 +301,13 @@
   <footer>
     <div class="footer-container">
       <section class="sociocon">
-        <img class="icon" src="images/pinterest-sociocon.png" alt="link to Surfing Chef on Pinterest">
+        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/src/images/pinterest-sociocon.png" alt="link to Surfing Chef on Pinterest">
       </section>
       <section class="sociocon">
-        <img class="icon" src="images/github-sociocon.png" alt="link to Surfing Chef on GitHub">
+        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/src/images/github-sociocon.png" alt="link to Surfing Chef on GitHub">
       </section>
       <section class="sociocon">
-        <img class="icon" src="images/email-sociocon.png" alt="email Surfing Chef">
+        <img class="icon" src="<?php echo get_template_directory_uri(); ?>/src/images/email-sociocon.png" alt="email Surfing Chef">
       </section>
       <section>
         <p>Powered by WordPress. Maintained with love. Copyright 2017 Surfing-Chef</p>
@@ -308,11 +327,12 @@
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
     <script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+    <script>var templateDir = "<?php bloginfo('template_directory') ?>";</script>
 
     <!-- +++++ All SCRIPTS AFTER THIS COMMENT +++++ -->
 
     <!-- IMPORTS -->
-    <script src="js/script.min.js"></script>
+    <script src="<?php echo get_template_directory_uri(); ?>/src/js/script.min.js"></script>
 
     <!-- CUSTOM -->
 
