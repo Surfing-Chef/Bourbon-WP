@@ -1,4 +1,5 @@
-#Bourbon-WP (aka Bourbon-Chef-Site-2.0)
+#Bourbon-WP (aka Bourbon-Chef-Site-2.1)
+> Developed based on the Bones Blank Theme template.
 
 ##1. INITIALIZE
 ###a. Fresh WordPress install  
