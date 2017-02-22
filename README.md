@@ -168,7 +168,7 @@ gulp.task('serve', function(){
   + Selected _Landing Menu_ and _The Main Menu_ under **Menu Settings**  
   + Installed [Menu Image](https://wordpress.org/plugins/menu-image/)  
   + Uploaded a logo to WordPress and used it as image on _logo_ menu item  
-  + Created a duplicate menu called Bourbon Menu with the following differences:  
+  + Created a duplicate menu called Blog Menu with the following differences:  
     + Home and Logo links remain the same: `/bourbon-wp`  
     + Culinary in Landing Menu: `#culinary`, in Bourbon Menu `/bourbon-wp`  
     + No Welcome link  
@@ -176,13 +176,18 @@ gulp.task('serve', function(){
     + Contacts in Landing Menu: `#contacts`, in Bourbon Menu `/bourbon-wp`  
   + Added a dark, transparent background to navigation
   + Simplified additions of **Bourbon Chef WP Custom Menus** outlined Below
+  + Changed _Bourbon Menu_ to _Blog Menu_
 
-####Template Directory Path Available in Javascript/jQuery    
-+ Added the following script just after _TweenMax_ CDN loads in footer of _landing.php_ and just before `<?php wp_footer(); ?>` in _footer.php_:  
-```html5blank
-<script>var templateDir = "<?php bloginfo('template_directory') ?>";</script>
-```
+####WORDPRESS TEMPLATE DIRECTORY  
++ Copied _template parts_ from _twentyseventeen_ for template parts
+
++ Made template dfirectory path available in javascript/jQuery    
+  + Added the following script just after _TweenMax_ CDN loads in footer of _landing.php_ and just before `<?php wp_footer(); ?>` in _footer.php_:  
+  ```html5blank
+  <script>var templateDir = "<?php bloginfo('template_directory') ?>";</script>
+  ```
   + This allows darksky.js and apifier.js to dynamically access the template directory path.
+
 
 ####WORDPRESS PLUGINS
 + Installed Jetpack plugin  
@@ -224,7 +229,7 @@ gulp.task('serve', function(){
 ####Cheatsheets
 [Theme Guide](https://premium.wpmudev.org/blog/free-wordpress-themes-ultimate-guide/?utm_expid=3606929-97.J2zL7V7mQbSNQDPrXwvBgQ.0)    
 
-####BOURBON CHEF TO DO's
-- Culinaria feeds Food52, Epicurious, and Lucky Peach are not very dynamic.  Change apifier setups.
-- Working on article footers. (Feb21)
-  - edit option if logged in
+####BOURBON CHEF TO DO's  
+- Ensure laptop project WordPress install and DB are caught up to desktop project install and DB.     
+- [PROJECT 1](https://www.smashingmagazine.com/2015/04/building-custom-wordpress-archive-page/)  
+- Culinaria feeds Food52, Epicurious, and Lucky Peach are not very dynamic.  Change apifier setups.  
