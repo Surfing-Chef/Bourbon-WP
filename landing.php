@@ -25,7 +25,6 @@ session_start();
 
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/src/css/style.css">
 
-
   <title><?php wp_title(''); ?></title>
 
 </head>
@@ -224,9 +223,16 @@ session_start();
         </section>
 
         <aside>
-          <h3>Recent Posts</h3>
-          <p><span>Consequatur ullam, voluptatum</span> incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit. Accusamus. Consequatur, a, ullam, voluptatum incidunt neque porro numquam doloremque vel inventore distinctio laudantium harum illo quam nulla dolor alias iure impedit! Accusamus.</p>
-          <p class="author">Author Name</p>
+          <h3>Blog Roll</h3>
+          <?php wp_nav_menu(array(
+            'theme_location'  => 'blog_menu',
+            'menu'            => '',
+            'container'       => '',
+            'container_class' => '',
+            'container_id'    => '',
+            'menu_class'      => 'aside-menu',
+            'menu_id'         => 'coding-links'
+          )); ?>
         </aside>
 
       </div>

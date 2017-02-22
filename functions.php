@@ -249,6 +249,7 @@ function register_bcbp_menus(){
   register_nav_menus( array(
   	'landing_menu' => __('Landing Menu'),
     'culinary_menu' => __('Culinary Menu'),
+    'blog_menu' => __('Blog Roll'),
     'coding_menu' => __('Coding Menu')
     )
   );
