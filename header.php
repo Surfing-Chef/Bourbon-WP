@@ -1,94 +1,49 @@
-<!doctype html>
+<?php
+/**
+ * The header for our theme
+ *
+ * This is the template that displays all of the <head> section and everything up until <div id="content">
+ *
+ * @link https://developer.wordpress.org/themes/basics/template-files/#template-partials
+ *
+ * @package Bourbon-WP
+ */
 
-<!--[if lt IE 7]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8 lt-ie7"><![endif]-->
-<!--[if (IE 7)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9 lt-ie8"><![endif]-->
-<!--[if (IE 8)&!(IEMobile)]><html <?php language_attributes(); ?> class="no-js lt-ie9"><![endif]-->
-<!--[if gt IE 8]><!--> <html <?php language_attributes(); ?> class="no-js"><!--<![endif]-->
+?><!DOCTYPE html>
+<html <?php language_attributes(); ?>>
+<head>
+<meta charset="<?php bloginfo( 'charset' ); ?>">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="profile" href="http://gmpg.org/xfn/11">
 
-	<head>
-		<meta charset="utf-8">
+<?php wp_head(); ?>
+</head>
 
-		<?php // force Internet Explorer to use the latest rendering engine available ?>
-		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<body <?php body_class(); ?>>
+<div id="page" class="site">
+	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bourbon-wp' ); ?></a>
 
-		<title><?php wp_title(''); ?></title>
+	<header id="masthead" class="site-header" role="banner">
+		<div class="site-branding">
+			<?php
+			if ( is_front_page() && is_home() ) : ?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php else : ?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+			<?php
+			endif;
 
-		<?php // mobile meta (hooray!) ?>
-		<meta name="HandheldFriendly" content="True">
-		<meta name="MobileOptimized" content="320">
-		<meta name="viewport" content="width=device-width, initial-scale=1"/>
+			$description = get_bloginfo( 'description', 'display' );
+			if ( $description || is_customize_preview() ) : ?>
+				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+			<?php
+			endif; ?>
+		</div><!-- .site-branding -->
 
-		<?php // icons & favicons (for more: http://www.jonathantneal.com/blog/understand-the-favicon/) ?>
-		<link rel="apple-touch-icon" href="<?php echo get_template_directory_uri(); ?>/src/images/apple-touch-icon.png">
-		<link rel="icon" href="<?php echo get_template_directory_uri(); ?>/favicon.png">
-		<!--[if IE]>
-			<link rel="shortcut icon" href="<?php echo get_template_directory_uri(); ?>/favicon.ico">
-		<![endif]-->
-		<?php // or, set /favicon.ico for IE10 win ?>
-		<meta name="msapplication-TileColor" content="#f01d4f">
-		<meta name="msapplication-TileImage" content="<?php echo get_template_directory_uri(); ?>/src/images/win8-tile-icon.png">
-            <meta name="theme-color" content="#121212">
+		<nav id="site-navigation" class="main-navigation" role="navigation">
+			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'bourbon-wp' ); ?></button>
+			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
+		</nav><!-- #site-navigation -->
+	</header><!-- #masthead -->
 
-		<link rel="pingback" href="<?php bloginfo('pingback_url'); ?>">
-
-		<?php // wordpress head functions ?>
-		<?php wp_head(); ?>
-		<?php // end of wordpress head ?>
-
-		<?php // drop Google Analytics Here ?>
-		<?php // end analytics ?>
-
-		<?php // drop Google Fonts ?>
-		<link href='//fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
-		<link href='//fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
-		<?php // end fonts ?>
-
-	</head>
-
-	<!-- body class sets Bourbon Refills type system as ' type-system-geometric' or similar -->
-	<body <?php echo 'class="' . join( ' ', get_body_class( $class ) ) . ' type-system-geometric"'; ?> itemscope itemtype="http://schema.org/WebPage">
-
-		<!-- <div id="container"> -->
-
-		<header class="header" role="banner" itemscope itemtype="http://schema.org/WPHeader">
-
-		<!-- centered-navigation -->
-			<section class="centered-navigation" role="banner">
-				<div class="centered-navigation-wrapper">
-			    <a href="javascript:void(0)" class="mobile-logo">
-			      <img src="<?php echo get_template_directory_uri(); ?>/src/images/mountain.svg" alt="Logo image">
-			    </a>
-			    <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
-
-					<nav class="nav-menu nav-main" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
-
-						<?php wp_nav_menu(array(
-							'theme_location'  => 'main-nav',
-							'menu'            => '',
-							'container'       => '',
-							'container_class' => '',
-							'container_id'    => '',
-							'menu_class'      => 'centered-navigation-menu show',
-							'menu_id'         => 'js-centered-navigation-menu',
-							'echo'            => true,
-							'fallback_cb'     => 'wp_page_menu',
-							'before'          => '',
-							'after'           => '',
-							'link_before'     => '',
-							'link_after'      => '',
-							'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-							'depth'           => 0,
-							'walker'          => ''
-						)); ?>
-
-					</nav>
-
-				</div><!-- End centered-navigation-wrapper -->
-			</section><!-- End centered-navigation -->
-
-			<!-- Parallax background if on landing page -->
-			<!-- PHP code here to ensure this header is displayed only on landing page -->
-
-
-		</header>
-		<!-- END HEADER -->
+	<div id="content" class="site-content">

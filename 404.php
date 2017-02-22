@@ -1,43 +1,64 @@
-<?php get_header(); ?>
+<?php
+/**
+ * The template for displaying 404 pages (not found)
+ *
+ * @link https://codex.wordpress.org/Creating_an_Error_404_Page
+ *
+ * @package Bourbon-WP
+ */
 
-			<div id="content">
+get_header(); ?>
 
-				<div id="inner-content" class="wrap cf">
+	<div id="primary" class="content-area">
+		<main id="main" class="site-main" role="main">
 
-					<main id="main" class="m-all t-2of3 d-5of7 cf" role="main" itemscope itemprop="mainContentOfPage" itemtype="http://schema.org/Blog">
+			<section class="error-404 not-found">
+				<header class="page-header">
+					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'bourbon-wp' ); ?></h1>
+				</header><!-- .page-header -->
 
-						<article id="post-not-found" class="hentry cf">
+				<div class="page-content">
+					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'bourbon-wp' ); ?></p>
 
-							<header class="article-header">
+					<?php
+						get_search_form();
 
-								<h1><?php _e( 'Epic 404 - Article Not Found', 'bonestheme' ); ?></h1>
+						the_widget( 'WP_Widget_Recent_Posts' );
 
-							</header>
+						// Only show the widget if site has multiple categories.
+						if ( bourbon_wp_categorized_blog() ) :
+					?>
 
-							<section class="entry-content">
+					<div class="widget widget_categories">
+						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'bourbon-wp' ); ?></h2>
+						<ul>
+						<?php
+							wp_list_categories( array(
+								'orderby'    => 'count',
+								'order'      => 'DESC',
+								'show_count' => 1,
+								'title_li'   => '',
+								'number'     => 10,
+							) );
+						?>
+						</ul>
+					</div><!-- .widget -->
 
-								<p><?php _e( 'The article you were looking for was not found, but maybe try looking again!', 'bonestheme' ); ?></p>
+					<?php
+						endif;
 
-							</section>
+						/* translators: %1$s: smiley */
+						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'bourbon-wp' ), convert_smilies( ':)' ) ) . '</p>';
+						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 
-							<section class="search">
+						the_widget( 'WP_Widget_Tag_Cloud' );
+					?>
 
-									<p><?php get_search_form(); ?></p>
+				</div><!-- .page-content -->
+			</section><!-- .error-404 -->
 
-							</section>
+		</main><!-- #main -->
+	</div><!-- #primary -->
 
-							<footer class="article-footer">
-
-									<p><?php _e( 'This is the 404.php template.', 'bonestheme' ); ?></p>
-
-							</footer>
-
-						</article>
-
-					</main>
-
-				</div>
-
-			</div>
-
-<?php get_footer(); ?>
+<?php
+get_footer();
