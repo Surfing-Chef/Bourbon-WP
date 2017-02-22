@@ -220,7 +220,7 @@
 
     &:focus > .submenu,
     &:hover > .submenu {
-      display: block;
+      display: block;  
     }
 
     @include media($horizontal-bar-mode) {
