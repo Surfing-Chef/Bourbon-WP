@@ -179,8 +179,7 @@ gulp.task('serve', function(){
   + Changed _Bourbon Menu_ to _Blog Menu_
 
 ####WORDPRESS TEMPLATE DIRECTORY  
-+ Copied _template parts_ from _twentyseventeen_ for template parts
-
++ Copied _template parts_ from _twentyseventeen_ to use WordPress established template parts  
 + Made template dfirectory path available in javascript/jQuery    
   + Added the following script just after _TweenMax_ CDN loads in footer of _landing.php_ and just before `<?php wp_footer(); ?>` in _footer.php_:  
   ```html5blank
@@ -230,6 +229,7 @@ gulp.task('serve', function(){
 [Theme Guide](https://premium.wpmudev.org/blog/free-wordpress-themes-ultimate-guide/?utm_expid=3606929-97.J2zL7V7mQbSNQDPrXwvBgQ.0)    
 
 ####BOURBON CHEF TO DO's  
-- Ensure laptop project WordPress install and DB are caught up to desktop project install and DB.     
-- [PROJECT 1](https://www.smashingmagazine.com/2015/04/building-custom-wordpress-archive-page/)  
+- Ensure laptop project WordPress install and DB are caught up to desktop project install and DB.
+- PROJECT 1: Experiment subbing out Bones page templates with WordPress (twentyseventeen) templates  
+- [PROJECT 2](https://www.smashingmagazine.com/2015/04/building-custom-wordpress-archive-page/): New Archive Page   
 - Culinaria feeds Food52, Epicurious, and Lucky Peach are not very dynamic.  Change apifier setups.  
