@@ -19,9 +19,63 @@ Already had created a branch based on a working Bourbon-Chef 2.1. It contained a
 - package.json   
 - README.md  
 
+I then copied the Underscores theme files into the Bourbon-WP theme folder
+
 After a quick test in the browser and committing the changes, the fun begins...
 
 ###3. Bourbon-Chef-Site Implementation
+####Styles
+Started by updating the _style.scss_ in _src_ directory to version 2.2 and stated this theme is based on both Bones and Underscores. By saving the changes to this file with gulp running, the _style.css_ is over written with one created from _src/scss_ not by _sass_ and the Underscores styles.
+
+####_src/scss/3-layouts_
+Started compartmentalizing markup appropriately, ie body contains body markup, header contains footer etc.  
+
+####header.php  
+Transferred appropriate markup from previous version of Bourbon-WP.
+- added custom type class
+```php
+<body <?php body_class('type-system-geometric'); ?>>
+```
+- copied navigation from `<!-- centered-navigation -->` to `<!-- PHP code here to ensure this header is displayed only on landing page -->` and placed it directly under the heading tag.  I also commented out the pre-existing _<nav>_ tags and content just before `</header><!-- #masthead -->`
+- this left a broken looking theme as the navigation was looking for content in the menu.  Created a menu containing the same nav links as Bourbon-WP 1.1.  Note to self **WHY DID YOU DELETE THE WORDPRESS MENUS YOU'D ALREADY CREATED?**  
+- rebuilt navigation system referring to [notes](https://github.com/Surfing-Chef/Bourbon-WP/tree/2.1) from build 2.1
+- copied _landing.php_ from 2.1 for use in menu creation in case it didn't exist.  I used this template in creating a new page called _Landing_ (Bourbon-WP's homepage).  
+- change _functions.php_ `register_nav_menus()` to:
+```PHP
+// This theme uses wp_nav_menu() these locations.
+register_nav_menus( array(
+  'main_menu' => esc_html__( 'Primary', 'bourbon-wp' ),
+  'landing_menu' => esc_html__('Landing Menu', 'bourbon-wp'),
+  'culinary_menu' => esc_html__('Culinary Menu', 'bourbon-wp'),
+  'blog_menu' => esc_html__('Blog Roll', 'bourbon-wp'),
+  'coding_menu' => esc_html__('Coding Menu', 'bourbon-wp')
+) );
+```  
+
+- installed [menu image](https://en-ca.wordpress.org/plugins/menu-image/) plugin to allow for images as a menu selection.  Used this plugin to create a logo in the menus.  
+
+- Create a WordPress menu called *Main Menu* in *admin > Appearance > Menus* under the Edit Menus tab:  
+  - Main Menu:  (Primary menu location)
+    1. Landing > page: Landing, class: nav-link main logo, image: logo, size: thumbnail, title position: hide  
+    2. Blog > page: Blog, class: nav-link  
+  - Click the _Primary_ box at bottom and **save**.  
+
+- Create another menu called *Landing Menu*:
+  - Landing Menu:  (Landing menu location)
+    1. Home > page: Landing, class: nav-link  
+    2. Welcome > page: Blog, class: nav-link  
+    3. Culinaria > page: Blog, class: nav-link  
+    4. Logo > page: Landing, class: nav-link logo, image: logo, size: thumbnail, title position: hide    
+    5. Coding > page: Blog, class: nav-link  
+    6. Blog > page: Blog, class: nav-link  
+    7. Contacts > page: Blog, class: nav-link  
+  - Click the _Landing Menu_ box and **save**.
+
+####footer.php  
+- Transferred appropriate markup from previous version of Bourbon-WP.
+- Ensured that the `<footer>` tag in both _footer.php_ and _landing.php_ were `<footer id='colophon>'`, and that _src/scss/3-layouts/\_footer.scss_ specified the same,  `footer#colophon {...`
+
+
 ####a. Use Bones as starting point:  
 + **IMPORTANT NOTE**: Attempts to load the theme into WordPress before completing these steps will throw errors.  
 + renamed bones-master to bourbon-wp
