@@ -92,7 +92,8 @@ session_start();
           <p>Much of my life involves the past, present and upcoming weather conditions. I spend a lot of time here between work and play, so it made sense to have a weather snapshot. This site was designed with WordPress as its framework from the start, and so I could easily have just installed a weather widget. I also could have just used a WordPress theme. But knowing how websites work is my thing.</p>
           <p>Surfing-Chef.com's HTML is not symantically perfect. You will not find beautifully crafted CSS or Javascript here. However, the fact that you are here with me means that I did something right. I like to design and develop web applications.  But I am truly passionate about learning the concepts involved and how to make them do the things I want them to.
           </p>
-          <p>All the content on this website is simply a notebook of links, notes, thoughts and bookmarks that make up Surfing-Chef. Work. Play. Sleep. Repeat. Doesn't get any simpler than that.</p>
+          <p>All the content on this website is simply a notebook of links, notes, thoughts and bookmarks that make up Surfing-Chef.</p>
+          <p>Work. Play. Sleep. Repeat. It doesn't get any simpler than that.</p>
 
         </section>
 
@@ -117,48 +118,50 @@ session_start();
       <div class="article-content">
 
         <h1>Culinaria</h1>
+        <section>
+          <p>With so much information available today from so many different sources, offered here are some of the web-resources that I tend to frequent. The links in the sidebar are some bookmarks I find useful and below are some of the more content-rich sites I visit often.</p>
+          <p>Cookbooks are something of an addiction - unless I have a few hours to kill, I need to steer clear of Chapters. A few of my favourites include any work of <strong>America's Test Kitchen</strong>, the classic <strong>Joy of Cooking</strong>, and <strong>Modernist Cuisine</strong> by Nathan Myhrvold, Chris Young, and Maxime Bilet. I also subscribe to 2 publications: the bi-monthly <strong>Cook's Illustrated</strong>, and quarterly <strong>Lucky Peach</strong>.</p>
 
-        <p>With so much information available today from so many different sources, offered here are some of the web-resources that I tend to frequent. The links in the sidebar are some bookmarks I find useful and below are some of the more content-rich sites I visit often.</p>
-        <p>Cookbooks are something of an addiction - unless I have a few hours to kill, I need to steer clear of Chapters. A few of my favourites include any work of <strong>America's Test Kitchen</strong>, the classic <strong>Joy of Cooking</strong>, and <strong>Modernist Cuisine</strong> by Nathan Myhrvold, Chris Young, and Maxime Bilet. I also subscribe to 2 publications: the bi-monthly <strong>Cook's Illustrated</strong>, and quarterly <strong>Lucky Peach</strong>.</p>
-
-        <ul class="accordion-tabs">
-          <li class="tab-header-and-content">
-            <a href="javascript:void(0)" class="is-active tab-link">Food 52</a>
-            <div class="tab-content" id="food52">
-              <img src="<?php echo get_template_directory_uri(); ?>/src/images/food52.png" alt="Food52 Logo">
-              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.</p>
-            </div>
-          </li>
-          <li class="tab-header-and-content">
-            <a href="javascript:void(0)" class="tab-link">Epicurious</a>
-            <div class="tab-content"  id="epicurious">
-              <img src="<?php echo get_template_directory_uri(); ?>/src/images/epicurious.png" alt="Epicurious Logo">
-              <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque. Sed imperdiet, nibh ut vestibulum tempor, nibh dui volutpat lacus, vel gravida magna justo sit amet quam. Quisque tincidunt ligula at nisl imperdiet sagittis. Morbi rutrum tempor arcu, non ultrices sem semper a. Aliquam quis sem mi.</p>
-            </div>
-          </li>
-          <li class="tab-header-and-content">
-            <a href="javascript:void(0)" class="tab-link">Lucky Peach</a>
-            <div class="tab-content"  id="luckypeach">
-              <img src="<?php echo get_template_directory_uri(); ?>/src/images/luckypeach.png" alt="Lucky Peach Logo">
-              <p>Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.</p>
-            </div>
-          </li>
-          <li class="tab-header-and-content">
-            <a href="javascript:void(0)" class="tab-link">Saveur</a>
-            <div class="tab-content"  id="saveur">
-              <img src="<?php echo get_template_directory_uri(); ?>/src/images/saveur.png" alt="Saveur Logo">
-              <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna.</p>
-            </div>
-          </li>
-          <li class="tab-header-and-content">
-            <a href="javascript:void(0)" class="tab-link">Food &amp; Wine</a>
-            <div class="tab-content"  id="foodandwine">
-              <img src="<?php echo get_template_directory_uri(); ?>/src/images/foodandwine.png" alt="Food and Wine Logo">
-              <p>Four dollar toast bespoke snackwave mumblecore. Schlitz iceland lo-fi, echo park art party microdosing farm-to-table lyft tattooed. Poke chicharrones DIY, affogato brunch aesthetic paleo jianbing meditation lomo. Dreamcatcher poutine cred chia vexillologist, salvia ethical ramps lyft PBR&B cliche plaid wolf skateboard. Kitsch dreamcatcher tumeric, stumptown viral lo-fi man braid cred direct trade green juice williamsburg celiac bushwick taxidermy. Authentic microdosing bitters, pour-over disrupt pop-up chillwave chicharrones tote bag freegan banh mi franzen. Umami gluten-free sartorial, chicharrones distillery ennui ramps kale chips vinyl flexitarian farm-to-table synth waistcoat tumblr.</p>
-            </div>
-          </li>
-
-        </ul>
+          <div>
+            <ul class="accordion-tabs">
+              <li class="tab-header-and-content">
+                <a href="javascript:void(0)" class="is-active tab-link">Food 52</a>
+                <div class="tab-content" id="food52">
+                  <img src="<?php echo get_template_directory_uri(); ?>/src/images/food52.png" alt="Food52 Logo">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.</p>
+                </div>
+              </li>
+              <li class="tab-header-and-content">
+                <a href="javascript:void(0)" class="tab-link">Epicurious</a>
+                <div class="tab-content"  id="epicurious">
+                  <img src="<?php echo get_template_directory_uri(); ?>/src/images/epicurious.png" alt="Epicurious Logo">
+                  <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque. Sed imperdiet, nibh ut vestibulum tempor, nibh dui volutpat lacus, vel gravida magna justo sit amet quam. Quisque tincidunt ligula at nisl imperdiet sagittis. Morbi rutrum tempor arcu, non ultrices sem semper a. Aliquam quis sem mi.</p>
+                </div>
+              </li>
+              <li class="tab-header-and-content">
+                <a href="javascript:void(0)" class="tab-link">Lucky Peach</a>
+                <div class="tab-content"  id="luckypeach">
+                  <img src="<?php echo get_template_directory_uri(); ?>/src/images/luckypeach.png" alt="Lucky Peach Logo">
+                  <p>Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.</p>
+                </div>
+              </li>
+              <li class="tab-header-and-content">
+                <a href="javascript:void(0)" class="tab-link">Saveur</a>
+                <div class="tab-content"  id="saveur">
+                  <img src="<?php echo get_template_directory_uri(); ?>/src/images/saveur.png" alt="Saveur Logo">
+                  <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna.</p>
+                </div>
+              </li>
+              <li class="tab-header-and-content">
+                <a href="javascript:void(0)" class="tab-link">Food &amp; Wine</a>
+                <div class="tab-content"  id="foodandwine">
+                  <img src="<?php echo get_template_directory_uri(); ?>/src/images/foodandwine.png" alt="Food and Wine Logo">
+                  <p>Four dollar toast bespoke snackwave mumblecore. Schlitz iceland lo-fi, echo park art party microdosing farm-to-table lyft tattooed. Poke chicharrones DIY, affogato brunch aesthetic paleo jianbing meditation lomo. Dreamcatcher poutine cred chia vexillologist, salvia ethical ramps lyft PBR&B cliche plaid wolf skateboard. Kitsch dreamcatcher tumeric, stumptown viral lo-fi man braid cred direct trade green juice williamsburg celiac bushwick taxidermy. Authentic microdosing bitters, pour-over disrupt pop-up chillwave chicharrones tote bag freegan banh mi franzen. Umami gluten-free sartorial, chicharrones distillery ennui ramps kale chips vinyl flexitarian farm-to-table synth waistcoat tumblr.</p>
+                </div>
+              </li>
+            </ul>
+          </div>
+        </section>
 
         <aside>
           <h3>Library of Culinaria</h3>
@@ -192,7 +195,7 @@ session_start();
         </section>
 
         <aside>
-          <h3>Forgotten Rememebered Fors</h3>
+          <h3>&lt; a href = &quot;&hellip;&quot; &gt;</h3>
           <?php wp_nav_menu(array(
             'theme_location'  => 'coding_menu',
             'menu'            => '',
