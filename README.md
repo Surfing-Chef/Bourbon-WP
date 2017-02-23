@@ -69,10 +69,20 @@ register_nav_menus( array(
     5. Coding > page: Blog, class: nav-link  
     6. Blog > page: Blog, class: nav-link  
     7. Contacts > page: Blog, class: nav-link  
-  - Click the _Landing Menu_ box and **save**.
+  - Click the _Landing Menu_ box and **save**.  
 
-####footer.php  
-- Transferred appropriate markup from previous version of Bourbon-WP.
+  - To properly hide the screen reader text, place the following styles after the header styles in _header.scss_:  
+  ```php
+  .screen-reader-text {
+      position: absolute !important;
+      left: -999em;
+  }
+  ```
+
+  - Ensure the _Display Site Title and Tagline_ box in unchecked in the customize options for the theme
+
+####footer.php    
+- Transferred appropriate markup from previous version of Bourbon-WP.  
 - Ensured that the `<footer>` tag in both _footer.php_ and _landing.php_ were `<footer id='colophon>'`, and that _src/scss/3-layouts/\_footer.scss_ specified the same,  `footer#colophon {...`
 
 
