@@ -298,7 +298,7 @@ session_start();
   <!-- END MAIN  -->
 
   <!-- FOOTER -->
-  <footer>
+  <footer id="colophon">
     <div class="footer-container">
       <section class="sociocon">
         <img class="icon" src="<?php echo get_template_directory_uri(); ?>/src/images/pinterest-sociocon.png" alt="link to Surfing Chef on Pinterest">

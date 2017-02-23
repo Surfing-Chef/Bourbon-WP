@@ -155,7 +155,7 @@
     margin-bottom: -$centered-navigation-logo-height / 1.5;
     max-height: $centered-navigation-logo-height * 1.5;
     max-width: $centered-navigation-logo-height * 1.5;
-    opacity: 0.6;
+    opacity: 0.6; 
   }
 
   .nav-link.main a img {
@@ -220,7 +220,7 @@
 
     &:focus > .submenu,
     &:hover > .submenu {
-      display: block;  
+      display: block;
     }
 
     @include media($horizontal-bar-mode) {

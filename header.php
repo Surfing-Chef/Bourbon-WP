@@ -17,13 +17,47 @@
 <link rel="profile" href="http://gmpg.org/xfn/11">
 
 <?php wp_head(); ?>
+
+<?php // drop Google Fonts ?>
+<link href='//fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
+<?php // end fonts ?>
+
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class('type-system-geometric'); ?>>
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bourbon-wp' ); ?></a>
 
 	<header id="masthead" class="site-header" role="banner">
+		<!-- centered-navigation -->
+			<section class="centered-navigation" role="banner">
+				<div class="centered-navigation-wrapper">
+			    <a href="javascript:void(0)" class="mobile-logo">
+			      <img src="<?php echo get_template_directory_uri(); ?>/src/images/mountain.svg" alt="Logo image">
+			    </a>
+			    <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
+
+					<nav class="nav-menu nav-main" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+
+						<?php wp_nav_menu(array(
+							'theme_location'  => 'main_menu',
+							'menu'            => '',
+							'container'       => '',
+							'container_class' => '',
+							'container_id'    => '',
+							'menu_class'      => 'centered-navigation-menu show',
+							'menu_id'         => 'js-centered-navigation-menu'
+						)); ?>
+
+					</nav>
+
+				</div><!-- End centered-navigation-wrapper -->
+			</section><!-- End centered-navigation -->
+
+			<!-- Parallax background if on landing page -->
+			<!-- PHP code here to ensure this header is displayed only on landing page -->
+
 		<div class="site-branding">
 			<?php
 			if ( is_front_page() && is_home() ) : ?>
@@ -40,7 +74,7 @@
 			endif; ?>
 		</div><!-- .site-branding -->
 
-		<nav id="site-navigation" class="main-navigation" role="navigation">
+		<!-- <nav id="site-navigation" class="main-navigation" role="navigation">
 			<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false"><?php esc_html_e( 'Primary Menu', 'bourbon-wp' ); ?></button>
 			<?php wp_nav_menu( array( 'theme_location' => 'menu-1', 'menu_id' => 'primary-menu' ) ); ?>
 		</nav><!-- #site-navigation -->
