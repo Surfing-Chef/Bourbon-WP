@@ -14,8 +14,6 @@
   $tab-inactive-hover-color: darken($light-gray, 5);
   $tab-mode: $medium-screen;
 
-  @include span-columns(8 of 12);
-
   @include clearfix;
   line-height: 1.5;
   margin-bottom: $base-spacing;

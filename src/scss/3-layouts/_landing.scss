@@ -71,6 +71,7 @@ body {
 
         aside {
           @include span-columns(4 of 12);
+          @include omega;
 
           @include media(min-width 320px max-width 900px) {
             @include span-columns(12);
