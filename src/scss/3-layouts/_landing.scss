@@ -1,10 +1,5 @@
-/*! home.scss */
-// body >>
-body {
-  position: relative;
-  min-width: 320px;
+/*! scss/3-layouts/_landing.scss */
 
-  // header >>
   header {
 
     section.callout {
@@ -43,7 +38,7 @@ body {
   //<< END: header
 
   // main content >>
-  main {
+  main.landing {
     background: $light-gray;
     margin-bottom: 200px;
     border-bottom: 1px solid shade(white, 70%);
@@ -231,7 +226,7 @@ body {
   //<< END: main
 
   // back-to-top button >>
-  .back-to-top {
+  a.back-to-top {
     background: none;
     margin: 0;
     position: fixed;
@@ -249,8 +244,6 @@ body {
   }
   //<< END: back-to-top button
 
-}
-//<< END: body
 
 // test-fill
   .test-fill {
