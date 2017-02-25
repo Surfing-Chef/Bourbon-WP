@@ -77,7 +77,7 @@ session_start();
   <!-- END HEADER -->
 
   <!-- MAIN -->
-  <main>
+  <main class="landing">
 
     <!-- Welcome -->
     <article id="welcome">
