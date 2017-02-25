@@ -8,8 +8,9 @@ div#primary{
     border-bottom: none;
 
     article{
-      @include span-columns(8 of 12);
-      @include padding(null 2em null null);
+      @include span-columns(12);
+      @include padding(null null 1em null);
+      @include margin(null null 1em null);
       @include border-width(null null 3px null);
       @include border-color(null null tint($medium-gray, 50%) null);
       @include border-style(null null solid null);
@@ -17,6 +18,18 @@ div#primary{
       @include media(min-width 320px max-width 900px) {
         @include span-columns(12);
         //border: none;
+      }
+
+      .entry-footer{
+        @include span-columns(8);
+
+        span{
+          @include span-columns(4 of 8);
+        }
+      }
+
+      .gallery-row {
+        margin: 0 auto;
       }
     }
     .sticky {
