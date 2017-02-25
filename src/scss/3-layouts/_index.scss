@@ -1,30 +1,26 @@
-main.main {
-  
-  div{
-    #inner-content {
-      min-height: 100vh;
-      background-color: $light-gray;
+
+div#primary{
+    background-color: $light-gray;
+
+  main{
+    @include outer-container;
+    @include padding(1em null null null);
+    border-bottom: none;
+
+    article{
+      @include span-columns(8 of 12);
+      @include padding(null 2em null null);
+      @include border-width(null null 3px null);
+      @include border-color(null null tint($medium-gray, 50%) null);
+      @include border-style(null null solid null);
+
+      @include media(min-width 320px max-width 900px) {
+        @include span-columns(12);
+        //border: none;
+      }
     }
-    main{
-      @include outer-container;
-      @include padding(1em null null null);
-      border-bottom: none;
-
-      article{
-        @include span-columns(12 of 12);
-        @include padding(null 2em null null);
-        @include border-width(null null 3px null);
-        @include border-color(null null tint($medium-gray, 50%) null);
-        @include border-style(null null solid null);
-
-        @include media(min-width 320px max-width 900px) {
-          @include span-columns(12);
-          //border: none;
-        }
-      }
-      .sticky {
-        // sticky post styles
-      }
+    .sticky {
+      // sticky post styles
     }
   }
 }
