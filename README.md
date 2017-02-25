@@ -7,8 +7,10 @@
 ###1.3 Plugins - Install and activate the following plugins:
 [Menu Image](https://en-ca.wordpress.org/plugins/menu-image/): allows for images as menu items.  Use this plugin to create a logo in the Main and Landing Menus  
 [Jetpack](https://jetpack.com/): a single plugin accessing over two dozen popular plugins.  
-- Input API.  
-- Navigate to Jetpack settings > Appearance.  Ensure the **Tiled Galleries** option is toggled on.
+  - Input API.  
+  - Navigate to Jetpack settings > Appearance.  Ensure the **Tiled Galleries** option is toggled on.
+[Simple Image Sizes](https://wordpress.org/plugins-wp/simple-image-sizes/): shows all available images sizes and allows setting of custom sizes and classes.  Easier implementation of feature image sizes.  
+Rather than a plugin to [toggle the admin bar](https://en-ca.wordpress.org/plugins/auto-hide-admin-bar/), this [Chrome extention](https://chrome.google.com/webstore/detail/wordpress-admin-bar-contr/joldejophkhmeajgjenfnfdpfjkalckn/related) works great.
 
 
 ##2. CREATE/DOWNLOAD **UNDERSCORES** THEME TEMPLATE  
@@ -89,137 +91,29 @@ register_nav_menus( array(
 
   - Ensure the _Display Site Title and Tagline_ box in unchecked in the customize options for the theme
 
-####footer.php    
+####footer.php / _footer.scss  
 - Transferred appropriate markup from previous version of Bourbon-WP.  
 - Ensured that the `<footer>` tag in both _footer.php_ and _landing.php_ were `<footer id='colophon>'`, and that _src/scss/3-layouts/\_footer.scss_ specified the same,  `footer#colophon {...`
 
-Opening the developer tools and looking at the javascript console should reveal no errors.  
 
-####index.php    
+####index.php / _index.scss_  
+- if using `get_template_part( 'template-parts/content', get_post_format() );` in the loop, edit the appropriate template PHP file in the _template-parts_ directory.  
 
-
-
-
-+ ran `npm install` from within _bourbon-wp_ theme root
-+ adjusted _// Sass Task - development css - nested/readable/mappedgulpfile.js_ as follows:
-```javascript
-// Sass Task - development css - nested/readable/mapped
-gulp.task('sass', function() {      // RENAMED TASK
-  gulp.src('src/scss/**/*.scss')
-  .pipe(plumber())
-  // .pipe(rename({suffix:'.dev'})) // DELETED
-  .pipe(sourcemaps.init())
-    .pipe(sass({sourceComments: 'map', sourceMap: 'sass', outputStyle: 'nested'}))
-    .pipe(autoprefixer('last 2 versions'))
-  .pipe(sourcemaps.write())
-  .pipe(gulp.dest('src/css/'))
-  .pipe(sass({outputStyle: 'compressed'}))  // ADDED
-  .pipe(gulp.dest('./'))  // ADDED
-  .pipe(browserSync.stream());
-});
-```   
-+ Deleted sassDep task  
-+ Adjusted _// Server Task - Asynchronous browser syncing..._ as follows:  
-```javascript
-gulp.task('serve', function(){
-  browserSync.init({
-    proxy   : "http://localhost/bourbon-wp"
-  });
-
-  gulp.watch('src/js/**/*.js', ['scripts']);
-  gulp.watch('src/scss/**/*.scss', ['sass']);  // CALLED TASK NAME CHANGE sassDev to sass
-  // gulp.watch('src/scss/**/*.scss', ['sassDep']); // DELETED
-  gulp.watch('**/*.html').on('change', browserSync.reload);
-  gulp.watch('**/*.php').on('change', browserSync.reload);
-});
-```  
-###WORDPRESS:
-+ Make bourbon-wp the current theme  
-
-####Navigation (Landing and Main)
-+ Emulate Bourbon-Chef-Site menu choices to structure menu  
-  + Inserted `register_nav_menus()` function in _functions.php_:
-  ```php
-  register_nav_menus( array(
-  	'landing_menu' => 'Landing Menu',
-
-  ) );  
+- [Feature Images(Post Thumbnails)](https://codex.wordpress.org/Post_Thumbnails)  
+  - ensure _functions.php_ contains `add_theme_support( 'post-thumbnails' ); ` to enable Feature Images
+  - insert feature images if they are set in a post - in the _template-parts/content.php_ file, add the following just after `<?php the_content( sprintf(... ?>`:  
+  ```PHP
+  <div class="post-thumbnail">
+    <?php
+      // check if the post or page has a Featured Image assigned to it.
+      if ( has_post_thumbnail() ) {
+          the_post_thumbnail('full');
+      }
+    ?>  
+  </div>
   ```
-  + Adjusted menu array in header.php:
-  ```php
-  <?php wp_nav_menu(array(
-    'theme_location'  => 'landing_menu',
-    'menu'            => '',
-    'container'       => '',
-    'container_class' => '',
-    'container_id'    => '',
-    'menu_class'      => 'centered-navigation-menu show',
-    'menu_id'         => 'js-centered-navigation-menu',
-    'echo'            => true,
-    'fallback_cb'     => 'wp_page_menu',
-    'before'          => '',
-    'after'           => '',
-    'link_before'     => '',
-    'link_after'      => '',
-    'items_wrap'      => '<ul id="%1$s" class="%2$s">%3$s</ul>',
-    'depth'           => 0,
-    'walker'          => ''
-  )); ?>
-  ```
-  + In **WordPress Admin Menu Panel**, created Landing Menu by adding **Custom Links**, containing the menu items from _landing.php_ (home, welcome, etc.)
-    + Added the class _nav-link_ to each item (click **Screen Options** tab at top of screen to show the **CSS Classes** option)  
-  + Selected _Landing Menu_ and _The Main Menu_ under **Menu Settings**  
-  + Installed [Menu Image](https://wordpress.org/plugins/menu-image/)  
-  + Uploaded a logo to WordPress and used it as image on _logo_ menu item  
-  + Created a duplicate menu called Blog Menu with the following differences:  
-    + Home and Logo links remain the same: `/bourbon-wp`  
-    + Culinary in Landing Menu: `#culinary`, in Bourbon Menu `/bourbon-wp`  
-    + No Welcome link  
-    + Coding in Landing Menu: `#coding`, in Bourbon Menu `/bourbon-wp`  
-    + Contacts in Landing Menu: `#contacts`, in Bourbon Menu `/bourbon-wp`  
-  + Added a dark, transparent background to navigation
-  + Simplified additions of **Bourbon Chef WP Custom Menus** outlined Below
-  + Changed _Bourbon Menu_ to _Blog Menu_
 
-####WORDPRESS TEMPLATE DIRECTORY  
-+ Copied _template parts_ from _twentyseventeen_ to use WordPress established template parts  
-+ Made template dfirectory path available in javascript/jQuery    
-  + Added the following script just after _TweenMax_ CDN loads in footer of _landing.php_ and just before `<?php wp_footer(); ?>` in _footer.php_:  
-  ```html5blank
-  <script>var templateDir = "<?php bloginfo('template_directory') ?>";</script>
-  ```
-  + This allows darksky.js and apifier.js to dynamically access the template directory path.
-
-
-####WORDPRESS PLUGINS
-+ Installed Jetpack plugin  
-+ Installed Jetpack plugin Simple Image Sizes   
-  + Shows all available images sizes and allows setting of custom sizes and classes.  Allows for implementation of feature image sizing in index.php post content:  
-  ```php
-  <?php
-    // check if the post or page has a Featured Image assigned to it.
-    if ( has_post_thumbnail() ) {
-        the_post_thumbnail('full');
-    }
-  ?>
-  ```  
-+ Rather than a plugin to [toggle the admin bar](https://en-ca.wordpress.org/plugins/auto-hide-admin-bar/), this [Chrome extention](https://chrome.google.com/webstore/detail/wordpress-admin-bar-contr/joldejophkhmeajgjenfnfdpfjkalckn/related) works fine.
-####WORDPRESS STYLE  
-+ created a WordPress module to define WordPress specific classes
-  + image alignment classes:
-  ```css
-  .wp-caption.alignright {float:right; margin:0 0 1em 1em}
-  .wp-caption.alignleft {float:left; margin:0 1em 1em 0}
-  .wp-caption.aligncenter {display: block; margin-left: auto; margin-right: auto}img.alignright {float:right; margin:0 0 1em 1em}
-  img.alignleft {float:left; margin:0 1em 1em 0}
-  img.aligncenter {display: block; margin-left: auto; margin-right: auto}
-  a img.alignright {float:right; margin:0 0 1em 1em}
-  a img.alignleft {float:left; margin:0 1em 1em 0}
-  a img.aligncenter {display: block; margin-left: auto; margin-right: auto}
-  ```
-- Note the **importance** of style, structure and appropriate implementation of _post formats_ in the _post-formats_ directory
-
-####TIPS TRICKS AND LINKS
+###4. TIPS TRICKS AND LINKS
 
 ####WordPress Custom Widgets
 + [Creating Custom Widgets](https://premium.wpmudev.org/blog/create-custom-wordpress-widget)   
