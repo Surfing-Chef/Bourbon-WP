@@ -1,17 +1,18 @@
 
 div#primary{
     background-color: $light-gray;
+    margin-bottom: 200px;
 
   main{
     @include outer-container;
     @include padding(1em null null null);
     border-bottom: none;
 
-    article{
+    article {
       @include span-columns(12);
-      @include padding(null null 1em null);
-      @include margin(null null 1em null);
-      @include border-width(null null 3px null);
+      @include padding(null null 1.75em null);
+      @include margin(null null 1.5em null);
+      @include border-width(null null 1px null);
       @include border-color(null null tint($medium-gray, 50%) null);
       @include border-style(null null solid null);
 
@@ -32,6 +33,13 @@ div#primary{
         margin: 0 auto;
       }
     }
+
+    article:last-child {
+      border-bottom: 0;
+      margin-bottom: 1em;
+      padding-bottom: 1em;
+    }
+
     .sticky {
       // sticky post styles
     }
