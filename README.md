@@ -1,9 +1,15 @@
 #Bourbon-WP (aka Bourbon-Chef-Site-2.2)
-> Bones Blank starter theme was a helpful start. This branch will explore starting with WordPress theme  
+> Bones Blank starter theme was a helpful start. This branch will explore starting with Underscores theme  
 
 ##1. INITIALIZE
-###a. Fresh WordPress install  
-###b. Import [Test Data](http://wptest.io/). ([GitHub link](https://github.com/poststatus))  
+###1.1 Fresh WordPress install.  Deactivate and Uninstall all plugins except WordPress Importer.
+###1.2 Import [Test Data](http://wptest.io/) - ([GitHub link](https://github.com/poststatus)) using WordPress Importer plugin
+###1.3 Plugins - Install and activate the following plugins:
+[Menu Image](https://en-ca.wordpress.org/plugins/menu-image/): allows for images as menu items.  Use this plugin to create a logo in the Main and Landing Menus  
+[Jetpack](https://jetpack.com/): a single plugin accessing over two dozen popular plugins.  
+- Input API.  
+- Navigate to Jetpack settings > Appearance.  Ensure the **Tiled Galleries** option is toggled on.
+
 
 ##2. CREATE/DOWNLOAD **UNDERSCORES** THEME TEMPLATE  
 Click the _advanced option_, fill out appropriately, check the _\_sassify!_ box, then _GENERATE_  
@@ -19,7 +25,7 @@ Already had created a branch based on a working Bourbon-Chef 2.1. It contained a
 - package.json   
 - README.md  
 
-I then copied the Underscores theme files into the Bourbon-WP theme folder
+I then copied the Underscores theme files and folders into the Bourbon-WP theme folder
 
 After a quick test in the browser and committing the changes, the fun begins...
 
@@ -28,7 +34,7 @@ After a quick test in the browser and committing the changes, the fun begins...
 Started by updating the _style.scss_ in _src_ directory to version 2.2 and stated this theme is based on both Bones and Underscores. By saving the changes to this file with gulp running, the _style.css_ is over written with one created from _src/scss_ not by _sass_ and the Underscores styles.
 
 ####_src/scss/3-layouts_
-Started compartmentalizing markup appropriately, ie body contains body markup, header contains footer etc.  
+Started compartmentalizing markup appropriately, ie body contains body markup, header contains header, etc.  
 
 ####header.php  
 Transferred appropriate markup from previous version of Bourbon-WP.
@@ -37,7 +43,7 @@ Transferred appropriate markup from previous version of Bourbon-WP.
 <body <?php body_class('type-system-geometric'); ?>>
 ```
 - copied navigation from `<!-- centered-navigation -->` to `<!-- PHP code here to ensure this header is displayed only on landing page -->` and placed it directly under the heading tag.  I also commented out the pre-existing _<nav>_ tags and content just before `</header><!-- #masthead -->`
-- this left a broken looking theme as the navigation was looking for content in the menu.  Created a menu containing the same nav links as Bourbon-WP 1.1.  Note to self **WHY DID YOU DELETE THE WORDPRESS MENUS YOU'D ALREADY CREATED?**  
+- this left a broken looking theme as the navigation was looking for content in the menu.  Created a menu containing the same nav links as Bourbon-WP 1.1.  Note to self **WHY DID YOU DELETE THE WORDPRESS MENUS ALREADY CREATED?**  
 - rebuilt navigation system referring to [notes](https://github.com/Surfing-Chef/Bourbon-WP/tree/2.1) from build 2.1
 - copied _landing.php_ from 2.1 for use in menu creation in case it didn't exist.  I used this template in creating a new page called _Landing_ (Bourbon-WP's homepage).  
 - change _functions.php_ `register_nav_menus()` to:
@@ -52,23 +58,25 @@ register_nav_menus( array(
 ) );
 ```  
 
-- installed [menu image](https://en-ca.wordpress.org/plugins/menu-image/) plugin to allow for images as a menu selection.  Used this plugin to create a logo in the menus.  
-
 - Create a WordPress menu called *Main Menu* in *admin > Appearance > Menus* under the Edit Menus tab:  
-  - Main Menu:  (Primary menu location)
-    1. Landing > page: Landing, class: nav-link main logo, image: logo, size: thumbnail, title position: hide  
-    2. Blog > page: Blog, class: nav-link  
-  - Click the _Primary_ box at bottom and **save**.  
+  - Main Menu:  (Primary menu location)  
+    1. Page: Landing, Navigation Label: Logo, CSS Classes: nav-link main logo, image: logo, size: thumbnail, title position: hide  
+    2. Custom Link > Navigation Label: Culinaria, URL: /bourbon-wp, CSS Classes: nav-link   
+    3. Custom Link > Navigation Label: Coding, URL: /bourbon-wp, CSS Classes: nav-link  
+    4. Page: Blog > Navigation Label: Blog, CSS Classes: nav-link   
+    5. Custom Link > Navigation Label: Contacts, URL: /bourbon-wp, CSS Classes: nav-link  
+
+  - Click the _Primary_ box at bottom and **save**  
 
 - Create another menu called *Landing Menu*:
   - Landing Menu:  (Landing menu location)
-    1. Home > page: Landing, class: nav-link  
-    2. Welcome > page: Blog, class: nav-link  
-    3. Culinaria > page: Blog, class: nav-link  
-    4. Logo > page: Landing, class: nav-link logo, image: logo, size: thumbnail, title position: hide    
-    5. Coding > page: Blog, class: nav-link  
-    6. Blog > page: Blog, class: nav-link  
-    7. Contacts > page: Blog, class: nav-link  
+    1. Page: Landing, Navigation Label: Home, CSS Classes: nav-link  
+    2. Custom Link > Navigation Label: Welcome, URL: /bourbon-wp, CSS Classes: nav-link  
+    3. Custom Link > Navigation Label: Culinaria, URL: /bourbon-wp, CSS Classes: nav-link  
+    4. Page: Landing, Navigation Label: Logo, CSS Classes: nav-link logo, image: logo, size: thumbnail, title position: hide    
+    5. Custom Link > Navigation Label: Coding, CSS Classes: nav-link  
+    6. Page: Landing, Navigation Label: Blog, CSS Classes: nav-link  
+    7. Custom Link > Navigation Label: Contacts, URL: /bourbon-wp, CSS Classes: nav-link   
   - Click the _Landing Menu_ box and **save**.  
 
   - To properly hide the screen reader text, place the following styles after the header styles in _header.scss_:  
@@ -85,54 +93,12 @@ register_nav_menus( array(
 - Transferred appropriate markup from previous version of Bourbon-WP.  
 - Ensured that the `<footer>` tag in both _footer.php_ and _landing.php_ were `<footer id='colophon>'`, and that _src/scss/3-layouts/\_footer.scss_ specified the same,  `footer#colophon {...`
 
-
-####a. Use Bones as starting point:  
-+ **IMPORTANT NOTE**: Attempts to load the theme into WordPress before completing these steps will throw errors.  
-+ renamed bones-master to bourbon-wp
-+ ammended _.gitignore_ with Bourbon-Chef-Site copy
-+ copied _library_ as _src_ and changed _library_ to _library.bones_ for use as reference  
-+ deleted all the copied files and folders within the new _src_ folder, **Except bones.php and custom-post-type.php**  
-+ copied all files and folders in _app_ from Bourbon-Chef-Site into _bourbon-wp/src_
-+ changed _src/sass_ to _src/scss_
-- renamed _index.php_ copied from _app_ from Bourbon-Chef-Site to _landing_ and moved it to the root of bourbon-wp
-  - will use it as home page when site is appropriately converted into the WordPress structure
-+ copied _package.json_ and _gulpfile.js_ from Bourbon-Chef-Site
-+ ensured the following files have paths appropriately adjusted (ie _library_ changed to _src_, _app_ changed to _src_, _sass_ changed to _scss_):  
-  + gulpfile.js  
-  + bones.js
-  + all files in _src/js/_  
-  + all files in _src/scss/_  
-+ Changed `proxy   : "http://localhost/Bourbon/src"` in _gulpfile.js_ to `proxy   : "http://localhost/bourbon-wp"`  
-
-
-A bare, yet functioning theme is available in a browser at this point.
-
-+ adjusted bones.php.   
-From:
-```php
-// modernizr (without media query polyfill)
-wp_register_script( 'bones-modernizr', '', array(), '2.5.3', false );
-```
-
-To:  
-```php
-// modernizr (without media query polyfill)
-wp_register_script( 'bones-modernizr', 'https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js', array(), '2.5.3', false );
-```
-
-and added:   
-```php
-// adding jquery
-wp_deregister_script('jquery');
-wp_register_script( 'jquery', 'https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js', false);
-```  
-just before:    
-```php
-// adding scripts file in the footer
-wp_register_script( 'bones-js', get_stylesheet_directory_uri() . '/src/js/script.js', array( 'jquery' ), '', true );
-```  
-
 Opening the developer tools and looking at the javascript console should reveal no errors.  
+
+####index.php    
+
+
+
 
 + ran `npm install` from within _bourbon-wp_ theme root
 + adjusted _// Sass Task - development css - nested/readable/mappedgulpfile.js_ as follows:
@@ -267,6 +233,6 @@ gulp.task('serve', function(){
 
 ####BOURBON CHEF TO DO's  
 - Ensure laptop project WordPress install and DB are caught up to desktop project install and DB.
-- PROJECT 1: Experiment subbing out Bones page templates with WordPress (twentyseventeen) templates  
-- [PROJECT 2](https://www.smashingmagazine.com/2015/04/building-custom-wordpress-archive-page/): New Archive Page   
+
+- [PROJECT 1](https://www.smashingmagazine.com/2015/04/building-custom-wordpress-archive-page/): New Archive Page   
 - Culinaria feeds Food52, Epicurious, and Lucky Peach are not very dynamic.  Change apifier setups.  
