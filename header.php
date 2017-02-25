@@ -80,4 +80,5 @@
 		</nav><!-- #site-navigation -->
 	</header><!-- #masthead -->
 
+	<!-- CONTENT  -->
 	<div id="content" class="site-content">
