@@ -1,25 +1,26 @@
+#content {
+  background-color: $light-gray;
+  margin-bottom: 200px;
+  border-bottom: 1px solid shade(white, 70%);
 
-div#primary{
-    background-color: $light-gray;
-    margin-bottom: 200px;
+}
 
-  main{
-    @include outer-container;
-    @include padding(1em null null null);
+#primary{
+  @include outer-container;
+
+  main {
+    @include padding(1em 1em 1em 1em);
     border-bottom: none;
 
     article {
       @include span-columns(12);
-      @include padding(null null 1.75em null);
+      @include padding(null null 1.5em null);
       @include margin(null null 1.5em null);
       @include border-width(null null 1px null);
       @include border-color(null null tint($medium-gray, 50%) null);
       @include border-style(null null solid null);
 
-      @include media(min-width 320px max-width 900px) {
-        @include span-columns(12);
-        //border: none;
-      }
+
 
       .entry-footer{
         @include span-columns(8);
