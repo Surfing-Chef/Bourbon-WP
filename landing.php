@@ -50,7 +50,7 @@ session_start();
     <!-- centered-navigation -->
 			<section class="centered-navigation" role="banner">
 				<div class="centered-navigation-wrapper">
-			    <a href="javascript:void(0)" class="mobile-logo">
+			    <a href="/bourbon-wp" class="mobile-logo">
 			      <img src="<?php echo get_template_directory_uri(); ?>/src/images/mountain.svg" alt="Logo image">
 			    </a>
 			    <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
