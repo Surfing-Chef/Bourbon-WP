@@ -112,6 +112,17 @@ register_nav_menus( array(
     ?>  
   </div>
   ```
+####CSS
+- Responsive images.  A simple fix that my brain just couldn't figure out.  Thanks much [stack overflow](http://stackoverflow.com/questions/12991351/css-force-image-resize-and-keep-aspect-ratio):
+```css
+img {
+  display: block;
+  max-width:230px;
+  max-height:95px;
+  width: auto;
+  height: auto;
+}
+```
 
 ###4. TIPS TRICKS AND LINKS
 
