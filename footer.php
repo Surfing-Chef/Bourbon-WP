@@ -37,6 +37,8 @@
 
 </div><!-- #page -->
 <?php wp_footer(); ?>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+<script>var templateDir = "<?php bloginfo('template_directory') ?>";</script>
 </body>
 </html>
