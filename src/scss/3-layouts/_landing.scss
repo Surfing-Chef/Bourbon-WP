@@ -45,15 +45,17 @@
     @include omega;
 
     article {
-      @include padding(1em 1em 1em 1em);
+
+      div.article-content:first-child{
+        @include padding(1em null null null);
+      }
 
       div.article-content {
         @include outer-container;
-        @include padding(1em null null null);
 
         section {
           @include span-columns(8 of 12);
-          @include padding(null 2em null null null);
+          @include padding(null 2em null null);
           @include border-width(null 1px null null);
           @include border-color(null tint($medium-gray, 50%) null null);
           @include border-style(null solid null null);
@@ -80,7 +82,14 @@
         }
 
       }// div.article-content
+
     }// article
+
+    article:last-child {
+      @include padding(null null 1em null);
+    }
+
+
 
     // welcome
     #welcome {
