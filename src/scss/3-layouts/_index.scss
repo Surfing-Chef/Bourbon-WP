@@ -8,9 +8,11 @@
 #primary{
   @include outer-container;
 
+
   main {
     @include padding(1em 1em 1em 1em);
     border-bottom: none;
+
 
     article {
       @include span-columns(12);
@@ -19,7 +21,7 @@
       @include border-width(null null 1px null);
       @include border-color(null null tint($medium-gray, 50%) null);
       @include border-style(null null solid null);
-
+      overflow-x: auto;
 
 
       .entry-footer{
