@@ -25,7 +25,7 @@ gulp.task('scripts', function(){
 });
 
 // Sass Task - development css - nested/readable/mapped
-gulp.task('sass', function() {
+gulp.task('sassDev', function() {
   gulp.src('src/scss/**/*.scss')
   .pipe(plumber())
   .pipe(sourcemaps.init())
@@ -33,10 +33,21 @@ gulp.task('sass', function() {
     .pipe(autoprefixer('last 2 versions'))
   .pipe(sourcemaps.write())
   .pipe(gulp.dest('src/css/'))
-  .pipe(sass({outputStyle: 'compressed'}))
-  .pipe(gulp.dest('./'))
   .pipe(browserSync.stream());
 });
+
+// Sass Task - deployment css - nested/readable/mapped
+gulp.task('sassDep', function() {
+  gulp.src('src/scss/**/*.scss')
+  .pipe(plumber())
+  .pipe(sourcemaps.init())
+    .pipe(sass({sourceComments: 'map', sourceMap: 'sass', outputStyle: 'compressed'}))
+    .pipe(autoprefixer('last 2 versions'))
+  .pipe(sourcemaps.write())
+  .pipe(gulp.dest('./'))
+  //.pipe(browserSync.stream());
+});
+
 
 // Server Task - Asynchronous browser syncing of assets across multiple devices
 gulp.task('serve', function(){
@@ -45,7 +56,8 @@ gulp.task('serve', function(){
   });
 
   gulp.watch('src/js/**/*.js', ['scripts']);
-  gulp.watch('src/scss/**/*.scss', ['sass']);
+  gulp.watch('src/scss/**/*.scss', ['sassDev']);
+  gulp.watch('src/scss/**/*.scss', ['sassDep']);
   gulp.watch('**/*.html').on('change', browserSync.reload);
   gulp.watch('**/*.php').on('change', browserSync.reload);
 });
