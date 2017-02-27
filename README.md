@@ -145,6 +145,7 @@ and the parent container should have `overflow: auto;` or `overflow-x: auto;`
 ####BOURBON CHEF TO DO's  
 - Ensure laptop project WordPress install and DB are caught up to desktop project install and DB.
 - How to add custom scripts to WordPress footer.
+- Implement Custom parts in Landing Page to edit from WordPress
 
 - [PROJECT 1](https://www.smashingmagazine.com/2015/04/building-custom-wordpress-archive-page/): New Archive Page   
 - Culinaria feeds Food52, Epicurious, and Lucky Peach are not very dynamic.  Change apifier setups.  
