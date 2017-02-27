@@ -123,8 +123,14 @@ img {
   height: auto;
 }
 ```
+and the parent container should have `overflow: auto;` or `overflow-x: auto;`  
 
-###4. TIPS TRICKS AND LINKS
+- Also note that updating/replacing images with themselves may solve alignment issues when trouble shooting
+
+###4. DEPLOYMENT TO SURFING-CHEF.COM
+
+
+###5. TIPS TRICKS AND LINKS
 
 ####WordPress Custom Widgets
 + [Creating Custom Widgets](https://premium.wpmudev.org/blog/create-custom-wordpress-widget)   
