@@ -74,7 +74,7 @@ gulp.task('build:cleanfolder', function(){
   ]);
 });
 
-// create build directory for all files
+// create build directory for all theme deployment files
 gulp.task('build:copy', ['build:cleanfolder'], function(){
   return gulp.src(['./src/**/*/', '!./src/images/**/*' ])
   .pipe(gulp.dest('./build/'));
