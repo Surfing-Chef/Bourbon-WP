@@ -92,3 +92,4 @@ apifier.json
 # ATOM.IO #
 ###########
 .ftpconfig
+.ftp-settings.json
