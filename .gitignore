@@ -88,3 +88,7 @@ Gemfile.lock
 ########
 darksky.json
 apifier.json
+
+# ATOM.IO #
+###########
+.ftpconfig
