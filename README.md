@@ -128,7 +128,9 @@ and the parent container should have `overflow: auto;` or `overflow-x: auto;`
 - Also note that updating/replacing images with themselves may solve alignment issues when trouble shooting
 
 ###4. DEPLOYMENT TO SURFING-CHEF.COM
-
+- Set up filezilla as backup plan for file updates
+- Ensuring header is same for landing and index - checking wp_head()
+- Checking gulpfile.js for build tasks
 
 ###5. TIPS TRICKS AND LINKS
 
