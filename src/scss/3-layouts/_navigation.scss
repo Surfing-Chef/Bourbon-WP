@@ -152,14 +152,10 @@
   }
 
   .nav-link a img {
-    margin-bottom: -$centered-navigation-logo-height / 1.5;
+    margin-bottom: 0;
     max-height: $centered-navigation-logo-height * 1.5;
     max-width: $centered-navigation-logo-height * 1.5;
-    opacity: 0.6; 
-  }
-
-  .nav-link.main a img {
-    margin-bottom: 0;
+    opacity: 0.6;
   }
 
   .nav-link.logo>a>span {
