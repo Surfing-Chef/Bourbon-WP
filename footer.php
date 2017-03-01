@@ -36,9 +36,29 @@
  <!-- END FOOTER  -->
 
 </div><!-- #page -->
+
+<!-- BACK TO TOP BUTTON  -->
+<a href="#" class="back-to-top" style="display: inline;">
+	<i class="fa fa-long-arrow-up" aria-hidden="true"></i>
+</a>
+<!-- END BACK TO TOP BUTTON  -->
+
+	<!-- +++++ NO SCRIPTS BEFORE THIS COMMENT +++++ -->
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+	<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
+	<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
+	<script>var templateDir = "<?php bloginfo('template_directory') ?>";</script>
+
+	<!-- +++++ All SCRIPTS AFTER THIS COMMENT +++++ -->
+
+	<!-- IMPORTS -->
+	<script src="<?php echo get_template_directory_uri(); ?>/src/js/script.min.js"></script>
+
+	<!-- CUSTOM -->
+
+	<!-- END SCRIPT IMPORTS -->
+
 <?php wp_footer(); ?>
-<script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-<script src="http://cdnjs.cloudflare.com/ajax/libs/gsap/1.19.0/TweenMax.min.js"></script>
-<script>var templateDir = "<?php bloginfo('template_directory') ?>";</script>
+
 </body>
 </html>

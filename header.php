@@ -12,9 +12,10 @@
 ?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
-<meta charset="<?php bloginfo( 'charset' ); ?>">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="profile" href="http://gmpg.org/xfn/11">
+	<meta charset="<?php bloginfo( 'charset' ); ?>">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="profile" href="http://gmpg.org/xfn/11">
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <?php wp_head(); ?>
 
@@ -23,9 +24,15 @@
 <link href='//fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
 <?php // end fonts ?>
 
-</head>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
+
+</head>
 <body <?php body_class('type-system-geometric'); ?>>
+	<!--[if lt IE 8]>
+    <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+  <![endif]-->
+
 <div id="page" class="site">
 	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bourbon-wp' ); ?></a>
 
@@ -56,7 +63,6 @@
 			</section><!-- End centered-navigation -->
 
 			<!-- Parallax background if on landing page -->
-			<!-- PHP code here to ensure this header is displayed only on landing page -->
 
 		<div class="site-branding">
 			<?php

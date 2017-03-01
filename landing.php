@@ -10,25 +10,29 @@ session_start();
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
   <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="profile" href="http://gmpg.org/xfn/11">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-  <?php // drop Google Fonts ?>
-  <link href='//fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
-  <link href='//fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
-  <?php // end fonts ?>
+<?php wp_head(); ?>
+
+<?php // drop Google Fonts ?>
+<link href='//fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
+<?php // end fonts ?>
 
   <!-- <link rel="stylesheet" href="css/font-awesome.css" /> -->
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/src/css/style.css">
 
-  <title><?php wp_title(''); ?></title>
-
 </head>
 <body class="home type-system-geometric">
   <!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
+
+  <div id="page" class="site">
+  	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bourbon-wp' ); ?></a>
 
   <!-- HEADER -->
   <header  id="js-parallax-window" class="parallax-window">
@@ -70,10 +74,30 @@ session_start();
 			</section><!-- End centered-navigation -->
 
     <div id="js-parallax-background" class="parallax-background"></div>
+
+    <div class="site-branding">
+			<?php
+			if ( is_front_page() && is_home() ) : ?>
+				<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
+			<?php else : ?>
+				<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></p>
+			<?php
+			endif;
+
+			$description = get_bloginfo( 'description', 'display' );
+			if ( $description || is_customize_preview() ) : ?>
+				<p class="site-description"><?php echo $description; /* WPCS: xss ok. */ ?></p>
+			<?php
+			endif; ?>
+		</div><!-- .site-branding -->
+
   </header>
   <!-- END HEADER -->
 
-  <!-- MAIN -->
+  <!-- CONTENT  -->
+  <div id="content" class="site-content">
+    <div id="primary" class="content-area">
+
   <main class="landing">
 
     <!-- Welcome -->
@@ -296,6 +320,10 @@ session_start();
 
   </main>
   <!-- END MAIN  -->
+</div><!-- #primary -->
+
+</div><!-- #content -->
+<!-- END CONTENT  -->
 
   <!-- FOOTER -->
   <footer id="colophon">
@@ -316,6 +344,8 @@ session_start();
 
   </footer>
   <!-- END FOOTER  -->
+
+  </div><!-- #page -->
 
   <!-- BACK TO TOP BUTTON  -->
   <a href="#" class="back-to-top" style="display: inline;">
