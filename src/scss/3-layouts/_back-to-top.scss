@@ -1,0 +1,18 @@
+// back-to-top button >>
+a.back-to-top {
+  background: none;
+  margin: 0;
+  position: fixed;
+
+  bottom: 8vh;
+  right: 2%;
+  z-index: 100;
+  display: none;
+  text-decoration: none;
+  color: transparentize($medium-gray, 0.3);
+}
+
+.back-to-top i {
+  font-size: 50px;
+}
+//<< END: back-to-top button
