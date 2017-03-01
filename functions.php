@@ -145,3 +145,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+* Remove the Push Down from the Admin Bar
+*/
+add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
