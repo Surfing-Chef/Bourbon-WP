@@ -5,6 +5,8 @@ $(document).ready(function() {
   var offset = 100;
   var duration = 300;
 
+  $('.back-to-top').css( "display", "none" );
+  
   jQuery(window).scroll(function() {
     if (jQuery(this).scrollTop() > offset) {
       jQuery('.back-to-top').fadeIn(duration);
