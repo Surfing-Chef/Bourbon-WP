@@ -6,7 +6,7 @@
 var srcBase = "http://localhost:3000/bourbon-wp/wp-content/themes/bourbon-wp/src/";
 // Load api
 $.ajax({
-   url: templateDir + '/src/darksky.json',
+   url: templateDir + '/darksky.json',
    async: false,
    dataType: 'json',
    success: function (data) {
