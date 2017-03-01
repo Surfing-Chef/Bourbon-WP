@@ -32,7 +32,13 @@ var dsForecastUrl = "https://darksky.net/forecast/"+loc+"/ca12/en";
 // Create the function the JSON data will be passed to.
 function weatherData(json) {
   // test container
-  target = document.getElementById('weather');
+  if (document.getElementById('weather')) {
+    target = document.getElementById('weather');
+  } //element exists in the document.
+  else {
+    return;
+  }
+
   // current date (timestamp)
   //unixDate = unx;
 
