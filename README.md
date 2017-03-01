@@ -130,6 +130,11 @@ and the parent container should have `overflow: auto;` or `overflow-x: auto;`
 ###4. DEPLOYMENT TO SURFING-CHEF.COM
 - Set up filezilla as backup plan for file updates
 - Ensuring header is same for landing and index - checking wp_head()
+  - [Remove the 32px Push Down from the Admin Bar](https://css-tricks.com/snippets/wordpress/remove-the-28px-push-down-from-the-admin-bar/#comment-1588042) solved by adding the following to functions.php:  
+  ```php
+add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
+  ```
+
 - Checking gulpfile.js for build tasks
 
 ###5. TIPS TRICKS AND LINKS
