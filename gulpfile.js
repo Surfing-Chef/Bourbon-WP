@@ -44,7 +44,7 @@ gulp.task('sassDep', function() {
     .pipe(sass({sourceComments: 'map', sourceMap: 'sass', outputStyle: 'compressed'}))
     .pipe(autoprefixer('last 2 versions'))
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest('./'))
+  .pipe(gulp.dest('./'));
   //.pipe(browserSync.stream());
 });
 
@@ -76,7 +76,11 @@ gulp.task('build:cleanfolder', function(){
 
 // create build directory for all theme deployment files
 gulp.task('build:copy', ['build:cleanfolder'], function(){
-  return gulp.src(['./src/**/*/', '!./src/images/**/*' ])
+  return gulp.src([
+                  './**/*/',
+                  '!./src/images/**/*',
+                  '!./build'
+                ])
   .pipe(gulp.dest('./build/'));
 });
 
@@ -90,10 +94,15 @@ gulp.task('build:imgMin', function(){
 // remove unwanted build files and directories
 gulp.task('build:remove', ['build:copy'], function(done){
   del([  // list files and directories to delete
+    './build/gulpfile.js',
+    './build/.git*',
+    './build/node_modules',
+    './build/README.md',
     './build/scss/',
+    './build/css/',
     './build/css/*dev*'
   ], done);
 });
 
 // main build task
-gulp.task('build', ['build:copy', 'build:imgMin', 'build:remove']);
+gulp.task('build', ['build:cleanfolder', 'build:copy', 'build:imgMin', 'build:remove']);
