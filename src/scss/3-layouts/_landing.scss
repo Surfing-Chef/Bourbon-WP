@@ -45,6 +45,7 @@
     @include omega();
 
     article {
+      border-bottom: 0;
 
       div.article-content:first-child{
         @include padding(1em null null null);
