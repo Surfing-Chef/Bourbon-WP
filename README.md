@@ -181,6 +181,8 @@ add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
  </section>
  ```   
   - Tested using [Test Mail Server Tool](http://www.toolheap.com/test-mail-server-tool/)  
+  - Toggled off Formidable styling:  
+    - While in the Contact Form I created, under the Settings tab: Styling & Buttons > Style Template: select _Do not use Formidable styling_  
   - Further refine both the styles in scss files and the many options within the plugin itself
 
 - Checking gulpfile.js for build tasks  
