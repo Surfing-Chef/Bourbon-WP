@@ -159,21 +159,6 @@
       }
     }
 
-    // contact form
-    #contacts{
-
-      div {
-      padding-bottom: 1em;
-
-        section {
-          border: none;
-          @include span-columns(12);
-          padding-right: 0;
-
-        } // section
-      } // div
-    } // #contacts
-
   } // main
   //<< END: main
 
