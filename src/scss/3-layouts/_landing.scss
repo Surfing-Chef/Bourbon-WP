@@ -42,7 +42,7 @@
     background: $light-gray;
     margin-bottom: 200px;
     border-bottom: 1px solid shade(white, 70%);
-    @include omega;
+    @include omega();
 
     article {
 
@@ -168,67 +168,10 @@
         section {
           border: none;
           @include span-columns(12);
+          padding-right: 0;
 
-          #errors, #loading {
-            display: none;
-          }
-          #errors li:before {
-              content: ' - ';
-          }
-          #errors #info:before {
-              content: '';
-          }
-
-          input, textarea{
-            background: {
-              color: #F7F7F7;
-            }
-          }
-
-          #contactInfo  {
-            @include span-columns(12);
-            padding-bottom: 0;
-
-            div {
-              @include span-columns(6 of 12);
-              input {
-                width: 100%;
-              }
-              padding-bottom: 0;
-            }
-          } // #contactInfo
-
-          textarea {
-            height: 100px;
-          }
-
-          #success{
-            display: none;
-          }
-
-          #submit-button {
-            color: $base-font-color;
-            background-color: $blue;
-          }
-
-          #submit-button:hover {
-            color: $light-gray;
-          }
         } // section
-
-        aside {
-          border: none;
-          div{
-            padding-top: 5%;
-            img {
-              display: block;
-              width: 35%;
-              margin: 0 auto;
-            }
-          }
-        } // aside
-
-      } // div.article-content
+      } // div
     } // #contacts
 
   } // main
