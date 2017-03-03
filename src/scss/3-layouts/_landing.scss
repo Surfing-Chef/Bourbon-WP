@@ -61,8 +61,9 @@
           @include border-color(null tint($medium-gray, 50%) null null);
           @include border-style(null solid null null);
 
-          @include media(min-width 320px max-width 900px) {
+          @include media(min-width 320px max-width 720px) {
             @include span-columns(12);
+            padding-right: 0;
             border: none;
           }
         }
@@ -71,7 +72,7 @@
           @include span-columns(4 of 12);
           @include omega;
 
-          @include media(min-width 320px max-width 900px) {
+          @include media(min-width 320px max-width 720px) {
             @include span-columns(12);
           }
 
