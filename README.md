@@ -139,7 +139,7 @@ add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
   ```
   - Match/copy header and footer div tags with ids and classes to approproate areas on landing to match a wordpress post/page.  This makes it easier to implement WordPress actions, hooks, plugins, etc.  
 
-- Implemented WordPress plug-in based contact form - with custom widget area
+- ~~Implemented WordPress plug-in based contact form - with custom widget area and [PlanSo Forms](https://en-ca.wordpress.org/plugins/planso-forms/)~~
   - Created dynamic contact area in _landing.php_  
   - Used [PlanSo Forms](https://en-ca.wordpress.org/plugins/planso-forms/) plug in to create form and shortcode to place into the new widget.  
   - Created widget area for contact form on landing page to replace form markup:  
