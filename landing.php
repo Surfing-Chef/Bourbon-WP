@@ -269,7 +269,7 @@ session_start();
 
         <h1>Contact Me</h1>
         <section id="contact-form" class="clearfix">
-          <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 6, 'title' => false, 'description' => true ) ); ?>
+          <?php echo FrmFormsController::get_form_shortcode( array( 'id' => 5, 'title' => false, 'description' => true ) ); ?>
         </section>
 
       </div>
