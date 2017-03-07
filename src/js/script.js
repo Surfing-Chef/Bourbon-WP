@@ -6,7 +6,7 @@ $(document).ready(function() {
   var duration = 300;
 
   $('.back-to-top').css( "display", "none" );
-  
+
   jQuery(window).scroll(function() {
     if (jQuery(this).scrollTop() > offset) {
       jQuery('.back-to-top').fadeIn(duration);
@@ -136,7 +136,7 @@ $(document).ready(function() {
 
     quoteContainer.html('');
     quoteContainer.append('<p class="quote">'+newQuoteText+'</p>'+'<p class="author">'+newQuoteGenius+'</p>');
-  }//end for loop
+  } //end for loop
 
 }); // END DOCUMENT READY
 
