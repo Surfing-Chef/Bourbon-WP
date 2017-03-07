@@ -186,9 +186,9 @@ add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
   - Further refined both the styles in *SCSS* files and the many options within the plugin itself  
   - Tested using [Test Mail Server Tool](http://www.toolheap.com/test-mail-server-tool/)  
 
-- Checking gulpfile.js for build tasks  
-
 ###5. TIPS TRICKS AND LINKS
+####GULP  
++ [Ensuring tasks complete](https://www.npmjs.com/package/run-sequence): The notes in the example code, I did not use the *run-sequence* package  
 
 ####WordPress Custom Widgets
 + [Easy Custom Widget Areas](https://buckleupstudios.com/add-a-new-widget-area-to-a-wordpress-theme/)   
@@ -204,7 +204,8 @@ add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
 ####BOURBON CHEF TO DO's  
 - Ensure laptop project WordPress install and DB are caught up to desktop project install and DB.
 - How to add custom scripts to WordPress footer.
-- Implement Custom parts in Landing Page to edit from WordPress
+- Implement Custom parts in Landing Page to edit from WordPress  
+- Ensure posts look is congruent with theme before going live.
 
 - [PROJECT 1](https://www.smashingmagazine.com/2015/04/building-custom-wordpress-archive-page/): New Archive Page   
 - Culinaria feeds Food52, Epicurious, and Lucky Peach are not very dynamic.  Change apifier setups.  
