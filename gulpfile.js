@@ -69,7 +69,7 @@ gulp.task('default', ['serve']);
 // DEPLOYMENT TASKS
 //////// Tasks used to build deployment package ////////
 gulp.task('build:cleanfolder', function(){
-  del([
+  return del([
     './build/**/*'
   ]);
 });
@@ -85,23 +85,23 @@ gulp.task('build:copy', ['build:cleanfolder'], function(){
 });
 
 // minimize images in deployment directory
-gulp.task('build:imgMin', function(){
-    gulp.src('./src/images/**/*')
+gulp.task('build:imgMin', ['build:copy'], function(){
+    return gulp.src('./src/images/**/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('./build/images'));
+        .pipe(gulp.dest('./build/src/images'));
 });
 
 // remove unwanted build files and directories
-gulp.task('build:remove', ['build:copy'], function(done){
-  del([  // list files and directories to delete
+gulp.task('build:remove', ['build:imgMin'], function(done){
+  return del([  // list files and directories to delete
     './build/gulpfile.js',
     './build/.git*',
     './build/node_modules',
     './build/README.md',
     './build/scss/',
     './build/css/',
-    './build/css/*dev*'
-  ], done);
+    './build/css/*dev*',
+  ], done); 
 });
 
 // main build task
