@@ -207,7 +207,7 @@ add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
 - Implement Custom parts in Landing Page to edit from WordPress  
 - Ensure posts look is congruent with theme before going live.  
 
-- [PHP COMPOSER](https://github.com/kbariotis/feedly-api)
+- [PHP COMPOSER AND THEN THIS LINK](https://github.com/kbariotis/feedly-api)
 
 - [PROJECT 1](https://www.smashingmagazine.com/2015/04/building-custom-wordpress-archive-page/): New Archive Page   
 - Culinaria feeds Food52, Epicurious, and Lucky Peach are not very dynamic.  Change apifier setups.  
