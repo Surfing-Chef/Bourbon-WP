@@ -146,37 +146,37 @@ session_start();
           <div>
             <ul class="accordion-tabs">
               <li class="tab-header-and-content">
-                <a href="javascript:void(0)" class="is-active tab-link">Food 52</a>
-                <div class="tab-content" id="food52">
-                  <img src="<?php echo get_template_directory_uri(); ?>/src/images/food52.png" alt="Food52 Logo">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.</p>
-                </div>
-              </li>
-              <li class="tab-header-and-content">
-                <a href="javascript:void(0)" class="tab-link">Epicurious</a>
-                <div class="tab-content"  id="epicurious">
-                  <img src="<?php echo get_template_directory_uri(); ?>/src/images/epicurious.png" alt="Epicurious Logo">
-                  <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque. Sed imperdiet, nibh ut vestibulum tempor, nibh dui volutpat lacus, vel gravida magna justo sit amet quam. Quisque tincidunt ligula at nisl imperdiet sagittis. Morbi rutrum tempor arcu, non ultrices sem semper a. Aliquam quis sem mi.</p>
-                </div>
-              </li>
-              <li class="tab-header-and-content">
-                <a href="javascript:void(0)" class="tab-link">Lucky Peach</a>
-                <div class="tab-content"  id="luckypeach">
-                  <img src="<?php echo get_template_directory_uri(); ?>/src/images/luckypeach.png" alt="Lucky Peach Logo">
-                  <p>Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.</p>
-                </div>
-              </li>
-              <li class="tab-header-and-content">
-                <a href="javascript:void(0)" class="tab-link">Saveur</a>
-                <div class="tab-content"  id="saveur">
+                <a href="javascript:void(0)" class="is-active tab-link">Saveur</a>
+                <div class="tab-content" id="saveur">
                   <img src="<?php echo get_template_directory_uri(); ?>/src/images/saveur.png" alt="Saveur Logo">
-                  <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna.</p>
+                  <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras tincidunt pellentesque lorem, id suscipit dolor rutrum id. Morbi facilisis porta volutpat. Fusce adipiscing, mauris quis congue tincidunt, sapien purus suscipit odio, quis dictum odio tortor in sem. Ut sit amet libero nec orci mattis fringilla. Praesent eu ipsum in sapien tincidunt molestie sed ut magna. Nam accumsan dui at orci rhoncus pharetra tincidunt elit ullamcorper. Sed ac mauris ipsum. Nullam imperdiet sapien id purus pretium id aliquam mi ullamcorper.</p>
                 </div>
               </li>
               <li class="tab-header-and-content">
                 <a href="javascript:void(0)" class="tab-link">Food &amp; Wine</a>
                 <div class="tab-content"  id="foodandwine">
                   <img src="<?php echo get_template_directory_uri(); ?>/src/images/foodandwine.png" alt="Food and Wine Logo">
+                  <p>Ut laoreet augue et neque pretium non sagittis nibh pulvinar. Etiam ornare tincidunt orci quis ultrices. Pellentesque ac sapien ac purus gravida ullamcorper. Duis rhoncus sodales lacus, vitae adipiscing tellus pharetra sed. Praesent bibendum lacus quis metus condimentum ac accumsan orci vulputate. Aenean fringilla massa vitae metus facilisis congue. Morbi placerat eros ac sapien semper pulvinar. Vestibulum facilisis, ligula a molestie venenatis, metus justo ullamcorper ipsum, congue aliquet dolor tortor eu neque. Sed imperdiet, nibh ut vestibulum tempor, nibh dui volutpat lacus, vel gravida magna justo sit amet quam. Quisque tincidunt ligula at nisl imperdiet sagittis. Morbi rutrum tempor arcu, non ultrices sem semper a. Aliquam quis sem mi.</p>
+                </div>
+              </li>
+              <li class="tab-header-and-content">
+                <a href="javascript:void(0)" class="tab-link">Food52</a>
+                <div class="tab-content"  id="food52">
+                  <img src="<?php echo get_template_directory_uri(); ?>/src/images/food52.png" alt="Food52 Logo">
+                  <p>Donec mattis mauris gravida metus laoreet non rutrum sem viverra. Aenean nibh libero, viverra vel vestibulum in, porttitor ut sapien. Phasellus tempor lorem id justo ornare tincidunt. Nulla faucibus, purus eu placerat fermentum, velit mi iaculis nunc, bibendum tincidunt ipsum justo eu mauris. Nulla facilisi. Vestibulum vel lectus ac purus tempus suscipit nec sit amet eros. Nullam fringilla, enim eu lobortis dapibus, quam magna tincidunt nibh, sit amet imperdiet dolor justo congue turpis.</p>
+                </div>
+              </li>
+              <li class="tab-header-and-content">
+                <a href="javascript:void(0)" class="tab-link">Lucky Peach</a>
+                <div class="tab-content"  id="luckypeach">
+                  <img src="<?php echo get_template_directory_uri(); ?>/src/images/luckypeach.png" alt="Lucky Peach Logo">
+                  <p>Sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Phasellus dui urna.</p>
+                </div>
+              </li>
+              <li class="tab-header-and-content">
+                <a href="javascript:void(0)" class="tab-link">Cooks Illustrated</a>
+                <div class="tab-content"  id="cooksillustrated">
+                  <img src="<?php echo get_template_directory_uri(); ?>/src/images/cooksillustrated.png" alt="Food and Wine Logo">
                   <p>Four dollar toast bespoke snackwave mumblecore. Schlitz iceland lo-fi, echo park art party microdosing farm-to-table lyft tattooed. Poke chicharrones DIY, affogato brunch aesthetic paleo jianbing meditation lomo. Dreamcatcher poutine cred chia vexillologist, salvia ethical ramps lyft PBR&B cliche plaid wolf skateboard. Kitsch dreamcatcher tumeric, stumptown viral lo-fi man braid cred direct trade green juice williamsburg celiac bushwick taxidermy. Authentic microdosing bitters, pour-over disrupt pop-up chillwave chicharrones tote bag freegan banh mi franzen. Umami gluten-free sartorial, chicharrones distillery ennui ramps kale chips vinyl flexitarian farm-to-table synth waistcoat tumblr.</p>
                 </div>
               </li>
