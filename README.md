@@ -209,5 +209,8 @@ add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
 
 - [PHP COMPOSER AND THEN THIS LINK](https://github.com/kbariotis/feedly-api)
 
-- [PROJECT 1](https://www.smashingmagazine.com/2015/04/building-custom-wordpress-archive-page/): New Archive Page   
-- Culinaria feeds Food52, Epicurious, and Lucky Peach are not very dynamic.  Change apifier setups.  
+- [Apifier login to Feedly](https://www.youtube.com/watch?v=kkHSsSpY2lk)  
+
+[PROJECT](https://www.smashingmagazine.com/2015/04/building-custom-wordpress-archive-page/): New Archive Page  
+
+[PROJECT](https://www.lynda.com/PHP-tutorials/WordPress-Creating-Custom-Plugins-PHP/508212-2.html): Culinaria Feeds  
