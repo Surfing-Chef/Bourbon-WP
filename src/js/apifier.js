@@ -60,18 +60,18 @@ function displayApifier(obj){
 
   // Create objects for easy deployment to page:
   // base, imageUrl, linkUrl, title, topic
-  var epicurious = feedArray[0];
-  var food52 = feedArray[1];
-  var luckypeach = feedArray[2];
-  var saveur = feedArray[3];
-  var foodandwine = feedArray[4];
+  var saveur = feedArray[0];
+  var foodandwine = feedArray[1];
+  var food52 = feedArray[2];
+  var luckypeach = feedArray[3];
+  var cooksillustrated = feedArray[4];
 
   // Add a label value to each array
-  epicurious.name = 'epicurious';
-  food52.name = 'food52';
-  luckypeach.name = 'luckypeach';
   saveur.name = 'saveur';
   foodandwine.name = 'foodandwine';
+  food52.name = 'food52';
+  luckypeach.name = 'luckypeach';
+  cooksillustrated.name = 'cooksillustrated';
 
   // Function :: show()
   // displays each item where appropriate,
@@ -99,11 +99,11 @@ function displayApifier(obj){
   }
 
   // Display feeds as defined
-  show(epicurious);
-  show(food52);
-  show(luckypeach);
   show(saveur);
   show(foodandwine);
+  show(food52);
+  show(luckypeach);
+  show(cooksillustrated);
 }
 
 // load APLIFIER data
