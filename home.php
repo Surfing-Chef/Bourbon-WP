@@ -64,7 +64,7 @@
 					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
 
 						<?php wp_nav_menu(array(
-							'theme_location'  => 'landing_menu',
+							'theme_location'  => 'main_menu',
 							'menu'            => '',
 							'container'       => '',
 							'container_class' => '',
