@@ -202,6 +202,10 @@ add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
 [Theme Guide](https://premium.wpmudev.org/blog/free-wordpress-themes-ultimate-guide/?utm_expid=3606929-97.J2zL7V7mQbSNQDPrXwvBgQ.0)    
 
 ####BOURBON CHEF TO DO's  
+- **REVAMP SITE LAYOUT:   
+  - Front Page is blog layout, with hero header.  Each menu item links to a specific page/topic**  
+
+  
 - Ensure laptop project WordPress install and DB are caught up to desktop project install and DB.
 - How to add custom scripts to WordPress footer.
 - Implement Custom parts in Landing Page to edit from WordPress  
