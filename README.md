@@ -11,38 +11,32 @@
 ###1.1 Home Page
 - copy _index.php_ as _home.php_
 - alter **header** section of _home.php_ to match _landing.php_
+- adjust the _wp_nav_menu(array)_ from `'theme_location'  => 'landing_menu',` to `'theme_location'  => 'main_menu',`
+  - [home.php](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/home.php)  
 
-###1.2 Navigation  
-- Create a WordPress menu called *Main Menu* in *admin > Appearance > Menus* under the Edit Menus tab:  
+##2. WordPress Admin
+###2.3 New Pages
+- Created the following pages after deleting existing versions:
+  - Culinaria > Template: Default Template    
+  - Coding > Template: Default Template    
+  - Projects  > Template: Default Template   
+  - About > Template: Default Template    
+  - Contacts > Template: Default Template    
+
+
+###2.2 Navigation
+-  Adjust *Primary Menu* in *admin > Appearance > Menus* under the Edit Menus tab:  
   - Main Menu:  (Primary menu location)  
-    1. Page: Landing, Navigation Label: Logo, CSS Classes: nav-link main logo, image: logo, size: thumbnail, title position: hide  
-    2. Custom Link > Navigation Label: Culinaria, URL: /bourbon-wp, CSS Classes: nav-link   
-    3. Custom Link > Navigation Label: Coding, URL: /bourbon-wp, CSS Classes: nav-link  
-    4. Page: Blog > Navigation Label: Blog, CSS Classes: nav-link   
-    5. Custom Link > Navigation Label: Contacts, URL: /bourbon-wp, CSS Classes: nav-link  
+  1. Custom Link > Navigation Label: Home, URL: /bourbon-wp, CSS Classes: nav-link  
+  2. Page: Culinaria, Navigation Label: Culinaria, CSS Classes: nav-link  
+  3. Page: Coding, Navigation Label: Coding, CSS Classes: nav-link  
+  4. Custom Link > Navigation Label: Logo, CSS Classes: nav-link logo, image: logo, size: thumbnail, title position: hide    
+  5. Page: Projects, Navigation Label: Projects, CSS Classes: nav-link  
+  6. Page: About, Navigation Label: About, CSS Classes: nav-link  
+  7. Page: Contacts, Navigation Label: Contacts, CSS Classes: nav-link   
+- Click the _Primary Menu_ box and **save**.
 
-  - Click the _Primary_ box at bottom and **save**  
 
-- Create another menu called *Landing Menu*:
-  - Landing Menu:  (Landing menu location)
-    1. Page: Landing, Navigation Label: Home, CSS Classes: nav-link  
-    2. Custom Link > Navigation Label: Welcome, URL: /bourbon-wp, CSS Classes: nav-link  
-    3. Custom Link > Navigation Label: Culinaria, URL: /bourbon-wp, CSS Classes: nav-link  
-    4. Page: Landing, Navigation Label: Logo, CSS Classes: nav-link logo, image: logo, size: thumbnail, title position: hide    
-    5. Custom Link > Navigation Label: Coding, CSS Classes: nav-link  
-    6. Page: Landing, Navigation Label: Blog, CSS Classes: nav-link  
-    7. Custom Link > Navigation Label: Contacts, URL: /bourbon-wp, CSS Classes: nav-link   
-  - Click the _Landing Menu_ box and **save**.  
-
-  - To properly hide the screen reader text, place the following styles after the header styles in _header.scss_:  
-  ```php
-  .screen-reader-text {
-      position: absolute !important;
-      left: -999em;
-  }
-  ```
-
-  - Ensure the _Display Site Title and Tagline_ box in unchecked in the customize options for the theme
 
 ####footer.php / _footer.scss  
 - Transferred appropriate markup from previous version of Bourbon-WP.  
