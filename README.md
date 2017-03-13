@@ -1,67 +1,18 @@
-#Bourbon-WP (aka Bourbon-Chef-Site-2.2)
-> Bones Blank starter theme was a helpful start. This branch will explore starting with Underscores theme  
+#Bourbon-WP (aka Bourbon-Chef-Site-2.3)
+> Bones Blank starter theme was a helpful start. This branch reconfigures the site layout to a blog start page, with the main parent categories each having a nav bar link - Culinaria, Coding, Projects, About - as well as a contact page.
 
-##1. INITIALIZE
-###1.1 Fresh WordPress install.  Deactivate and Uninstall all plugins except WordPress Importer.
-###1.2 Import [Test Data](http://wptest.io/) - ([GitHub link](https://github.com/poststatus)) using WordPress Importer plugin
-###1.3 Plugins - Install and activate the following plugins:
-[Menu Image](https://en-ca.wordpress.org/plugins/menu-image/): allows for images as menu items.  Use this plugin to create a logo in the Main and Landing Menus  
-[Jetpack](https://jetpack.com/): a single plugin accessing over two dozen popular plugins.  
-  - Input API.  
-  - Navigate to Jetpack settings > Appearance.  Ensure the **Tiled Galleries** option is toggled on.
-[Simple Image Sizes](https://wordpress.org/plugins-wp/simple-image-sizes/): shows all available images sizes and allows setting of custom sizes and classes.  Easier implementation of feature image sizes.  
-[Contact Form 1](https://en-ca.wordpress.org/plugins/formidable/): makes it easy to create professional forms.
-[Contact Form 2]([Formidable Forms](https://en-ca.wordpress.org/plugins/planso-forms/): Super flexible plug-in to create contact forms and more. Has a built-in visual styler, included layout classes, and complete access to edit the form HTML and CSS.  
+##SITEMAP 1.3
+1. < HOME (BLOG) >
+2. < HOME >< CULINARIA >< CODING >< LOGO(home) >< PROJECTS >< ABOUT >< CONTACTS >  
 
-Rather than a plugin to [toggle the admin bar](https://en-ca.wordpress.org/plugins/auto-hide-admin-bar/), this [Chrome extention](https://chrome.google.com/webstore/detail/wordpress-admin-bar-contr/joldejophkhmeajgjenfnfdpfjkalckn/related) works great.  Be sure to read the fix below for [Removing the 32px Push Down from the Admin Bar](https://css-tricks.com/snippets/wordpress/remove-the-28px-push-down-from-the-admin-bar/#comment-1588042)
 
-##2. CREATE/DOWNLOAD **UNDERSCORES** THEME TEMPLATE  
-Click the _advanced option_, fill out appropriately, check the _\_sassify!_ box, then _GENERATE_  
+##1. ADJUSTMENTS
 
-##3. CLEAN HOUSE/ CLEAN START
-Already had created a branch based on a working Bourbon-Chef 2.1. It contained a gulpfile.js and an installed package.json so I deleted all files and folders excluding:  
-- .git  
-- .gitattributes  
-- .gitignore  
-- node_modules  
-- src  
-- gulpfile.js  
-- package.json   
-- README.md  
+###1.1 Home Page
+- copy _index.php_ as _home.php_
+- alter **header** section of _home.php_ to match _landing.php_
 
-I then copied the Underscores theme files and folders into the Bourbon-WP theme folder
-
-After a quick test in the browser and committing the changes, the fun begins...
-
-###3. Bourbon-Chef-Site Implementation
-####Styles
-Started by updating the _style.scss_ in _src_ directory to version 2.2 and stated this theme is based on both Bones and Underscores. By saving the changes to this file with gulp running, the _style.css_ is over written with one created from _src/scss_ not by _sass_ and the Underscores styles.
-
-####_src/scss/3-layouts_
-Started compartmentalizing markup appropriately, ie body contains body markup, header contains header, etc.  
-
-####header.php  
-Transferred appropriate markup from previous version of Bourbon-WP.
-- added custom type class
-```php
-<body <?php body_class('type-system-geometric'); ?>>
-```
-- copied navigation from `<!-- centered-navigation -->` to `<!-- PHP code here to ensure this header is displayed only on landing page -->` and placed it directly under the heading tag.  I also commented out the pre-existing _<nav>_ tags and content just before `</header><!-- #masthead -->`
-- this left a broken looking theme as the navigation was looking for content in the menu.  Created a menu containing the same nav links as Bourbon-WP 1.1.  Note to self **WHY DID YOU DELETE THE WORDPRESS MENUS ALREADY CREATED?**  
-- rebuilt navigation system referring to [notes](https://github.com/Surfing-Chef/Bourbon-WP/tree/2.1) from build 2.1
-- copied _landing.php_ from 2.1 for use in menu creation in case it didn't exist.  I used this template in creating a new page called _Landing_ (Bourbon-WP's homepage).  
-- change _functions.php_ `register_nav_menus()` to:
-```PHP
-// This theme uses wp_nav_menu() these locations.
-register_nav_menus( array(
-  'main_menu' => esc_html__( 'Primary', 'bourbon-wp' ),
-  'landing_menu' => esc_html__('Landing Menu', 'bourbon-wp'),
-  'culinary_menu' => esc_html__('Culinary Menu', 'bourbon-wp'),
-  'blog_menu' => esc_html__('Blog Roll', 'bourbon-wp'),
-  'coding_menu' => esc_html__('Coding Menu', 'bourbon-wp')
-) );
-```  
-
+###1.2 Navigation  
 - Create a WordPress menu called *Main Menu* in *admin > Appearance > Menus* under the Edit Menus tab:  
   - Main Menu:  (Primary menu location)  
     1. Page: Landing, Navigation Label: Logo, CSS Classes: nav-link main logo, image: logo, size: thumbnail, title position: hide  
