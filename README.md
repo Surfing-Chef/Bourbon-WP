@@ -9,12 +9,12 @@
 ##1. ADJUSTMENTS
 
 ###1.1 Home Page
-- copy _index.php_ as _home.php_
-- alter **header** section of _home.php_ to match the same section in _landing.php_
-- adjust the _wp_nav_menu(array)_ from `'theme_location'  => 'landing_menu',` to `'theme_location'  => 'main_menu',`
+- copy _**index.php**_ as _**home.php**_
+- alter **header** section of _**home.php**_ to match the same section in _**landing.php**_
+- adjust the _**wp_nav_menu(array)**_ from `'theme_location'  => 'landing_menu',` to `'theme_location'  => 'main_menu',`
   - [home.php](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/home.php)  
-- enable _the\_excerpt()_ on the homepage:
-  - copy _template-parts/content.php_ and rename it to _template-parts/content-excerpt.php_
+- enable _**the\_excerpt()**_ on the homepage:
+  - copy _**template-parts/content.php**_ and rename it to _**template-parts/content-excerpt.php**_
   - adjust `<?php the_content( sprintf(` starting around line 30 to `<?php the_excerpt(); ?>`  
     - [content-excerpt.php](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/template-parts/content-excerpt.php)   
 
