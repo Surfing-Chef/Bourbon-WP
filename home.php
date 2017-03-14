@@ -28,7 +28,7 @@
   <!-- <link rel="stylesheet" href="css/font-awesome.css" /> -->
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
-  <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/src/css/style.css">
+  <!-- <link rel="stylesheet" href="<?php echo get_template_directory_uri(); ?>/src/css/style.css"> -->
 
 </head>
 <body class="home type-system-geometric">
