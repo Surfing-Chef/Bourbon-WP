@@ -44,8 +44,8 @@ gulp.task('sassDep', function() {
     .pipe(sass({sourceComments: 'map', sourceMap: 'sass', outputStyle: 'compressed'}))
     .pipe(autoprefixer('last 2 versions'))
   .pipe(sourcemaps.write())
-  .pipe(gulp.dest('./'));
-  //.pipe(browserSync.stream());
+  .pipe(gulp.dest('./'))
+  .pipe(browserSync.stream());
 });
 
 
@@ -101,7 +101,7 @@ gulp.task('build:remove', ['build:imgMin'], function(done){
     './build/scss/',
     './build/css/',
     './build/css/*dev*',
-  ], done); 
+  ], done);
 });
 
 // main build task
