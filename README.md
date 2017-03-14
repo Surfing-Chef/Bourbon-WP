@@ -10,9 +10,13 @@
 
 ###1.1 Home Page
 - copy _index.php_ as _home.php_
-- alter **header** section of _home.php_ to match _landing.php_
+- alter **header** section of _home.php_ to match the same section in _landing.php_
 - adjust the _wp_nav_menu(array)_ from `'theme_location'  => 'landing_menu',` to `'theme_location'  => 'main_menu',`
   - [home.php](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/home.php)  
+- enable _the\_excerpt()_ on the homepage:
+  - copy _template-parts/content.php_ and rename it to _template-parts/content-excerpt.php_
+  - adjust `<?php the_content( sprintf(` starting around line 30 to `<?php the_excerpt(); ?>`  
+    - [content-excerpt.php](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/template-parts/content-excerpt.php)   
 
 ##2. WordPress Admin
 ###2.3 New Pages
@@ -35,13 +39,6 @@
   6. Page: About, Navigation Label: About, CSS Classes: nav-link  
   7. Page: Contacts, Navigation Label: Contacts, CSS Classes: nav-link   
 - Click the _Primary Menu_ box and **save**.
-
-
-
-####footer.php / _footer.scss  
-- Transferred appropriate markup from previous version of Bourbon-WP.  
-- Ensured that the `<footer>` tag in both _footer.php_ and _landing.php_ were `<footer id='colophon>'`, and that _src/scss/3-layouts/\_footer.scss_ specified the same,  `footer#colophon {...`
-
 
 ####index.php / _index.scss_  
 - if using `get_template_part( 'template-parts/content', get_post_format() );` in the loop, edit the appropriate template PHP file in the _template-parts_ directory.  
