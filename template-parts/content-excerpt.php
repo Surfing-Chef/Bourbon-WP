@@ -38,7 +38,7 @@
 				<?php
 				if ( 'post' === get_post_type() ) : ?>
 				<div class="entry-meta">
-					<?php bourbon_wp_posted_on(); ?>
+					<?php bourbon_wp_posted_modified_on(); ?>
 				</div><!-- .entry-meta -->
 				<?php
 				endif; ?>
