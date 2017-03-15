@@ -18,6 +18,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php
+			// Start the loop.
 			while ( have_posts() ) : the_post();
 
 				get_template_part( 'template-parts/content', 'page' );
