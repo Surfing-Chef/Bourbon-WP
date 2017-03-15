@@ -37,7 +37,58 @@ function bourbon_wp_posted_on() {
 	echo '<span class="posted-on">' . $posted_on . '</span><span class="byline"> ' . $byline . '</span>'; // WPCS: XSS OK.
 
 }
+
+function bourbon_wp_posted_modified_on() {
+	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
+
+	$time_string = sprintf( $time_string,
+		esc_attr( get_the_date( 'c' ) ),
+		esc_html( get_the_date() ),
+		esc_attr( get_the_modified_date( 'c' ) ),
+		esc_html( get_the_modified_date() )
+	);
+
+	$posted_on = sprintf(
+		esc_html_x( 'Posted: %s', 'post date', 'bourbon-wp' ),
+		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
+	);
+
+	$byline = sprintf(
+		esc_html_x( 'by %s', 'post author', 'bourbon-wp' ),
+		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+	);
+
+	echo '<span class="posted-on">' . $posted_on . '<span class="byline"> ' . $byline . '</span></span>'; // WPCS: XSS OK.
+
+
+	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
+		$time_string2 = '<time class="updated" datetime="%3$s">%4$s</time>';
+
+		$time_string2 = sprintf( $time_string2,
+			esc_attr( get_the_date( 'c' ) ),
+			esc_html( get_the_date() ),
+			esc_attr( get_the_modified_date( 'c' ) ),
+			esc_html( get_the_modified_date() )
+		);
+
+		$modified_on = sprintf(
+			esc_html_x( 'Modified: %s', 'post date', 'bourbon-wp' ),
+			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string2 . '</a>'
+		);
+
+		$byline = sprintf(
+			esc_html_x( 'by %s', 'post author', 'bourbon-wp' ),
+			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
+		);
+
+		echo '<span class="modified-on">' . $modified_on . '<span class="byline"> ' . $byline . '</span></span>'; //
+	}
+
+}
+
 endif;
+
+
 
 if ( ! function_exists( 'bourbon_wp_entry_footer' ) ) :
 /**
