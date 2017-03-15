@@ -13,10 +13,12 @@
 - alter **header** section of _**home.php**_ to match the same section in _**landing.php**_
 - adjust the _**wp_nav_menu(array)**_ from `'theme_location'  => 'landing_menu',` to `'theme_location'  => 'main_menu',`
   - [home.php](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/home.php)  
-- enable _**the\_excerpt()**_ on the homepage:
-  - copy _**template-parts/content.php**_ and rename it to _**template-parts/content-excerpt.php**_
-  - adjust `<?php the_content( sprintf(` starting around line 30 to `<?php the_excerpt(); ?>`  
-    - [content-excerpt.php](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/template-parts/content-excerpt.php)   
+- [Modified _**template-parts/content-excerpt.php**_](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/template-parts/content-excerpt.php)  
+- [Modified _**inc\template-tags.php**_](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/inc/template-tags.php)  
+
+###1.2 Static Pages - Culinaria, Coding, Projects and About 
+
+###1.3 Archives and Single Posts  
 
 ##2. WordPress Admin
 ###2.3 New Pages
