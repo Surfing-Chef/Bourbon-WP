@@ -93,22 +93,23 @@ add_action( 'after_setup_theme', 'bourbon_wp_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function bourbon_wp_widgets_init() {
-	register_sidebar( array(
-		'name'          => esc_html__( 'Sidebar', 'bourbon-wp' ),
-		'id'            => 'sidebar-1',
-		'description'   => esc_html__( 'Add widgets here.', 'bourbon-wp' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
-		'after_widget'  => '</section>',
-		'before_title'  => '<h2 class="widget-title">',
-		'after_title'   => '</h2>',
-	) );
+	// // Default sidebar/widget area
+	// register_sidebar( array(
+	// 	'name'          => esc_html__( 'Sidebar', 'bourbon-wp' ),
+	// 	'id'            => 'sidebar-1',
+	// 	'description'   => esc_html__( 'Add widgets here.', 'bourbon-wp' ),
+	// 	'before_widget' => '<section id="%1$s" class="widget %2$s">',
+	// 	'after_widget'  => '</section>',
+	// 	'before_title'  => '<h2 class="widget-title">',
+	// 	'after_title'   => '</h2>',
+	// ) );
 
-	// Widget - Culinaria Feeds
+	// Widget Area - Culinaria Feeds
 	register_sidebar( array(
 		'name'          => esc_html__( 'Culinaria Feeds', 'bourbon-wp' ),
-		'id'            => 'sidebar-1',
+		'id'            => 'widget-area-1',
 		'description'   => esc_html__( 'Add widgets here.', 'bourbon-wp' ),
-		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'before_widget' => '<section id="%1$s" class="widget culinaria-widget-area">',
 		'after_widget'  => '</section>',
 		'before_title'  => '<h2 class="widget-title">',
 		'after_title'   => '</h2>',
@@ -162,3 +163,17 @@ require get_template_directory() . '/inc/jetpack.php';
 * Remove the Push Down from the Admin Bar
 */
 add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
+
+/**
+* Enable PHP in the default Text widget 
+*/
+add_filter('widget_text','execute_php',100);
+function execute_php($html){
+     if(strpos($html,"<"."?php")!==false){
+          ob_start();
+          eval("?".">".$html);
+          $html=ob_get_contents();
+          ob_end_clean();
+     }
+     return $html;
+}
