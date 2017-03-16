@@ -93,7 +93,9 @@ function displayApifier(obj){
       // Create a div containing an image link and title
       var tag = $('<div class="culinaria-feed-container">'+
       '<a href="' + link_url + '" target="_blank">'+
+      '<div class="image-container">'+
       '<img class="culinaria-feed-image" src="' + dta.imageUrl + '" alt="' + dta.title + '">'+
+      '</div>'+
       '<span>'+dta.title+'</span>'+
       '</a></div>');
 
