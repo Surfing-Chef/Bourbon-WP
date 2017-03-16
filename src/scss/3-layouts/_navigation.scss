@@ -36,9 +36,9 @@
     padding-left: $centered-navigation-padding;
 
     img {
-      max-height: $centered-navigation-height;
+      max-height: $centered-navigation-height * 0.9;
       opacity: 0.6;
-      padding: 0.8em 0;
+      padding: 0.3em 0 0 0;
     }
 
     @include media($horizontal-bar-mode) {
