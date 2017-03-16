@@ -1,0 +1,85 @@
+/*! 3-layouts/_page-culinaria.scss */
+
+.culinaria-widget-area {
+  width: 100%;
+  .accordion-tabs {
+    p {
+      @include span-columns(12);
+      @include media(max-width 699px) {
+        color: $light-gray;
+        padding: ($base-spacing) ($gutter/2);
+      }
+
+    }
+
+    @include media(max-width 900px) {
+      @include span-columns(12);
+    }
+  } // .accordion-tabs
+
+  .article-content {
+    @include media(max-width 900px) {
+      width: 100%;
+    }
+  } // .article-content
+
+  .tab-link {
+    color: $blue;
+    font-size: 1.2em;
+    text-align: center;
+  } // .tab-link
+
+  .tab-link:hover {
+    color: black;
+  } // .tab-link:hover
+
+  .is-active {
+    color: $base-font-color;
+  } // .is-active
+
+  .tab-content {
+    position: relative;
+
+    .culinaria-feed-container {
+      @include span-columns(3);
+      font-size: 1.1em;
+      text-align: center;
+    } // .culinaria-feed-container
+
+    .culinaria-feed-container:nth-child(5){
+      display: none;
+    } // .culinaria-feed-container:nth-child(5)
+
+    img {
+      margin-bottom: 5px;
+      border-radius: 2px;
+      border: 1px solid rgba(0,0,0,0.2);
+    } // .culinaria-feed-container img
+
+    @include media(max-width 700px) {
+      padding-bottom: 0;
+      .culinaria-feed-container {
+        @include span-columns(6);
+        @include omega(3);
+
+        padding-bottom: 1.5em;
+
+        img {
+          margin: 0 auto;
+        }
+      }
+    }
+
+    @include media(max-width 400px) {
+      .culinaria-feed-container {
+        @include span-columns(12);
+        @include omega;
+      }
+    }
+
+    @include media(max-width 699px) {
+      padding: 0;
+    }
+  } // .tab-content
+
+} // .culinaria-widget-area
