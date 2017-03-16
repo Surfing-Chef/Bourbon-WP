@@ -12,11 +12,38 @@
 - copy _**index.php**_ as _**home.php**_
 - alter **header** section of _**home.php**_ to match the same section in _**landing.php**_
 - adjust the _**wp_nav_menu(array)**_ from `'theme_location'  => 'landing_menu',` to `'theme_location'  => 'main_menu',`
-  - [home.php](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/home.php)  
+  - [_**home.php**_](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/home.php)  
 - [Modified _**template-parts/content-excerpt.php**_](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/template-parts/content-excerpt.php)  
 - [Modified _**inc\template-tags.php**_](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/inc/template-tags.php)  
 
-###1.2 Static Pages - Culinaria, Coding, Projects and About 
+###1.2 Static Pages - Culinaria, Coding, Projects and About
+####Culinaria
+- Added a widgets' section to _**template-parts\content-page.php**_ that inserts appropriate widget areas depending on the current page slug:
+```PHP
+<?php if ( is_page( 'culinaria' ) && (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Culinaria Feeds")) ) : ?>
+<?php endif;?>
+```  
+  - [_**template-parts\content-page.php**_](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/template-parts/content-page.php)
+  - added PHP functionality to WordPress default text widget:
+  ```PHP
+  /**
+  * Enable PHP in the default Text widget
+  */
+  add_filter('widget_text','execute_php',100);
+  function execute_php($html){
+       if(strpos($html,"<"."?php")!==false){
+            ob_start();
+            eval("?".">".$html);
+            $html=ob_get_contents();
+            ob_end_clean();
+       }
+       return $html;
+  }
+  ```  
+- [adjusted apifier.js to output images](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/src/js/apifier.js)
+- [google seach to crop and center](https://www.google.ca/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=how+to+crop+and+center+image+css&*)
+- [Adjust images so they crop to square](http://stackoverflow.com/questions/18673900/how-to-center-and-crop-an-image-to-square-with-css)
+
 
 ###1.3 Archives and Single Posts  
 
@@ -29,9 +56,8 @@
   - About > Template: Default Template    
   - Contacts > Template: Default Template    
 
-
 ###2.2 Navigation
--  Adjust *Primary Menu* in *admin > Appearance > Menus* under the Edit Menus tab:  
+-  Adjust *Primary Menu* in *admin > Appearance > Menus* under the *Edit Menus* tab:  
   - Main Menu:  (Primary menu location)  
   1. Custom Link > Navigation Label: Home, URL: /bourbon-wp, CSS Classes: nav-link  
   2. Page: Culinaria, Navigation Label: Culinaria, CSS Classes: nav-link  
@@ -40,24 +66,15 @@
   5. Page: Projects, Navigation Label: Projects, CSS Classes: nav-link  
   6. Page: About, Navigation Label: About, CSS Classes: nav-link  
   7. Page: Contacts, Navigation Label: Contacts, CSS Classes: nav-link   
-- Click the _Primary Menu_ box and **save**.
+- Click the *Primary Menu* box and **save**.  
 
-####index.php / _index.scss_  
-- if using `get_template_part( 'template-parts/content', get_post_format() );` in the loop, edit the appropriate template PHP file in the _template-parts_ directory.  
+###2.3 Widgets
+- Drag and drop the default WP *text widget* to the new *Culinaria Feeds* widget area:  
+  - *Dashboard > Appearance > Widgets*  
+- Insert accordion-section html and php into _**Culinary Feeds > text widget**_  
+  - [Culinaria Feed Snippet no Logo BG](https://gist.github.com/Surfing-Chef/3db8facc6c6807e5ffa23d79735c35df#file-culinaria-feed-snippet-no-logo-bg)  
 
-- [Feature Images(Post Thumbnails)](https://codex.wordpress.org/Post_Thumbnails)  
-  - ensure _functions.php_ contains `add_theme_support( 'post-thumbnails' ); ` to enable Feature Images
-  - insert feature images if they are set in a post - in the _template-parts/content.php_ file, add the following just after `<?php the_content( sprintf(... ?>`:  
-  ```PHP
-  <div class="post-thumbnail">
-    <?php
-      // check if the post or page has a Featured Image assigned to it.
-      if ( has_post_thumbnail() ) {
-          the_post_thumbnail('full');
-      }
-    ?>  
-  </div>
-  ```
+
 ####CSS
 - Responsive images.  A simple fix that my brain just couldn't figure out.  Thanks much [stack overflow](http://stackoverflow.com/questions/12991351/css-force-image-resize-and-keep-aspect-ratio):
 ```css
