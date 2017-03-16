@@ -82,19 +82,24 @@ function displayApifier(obj){
     var link = '';
 
     obj.forEach(function(dta){
-      // if links have http prefix...
+      // Check if links have http prefix...
+      var link = '';
       if(dta.linkUrl.startsWith('http://')){
-        var tag = $('<a href="'+dta.linkUrl+'" target="_blank">'+dta.title+'</a><br>');
-
-        $("#"+objName).append(tag);
+        link_url = dta.linkUrl;
+      } else {
+        link_url = dta.base + dta.linkUrl;
       }
-      // if links DO NOT have http prefix...
-      else {
-        var link = dta.base + dta.linkUrl;
-        var tag1 = $('<a href="'+link+'" target="_blank">'+dta.title+'</a><br>');
 
-        $("#"+objName).append(tag1);
-      }
+      // Create a div containing an image link and title
+      var tag = $('<div class="culinaria-feed-container">'+
+      '<a href="' + link_url + '" target="_blank">'+
+      '<img class="culinaria-feed-image" src="' + dta.imageUrl + '" alt="' + dta.title + '">'+
+      '<span>'+dta.title+'</span>'+
+      '</a></div>');
+
+      // Append new tag within parent
+      $("#"+objName).append(tag);
+
     });
   }
 
