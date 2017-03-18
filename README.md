@@ -1,14 +1,14 @@
-#Bourbon-WP (aka Bourbon-Chef-Site-2.3)
-> Bones Blank starter theme was a helpful start. This branch reconfigures the site layout to a blog start page, with the main parent categories each having a nav bar link - Culinaria, Coding, Projects, About - as well as a contact page.
+# Bourbon-WP (aka Bourbon-Chef-Site-2.3)
+> Bones Blank starter theme was a helpful start. This branch reconfigures the site layout to a blog start page, with the main parent categories each having a nav bar link - Culinaria, Coding, Projects, About - as well as a contact page.  
 
-##SITEMAP 1.3
+## SITEMAP 1.3
 1. < HOME (BLOG) >
 2. < HOME >< CULINARIA >< CODING >< LOGO(home) >< PROJECTS >< ABOUT >< CONTACTS >  
 
 
-##1. ADJUSTMENTS
+## 1. ADJUSTMENTS
 
-###1.1 Home Page
+### 1.1 Home Page
 - copy _**index.php**_ as _**home.php**_
 - alter **header** section of _**home.php**_ to match the same section in _**landing.php**_
 - adjust the _**wp_nav_menu(array)**_ from `'theme_location'  => 'landing_menu',` to `'theme_location'  => 'main_menu',`
@@ -16,8 +16,8 @@
 - [Modified _**template-parts/content-excerpt.php**_](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/template-parts/content-excerpt.php)  
 - [Modified _**inc\template-tags.php**_](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/inc/template-tags.php)  
 
-###1.2 Static Pages - Culinaria, Coding, Projects and About
-####Culinaria
+### 1.2 Static Pages - Culinaria, Coding, Projects and About
+#### Culinaria
 - Added a widgets' section to _**template-parts\content-page.php**_ that inserts appropriate widget areas depending on the current page slug:
 ```PHP
 <?php if ( is_page( 'culinaria' ) && (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Culinaria Feeds")) ) : ?>
@@ -45,10 +45,10 @@
 - [Adjust images so they crop to square](http://stackoverflow.com/questions/18673900/how-to-center-and-crop-an-image-to-square-with-css)
 
 
-###1.3 Archives and Single Posts  
+### 1.3 Archives and Single Posts  
 
-##2. WordPress Admin
-###2.3 New Pages
+## 2. WordPress Admin
+### 2.1 New Pages
 - Created the following pages after deleting existing versions:
   - Culinaria > Template: Default Template    
   - Coding > Template: Default Template    
@@ -56,7 +56,7 @@
   - About > Template: Default Template    
   - Contacts > Template: Default Template    
 
-###2.2 Navigation
+### 2.2 Navigation
 -  Adjust *Primary Menu* in *admin > Appearance > Menus* under the *Edit Menus* tab:  
   - Main Menu:  (Primary menu location)  
   1. Custom Link > Navigation Label: Home, URL: /bourbon-wp, CSS Classes: nav-link  
@@ -68,14 +68,14 @@
   7. Page: Contacts, Navigation Label: Contacts, CSS Classes: nav-link   
 - Click the *Primary Menu* box and **save**.  
 
-###2.3 Widgets
+### 2.3 Widgets
 - Drag and drop the default WP *text widget* to the new *Culinaria Feeds* widget area:  
   - *Dashboard > Appearance > Widgets*  
 - Insert accordion-section html and php into _**Culinary Feeds > text widget**_  
   - [Culinaria Feed Snippet no Logo BG](https://gist.github.com/Surfing-Chef/3db8facc6c6807e5ffa23d79735c35df#file-culinaria-feed-snippet-no-logo-bg)  
 
 
-####CSS
+#### CSS
 - Responsive images.  A simple fix that my brain just couldn't figure out.  Thanks much [stack overflow](http://stackoverflow.com/questions/12991351/css-force-image-resize-and-keep-aspect-ratio):
 ```css
 img {
@@ -90,7 +90,7 @@ and the parent container should have `overflow: auto;` or `overflow-x: auto;`
 
 - Also note that updating/replacing images with themselves may solve alignment issues when trouble shooting
 
-###4. DEPLOYMENT TO SURFING-CHEF.COM
+### 4. DEPLOYMENT TO SURFING-CHEF.COM
 - Set up filezilla as backup plan for file updates  
 
 - Ensuring header is same for landing and index - checking wp_head()
@@ -147,22 +147,22 @@ add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
   - Further refined both the styles in *SCSS* files and the many options within the plugin itself  
   - Tested using [Test Mail Server Tool](http://www.toolheap.com/test-mail-server-tool/)  
 
-###5. TIPS TRICKS AND LINKS
-####GULP  
+### 5. TIPS TRICKS AND LINKS
+#### GULP  
 + [Ensuring tasks complete](https://www.npmjs.com/package/run-sequence): The notes in the example code, I did not use the *run-sequence* package  
 
-####WordPress Custom Widgets
+#### WordPress Custom Widgets
 + [Easy Custom Widget Areas](https://buckleupstudios.com/add-a-new-widget-area-to-a-wordpress-theme/)   
 + [Creating Custom Widgets](https://premium.wpmudev.org/blog/create-custom-wordpress-widget)   
 + [More on Custom Widgets](https://www.templatemonster.com/blog/add-widget-areas-to-wordpress-guide/)  
 
-####WordPress Custom Menus _(Bourbon Chef WP Custom Menus)_  
+#### WordPress Custom Menus _(Bourbon Chef WP Custom Menus)_  
 + [Simplified Custom Menus](https://premium.wpmudev.org/blog/add-menus-to-wordpress/?utm_expid=3606929-97.J2zL7V7mQbSNQDPrXwvBgQ.0&utm_referrer=https%3A%2F%2Fwww.google.ca%2F)  
 
-####Cheatsheets
+#### Cheatsheets
 [Theme Guide](https://premium.wpmudev.org/blog/free-wordpress-themes-ultimate-guide/?utm_expid=3606929-97.J2zL7V7mQbSNQDPrXwvBgQ.0)    
 
-####BOURBON CHEF TO DO's  
+#### BOURBON CHEF TO DO's  
 - Ensure laptop project WordPress install and DB are caught up to desktop project install and DB.
 - How to add custom scripts to WordPress footer.
 - Implement Custom parts in Landing Page to edit from WordPress  
