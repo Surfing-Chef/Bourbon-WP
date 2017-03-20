@@ -14,12 +14,13 @@
   $tab-inactive-hover-color: darken($light-gray, 5);
   $tab-mode: 700px;
 
-  @include clearfix;
+  //@include clearfix;
   line-height: 1.5;
   margin-bottom: $base-spacing;
   padding: 0;
 
   @include media(max-width $tab-mode) {
+    background-color: $dark-gray;
     border: $tab-border;
     border-radius: $base-border-radius;
   }
