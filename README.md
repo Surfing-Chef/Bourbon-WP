@@ -1,5 +1,7 @@
 # Bourbon-WP (aka Bourbon-Chef-Site-2.3)
-> Bones Blank starter theme was a helpful start. This branch reconfigures the site layout to a blog start page, with the main parent categories each having a nav bar link - Culinaria, Coding, Projects, About - as well as a contact page.  
+> Bones Blank starter theme was a helpful start. This branch reconfigures the site layout to a blog start page, with the main parent categories each having a nav bar link - Culinaria, Coding, Projects, About - as well as a contact page.   
+
+> **TOO SAD!** I can't believe LuckyPeach.com is done May 1.  And just as heart-breaking is the last publication occurs this fall.
 
 ## SITEMAP 1.3
 1. < HOME (BLOG) >
@@ -77,6 +79,7 @@
 
 #### CSS
 - Responsive images: Various image sizes to same size, cropped and centered:  
+
 **_HTML:_**  
 ```HTML
 <div class="image-container" style="background-image: url('http://the.image.url')"></div>
