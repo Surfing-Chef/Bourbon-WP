@@ -19,8 +19,7 @@
 - [Modified _**inc\template-tags.php**_](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/inc/template-tags.php)  
 - Homepage to display featured images and excerpts:  
   - featured images as backgrounds to be centered and cropped via css  
-  or  
-  - feature imaged similar in size for front page   
+  - logo smaller size with larger margins/padding
 
 ### 1.2 Static Pages - Culinaria, Coding, Projects and About
 #### Culinaria
