@@ -27,11 +27,14 @@
 				// Must be inside a loop.
 
 				if ( has_post_thumbnail() ) {
-				    the_post_thumbnail();
+					//the_post_thumbnail (string|array $size = 'post-thumbnail', string|array $attr = '');
+					echo
+					'<img class="home-featured-image" style="background: url(\'' . bourbon_wp_post_thumbnail()
+							. '\')" />';
 				}
 				else {
-				    echo '<img src="' . get_bloginfo( 'stylesheet_directory' )
-				        . '/src/images/logo.png" />';
+				    echo '<img class="home-featured-image" style="background: url(\'' . get_bloginfo( 'stylesheet_directory' )
+				        . '/src/images/logo.png\')" />';
 				}				 ?>
 
 				<?php the_excerpt(); ?>

@@ -165,7 +165,7 @@ require get_template_directory() . '/inc/jetpack.php';
 add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
 
 /**
-* Enable PHP in the default Text widget 
+* Enable PHP in the default Text widget
 */
 add_filter('widget_text','execute_php',100);
 function execute_php($html){
@@ -176,4 +176,74 @@ function execute_php($html){
           ob_end_clean();
      }
      return $html;
+}
+
+/**
+* Custom Front Page Feature Image HTML
+*/
+
+function bourbon_wp_post_thumbnail( $post = null,$attr = '' ) {
+    $post = get_post( $post );
+    if ( ! $post ) {
+        return '';
+    }
+    $post_thumbnail_id = get_post_thumbnail_id( $post );
+
+    /**
+     * Filters the post thumbnail size.
+     *
+     * @since 2.9.0
+     *
+     * @param string|array $size The post thumbnail size. Image size or array of width and height
+     *                           values (in that order). Default 'post-thumbnail'.
+     */
+    //$size = apply_filters( 'post_thumbnail_size', $size );
+
+    if ( $post_thumbnail_id ) {
+
+        /**
+         * Fires before fetching the post thumbnail HTML.
+         *
+         * Provides "just in time" filtering of all filters in wp_get_attachment_image().
+         *
+         * @since 2.9.0
+         *
+         * @param int          $post_id           The post ID.
+         * @param string       $post_thumbnail_id The post thumbnail ID.
+         * @param string|array $size              The post thumbnail size. Image size or array of width
+         *                                        and height values (in that order). Default 'post-thumbnail'.
+         */
+        do_action( 'begin_fetch_post_thumbnail_html', $post->ID, $post_thumbnail_id);
+        if ( in_the_loop() )
+            update_post_thumbnail_cache();
+        $html = wp_get_attachment_image( $post_thumbnail_id);
+
+        /**
+         * Fires after fetching the post thumbnail HTML.
+         *
+         * @since 2.9.0
+         *
+         * @param int          $post_id           The post ID.
+         * @param string       $post_thumbnail_id The post thumbnail ID.
+         * @param string|array $size              The post thumbnail size. Image size or array of width
+         *                                        and height values (in that order). Default 'post-thumbnail'.
+         */
+        do_action( 'end_fetch_post_thumbnail_html', $post->ID, $post_thumbnail_id);
+
+    } else {
+        $html = '';
+    }
+    /**
+     * Filters the post thumbnail HTML.
+     *
+     * @since 2.9.0
+     *
+     * @param string       $html              The post thumbnail HTML.
+     * @param int          $post_id           The post ID.
+     * @param string       $post_thumbnail_id The post thumbnail ID.
+     * @param string|array $size              The post thumbnail size. Image size or array of width and height
+     *                                        values (in that order). Default 'post-thumbnail'.
+     * @param string       $attr              Query string of attributes.
+     */
+    return apply_filters( 'post_thumbnail_html', $html, $post->ID, $post_thumbnail_id,$attr );
 }
