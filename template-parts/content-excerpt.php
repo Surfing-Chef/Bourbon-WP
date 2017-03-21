@@ -27,14 +27,18 @@
 				// Must be inside a loop.
 
 				if ( has_post_thumbnail() ) {
+					$thumb_id = get_post_thumbnail_id();
+					$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
+					//echo $thumb_url[0];
+
 					//the_post_thumbnail (string|array $size = 'post-thumbnail', string|array $attr = '');
 					echo
-					'<img class="home-featured-image" style="background: url(\'' . bourbon_wp_post_thumbnail()
-							. '\')" />';
+					'<div class="home-featured-image" style="background-image: url(http:' . $thumb_url[0]
+							. ')"></div>';
 				}
 				else {
-				    echo '<img class="home-featured-image" style="background: url(\'' . get_bloginfo( 'stylesheet_directory' )
-				        . '/src/images/logo.png\')" />';
+				    echo '<div class="home-featured-image" style="background-image: url(\'' . get_bloginfo( 'stylesheet_directory' )
+				        . '/src/images/logo.png\')"></div>';
 				}				 ?>
 
 				<?php the_excerpt(); ?>
