@@ -60,6 +60,14 @@
           @include border-color(null tint($medium-gray, 50%) null null);
           @include border-style(null solid null null);
 
+          .home-featured-image {
+            height: 260px;
+            width: 260px;
+            background-position: center center;
+            background-size: cover;
+            background-repeat: no-repeat;
+          }
+
           @include media(min-width 320px max-width 720px) {
             @include span-columns(12);
             padding-right: 0;
