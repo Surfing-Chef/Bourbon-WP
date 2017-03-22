@@ -37,7 +37,7 @@
 							. ')"></div>';
 				}
 				else {
-				    echo '<div class="home-featured-image" style="background-image: url(\'' . get_bloginfo( 'stylesheet_directory' )
+				    echo '<div class="home-featured-image not-set" style="background-image: url(\'' . get_bloginfo( 'stylesheet_directory' )
 				        . '/src/images/logo.png\')"></div>';
 				}				 ?>
 
