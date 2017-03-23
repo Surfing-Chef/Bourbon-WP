@@ -1,5 +1,5 @@
 # Bourbon-WP (aka Bourbon-Chef-Site-2.3)
-> Bones Blank starter theme was a helpful start. This branch reconfigures the site layout to a blog start page, with the main parent categories each having a nav bar link - Culinaria, Coding, Projects, About - as well as a contact page.   
+> Bones Blank starter theme was a helpful start. This branch reconfigures the site layout to a blog start page, with the main parent categories each having a nav bar link - Culinaria, Coding, Projects, About - as well as a contact page. Layout components are influenced by the theme, [Activello](https://colorlib.com/activello/)  
 
 > **TOO SAD!** I can't believe LuckyPeach.com is done May 1.  And just as heart-breaking is the last publication occurs this fall.
 
@@ -7,6 +7,10 @@
 1. < HOME (BLOG) >
 2. < HOME >< CULINARIA >< CODING >< LOGO(home) >< PROJECTS >< ABOUT >< CONTACTS >  
 
+
+**UPDATE**  
+- After updating the main navigation layout, the logo/home line moves from center of site map and replaces the home button link.  Make these adjustments in the WordPress admin pages:  
+- Adjust *Primary Menu* in *admin > Appearance > Menus* under the *Edit Menus* tab
 
 ## 1. ADJUSTMENTS
 
