@@ -11,6 +11,12 @@
 
 ?>
 
+<!-- BACK TO TOP BUTTON  -->
+<div href="#" class="back-to-top" style="display: inline;">
+	<i class="fa fa-angle-up" aria-hidden="true"></i>
+</div>
+<!-- END BACK TO TOP BUTTON  -->
+
 	</div><!-- #content -->
  <!-- END CONTENT  -->
 
@@ -36,12 +42,6 @@
  <!-- END FOOTER  -->
 
 </div><!-- #page -->
-
-<!-- BACK TO TOP BUTTON  -->
-<a href="#" class="back-to-top" style="display: inline;">
-	<i class="fa fa-long-arrow-up" aria-hidden="true"></i>
-</a>
-<!-- END BACK TO TOP BUTTON  -->
 
 	<!-- +++++ NO SCRIPTS BEFORE THIS COMMENT +++++ -->
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
