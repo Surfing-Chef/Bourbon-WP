@@ -1,18 +1,27 @@
 /*! 3-layouts/_back-to-top.scss */
 
-a.back-to-top {
-  background: none;
-  margin: 0;
+.back-to-top {
+  background: transparentize($medium-gray, 0.3);
+  font-size: 16px;
+  text-align: center;
+  line-height: 30px;
   position: fixed;
-
-  bottom: 8vh;
-  right: 2%;
+  bottom: 50%;
+  right: 1em;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
   z-index: 100;
-  display: none;
-  text-decoration: none;
-  color: transparentize($medium-gray, 0.3);
+}
+
+.back-to-top:hover{
+  background: shade($medium-gray, 30%);
 }
 
 .back-to-top i {
-  font-size: 50px;
+  display: inline-block;
+  font-size: inherit;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+  color: $light-gray;
 }
