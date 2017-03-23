@@ -33,14 +33,14 @@
   $bg1: transparentize(black, 0.5);
   $bg2: transparentize(white, 0.5);
   @include texture($bg1, $bg2, 85, 2);
-
+  border-bottom: 1px solid rgba(black, 0.3);
   // Mobile view
 
   .mobile-logo {
     display: inline;
     float: left;
     max-height: $navigation-height;
-    padding-left: $navigation-padding;
+    //padding-left: $navigation-padding;
 
     img {
       max-height: $navigation-height * 0.9;
@@ -94,9 +94,11 @@
     @include clearfix;
     position: relative;
     z-index: 9999;
-    border-bottom: 1px solid rgba(black, 0.3);
+
     height: 100px;
     padding-top: $navigation-height/5;
+
+    @include outer-container;
 
     @include media( max-width ($horizontal-bar-mode - 1)) {
       padding-top: 0;
