@@ -53,30 +53,45 @@
       <!-- End callout -->
     </div>
 
-    <!-- centered-navigation -->
-			<section class="centered-navigation" role="banner">
-				<div class="centered-navigation-wrapper">
-			    <a href="/bourbon-wp" class="mobile-logo">
-			      <img src="<?php echo get_template_directory_uri(); ?>/src/images/mountain.svg" alt="Logo image">
-			    </a>
-			    <a href="javascript:void(0)" id="js-centered-navigation-mobile-menu" class="centered-navigation-mobile-menu">MENU</a>
+    <!-- main-navigation -->
+	  <section class="main-navigation" role="banner">
+	    <div class="navigation-wrapper">
+	      <a href="javascript:void(0)" class="mobile-logo">
+	        <img src="<?php echo get_template_directory_uri(); ?>/src/images/mountain.svg" alt="Logo image">
+	      </a>
 
-					<nav role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+	      <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
 
-						<?php wp_nav_menu(array(
-							'theme_location'  => 'main_menu',
-							'menu'            => '',
-							'container'       => '',
-							'container_class' => '',
-							'container_id'    => '',
-							'menu_class'      => 'centered-navigation-menu show',
-							'menu_id'         => 'js-centered-navigation-menu'
-						)); ?>
+	      <nav class="nav-menu nav-main" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<?php wp_nav_menu(array(
+						'theme_location'  => 'main_menu',
+						'menu'            => '',
+						'container'       => '',
+						'container_class' => '',
+						'container_id'    => '',
+						'menu_class'      => 'navigation-menu show',
+						'menu_id'         => 'js-navigation-menu'
+					)); ?>
+	      </nav>
+	      <!-- End main NAV -->
 
-					</nav>
+	      <div class="navigation-tools">
+	        <div class="search-bar">
+	          <form role="search">
+	            <input type="search" placeholder="Enter Search" />
+	            <button type="submit">
+	              <img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
+	            </button>
+	          </form>
+	          <!-- End search-bar FORM-->
+	        </div>
+	        <!-- End search-bar -->
 
-				</div><!-- End centered-navigation-wrapper -->
-			</section><!-- End centered-navigation -->
+	      </div>
+	      <!-- End navigation-tools -->
+
+	    </div>
+	    <!-- End main-navigation-wrapper -->
 
     <div id="js-parallax-background" class="parallax-background"></div>
 
