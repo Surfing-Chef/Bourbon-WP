@@ -43,9 +43,9 @@
     //padding-left: $navigation-padding;
 
     img {
-      max-height: $navigation-height * 0.9;
+      max-height: $navigation-height + 20px;
       opacity: 0.6;
-      padding: 0.3em 0 0 0;
+      padding: 1em 0 0 1em;
     }
 
     @include media($horizontal-bar-mode) {
