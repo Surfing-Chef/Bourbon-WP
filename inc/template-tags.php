@@ -39,6 +39,9 @@ function bourbon_wp_posted_on() {
 }
 
 function bourbon_wp_posted_modified_on() {
+	$icon_posted = '<i class="fa fa-clock-o" aria-hidden="true"></i>';
+	$icon_modified = '<i class="fa fa-pencil" aria-hidden="true"></i>';
+
 	$time_string = '<time class="entry-date published" datetime="%1$s">%2$s</time>';
 
 	$time_string = sprintf( $time_string,
@@ -48,8 +51,10 @@ function bourbon_wp_posted_modified_on() {
 		esc_html( get_the_modified_date() )
 	);
 
+	echo '<span class="post-date-mods">';
+
 	$posted_on = sprintf(
-		esc_html_x( 'Posted: %s', 'post date', 'bourbon-wp' ),
+		esc_html_x( ' %s', 'post date', 'bourbon-wp' ),
 		'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string . '</a>'
 	);
 
@@ -58,7 +63,9 @@ function bourbon_wp_posted_modified_on() {
 		'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 	);
 
-	echo '<span class="posted-on">' . $posted_on . '<span class="byline"> ' . $byline . '</span></span>'; // WPCS: XSS OK.
+	echo '<span class="posted-on">' . $icon_posted . $posted_on . '</span>' ;
+
+	// echo '<span class="posted-on">' . $posted_on . '<span class="byline"> ' . $byline . '</span></span>'; // WPCS: XSS OK.
 
 
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
@@ -72,7 +79,7 @@ function bourbon_wp_posted_modified_on() {
 		);
 
 		$modified_on = sprintf(
-			esc_html_x( 'Modified: %s', 'post date', 'bourbon-wp' ),
+			esc_html_x( ' %s', 'post date', 'bourbon-wp' ),
 			'<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">' . $time_string2 . '</a>'
 		);
 
@@ -81,9 +88,11 @@ function bourbon_wp_posted_modified_on() {
 			'<span class="author vcard"><a class="url fn n" href="' . esc_url( get_author_posts_url( get_the_author_meta( 'ID' ) ) ) . '">' . esc_html( get_the_author() ) . '</a></span>'
 		);
 
-		echo '<span class="modified-on">' . $modified_on . '<span class="byline"> ' . $byline . '</span></span>'; //
-	}
+		echo '<span class="modified-on">' . $icon_modified . $modified_on . '</span>' ;
 
+		// echo '<span class="modified-on">' . $modified_on . '<span class="byline"> ' . $byline . '</span></span>'; //
+	}
+	echo '</span>';
 }
 
 endif;
@@ -95,25 +104,34 @@ if ( ! function_exists( 'bourbon_wp_entry_footer' ) ) :
  * Prints HTML with meta information for the categories, tags and comments.
  */
 function bourbon_wp_entry_footer() {
+	$icon_category = '<i class="fa fa-folder-open-o" aria-hidden="true"></i>';
+	$icon_tag = '<i class="fa fa-tags" aria-hidden="true"></i>';
+	$icon_comments = '<i class="fa fa-comments" aria-hidden="true"></i>';
+
+	echo '<span class="post-meta-info">';
+
 	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
 		$categories_list = get_the_category_list( esc_html__( ', ', 'bourbon-wp' ) );
 		if ( $categories_list && bourbon_wp_categorized_blog() ) {
-			printf( '<span class="cat-links">' . esc_html__( 'Posted in %1$s', 'bourbon-wp' ) . '</span>', $categories_list ); // WPCS: XSS OK.
+			printf( '<span class="cat-links">' . $icon_category . ' %1$s' . '</span>', $categories_list ); // WPCS: XSS OK.
 		}
 
 		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'bourbon-wp' ) );
 		if ( $tags_list ) {
-			printf( '<span class="tags-links">' . esc_html__( 'Tagged %1$s', 'bourbon-wp' ) . '</span>', $tags_list ); // WPCS: XSS OK.
+			printf( '<span class="tags-links">' . $icon_tag . ' %1$s' . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
+	echo '</span>';
+	echo '<span class="comment-and-edit">';
+
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
-		echo '<span class="comments-link">';
+		echo '<span class="comments-link">' . $icon_comments;
 		/* translators: %s: post title */
-		comments_popup_link( sprintf( wp_kses( __( 'Leave a Comment<span class="screen-reader-text"> on %s</span>', 'bourbon-wp' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
+		comments_popup_link( sprintf( wp_kses( __( ' Leave a Comment<span class="screen-reader-text"> on %s</span>', 'bourbon-wp' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
 		echo '</span>';
 	}
 
@@ -126,6 +144,8 @@ function bourbon_wp_entry_footer() {
 		'<span class="edit-link">',
 		'</span>'
 	);
+
+	echo '</span>';
 }
 endif;
 
