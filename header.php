@@ -40,7 +40,7 @@
 		<!-- main-navigation -->
 	  <section class="main-navigation" role="banner">
 	    <div class="navigation-wrapper">
-	      <a href="javascript:void(0)" class="mobile-logo">
+	      <a href="<?php echo home_url(); ?>" class="mobile-logo">
 	        <img src="<?php echo get_template_directory_uri(); ?>/src/images/mountain.svg" alt="Logo image">
 	      </a>
 
