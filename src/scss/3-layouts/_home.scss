@@ -41,6 +41,11 @@
     background: $light-gray;
     @include span-columns(8 of 12);
 
+    @include media(min-width 320px max-width 949px) {
+      @include span-columns(12);
+    }
+
+
     article {
       border-bottom: 0;
 
@@ -52,8 +57,10 @@
         @include outer-container;
 
         section {
-          border-right: none !important;
           width: 100% !important;
+          @include border-width(null 1px null null);
+          @include border-color(null tint($medium-gray, 50%) null null);
+          @include border-style(null solid null null);
 
           .home-featured-image {
             height: 260px;
@@ -179,9 +186,11 @@
   aside {
     @include span-columns(4 of 12);
     @include omega;
+    padding: 2em 1em 1em 1em;
 
-    @include media(min-width 320px max-width 720px) {
+    @include media(min-width 320px max-width 949px) {
       @include span-columns(12);
+      padding-top: 0;
     }
 
     .entry-meta,
@@ -199,12 +208,12 @@
 
 
 // override Bourbon span-columns
-#primary main.home article .entry-footer span {
-  float: left;
-  display: block;
-  margin-right: 0;
-  width: 100%;
-}
+// #primary main.home article .entry-footer span {
+//   float: left;
+//   display: block;
+//   margin-right: 0;
+//   width: 100%;
+// }
 
 // test-fill
   .test-fill {
