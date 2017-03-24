@@ -42,6 +42,8 @@
 				}				 ?>
 
 				<?php the_excerpt(); ?>
+				<?php bourbon_wp_posted_modified_on(); ?>
+				<?php bourbon_wp_entry_footer(); ?>
 
 				<?php wp_link_pages( array(
 						'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'bourbon-wp' ),
@@ -52,20 +54,12 @@
 		</section>
 
 		<aside>
-			<header class="entry-header">
-				<?php
-				if ( 'post' === get_post_type() ) : ?>
-				<div class="entry-meta">
-					<?php bourbon_wp_posted_modified_on(); ?>
-				</div><!-- .entry-meta -->
-				<?php
-				endif; ?>
-			</header><!-- .entry-header -->
-
-			<footer class="entry-footer">
-				<?php bourbon_wp_entry_footer(); ?>
-			</footer><!-- .entry-footer -->
-
+			<div class="recent-posts">
+				<h3>Recent Posts</h3>
+			</div>
+			<div class="recent-posts">
+				<h3>Categories</h3>
+			</div>
 		</aside>
 	</div>
 
