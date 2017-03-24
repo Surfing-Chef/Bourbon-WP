@@ -1,3 +1,8 @@
+#***TODO***
+- homepage aside content-excerpt  
+- convert tabbed to accordion in culinaria  
+  - address responsive images in accordion
+
 # Bourbon-WP (aka Bourbon-Chef-Site-2.3)
 > Bones Blank starter theme was a helpful start. This branch reconfigures the site layout to a blog start page, with the main parent categories each having a nav bar link - Culinaria, Coding, Projects, About - as well as a contact page. Layout components are influenced by the theme, [Activello](https://colorlib.com/wp/themes/activello/)  
 
