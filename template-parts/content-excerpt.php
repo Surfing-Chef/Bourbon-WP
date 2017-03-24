@@ -53,14 +53,6 @@
 			</div><!-- .entry-content -->
 		</section>
 
-		<aside>
-			<div class="recent-posts">
-				<h3>Recent Posts</h3>
-			</div>
-			<div class="recent-posts">
-				<h3>Categories</h3>
-			</div>
-		</aside>
 	</div>
 
 
