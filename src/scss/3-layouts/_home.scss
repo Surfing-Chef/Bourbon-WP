@@ -54,12 +54,6 @@
         @include outer-container;
 
         section {
-          @include span-columns(8 of 12);
-          @include padding(null 2em null null);
-          @include border-width(null 1px null null);
-          @include border-color(null tint($medium-gray, 50%) null null);
-          @include border-style(null solid null null);
-
           .home-featured-image {
             height: 260px;
             width: 260px;
@@ -75,12 +69,6 @@
           .not-set {
             height: 75px;
             width: 75px;
-            border: none;
-          }
-
-          @include media(min-width 320px max-width 720px) {
-            @include span-columns(12);
-            padding-right: 0;
             border: none;
           }
         }

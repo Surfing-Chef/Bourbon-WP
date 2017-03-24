@@ -6,9 +6,34 @@
   border-bottom: 1px solid shade(white, 70%);
 
 }
+// END #content
 
-#primary{
+#primary {
   @include outer-container;
+
+  .article-content {
+    @include media(min-width 320px max-width 949px) {
+      //@include span-columns(12);
+      //padding-right: 0;
+      @include border-width(null 0 1px null);
+      @include border-color(null null tint($medium-gray, 50%) null);
+      @include border-style(null null solid null);
+    }
+  }
+
+  section {
+    @include span-columns(8 of 12);
+    @include padding(null 2em null null);
+    @include border-width(null 1px null null);
+    @include border-color(null tint($medium-gray, 50%) null null);
+    @include border-style(null solid null null);
+
+    @include media(min-width 320px max-width 949px) {
+      @include span-columns(12);
+      padding-right: 0;
+      border: none;
+    }
+  }
 
   main {
     @include padding(1em 1em 1em 1em);
@@ -21,28 +46,36 @@
       @include margin(null null 1.5em null);
       overflow-x: auto;
 
-
-      .entry-footer{
-        @include span-columns(8);
-
-        span{
-          @include span-columns(4 of 8);
-        }
+      @include media(min-width 320px max-width 949px) {
+        margin-bottom: 0;
       }
 
-      .gallery-row {
-        margin: 0 auto;
+
+      div > span > span {
+        @include span-columns(4 of 8);
+        margin-bottom: 0.5em;
+        @include omega;
       }
+
+      div > span {
+        @include span-columns(8 of 8);
+      }
+
     }
 
-    article:last-child {
-      border-bottom: 0;
-      margin-bottom: 1em;
-      padding-bottom: 1em;
-    }
-
-    .sticky {
-      // sticky post styles
+    .gallery-row {
+      margin: 0 auto;
     }
   }
+
+  article:last-child {
+    border-bottom: 0;
+    margin-bottom: 1em;
+    padding-bottom: 1em;
+  }
+
+  .sticky {
+    // sticky post styles
+  }
 }
+// END #primary
