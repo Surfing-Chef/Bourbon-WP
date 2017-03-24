@@ -93,16 +93,16 @@ add_action( 'after_setup_theme', 'bourbon_wp_content_width', 0 );
  * @link https://developer.wordpress.org/themes/functionality/sidebars/#registering-a-sidebar
  */
 function bourbon_wp_widgets_init() {
-	// // Default sidebar/widget area
-	// register_sidebar( array(
-	// 	'name'          => esc_html__( 'Sidebar', 'bourbon-wp' ),
-	// 	'id'            => 'sidebar-1',
-	// 	'description'   => esc_html__( 'Add widgets here.', 'bourbon-wp' ),
-	// 	'before_widget' => '<section id="%1$s" class="widget %2$s">',
-	// 	'after_widget'  => '</section>',
-	// 	'before_title'  => '<h2 class="widget-title">',
-	// 	'after_title'   => '</h2>',
-	// ) );
+	// Default sidebar/widget area
+	register_sidebar( array(
+		'name'          => esc_html__( 'Home Page Sidebar', 'bourbon-wp' ),
+		'id'            => 'sidebar-home',
+		'description'   => esc_html__( 'Add widgets here.', 'bourbon-wp' ),
+		'before_widget' => '<section id="%1$s" class="widget %2$s">',
+		'after_widget'  => '</section>',
+		'before_title'  => '<h2 class="widget-title">',
+		'after_title'   => '</h2>',
+	) );
 
 	// Widget Area - Culinaria Feeds
 	register_sidebar( array(

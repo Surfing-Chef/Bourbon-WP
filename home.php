@@ -154,8 +154,8 @@
 		</main><!-- #main -->
 
     <aside class="">
-      <h3>Recent Posts</h3>
-      <h3>Categories</h3>
+      <?php if ( is_home() && (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Home Page Sidebar")) ) : ?>
+      <?php endif;?>
     </aside>
 	</div><!-- #primary -->
 
