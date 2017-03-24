@@ -152,6 +152,11 @@
 		endif; ?>
 
 		</main><!-- #main -->
+
+    <aside class="">
+      <h3>Recent Posts</h3>
+      <h3>Categories</h3>
+    </aside>
 	</div><!-- #primary -->
 
 <?php
