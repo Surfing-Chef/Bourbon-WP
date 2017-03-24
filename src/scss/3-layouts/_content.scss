@@ -48,8 +48,11 @@
 
       @include media(min-width 320px max-width 949px) {
         margin-bottom: 0;
-      }
 
+        .article-content {
+          padding-bottom: 2.5em;
+        }
+      }
 
       div > span > span {
         @include span-columns(4 of 8);
