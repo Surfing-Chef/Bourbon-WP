@@ -26,11 +26,12 @@
   - [_**home.php**_](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/home.php)  
 - [Modified _**template-parts/content-excerpt.php**_](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/template-parts/content-excerpt.php)  
 - [Modified _**inc\template-tags.php**_](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/inc/template-tags.php)  
-- Homepage to display featured images and excerpts:  
+- Display featured images and excerpts:  
   - featured images as backgrounds to be centered and cropped via css  
   - logo smaller size with larger margins/padding  
-
-- **TODO** center the navigation using ***outer-container***
+- Custom sidebar displays recent posts and categories:  
+  - [recent posts](https://codex.wordpress.org/Function_Reference/wp_get_recent_posts)  
+  - [categories](https://developer.wordpress.org/reference/functions/get_categories/)  
 
 ### 1.2 Static Pages - Culinaria, Coding, Projects and About
 #### Culinaria
