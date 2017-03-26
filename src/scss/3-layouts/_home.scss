@@ -40,6 +40,7 @@
   main.home {
     background: $light-gray;
     @include span-columns(8 of 12);
+    @include omega;
 
     @include media(min-width 320px max-width 949px) {
       @include span-columns(12);
@@ -58,9 +59,7 @@
 
         section {
           width: 100% !important;
-          @include border-width(null 1px null null);
-          @include border-color(null tint($medium-gray, 50%) null null);
-          @include border-style(null solid null null);
+          border: none !important;
 
           .home-featured-image {
             height: 260px;
@@ -183,10 +182,52 @@
   } // main
   //<< END: main
 
+  #primary > aside > section {
+    @include border-width(null 0 0 null);
+    @include span-columns (12);
+  }
   aside {
     @include span-columns(4 of 12);
     @include omega;
     padding: 2em 1em 1em 1em;
+
+
+    .home-aside-post {
+      @include span-columns(12);
+      padding: 0.5em;
+
+      a {
+        color: $dark-gray;
+
+        &:active,
+        &:focus,
+        &:hover {
+          color: $action-color;
+          font-weight: bold;
+        }
+      }
+
+      .home-aside-post-image {
+        @include span-columns(4);
+        //margin-right: 1em;
+      }
+
+      .home-aside-post-title {
+        @include span-columns(8);
+        padding-left: 0.5em;
+        @include omega;
+      }
+
+      .home-aside-post-date {
+        @include span-columns(8);
+        @include shift(4);
+        padding-left: 0.5em;
+        font-size: .9em;
+        font-style: italic;
+        line-height: 2em;
+        //text-align: center;
+      }
+    }
 
     @include media(min-width 320px max-width 949px) {
       @include span-columns(12);
