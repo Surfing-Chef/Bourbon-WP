@@ -185,48 +185,90 @@
   #primary > aside > section {
     @include border-width(null 0 0 null);
     @include span-columns (12);
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+
+    a {
+      color: $dark-gray;
+
+      &:active,
+      &:focus,
+      &:hover {
+        color: $action-color;
+        font-weight: bold;
+      }
+    }
   }
+
+#primary > aside > section:first-child {
+  @include media(min-width 320px max-width 949px) {
+    border-bottom: 1px solid #ccc;
+  }
+}
+
+
+
   aside {
     @include span-columns(4 of 12);
     @include omega;
     padding: 2em 1em 1em 1em;
 
+    .home-aside-section-posts {
 
-    .home-aside-post {
-      @include span-columns(12);
-      padding: 0.5em;
+      .home-aside-post {
+        @include span-columns(12);
+        padding: 0.5em;
 
-      a {
-        color: $dark-gray;
+        @include media(min-width 500px max-width 949px) {
+          @include span-columns(4 of 12);
+        }
 
-        &:active,
-        &:focus,
-        &:hover {
-          color: $action-color;
-          font-weight: bold;
+        .home-aside-post-image {
+          @include span-columns(4);
+          //margin-right: 1em;
+        }
+
+        .home-aside-post-title {
+          @include span-columns(8);
+          padding-left: 0.5em;
+          @include omega;
+        }
+
+        .home-aside-post-date {
+          @include span-columns(8);
+          @include shift(4);
+          padding-left: 0.5em;
+          font-size: .9em;
+          font-style: italic;
+          line-height: 2em;
+          //text-align: center;
+        }
+      }
+    }
+
+    .home-aside-section-categories {
+
+
+      .categories-list {
+        @include span-columns(12);
+        padding-left: 0;
+
+        span {
+          line-height: 2em;
+          margin: 0;
+          border-bottom: 1px solid #ccc;
         }
       }
 
-      .home-aside-post-image {
-        @include span-columns(4);
-        //margin-right: 1em;
+      .category-name {
+        @include span-columns(10);
       }
 
-      .home-aside-post-title {
-        @include span-columns(8);
-        padding-left: 0.5em;
-        @include omega;
+      .category-count {
+        @include span-columns(2);
+        text-align: right;
       }
 
-      .home-aside-post-date {
-        @include span-columns(8);
-        @include shift(4);
-        padding-left: 0.5em;
-        font-size: .9em;
-        font-style: italic;
-        line-height: 2em;
-        //text-align: center;
-      }
     }
 
     @include media(min-width 320px max-width 949px) {
