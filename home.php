@@ -154,50 +154,76 @@
 		</main><!-- #main -->
 
     <aside class="home-aside">
-      <h3>Recent Posts</h2>
-      <section>
+      <section class="home-aside-section-posts">
+        <h3>Recent Posts</h2>
       <?php
-      	$args = array( 'numberposts' => '3' );
-      	$recent_posts = wp_get_recent_posts( $args );
+      $args = array( 'numberposts' => '3' );
+      $recent_posts = wp_get_recent_posts( $args );
 
-      	foreach( $recent_posts as $recent ){
-          $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($recent["ID"]), 'thumbnail', false );
-          $postdate = get_the_date('Y-m-d', $recent["ID"]);
-          ?>
-          <div class="home-aside-post">
-            <a href="<?php echo get_permalink($recent["ID"]);?>">
+      foreach( $recent_posts as $recent ){
+        $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($recent["ID"]), 'thumbnail', false );
+        $postdate = get_the_date('Y-m-d', $recent["ID"]);
+        ?>
+        <div class="home-aside-post">
+          <a href="<?php echo get_permalink($recent["ID"]);?>">
 
-              <div class="home-aside-post-image">
+            <div class="home-aside-post-image">
 
-                <?php if ($thumbnail[0]) : ?>
-                <img src="<?php echo $thumbnail[0]; ?>" alt="<?php echo $recent["post_title"]; ?>">
+              <?php if ($thumbnail[0]) : ?>
+              <img src="<?php echo $thumbnail[0]; ?>" alt="<?php echo $recent["post_title"]; ?>">
 
-                <?php else : ?>
-                <img src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>
-                /src/images/logo.png" alt="<?php echo $recent["post_title"]; ?>">
+              <?php else : ?>
+              <img src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>
+              /src/images/logo.png" alt="<?php echo $recent["post_title"]; ?>">
 
-                <?php endif; ?>
-              </div>
-              <div class="home-aside-post-title">
-                <span><?php echo $recent["post_title"]; ?></span>
-              </div>
-              <div class="home-aside-post-date">
-                <span><i class="fa fa-clock-o" aria-hidden="true"></i><?php echo " ".$postdate; ?></span>
-              </div>
+              <?php endif; ?>
+            </div>
+            <div class="home-aside-post-title">
+              <span><?php echo $recent["post_title"]; ?></span>
+            </div>
+            <div class="home-aside-post-date">
+              <span><i class="fa fa-clock-o" aria-hidden="true"></i><?php echo " ".$postdate; ?></span>
+            </div>
 
-            </a>
-          </div>
-          <?php
-      		// echo '<li><a href="' . get_permalink($recent["ID"]) . '"><span>' .
-          // '<img src="' . $thumbnail . '" '.
-          //  'alt="' . $recent["post_title"] . '">'.
-          // $recent["post_title"].'</span></a> </li> ';
-      	}
-      	wp_reset_query();
+          </a>
+        </div>
+        <?php
+      	// echo '<li><a href="' . get_permalink($recent["ID"]) . '"><span>' .
+        // '<img src="' . $thumbnail . '" '.
+        //  'alt="' . $recent["post_title"] . '">'.
+        // $recent["post_title"].'</span></a> </li> ';
+      }
+      wp_reset_query();
       ?>
-    </section>
-      <?php if ( is_home() && (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Home Page Sidebar")) ) : ?>
-      <?php endif;?>
+      </section>
+
+      <section class="home-aside-section-categories">
+        <h3>Categories</h2>
+        <ul class="categories-list">
+        <?php
+        $categories = get_categories( array(
+        'orderby' => 'name',
+        'parent'  => 0
+        ) );
+
+        foreach ( $categories as $category ) {
+          printf( '<li>
+                    <a href="%1$s">
+                      <span class="category-name">%2$s</span>
+                      <span class="category-count">%3$s</span>
+                    </a>
+                  </li>',
+              esc_url( get_category_link( $category->term_id ) ),
+              esc_html( $category->name ),esc_html( $category->count )
+          );
+        }
+        ?>
+
+        </ul>
+      </section>
+
+      <!-- <?php if ( is_home() && (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Home Page Sidebar")) ) : ?>
+      <?php endif;?> -->
     </aside>
 	</div><!-- #primary -->
 
