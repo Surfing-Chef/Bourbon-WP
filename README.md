@@ -1,5 +1,6 @@
 #***TODO***
-- adjust single and archive pages to match homepage post formats    
+- adjust responsive aside images for smaller devices - need a minimum size when under content at bottom of page   
+- jump buttons for mobile screen - links to other pages  
 - convert tabbed to accordion in culinaria  
   - address responsive images in accordion
 
