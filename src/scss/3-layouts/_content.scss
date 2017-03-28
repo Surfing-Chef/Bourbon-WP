@@ -11,22 +11,12 @@
 #primary {
   @include outer-container;
 
-  .article-content {
-    @include media(min-width 320px max-width 949px) {
-      //@include span-columns(12);
-      //padding-right: 0;
-      @include border-width(null 0 1px null);
-      @include border-color(null null tint($medium-gray, 50%) null);
-      @include border-style(null null solid null);
-    }
-  }
-
   section {
-    @include span-columns(8 of 12);
+    //@include span-columns(12);
     @include padding(null 2em null null);
-    @include border-width(null 1px null null);
-    @include border-color(null tint($medium-gray, 50%) null null);
-    @include border-style(null solid null null);
+  //  @include border-width(null 1px null null);
+    //@include border-color(null tint($medium-gray, 50%) null null);
+    //@include border-style(null solid null null);
 
     @include media(min-width 320px max-width 949px) {
       @include span-columns(12);
@@ -36,22 +26,32 @@
   }
 
   main {
+    background: $light-gray;
+    @include span-columns(8 of 12);
+    @include omega;
+
     @include padding(1em 1em 1em 1em);
     border-bottom: none;
 
+    @include media(min-width 320px max-width 949px) {
+      @include span-columns(12);
+    }
 
     article {
       @include span-columns(12);
       @include padding(null null 1.5em null);
       @include margin(null null 1.5em null);
       overflow-x: auto;
-
       @include media(min-width 320px max-width 949px) {
         margin-bottom: 0;
+      }
 
-        .article-content {
+      .article-content {
+        border: none !important;
+        @include media(min-width 320px max-width 949px) {
           padding-bottom: 2.5em;
         }
+
       }
 
       div > span > span {
