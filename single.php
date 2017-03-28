@@ -29,8 +29,8 @@ get_header(); ?>
 
 		</main><!-- #main -->
 
-		<aside class="home-aside">
-			<section class="home-aside-section-posts">
+		<aside class="aside">
+			<section class="aside-section-posts">
 				<h3>Recent Posts</h2>
 			<?php
 			$args = array( 'numberposts' => '3' );
@@ -40,10 +40,10 @@ get_header(); ?>
 				$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($recent["ID"]), 'thumbnail', false );
 				$postdate = get_the_date('Y-m-d', $recent["ID"]);
 				?>
-				<div class="home-aside-post">
+				<div class="aside-post">
 					<a href="<?php echo get_permalink($recent["ID"]);?>">
 
-						<div class="home-aside-post-image">
+						<div class="aside-post-image">
 
 							<?php if ($thumbnail[0]) : ?>
 							<img src="<?php echo $thumbnail[0]; ?>" alt="<?php echo $recent["post_title"]; ?>">
@@ -54,10 +54,10 @@ get_header(); ?>
 
 							<?php endif; ?>
 						</div>
-						<div class="home-aside-post-title">
+						<div class="aside-post-title">
 							<span><?php echo $recent["post_title"]; ?></span>
 						</div>
-						<div class="home-aside-post-date">
+						<div class="aside-post-date">
 							<span><i class="fa fa-clock-o" aria-hidden="true"></i><?php echo " ".$postdate; ?></span>
 						</div>
 
@@ -69,7 +69,7 @@ get_header(); ?>
 			?>
 			</section>
 
-			<section class="home-aside-section-categories">
+			<section class="aside-section-categories">
 				<h3>Categories</h2>
 				<ul class="categories-list">
 				<?php
