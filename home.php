@@ -182,10 +182,6 @@
           </a>
         </div>
         <?php
-      	// echo '<li><a href="' . get_permalink($recent["ID"]) . '"><span>' .
-        // '<img src="' . $thumbnail . '" '.
-        //  'alt="' . $recent["post_title"] . '">'.
-        // $recent["post_title"].'</span></a> </li> ';
       }
       wp_reset_query();
       ?>
@@ -215,9 +211,6 @@
 
         </ul>
       </section>
-
-      <!-- <?php if ( is_home() && (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Home Page Sidebar")) ) : ?>
-      <?php endif;?> -->
     </aside>
 	</div><!-- #primary -->
 
