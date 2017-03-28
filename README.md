@@ -1,5 +1,5 @@
 #***TODO***
-- homepage aside content-excerpt  
+- adjust single and archive pages to match homepage post formats    
 - convert tabbed to accordion in culinaria  
   - address responsive images in accordion
 
@@ -18,6 +18,8 @@
 - Adjust *Primary Menu* in *admin > Appearance > Menus* under the *Edit Menus* tab
 
 ## 1. ADJUSTMENTS
+- Created custom searchbar based on WordPress [`get_search_bar()` function] (https://developer.wordpress.org/reference/functions/get_search_form/)  
+  - ['bourbon_wp_search_form()' in *functions.php*](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/functions.php)  
 
 ### 1.1 Home Page
 - copy _**index.php**_ as _**home.php**_
@@ -35,6 +37,7 @@
 
 ### 1.2 Static Pages - Culinaria, Coding, Projects and About
 #### Culinaria
+
 - Added a widgets' section to _**template-parts\content-page.php**_ that inserts appropriate widget areas depending on the current page slug:
 ```PHP
 <?php if ( is_page( 'culinaria' ) && (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Culinaria Feeds")) ) : ?>
