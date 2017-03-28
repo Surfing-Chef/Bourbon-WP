@@ -14,13 +14,15 @@
 	<div class="article-content">
 
 		<section>
-			<?php
-			if ( is_single() ) :
-				the_title( '<h1 class="entry-title">', '</h1>' );
-			else :
-				the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
-			endif;
-			?>
+			<header class="entry-header">
+				<?php
+				if ( is_single() ) :
+					the_title( '<h1 class="entry-title">', '</h1>' );
+				else :
+					the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
+				endif;
+				?>
+			</header><!-- .entry-header -->
 
 			<div class="entry-content">
 				<?php
@@ -29,9 +31,6 @@
 				if ( has_post_thumbnail() ) {
 					$thumb_id = get_post_thumbnail_id();
 					$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
-					//echo $thumb_url[0];
-
-					//the_post_thumbnail (string|array $size = 'post-thumbnail', string|array $attr = '');
 					echo
 					'<div class="home-featured-image" style="background-image: url(http:' . $thumb_url[0]
 							. ')"></div>';
@@ -53,7 +52,5 @@
 			</div><!-- .entry-content -->
 		</section>
 
-	</div>
-
-
+	</div><!-- .article-content -->
 </article><!-- #post-## -->
