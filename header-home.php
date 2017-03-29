@@ -6,9 +6,7 @@
   *
   * @package Bourbon-WP
 **/
-?>
-
-<!DOCTYPE html>
+?><!DOCTYPE html>
 <html <?php language_attributes(); ?>>
 <head>
   <meta charset="<?php bloginfo( 'charset' ); ?>">
@@ -47,7 +45,7 @@
 						'container'       => '',
 						'container_class' => '',
 						'container_id'    => '',
-						'menu_class'      => 'alt-menu show',
+						'menu_class'      => 'alt-menu',
 						'menu_id'         => 'js-alt-menu'
 					)); ?>
 	      </nav>
@@ -71,6 +69,7 @@
 
     <!-- main-navigation -->
 	  <section class="main-navigation top-nav" role="banner">
+
 	    <div class="navigation-wrapper">
 	      <a href="<?php echo home_url(); ?>" class="mobile-logo">
 	        <img src="<?php echo get_template_directory_uri(); ?>/src/images/mountain.svg" alt="Logo image">
@@ -85,7 +84,7 @@
 						'container'       => '',
 						'container_class' => '',
 						'container_id'    => '',
-						'menu_class'      => 'navigation-menu show',
+						'menu_class'      => 'navigation-menu',
 						'menu_id'         => 'js-navigation-menu'
 					)); ?>
 	      </nav>
