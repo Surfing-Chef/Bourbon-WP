@@ -1,11 +1,9 @@
 /*! 3-layouts/_navigation.scss */
 
-.main-navigation {
   $base-border-color: gainsboro !default;
   $base-border-radius: 3px !default;
   $action-color: #477DCA !default;
   $dark-gray: #333 !default;
-  //$large-screen: 53.75em !default;
   $navigation-padding: 1em;
   $navigation-background: $dark-gray;
   $navigation-color: transparentize(white, 0.3);
@@ -24,6 +22,7 @@
   $navigation-submenu-width: 12em;
   $horizontal-bar-mode: 950px;
 
+.top-nav {
   font-family: $sans-serif;
   font-size: 1.2em;
   text-shadow: 1px 1px rgba(grey, 0.9);
@@ -34,6 +33,7 @@
   $bg2: transparentize(white, 0.5);
   @include texture($bg1, $bg2, 85, 2);
   border-bottom: 1px solid rgba(black, 0.3);
+
   // Mobile view
 
   .mobile-logo {
@@ -67,9 +67,10 @@
       display: none;
     }
 
-    &:focus,
+    
     &:hover {
       color: $navigation-color-hover;
+      text-shadow: 1px 1px tint($dark-gray, 70%);
     }
   }
 
@@ -86,7 +87,6 @@
 
     @include media ($horizontal-bar-mode) {
       float: left;
-
     }
   }
 
@@ -131,11 +131,9 @@
   // The nav items
 
   ul li.nav-link {
-    //background: $navigation-background;
     display: block;
     line-height: $navigation-height;
     overflow: hidden;
-    //padding-right: 0.8em;
     text-align: right;
     width: 100%;
     z-index: 9999;
@@ -414,5 +412,53 @@
       padding-top: 0;
       float: right;
     }
+  }
+}
+
+.top-nav-alt {
+  position: fixed;
+  background-color: transparentize(black, .2);
+  line-height: 1em;
+  width: 100%;
+  z-index: 899;
+
+
+  .navigation-wrapper {
+    @include outer-container();
+    @include omega;
+  }
+
+  ul {
+    -webkit-transform-style: preserve-3d; // stop webkit flicker
+    @include span-columns(12);
+    padding: 0;
+
+    // The nav items
+    li {
+      @include span-columns(2);
+      display: table;
+      padding: 0.5em 0;
+      line-height: 1em;
+      text-align: center;
+      z-index: 9999;
+
+      a {
+        color: $navigation-color;
+
+        &:focus,
+        &:hover {
+          color: white;
+          text-shadow: 1px 1px $medium-gray;
+        }
+      }
+    }
+
+    @include media( max-width (600px)) {
+      li {
+        @include span-columns(4);
+        @include omega;
+      }
+    }
+
   }
 }
