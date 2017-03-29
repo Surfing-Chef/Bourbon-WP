@@ -37,6 +37,24 @@
   <div id="page" class="site">
   	<a class="skip-link screen-reader-text" href="#content"><?php esc_html_e( 'Skip to content', 'bourbon-wp' ); ?></a>
 
+    <!-- NAV ALT -->
+	  <section class="top-nav-alt" role="banner">
+	    <div class="navigation-wrapper">
+	      <nav class="nav-menu nav-alt" role="navigation" itemscope itemtype="http://schema.org/SiteNavigationElement">
+					<?php wp_nav_menu(array(
+						'theme_location'  => 'alt_menu',
+						'menu'            => '',
+						'container'       => '',
+						'container_class' => '',
+						'container_id'    => '',
+						'menu_class'      => 'alt-menu show',
+						'menu_id'         => 'js-alt-menu'
+					)); ?>
+	      </nav>
+      </div>
+    </section>
+    <!-- END NAV ALT -->
+
   <!-- HEADER -->
   <header  id="js-parallax-window" class="parallax-window">
 
@@ -52,7 +70,7 @@
     </div>
 
     <!-- main-navigation -->
-	  <section class="main-navigation" role="banner">
+	  <section class="main-navigation top-nav" role="banner">
 	    <div class="navigation-wrapper">
 	      <a href="<?php echo home_url(); ?>" class="mobile-logo">
 	        <img src="<?php echo get_template_directory_uri(); ?>/src/images/mountain.svg" alt="Logo image">
