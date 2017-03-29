@@ -1,8 +1,9 @@
 // DOCUMENT READY
 $(document).ready(function() {
+
   // BACK TO TOP BUTTON
   //----------------------------------------------
-  var offset = 100;
+  var offset = $('.top-nav').height();
   var duration = 300;
 
   $('.back-to-top').css( "display", "none" );
@@ -20,6 +21,21 @@ $(document).ready(function() {
     jQuery('html, body').animate({scrollTop: 0}, duration);
     return false;
   });
+// END BACK TO TOP BUTTON
+
+// ALT TOP MENU
+//----------------------------------------------
+$('.top-nav-alt').css( "display", "none" );
+
+jQuery(window).scroll(function() {
+  if (jQuery(this).scrollTop() > offset) {
+    jQuery('.top-nav-alt').fadeIn(duration);
+  } else {
+    jQuery('.top-nav-alt').fadeOut(duration);
+  }
+});
+// END ALT TOP MENU
+
 
 // QUOTE FUNCTION
 //----------------------------------------------

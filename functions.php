@@ -45,6 +45,7 @@ function bourbon_wp_setup() {
 	// This theme uses wp_nav_menu() in one location.
 	register_nav_menus( array(
 		'main_menu' => esc_html__( 'Primary', 'bourbon-wp' ),
+		'alt_menu' => esc_html__( 'Alt Main', 'bourbon-wp' ),
 		'landing_menu' => esc_html__('Landing Menu', 'bourbon-wp'),
     'culinary_menu' => esc_html__('Culinary Menu', 'bourbon-wp'),
     'blog_menu' => esc_html__('Blog Roll', 'bourbon-wp'),
