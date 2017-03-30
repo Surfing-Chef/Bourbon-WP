@@ -1,7 +1,6 @@
 #***TODO***
-- adjust responsive aside images for smaller devices - need a minimum size when under content at bottom of page   
-- jump buttons for mobile screen - links to other pages  
-- convert tabbed to accordion in culinaria  
+
+- convert accordion tabs to vertical tabs in culinaria  [link to ***Bourbon Refill Pattern***](http://refills.bourbon.io/)  
   - address responsive images in accordion
 
 # Bourbon-WP (aka Bourbon-Chef-Site-2.3)
@@ -21,7 +20,9 @@
 ## 1. ADJUSTMENTS
 - Created custom searchbar based on WordPress [`get_search_bar()` function] (https://developer.wordpress.org/reference/functions/get_search_form/)  
   - ['bourbon_wp_search_form()' in *functions.php*](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/functions.php)  
-
+- Created a simple fixed menu to appear at top of screen when main menu disappears:  
+  - [added code to *header.php* and *header-home.php* just inside the *#page* div tag](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/header-home.php)  
+  - [implemented menu in *functions.php* around line 48](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/functions.php)  
 ### 1.1 Home Page
 - copy _**index.php**_ as _**home.php**_
 - alter **header** section of _**home.php**_ to match the same section in _**landing.php**_
@@ -78,16 +79,24 @@
   - Contacts > Template: Default Template    
 
 ### 2.2 Navigation
--  Adjust *Primary Menu* in *admin > Appearance > Menus* under the *Edit Menus* tab:  
+- Adjust *Primary Menu* in *admin > Appearance > Menus* under the *Edit Menus* tab:  
   - Main Menu:  (Primary menu location)  
+  1. Custom Link > Navigation Label: Logo, CSS Classes: nav-link logo, image: logo, size: thumbnail, title position: hide    
+  2. Page: Culinaria, Navigation Label: Culinaria, CSS Classes: nav-link  
+  3. Page: Coding, Navigation Label: Coding, CSS Classes: nav-link  
+  4. Page: Projects, Navigation Label: Projects, CSS Classes: nav-link  
+  5. Page: About, Navigation Label: About, CSS Classes: nav-link  
+  6. Page: Contacts, Navigation Label: Contacts, CSS Classes: nav-link   
+  - Click the *Primary Menu* box and **save**.  
+- Create/Adjust *Alt Main Menu* in *admin > Appearance > Menus* under the *Manage Locations* tab:  
+  - Alt Main: select *Alt Main* from the drop down, or ***Use New Menu*** option  
   1. Custom Link > Navigation Label: Home, URL: /bourbon-wp, CSS Classes: nav-link  
   2. Page: Culinaria, Navigation Label: Culinaria, CSS Classes: nav-link  
   3. Page: Coding, Navigation Label: Coding, CSS Classes: nav-link  
-  4. Custom Link > Navigation Label: Logo, CSS Classes: nav-link logo, image: logo, size: thumbnail, title position: hide    
-  5. Page: Projects, Navigation Label: Projects, CSS Classes: nav-link  
-  6. Page: About, Navigation Label: About, CSS Classes: nav-link  
-  7. Page: Contacts, Navigation Label: Contacts, CSS Classes: nav-link   
-- Click the *Primary Menu* box and **save**.  
+  4. Page: Projects, Navigation Label: Projects, CSS Classes: nav-link  
+  5. Page: About, Navigation Label: About, CSS Classes: nav-link  
+  6. Page: Contacts, Navigation Label: Contacts, CSS Classes: nav-link  
+
 
 ### 2.3 Widgets
 - Drag and drop the default WP *text widget* to the new *Culinaria Feeds* widget area:  
