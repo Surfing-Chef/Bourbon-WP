@@ -67,7 +67,7 @@
       display: none;
     }
 
-    
+
     &:hover {
       color: $navigation-color-hover;
       text-shadow: 1px 1px tint($dark-gray, 70%);
@@ -425,7 +425,6 @@
 
   .navigation-wrapper {
     @include outer-container();
-    @include omega;
   }
 
   ul {
