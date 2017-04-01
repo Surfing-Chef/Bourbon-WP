@@ -37,26 +37,33 @@
     display: none;
 
     @include media($vertical-tab-mode) {
-      background-color: $tab-inactive-color;
+      @include span-columns(2 of 8);
+      @include omega;
       display: inline;
       float: left;
       height: $vertical-tabs-height;
-      @include span-columns(2 of 8);
-      @include omega;
+      border-right: 1px solid #ccc;
     }
+
   }
 
   .vertical-tab {
     @include media($vertical-tab-mode) {
-      border-bottom: $tab-border;
       display: block;
       font-weight: bold;
       margin-right: -1px;
       padding: ($base-spacing / 2) ($gutter / 2);
+      border: 1px solid $light-gray;
+      border-radius: 2px;
+      margin-right: -2px;
 
-      &.is-active {
-        background-color: $tab-content-background;
-        margin-right: -1px;
+      &.is-active,
+      &:hover {
+        background: $tab-content-background;
+        border: 1px solid #ccc;
+        border-radius: 2px;
+        margin-right: -2px;
+        color: $action-color;
       }
     }
   }
@@ -64,6 +71,14 @@
   a.vertical-tab-accordion-heading,
   a.vertical-tab {
     color: $dark-gray;
+
+    &.is-active {
+      color: $dark-gray;
+    }
+
+    @include media (max-width 599px){
+      color: $light-gray;
+    }
   }
 
   .vertical-tab:focus {
@@ -72,7 +87,13 @@
 
   .vertical-tab-content-container {
     display: block;
-    margin: 0 auto;
+    padding: 1em;
+    @include border-color(#ccc #ccc #ccc null );
+    @include border-width(1px 1px 1px null);
+    @include border-style(solid solid solid null );
+    @include border-right-radius(3px);
+    border-bottom-left-radius: 3px;
+
 
     & a:focus {
       outline: none;
@@ -85,69 +106,53 @@
       background-color: $tab-content-background;
       display: inline-block;
     }
+
+    @include media (max-width 599px){
+      border: none;
+    }
+
   }
 
   .vertical-tab-content {
     position: relative;
 
     .culinaria-feed-container {
-      @include span-columns(3);
-      font-size: 1.1em;
+      @include span-columns(3, table);
+      margin: 0 .4em;
+      padding: .5em .5em 0 .5em;
+      font-size: .8em;
       text-align: center;
       position: relative;
-    } // .culinaria-feed-container
 
-    .culinaria-feed-container:nth-child(4),
-    .culinaria-feed-container:nth-child(5){
-      display: none;
-    } // .culinaria-feed-container:nth-child(5)
+      @include media (max-width 375px){
+        @include span-columns(12);
+        padding: 0;
+        margin: 0;
+      }
 
-    .image-container {
-      height: 150px;
+      @include media (max-width 599px){
+        background: $tab-content-background;
+      }
 
-      background-position: center center;
-      background-size: cover;
-      background-repeat: no-repeat;
-    }
+      .image-container {
+        min-height: 185px;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        border: 1px solid #ccc;
+        border-radius: 2px;
 
-    @include media(max-width 700px) {
-      padding-bottom: 0;
-      .culinaria-feed-container {
-        @include span-columns(6);
-        @include omega(3);
-
-        padding-bottom: 1.5em;
-
-        img {
-          margin: 0 auto;
+        @include media (max-width 375px){
+          border: none;
         }
       }
     }
 
-    @include media(max-width 400px) {
-      .culinaria-feed-container {
-        @include span-columns(12);
-        @include omega;
-      }
+    // do not display extra feeds
+    .culinaria-feed-container:nth-child(4),
+    .culinaria-feed-container:nth-child(5){
+      display: none;
     }
-
-    @include media(max-width 699px) {
-      padding: 0;
-    }
-
-
-    // background-color: $tab-content-background;
-    // padding: $base-spacing $gutter;
-    //
-    // p {
-    //   color: $base-font-color;
-    //   line-height: $base-line-height;
-    // }
-    //
-    // @include media($vertical-tab-mode) {
-    //   border: 0;
-    //   display: none;
-    // }
   }
 
   .vertical-tab-accordion-heading {
