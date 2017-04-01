@@ -1,12 +1,10 @@
 #***TODO***
 
-- converting accordion tabs to vertical tabs in culinaria  
-- content being imported  
-- need to adjust layout  
-- possibly limit number of feeds to three each  
-- change out cooks illustrated    
-  - [using a test page before implementing into WordPress Culinary widget](http://localhost:3000/Bourbon-WP/tester/)
-  - refer to and compare [recently tabbed](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/src/scss/2-modules/_recently-tabbed.scss), [vertical tabs](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/src/scss/2-modules/_vertical-tabs.scss), [page culinaria](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/src/scss/3-layouts/_page-culinaria.scss)
+- Adjuste Culinaria Page  
+  - adjust individual feed titles - limit verbage  
+  - limit number of feeds to three  
+  - change out Cooks Illustrated    
+- Add aside content to pages - bookmarks (custom menus) perhaps...  
 
 # Bourbon-WP (aka Bourbon-Chef-Site-2.3)
 > Bones Blank starter theme was a helpful start. This branch reconfigures the site layout to a blog start page, with the main parent categories each having a nav bar link - Culinaria, Coding, Projects, About - as well as a contact page. Layout components are influenced by the theme, [Activello](https://colorlib.com/wp/themes/activello/)  
