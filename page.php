@@ -32,6 +32,17 @@ get_header(); ?>
 			?>
 
 		</main><!-- #main -->
+
+		<aside class="">
+			<?php if ( is_page( 'culinaria' ) ) : ?>
+				<h3>Library of Culinaria</h3>
+				<?php wp_nav_menu(array(
+					'theme_location'  => 'culinary_menu',
+					'menu_class'      => 'aside-menu',
+					'menu_id'         => 'culinary-links'
+				)); ?>
+			<?php endif;?>
+		</aside>
 	</div><!-- #primary -->
 
 <?php
