@@ -1,6 +1,8 @@
 #***TODO***
 
-- Adjuste Culinaria Page  
+- Orange color for highlights  
+- 404 page styles and layout  
+- Adjust Culinaria Page  
   - adjust individual feed titles - limit verbage  
   - limit number of feeds to three  
   - change out Cooks Illustrated    
