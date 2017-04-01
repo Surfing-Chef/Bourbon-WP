@@ -18,17 +18,21 @@ get_header(); ?>
 				</header><!-- .page-header -->
 
 				<div class="page-content">
-					<p><?php esc_html_e( 'It looks like nothing was found at this location. Maybe try one of the links below or a search?', 'bourbon-wp' ); ?></p>
+					<h2><?php esc_html_e( 'Sorry, but it looks like what you were looking for was not found at this location. What were you looking for?', 'bourbon-wp' ); ?></h2>
 
 					<?php
 						get_search_form();
+					?>
+					<br>
+					<h2><?php esc_html_e( 'Maybe you\'ll find it below...', 'bourbon-wp' ); ?></h2>
+					<?php
 
 						the_widget( 'WP_Widget_Recent_Posts' );
 
 						// Only show the widget if site has multiple categories.
 						if ( bourbon_wp_categorized_blog() ) :
 					?>
-
+					<br>
 					<div class="widget widget_categories">
 						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'bourbon-wp' ); ?></h2>
 						<ul>
@@ -43,12 +47,12 @@ get_header(); ?>
 						?>
 						</ul>
 					</div><!-- .widget -->
-
+					<br>
 					<?php
 						endif;
 
 						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives. %1$s', 'bourbon-wp' ), convert_smilies( ':)' ) ) . '</p>';
+						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives.', 'bourbon-wp' ) ) . '</p>';
 						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 
 						the_widget( 'WP_Widget_Tag_Cloud' );
