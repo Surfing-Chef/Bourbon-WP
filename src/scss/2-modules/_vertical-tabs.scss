@@ -42,7 +42,7 @@
       display: inline;
       float: left;
       height: $vertical-tabs-height;
-      border-right: 1px solid #ccc;
+      border: 1px solid #ccc;
     }
 
   }
@@ -62,8 +62,14 @@
         background: $tab-content-background;
         border: 1px solid #ccc;
         border-radius: 2px;
+        border-left: 2px solid orange;
         margin-right: -2px;
         color: $action-color;
+        &:first-child {
+          margin-top: -1px;
+          margin-bottom: 1px;
+        }
+
       }
     }
   }
