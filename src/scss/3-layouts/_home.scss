@@ -58,6 +58,10 @@ main.home {
           background-repeat: no-repeat;
           border: 1px solid #ccc;
           border-radius: 3px;
+
+          @include media (max-width 500px){
+            width: 100%;
+          }
         }
 
         .not-set {
