@@ -22,6 +22,8 @@
 					the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
 				endif;
 				?>
+
+				<?php bourbon_wp_posted_on(); ?>
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
@@ -41,7 +43,7 @@
 				}				 ?>
 
 				<?php the_excerpt(); ?>
-				<?php bourbon_wp_posted_modified_on(); ?>
+
 				<?php bourbon_wp_entry_footer(); ?>
 
 				<?php wp_link_pages( array(
