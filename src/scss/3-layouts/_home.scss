@@ -108,6 +108,16 @@ main.home {
 }
 //<< END main.home
 
+#primary  {
+  h3:after {
+    content: '';
+    display: block;
+    width: 5em;
+    border-bottom: 2px solid orange;
+    padding-bottom: .7em;
+  }
+}
+
 #primary > aside > section {
   @include border-width(null 0 0 null);
   @include span-columns (12);
