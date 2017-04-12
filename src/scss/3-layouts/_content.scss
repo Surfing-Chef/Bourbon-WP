@@ -1,7 +1,7 @@
 /*! 3-layouts/_content.scss */
 
 #content {
-  background-color: $light-gray;
+  background-color: $base-background-color;
   margin-bottom: 200px;
   border-bottom: 1px solid shade(white, 70%);
 
@@ -23,7 +23,7 @@
   }
 
   main {
-    background: $light-gray;
+    background: $base-background-color;
     @include span-columns(8 of 12);
     @include omega;
 
@@ -54,14 +54,17 @@
 
       }
 
-      div > span > span {
-        @include span-columns(4 of 8);
+      .post-meta-info span {
+        @include span-columns(8 of 8);
         margin-bottom: 0.5em;
-        @include omega;
       }
 
-      div > span {
-        @include span-columns(8 of 8);
+      .post-meta-info:before {
+        content: '';
+        display: block;
+        width: 5em;
+        border-top: 1px solid #ccc;
+        padding-top: 1.5em;
       }
 
     }
@@ -100,6 +103,8 @@ aside {
 
       .aside-post-image {
         @include span-columns(4);
+        border: 1px solid #ccc;
+        border-radius: 3px;
         min-width: 85px;
       }
 
