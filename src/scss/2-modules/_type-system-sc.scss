@@ -45,7 +45,7 @@
   }
 
   h1 {
-    color: shade($dark-gray, 60%);
+    color: shade($dark-gray, 40%);
     font-family: $serif;
     font-size: 1.5em;
     font-weight:normal;
@@ -53,7 +53,7 @@
   }
 
   h2 {
-    color: shade($dark-gray, 60%);
+    color: shade($dark-gray, 40%);
     font-family: $serif;
     font-size: 1.3em;
     font-weight: 400;
@@ -80,11 +80,11 @@
   }
 
   h3 {
-    color: shade($dark-gray, 60%);
-    font-family: $serif;
-    font-size: 1.4em;
-    font-style: italic;
+    color: shade($dark-gray, 40%);
+    font-family: $sans-serif;
+    font-size: 1em;
     font-weight: 400;
+    text-transform: uppercase;
     line-height: 1.3em;
     margin-bottom: 0.4em;
   }
