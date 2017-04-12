@@ -1,4 +1,4 @@
-.type-system-trad {
+.type-system-sc {
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
@@ -7,14 +7,15 @@
   $light-gray: #DDD !default;
   $medium-screen: 40em !default;
   $base-font-color: $dark-gray !default;
-  $sans-serif: 'Lora', sans-serif;
-  $serif: 'Montserrat', serif;
+  $serif: 'Lora', sans-serif;
+  $sans-serif: 'Montserrat', serif;
 
   @include clearfix;
-  font-family: $sans-serif;
+  font-family: $serif;
   text-align: left;
 
   h1, h2, h3, p {
+    color: $base-font-color;
     margin: 0;
   }
 
@@ -31,11 +32,6 @@
     line-height: $base-line-height;
   }
 
-  a {
-    color: $action-color;
-    text-decoration: none;
-  }
-
   .type {
     border-bottom: 2px solid;
     display: inline-block;
@@ -49,17 +45,15 @@
   }
 
   h1 {
+    color: shade($dark-gray, 60%);
     font-family: $serif;
-    font-size: 1.9em;
-    font-weight: 700;
+    font-size: 1.5em;
+    font-weight:normal;
     margin-bottom: 0.3em;
-
-    @include media($medium-screen) {
-      font-size: 2.6em;
-    }
   }
 
   h2 {
+    color: shade($dark-gray, 60%);
     font-family: $serif;
     font-size: 1.3em;
     font-weight: 400;
@@ -86,6 +80,7 @@
   }
 
   h3 {
+    color: shade($dark-gray, 60%);
     font-family: $serif;
     font-size: 1.4em;
     font-style: italic;
@@ -102,9 +97,9 @@
   }
 
   p {
-    font-family: $sans-serif;
+    font-family: $serif;
     letter-spacing: 1;
-    line-height: 1.55em;
+    line-height: 2em;
     margin-bottom: 1.5em;
 
     span {
