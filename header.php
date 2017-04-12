@@ -20,15 +20,29 @@
 <?php wp_head(); ?>
 
 <?php // drop Google Fonts ?>
-<link href='//fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'>
+<!-- Geometric-Serif -->
+<!-- <link href='//fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'> -->
+<!-- <link href='//fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'> -->
+
+<!-- Slab-Serif -->
+<!-- <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'> -->
+<!-- <link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'> -->
+
+<!-- Traditional -->
+<!-- <link href='//fonts.googleapis.com/css?family=Radley:400,400italic' rel='stylesheet' type='text/css'> -->
+<!-- <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
+
+<!-- SC -->
+<link href='//fonts.googleapis.com/css?family=Lora|Montserrat' rel='stylesheet' type='text/css'>
+<!-- <link href='//fonts.googleapis.com/css?family=Open+Sans:400,400i,700,700i' rel='stylesheet' type='text/css'> -->
+<!-- <link href="https://fonts.googleapis.com/css?family=Enriqueta|Glegoo:700|Open+Sans|Raleway|Rhodium+Libre" rel="stylesheet"> -->
 <?php // end fonts ?>
 
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 
 
 </head>
-<body <?php body_class('type-system-geometric'); ?>>
+<body <?php body_class('type-system-trad'); ?>>
 	<!--[if lt IE 8]>
     <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
   <![endif]-->
