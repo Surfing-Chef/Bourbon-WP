@@ -21,17 +21,19 @@
 					the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
 				endif;
 				?>
+
+				<?php bourbon_wp_posted_on(); ?>
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
-				<div class="post-thumbnail">
+				<!-- <div class="post-thumbnail">
 					<?php
 						// check if the post or page has a Featured Image assigned to it.
-						if ( has_post_thumbnail() ) {
-								the_post_thumbnail('full');
-						}
+						// if ( has_post_thumbnail() ) {
+						// 		the_post_thumbnail('full');
+						// }
 					?>
-				</div>
+				</div> -->
 
 				<?php the_content( sprintf(
 						/* translators: %s: Name of current post. */
@@ -40,7 +42,6 @@
 					) );
 				?>
 
-				<?php bourbon_wp_posted_modified_on(); ?>
 				<?php bourbon_wp_entry_footer(); ?>
 
 				<?php wp_link_pages( array(
