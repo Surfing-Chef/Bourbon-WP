@@ -1,5 +1,6 @@
-#***TODO***
-
+#***TODO***  
+- Adjust *comments* section in single posts  
+- Single posts to display feature images - adjust posts to contain them.  
 - Orange color for highlights  
 - 404 page styles and layout  
 - Adjust Culinaria Page  
