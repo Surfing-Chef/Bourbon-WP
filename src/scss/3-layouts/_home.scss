@@ -20,6 +20,7 @@ header {
       p {
         color: shade($dark-gray, 15%);
         text-shadow: 1px 1px tint($dark-gray, 55%);
+        line-height: 1.6em;
       }
 
       .quote {
@@ -44,31 +45,6 @@ main.home {
     border-bottom: 0;
 
     div.article-content {
-      h1 {
-        text-align: center;
-        font-style: italic;
-        line-height: 1.2em;
-        margin-bottom: .6em;
-      }
-
-      .meta {
-        font-family: $serif;
-        text-align: center;
-
-        a {
-          color: inherit;
-        }
-      }
-
-      .posted-on {
-        display: block;
-        line-height: 1.1em;
-        margin-bottom: 1.4em;
-
-        time{
-          font-size: .9em;
-        }
-      }
 
       section {
         width: 100% !important;
@@ -78,7 +54,7 @@ main.home {
           @include span-columns(12);
           height: 60vh;
           float: left;
-          margin: 0 1em .5em 0;
+          margin: 0 1em 20px 0;
           background-position: center center;
           background-size: cover;
           background-repeat: no-repeat;
@@ -108,16 +84,6 @@ main.home {
 }
 //<< END main.home
 
-#primary  {
-  h3:after {
-    content: '';
-    display: block;
-    width: 5em;
-    border-bottom: 2px solid orange;
-    padding-bottom: .7em;
-  }
-}
-
 #primary > aside > section {
   @include border-width(null 0 0 null);
   @include span-columns (12);
@@ -132,6 +98,12 @@ main.home {
     &:hover {
       color: $action-color;
       font-weight: bold;
+    }
+  }
+
+  .aside-post{
+    a {
+      font-family: $serif;
     }
   }
 }
