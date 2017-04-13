@@ -30,7 +30,8 @@
 <link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
 
 <!-- SC -->
-<link href='//fonts.googleapis.com/css?family=Lora|Montserrat' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Lora:400,400i,700,700i' rel='stylesheet' type='text/css'>
+<link href='//fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
 <?php // end fonts ?>
 
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
