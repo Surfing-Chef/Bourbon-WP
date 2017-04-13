@@ -1,5 +1,7 @@
 /*! 3-layouts/_content.scss */
 
+$serif: 'Lora', sans-serif;
+
 #content {
   background-color: $base-background-color;
   margin-bottom: 200px;
@@ -15,6 +17,25 @@
   section {
     @include padding(null 2em null null);
 
+    img,
+    figure {
+      border: 1px solid #ccc;
+      border-radius: 3px;
+    }
+
+    .wp-caption {
+      clear: both;
+    }
+
+    figcaption {
+      font-size: .8em;
+      font-style: italic;
+      text-align: center;
+      padding: 15px 5px;
+
+    }
+
+
     @include media(min-width 320px max-width 989px) {
       @include span-columns(12);
       padding-right: 0;
@@ -27,7 +48,7 @@
     @include span-columns(8 of 12);
     @include omega;
 
-    @include padding(2em 1em 1em 1em);
+    @include padding(2em 1em 0 1em);
     border-bottom: none;
 
     @include media(min-width 320px max-width 989px) {
@@ -45,14 +66,43 @@
 
 
       .article-content {
+        h1 {
+          text-align: center;
+          font-style: italic;
+          line-height: 1.2em;
+          margin-bottom: .6em;
+
+          a { font-family: $serif; }
+        }
+
+        .meta {
+          font-family: $serif;
+          text-align: center;
+
+          a {
+            color: inherit;
+            font-family: $serif;
+          }
+        }
+
+        .posted-on {
+          display: block;
+          line-height: 1.1em;
+          margin-bottom: 1.4em;
+
+          time{
+            font-size: .8em;
+          }
+        }
+
         @include outer-container;
         border: none !important;
 
         @include media(min-width 320px max-width 989px) {
           padding-bottom: 2.5em;
         }
-
       }
+      // .article-content
 
       .post-meta-info span {
         @include span-columns(8 of 8);
@@ -65,9 +115,10 @@
         width: 5em;
         border-top: 1px solid #ccc;
         padding-top: 1.5em;
+        margin-top: 1.5em;
       }
-
     }
+    // END article
 
     .gallery-row {
       margin: 0 auto;
@@ -91,6 +142,14 @@ aside {
   @include omega;
   padding: 2em 1em 1em 1em;
 
+  h3:after {
+    content: '';
+    display: block;
+    width: 5em;
+    border-bottom: 2px solid orange;
+    padding-bottom: .7em;
+  }
+
   .aside-section-posts {
 
     .aside-post {
@@ -103,8 +162,6 @@ aside {
 
       .aside-post-image {
         @include span-columns(4);
-        border: 1px solid #ccc;
-        border-radius: 3px;
         min-width: 85px;
       }
 
@@ -112,23 +169,20 @@ aside {
         @include span-columns(8);
         padding-left: 0.5em;
         @include omega;
+        font-style: italic;
       }
 
       .aside-post-date {
         @include span-columns(8);
-        @include shift(4);
         padding-left: 0.5em;
-        font-size: .9em;
-        font-style: italic;
+        font-size: .8em;
+        //font-style: italic;
         line-height: 2em;
-        //text-align: center;
       }
     }
   }
 
   .aside-section-categories {
-
-
     .categories-list {
       @include span-columns(12);
       padding-left: 0;
@@ -140,6 +194,10 @@ aside {
       }
     }
 
+    a {
+      font-family: $serif;
+      font-style: italic;
+    }
     .category-name {
       @include span-columns(10);
     }
