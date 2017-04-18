@@ -36,7 +36,7 @@ $serif: 'Lora', sans-serif;
     }
 
 
-    @include media(min-width 320px max-width 989px) {
+    @include media(max-width 989px) {
       @include span-columns(12);
       padding-right: 0;
       border: none;
@@ -47,11 +47,14 @@ $serif: 'Lora', sans-serif;
     background: $base-background-color;
     @include span-columns(8 of 12);
     @include omega;
+    // @include media(320px){
+    //   @include span-columns(12 of 12);
+    // }
 
     @include padding(2em 1em 0 1em);
     border-bottom: none;
 
-    @include media(min-width 320px max-width 989px) {
+    @include media(max-width 989px) {
       @include span-columns(12);
     }
 
@@ -60,7 +63,7 @@ $serif: 'Lora', sans-serif;
       @include padding(null null 1.5em null);
       @include margin(null null 1.5em null);
       overflow-x: auto;
-      @include media(min-width 320px max-width 989px) {
+      @include media(max-width 989px) {
         margin-bottom: 0;
       }
 
@@ -176,7 +179,6 @@ aside {
         @include span-columns(8);
         padding-left: 0.5em;
         font-size: .8em;
-        //font-style: italic;
         line-height: 2em;
       }
     }
@@ -209,7 +211,7 @@ aside {
 
   }
 
-  @include media(min-width 320px max-width 989px) {
+  @include media(max-width 989px) {
     @include span-columns(12);
     padding-top: 0;
   }
