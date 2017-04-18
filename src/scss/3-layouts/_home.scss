@@ -1,6 +1,7 @@
 /*! scss/3-layouts/_home.scss */
 
-$serif: 'Lora', sans-serif;
+$serif: 'Lora', serif;
+$sans-serif: 'Montserrat', sans-serif;
 
 header {
 
@@ -11,20 +12,26 @@ header {
 
     div {
       background: transparentize(white, 0.6);
-      width: 60%;
+      width: 50%;
       margin: 0 auto;
       @include padding(1em 1em 1em 1em);
       border-radius: $base-border-radius;
       border: 1px solid transparentize(black, 0.7);
 
+      @include media (max-width 989px){
+        width: 60%;
+      }
+
       p {
         color: shade($dark-gray, 15%);
         text-shadow: 1px 1px tint($dark-gray, 55%);
         line-height: 1.6em;
+        margin-bottom: .8em;
       }
 
       .quote {
         font-size: $base-font-size * 1.2;
+        font-family: $sans-serif;
 
       }
       .author {
