@@ -33,7 +33,7 @@
 			<section class="sociocon">
 				<img class="icon" src="<?php echo get_template_directory_uri(); ?>/src/images/email-sociocon.png" alt="email Surfing Chef">
 			</section>
-			<section>
+			<section class="sc-copyright">
 				<p class="source-org copyright"><?php bloginfo( 'name' ); ?> is powered by WordPress and maintained with love. &copy; <?php echo date('Y'); ?> Surfing-Chef.</p>
 			</section>
 

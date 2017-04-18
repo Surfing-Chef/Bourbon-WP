@@ -1,5 +1,8 @@
 /*! 3-layouts/_footer.scss */
 
+$serif: 'Lora', serif;
+$sans-serif: 'Montserrat', sans-serif;
+
 footer#colophon {
   position: fixed;
   width: 100%;
@@ -15,7 +18,7 @@ footer#colophon {
 
   .footer-container {
     @include outer-container;
-    @include padding(1% 2.5% null 2.5%);
+    @include padding(1% 2.5% 1% 2.5%);
 
     .sociocon {
       @include span-columns(4 of 12);
@@ -30,10 +33,18 @@ footer#colophon {
         margin: 0 auto;
       } // img
     } // .sociocon
+    .sc-copyright {
+      @include span-columns(12 of 12);
+      @include media(max-width 330px) {
+        margin-top: -2em;
+      }
+      
+      p {
+        font-family: $sans-serif;
+        text-align: center;
+        color: $light-gray;
+      }
 
-    p {
-      text-align: center;
-      color: $light-gray;
     }
   } // .footer-container
 } // footer
