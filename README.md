@@ -1,12 +1,12 @@
-#***TODO***  
+#***TODO***
+- Add meta tags to header - [Social Graph Object](http://ogp.me/)  
 - Adjust *comments* section in single posts  
 - Single posts to display feature images - adjust posts to contain them.  
 - Orange color for highlights  
 - 404 page styles and layout  
 - Adjust Culinaria Page  
-  - adjust individual feed titles - limit verbage  
-  - limit number of feeds to three  
-  - change out Cooks Illustrated    
+  - a gallery style section of feeds  
+  - must adjust the coding for the apifier.js and apifier.php   
 - Add aside content to pages - bookmarks (custom menus) perhaps...  
 
 # Bourbon-WP (aka Bourbon-Chef-Site-2.3)
