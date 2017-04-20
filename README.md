@@ -1,5 +1,5 @@
 #***TODO***
-- Add meta tags to header - [Social Graph Object](http://ogp.me/)  
+- Add meta tags to header - [Social Graph Object](http://ogp.me/)    
 - Adjust *comments* section in single posts  
 - Single posts to display feature images - adjust posts to contain them.  
 - Orange color for highlights  
