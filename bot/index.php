@@ -119,7 +119,7 @@ function build_feed($sites_arr){
   // Get current time (in seconds)
   $current_time = time();
   // Specify age of file before re-creating (in seconds)
-  $target_time = 60;
+  $target_time = 60*60*12; // 12 hours
   // Get time of file creation (in seconds)
   @$cache_time = filemtime("cache.txt");
   // Get age file (in seconds)
