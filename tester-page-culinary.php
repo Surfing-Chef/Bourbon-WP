@@ -23,24 +23,33 @@ get_header(); ?>
 
  				<div class="textwidget">
 
-					<!-- build the gallery here -->
-					<!-- use bourbon neat empties grid -->
+					<!-- The Feed Gallery -->
 					<div class="grid gallery">
-						<pre>
 						<?php
-							// retrieve array from file
-							// echo get_template_directory_uri();
+							// retrieve file with array data
 							$feeds = file_get_contents(get_template_directory_uri().'/bot/cache.txt');
+							// convert data to array
 							$feeds = unserialize($feeds);
-							print_r($feeds);
+							// display data
+							foreach ($feeds as $feed){
+							?>
+								<div class="grid-box-wrap">
+									<div class="grid-box">
+										<a href=<?php echo $feed[3] ?>>
+											<div class="image-container" style="background-image: url(<?php echo $feed[4]; ?>);">
 
-							// loop through array to populate grid gallery
-						 ?>
-					 </pre>
-					  <div class="grid-box-wrap"><div class="grid-box">image content</div></div>
+											</div>
+											<img src="<?php //echo $feed[4]; ?>" alt="<?php //echo $feed[2]; ?>">
+											<span><?php echo $feed[0]; ?> - </span>
+											<span><?php echo $feed[2]; ?><span>
+										</a>
+									</div>
+								</div>
+							<?php } ?>
 					</div>
-
+					<!-- END FEED GALLERY -->
 				</div>
+				<!-- END textwidget -->
 			 </section>
 			 <!-- END TEST MARKUP AND CODE -->
 
