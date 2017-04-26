@@ -26,17 +26,17 @@ get_header(); ?>
 					<!-- build the gallery here -->
 					<!-- use bourbon neat empties grid -->
 					<div class="grid gallery">
-
+						<pre>
 						<?php
 							// retrieve array from file
-							get_feeds();
-							$feeds = file_get_contents(get_template_directory().'/bot/cache.txt');
+							// echo get_template_directory_uri();
+							$feeds = file_get_contents(get_template_directory_uri().'/bot/cache.txt');
 							$feeds = unserialize($feeds);
 							print_r($feeds);
 
 							// loop through array to populate grid gallery
 						 ?>
-
+					 </pre>
 					  <div class="grid-box-wrap"><div class="grid-box">image content</div></div>
 					</div>
 
