@@ -42,6 +42,7 @@
 - Custom sidebar displays recent posts and categories:  
   - [recent posts](https://codex.wordpress.org/Function_Reference/wp_get_recent_posts)  
   - [categories](https://developer.wordpress.org/reference/functions/get_categories/)  
+- Images not displaying, had to [adjust link in *template-parts > content-exerpt.php*](https://github.com/Surfing-Chef/Bourbon-WP/commit/06ba9cdc29527ac224e46c36e3cc52b113399892)  
 
 ### 1.2 Static Pages - Culinaria, Coding, Projects and About
 #### Culinaria
