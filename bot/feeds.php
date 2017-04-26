@@ -1,11 +1,17 @@
 <?php
-
-$start = "http://localhost/sc-bot/sites.html";
-
+// get the various site-specific feed functions
 require_once("parseFunctions.php");
 
+// Location of the list of sites
+$sites = "http://localhost/sc-bot/sites.json";
+
+// Location of the feed cache
+// Varies from local to remote environment,
+// as cronjob vs windows schedule may require different paths.
+$cache = "C:/wamp64/www/Bourbon-WP/wp-content/themes/bourbon-wp/bot/cache.txt";
+
 // Import JSON file
-$sites_json = file_get_contents('http://localhost/sc-bot/sites.json');
+$sites_json = file_get_contents($sites);
 
 // Convert JSON to array
 $sites_arr = json_decode($sites_json, true);
@@ -84,6 +90,7 @@ function get_details($site_name, $site_url){
 
 function follow_links($sites_arr){
   global $feed_container;
+  global $cache;
 
   foreach ($sites_arr as $site){
 
@@ -103,25 +110,23 @@ function follow_links($sites_arr){
 
   }
 
-  // Name and path of target file
-  $target = "cache.txt";
-
   // Serialize container for writing to file
   $feed_container_string = serialize($feed_container);
 
   // Write contents to file
-  file_put_contents($target, $feed_container_string);
+  file_put_contents($cache, $feed_container_string);
 
 }
 // END follow_links()
 
 function build_feed($sites_arr){
+  global $cache;
   // Get current time (in seconds)
   $current_time = time();
   // Specify age of file before re-creating (in seconds)
   $target_time = 60; // 12 hours
   // Get time of file creation (in seconds)
-  @$cache_time = filemtime("cache.txt");
+  @$cache_time = filemtime($cache);
   // Get age file (in seconds)
   $age = $current_time - $cache_time;
   // Decide how to procede
