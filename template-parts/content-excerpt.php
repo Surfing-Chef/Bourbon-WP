@@ -34,7 +34,7 @@
 					$thumb_id = get_post_thumbnail_id();
 					$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
 					echo
-					'<div class="home-featured-image" style="background-image: url(http:' . $thumb_url[0]
+					'<div class="home-featured-image" style="background-image: url(' . $thumb_url[0]
 							. ')"></div>';
 				}
 				else {
