@@ -241,3 +241,14 @@ function bourbon_wp_search_form( $echo = true ) {
     else
         return $result;
 }
+
+/**
+* Truncate a string only at a whitespace (by nogdog)
+*/
+function truncate($text, $length) {
+   $length = abs((int)$length);
+   if(strlen($text) > $length) {
+      $text = preg_replace("/^(.{1,$length})(\s.*|$)/s", '\\1...', $text);
+   }
+   return($text);
+}
