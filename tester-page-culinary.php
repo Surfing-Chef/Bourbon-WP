@@ -23,29 +23,28 @@ get_header(); ?>
 
  				<div class="textwidget">
 
-					<!-- The Feed Gallery -->
+					<!-- FEED GALLERY -->
 					<div class="grid gallery">
-						<?php
-							// retrieve file with array data
-							$feeds = file_get_contents(get_template_directory_uri().'/bot/cache.txt');
-							// convert data to array
-							$feeds = unserialize($feeds);
-							// display data
-							foreach ($feeds as $feed){
-							?>
-								<div class="grid-box-wrap">
-									<div class="grid-box">
-										<a href=<?php echo $feed[3] ?>>
-											<div class="image-container" style="background-image: url(<?php echo $feed[4]; ?>);">
-
-											</div>
-											<img src="<?php //echo $feed[4]; ?>" alt="<?php //echo $feed[2]; ?>">
-											<span><?php echo $feed[0]; ?> - </span>
-											<span><?php echo $feed[2]; ?><span>
-										</a>
-									</div>
-								</div>
-							<?php } ?>
+					  <?php
+					    // retrieve file with array data
+					    $feeds = file_get_contents(get_template_directory_uri().'/bot/cache.txt');
+					    // convert data to array
+					    $feeds = unserialize($feeds);
+					    // display data
+					    foreach ($feeds as $feed){
+					    ?>
+					      <div class="grid-box-wrap">
+					        <div class="grid-box">
+					          <a href=<?php echo $feed[3] ?>>
+					            <div class="image-container" style="background-image: url(<?php echo $feed[4]; ?>);"></div>
+					            <span class="feed-meta">
+												<span class="feed-site"><?php echo strtolower($feed[0]); ?> - </span>
+												<span class="feed-caption"><?php echo strtolower($feed[2]); ?></span>
+											</span>
+					          </a>
+					        </div>
+					      </div>
+					    <?php } ?>
 					</div>
 					<!-- END FEED GALLERY -->
 				</div>
