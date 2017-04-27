@@ -5,9 +5,9 @@
 - Orange color for highlights  
 - 404 page styles and layout  
 - Adjust Culinaria Page  
-  - a gallery style section of feeds  
+  - function to randomly select 6 feed items only
   - must adjust the coding for the apifier.js and apifier.php   
-- Add aside content to pages - bookmarks (custom menus) perhaps...  
+- Add *aside* content on pages - bookmarks (custom menus) perhaps...  
 
 # Bourbon-WP (aka Bourbon-Chef-Site-2.3)
 > Bones Blank starter theme was a helpful start. This branch reconfigures the site layout to a blog start page, with the main parent categories each having a nav bar link - Culinaria, Coding, Projects, About - as well as a contact page. Layout components are influenced by the theme, [Activello](https://colorlib.com/wp/themes/activello/)  
