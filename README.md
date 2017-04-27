@@ -6,17 +6,16 @@
 - 404 page styles and layout  
 - Adjust Culinaria Page  
   - function to randomly select 6 feed items only
-  - must adjust the coding for the apifier.js and apifier.php   
 - Add *aside* content on pages - bookmarks (custom menus) perhaps...  
 
-# Bourbon-WP (aka Bourbon-Chef-Site-2.3)
+# Bourbon-WP (aka Bourbon-Chef-Site-2.4)
 > Bones Blank starter theme was a helpful start. This branch reconfigures the site layout to a blog start page, with the main parent categories each having a nav bar link - Culinaria, Coding, Projects, About - as well as a contact page. Layout components are influenced by the theme, [Activello](https://colorlib.com/wp/themes/activello/)  
 
 > **TOO SAD!** I can't believe LuckyPeach.com is done May 1.  And just as heart-breaking is the last publication occurs this fall.
 
 ## SITEMAP 1.3
 1. < HOME (BLOG) >
-2. < HOME >< CULINARIA >< CODING >< LOGO(home) >< PROJECTS >< ABOUT >< CONTACTS >  
+2. < LOGO(home) >< CULINARIA >< PROJECTS >< CODING >< ABOUT >< CONTACTS >  
 
 
 **UPDATE**  
@@ -69,9 +68,10 @@
        return $html;
   }
   ```  
-- [adjusted apifier.js to output images](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/src/js/apifier.js)
+- ~~[adjusted apifier.js to output images](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/src/js/apifier.js)
 - [google seach to crop and center](https://www.google.ca/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=how+to+crop+and+center+image+css&*)
-- [Adjust images so they crop to square](http://stackoverflow.com/questions/18673900/how-to-center-and-crop-an-image-to-square-with-css)
+- [Adjust images so they crop to square](http://stackoverflow.com/questions/18673900/how-to-center-and-crop-an-image-to-square-with-css)~~  
+- Deleted Apifier and implemented a PHP driven feed gallery
 
 
 ### 1.3 Archives and Single Posts  
