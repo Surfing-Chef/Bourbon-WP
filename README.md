@@ -1,9 +1,4 @@
-# Bourbon-WP (aka Bourbon-Chef-Site-2.4)
-> Bones Blank starter theme was a helpful start. This branch reconfigures the site layout to a blog start page, with the main parent categories each having a nav bar link - Culinaria, Coding, Projects, About - as well as a contact page. Layout components are influenced by the theme, [Activello](https://colorlib.com/wp/themes/activello/)  
-
-> **TOO SAD!** I can't believe LuckyPeach.com is done May 1.  And just as heart-breaking is the last publication occurs this fall.
-
-## ***TODO***
+#***TODO***
 - Add meta tags to header - [Social Graph Object](http://ogp.me/)    
 - Adjust *comments* section in single posts  
 - Single posts to display feature images - adjust posts to contain them.  
@@ -11,8 +6,12 @@
 - 404 page styles and layout  
 - Adjust Culinaria Page  
   - function to randomly select 6 feed items only
-- Add *aside* content on pages - bookmarks (custom menus) perhaps... 
-- Add animation:  start with [Animate.css](https://github.com/daneden/animate.css)
+- Add *aside* content on pages - bookmarks (custom menus) perhaps...  
+
+# Bourbon-WP (aka Bourbon-Chef-Site-2.4)
+> Bones Blank starter theme was a helpful start. This branch reconfigures the site layout to a blog start page, with the main parent categories each having a nav bar link - Culinaria, Coding, Projects, About - as well as a contact page. Layout components are influenced by the theme, [Activello](https://colorlib.com/wp/themes/activello/)  
+
+> **TOO SAD!** I can't believe LuckyPeach.com is done May 1.  And just as heart-breaking is the last publication occurs this fall.
 
 ## SITEMAP 1.3
 1. < HOME (BLOG) >
