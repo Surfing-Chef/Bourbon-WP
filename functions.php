@@ -260,7 +260,7 @@ function randomizer($how_many, $of_how_many){
   $num_array = array();
 
   while(count($num_array)<$how_many){
-    $num = round(rand(0, $of_how_many));
+    $num = round(rand(0, $of_how_many-1));
     if(!in_array($num,$num_array)){
       $num_array[] = $num;
     } else {
