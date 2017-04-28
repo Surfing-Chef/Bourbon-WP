@@ -252,3 +252,20 @@ function truncate($text, $length) {
    }
    return($text);
 }
+
+/**
+* Creates array set number af random numbers
+*/
+function randomizer($how_many, $of_how_many){
+  $num_array = array();
+
+  while(count($num_array)<$how_many){
+    $num = round(rand(0, $of_how_many));
+    if(!in_array($num,$num_array)){
+      $num_array[] = $num;
+    } else {
+      continue;
+    }
+  }
+  return $num_array;
+}
