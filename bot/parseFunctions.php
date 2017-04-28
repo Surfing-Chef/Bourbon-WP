@@ -9,7 +9,7 @@ function epicurious($site_name, $site_url){
   $html = file_get_html($site_url);
 
   // Parse HTML
-  $feed_base = $html->find("article[class=article-hero-featured-item]",0);
+  $feed_base = $html->find("article[class=gallery-hero-featured-item]",0);
   $feed_title = $feed_base->find("header H4", 0)->plaintext;
   $feed_title = trim(preg_replace('/\s\s+/', ' ', $feed_title));
   $feed_url = $feed_base->find("a", 0)->href;
