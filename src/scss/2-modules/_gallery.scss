@@ -21,9 +21,9 @@ $serif: 'Lora', serif;
       flex-basis: 50%;
     }
 
-    @include media($lrg){
-      flex-basis: 100%;
-    }
+    // @include media($lrg){
+    //   flex-basis: 50%;
+    // }
   }
 
   .grid-box {
@@ -35,14 +35,19 @@ $serif: 'Lora', serif;
       line-height: 125%;
       font-family: $serif;
       text-align: center;
+      width: 70%;
+      margin:0 auto;
 
       @include media($tab) {
         padding: 0 5px 0 105px;
         text-align: left;
+        width: 100%;
+        margin: none;
+
       }
 
       @include media($lrg) {
-        padding: 1em 0 0 135px;
+        //padding: 1em 0 0 135px;
       }
 
     }
@@ -58,12 +63,13 @@ $serif: 'Lora', serif;
     .image-container {
       float: none;
       min-height: 100px;
-      width: 100%;
+      max-width: 70%;
       background-position: center center;
       background-size: cover;
       background-repeat: no-repeat;
       border: 1px solid #ccc;
       border-radius: 2px;
+      margin: 0 auto;
 
       @include media($tab) {
         float: left;
@@ -73,8 +79,8 @@ $serif: 'Lora', serif;
 
       @include media($lrg) {
         float: left;
-        height: 125px;
-        width: 125px;
+        height: 100px;
+        width: 100px;
       }
 
     }
