@@ -3,7 +3,7 @@
 require_once("parseFunctions.php");
 
 // Location of the list of sites
-$sites = "http://localhost/sc-bot/sites.json";
+$sites ="sites.json";
 
 // Location of the feed cache
 // Varies from local to remote environment,
