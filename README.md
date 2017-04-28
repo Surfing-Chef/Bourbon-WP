@@ -10,7 +10,8 @@
 - Orange color for highlights  
 - 404 page styles and layout  
 - Adjust Culinaria Page  
-  - function to randomly select 6 feed items only
+  - responsive feeds
+  ~~- function to randomly select 6 feed items only~~
 - Add *aside* content on pages - bookmarks (custom menus) perhaps...
 - Add animation:  start with [Animate.css](https://github.com/daneden/animate.css)
 
