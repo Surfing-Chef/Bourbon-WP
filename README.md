@@ -10,7 +10,7 @@
 - Orange color for highlights  
 - 404 page styles and layout  
 - Adjust Culinaria Page  
-  - responsive feeds
+  ~~- responsive feeds~~
   ~~- function to randomly select 6 feed items only~~
 - Add *aside* content on pages - bookmarks (custom menus) perhaps...
 - Add animation:  start with [Animate.css](https://github.com/daneden/animate.css)
@@ -18,7 +18,6 @@
 ## SITEMAP 1.3
 1. < HOME (BLOG) >
 2. < LOGO(home) >< CULINARIA >< PROJECTS >< CODING >< ABOUT >< CONTACTS >  
-
 
 **UPDATE**  
 - After updating the main navigation layout, the logo/home line moves from center of site map and replaces the home button link.  Make these adjustments in the WordPress admin pages:  
