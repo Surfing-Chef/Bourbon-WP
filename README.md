@@ -15,13 +15,17 @@
 - Add *aside* content on pages - bookmarks (custom menus) perhaps...
 - Add animation:  start with [Animate.css](https://github.com/daneden/animate.css)
 
+## **UPDATES**  
+- After updating the main navigation layout, the logo/home line moves from center of site map and replaces the home button link.  Make these adjustments in the WordPress admin pages:  
+- Adjust *Primary Menu* in *admin > Appearance > Menus* under the *Edit Menus* tab  
+
+## **SITE DEPLOYMENT**  
+- install [Remote-FTP](https://atom.io/packages/remote-ftp) into Atom for ease of use. [Tutorial reminder](https://www.youtube.com/watch?v=YmSD2O85wx0)   
+- [Filezilla](https://filezilla-project.org/)  
+
 ## SITEMAP 1.3
 1. < HOME (BLOG) >
 2. < LOGO(home) >< CULINARIA >< PROJECTS >< CODING >< ABOUT >< CONTACTS >  
-
-**UPDATE**  
-- After updating the main navigation layout, the logo/home line moves from center of site map and replaces the home button link.  Make these adjustments in the WordPress admin pages:  
-- Adjust *Primary Menu* in *admin > Appearance > Menus* under the *Edit Menus* tab
 
 ## 1. ADJUSTMENTS
 - Created custom searchbar based on WordPress [`get_search_bar()` function] (https://developer.wordpress.org/reference/functions/get_search_form/)  
