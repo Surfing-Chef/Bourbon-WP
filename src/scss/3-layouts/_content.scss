@@ -1,7 +1,5 @@
 /*! 3-layouts/_content.scss */
 
-$serif: 'Lora', sans-serif;
-
 #content {
   background-color: $base-background-color;
   margin-bottom: 200px;
@@ -17,8 +15,8 @@ $serif: 'Lora', sans-serif;
   section {
     @include padding(null 2em null null);
 
-    img,
-    figure {
+    img:not(.no-border),
+    figure:not(.no-border) {
       border: 1px solid #ccc;
       border-radius: 3px;
     }

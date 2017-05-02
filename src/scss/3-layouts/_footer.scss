@@ -1,8 +1,5 @@
 /*! 3-layouts/_footer.scss */
 
-$serif: 'Lora', serif;
-$sans-serif: 'Montserrat', sans-serif;
-
 footer#colophon {
   position: fixed;
   width: 100%;
@@ -38,7 +35,7 @@ footer#colophon {
       @include media(max-width 330px) {
         margin-top: -2em;
       }
-      
+
       p {
         font-family: $sans-serif;
         text-align: center;
