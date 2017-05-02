@@ -4,6 +4,7 @@
 > **TOO SAD!** I can't believe LuckyPeach.com is done May 1.  And just as heart-breaking is the last publication occurs this fall.
 
 ## ***TODO***
+- Create a bookmarks page template to display my bookmarks as links
 ~~- Add meta tags to header - [Social Graph Object](http://ogp.me/)~~    
 - Adjust *comments* section in single posts  
 - Single posts to display feature images - adjust posts to contain them.  
