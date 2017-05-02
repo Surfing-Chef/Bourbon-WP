@@ -41,8 +41,14 @@ get_header(); ?>
 					'menu_class'      => 'aside-menu',
 					'menu_id'         => 'culinary-links'
 				)); ?>
+
+			<?php else :?>
+
+			<?php get_template_part( 'template-parts/content', 'aside-meta' ); ?>
+
 			<?php endif;?>
 		</aside>
+
 	</div><!-- #primary -->
 
 <?php
