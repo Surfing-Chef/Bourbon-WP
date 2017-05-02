@@ -15,7 +15,8 @@ get_header(); ?>
 			<section class="error-404 not-found">
 				<header class="page-header">
 					<h1 class="page-title"><?php esc_html_e( 'Oops! That page can&rsquo;t be found.', 'bourbon-wp' ); ?></h1>
-				</header><!-- .page-header -->
+				</header>
+				<!-- .page-header -->
 
 				<div class="page-content">
 					<h2><?php esc_html_e( 'Sorry, but it looks like what you were looking for was not found at this location. What were you looking for?', 'bourbon-wp' ); ?></h2>
@@ -46,7 +47,8 @@ get_header(); ?>
 							) );
 						?>
 						</ul>
-					</div><!-- .widget -->
+					</div>
+					<!-- .widget_categories -->
 					<br>
 					<?php
 						endif;
@@ -58,11 +60,33 @@ get_header(); ?>
 						the_widget( 'WP_Widget_Tag_Cloud' );
 					?>
 
-				</div><!-- .page-content -->
-			</section><!-- .error-404 -->
+				</div>
+				<!-- .page-content -->
+			</section>
+			<!-- .error-404 -->
 
-		</main><!-- #main -->
-	</div><!-- #primary -->
+		</main>
+		<!-- #main -->
+
+		<aside class="aside">
+			<?php if ( is_page( 'culinaria' ) ) : ?>
+				<h3>Library of Culinaria</h3>
+				<?php wp_nav_menu(array(
+					'theme_location'  => 'culinary_menu',
+					'menu_class'      => 'aside-menu',
+					'menu_id'         => 'culinary-links'
+				)); ?>
+
+			<?php else :?>
+
+			<?php get_template_part( 'template-parts/content', 'aside-meta' ); ?>
+
+			<?php endif;?>
+		</aside>
+		<!-- .aside -->
+
+	</div>
+	<!-- #primary -->
 
 <?php
 get_footer();
