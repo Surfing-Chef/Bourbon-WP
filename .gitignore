@@ -94,3 +94,6 @@ apifier.json
 .ftpconfig
 .ftp-settings.json
 bot/cache.txt
+
+# AUTO GENERATED STYLES
+*.css
