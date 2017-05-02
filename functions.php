@@ -208,7 +208,7 @@ function bourbon_wp_search_form( $echo = true ) {
                     <input type="search" class="search-field" placeholder="' . esc_attr_x( 'Search &hellip;', 'placeholder' ) . '" value="' . get_search_query() . '" name="s" />
                 </label>
                 <button type="submit">
-									<img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
+									<i class="fa fa-search" aria-hidden="true"></i>
 		            </button>
             </form>';
         } else {
@@ -217,7 +217,7 @@ function bourbon_wp_search_form( $echo = true ) {
                     <label class="screen-reader-text" for="s">' . _x( 'Search for:', 'label' ) . '</label>
                     <input type="text" value="' . get_search_query() . '" name="s" id="s" />
 										<button type="submit">
-											<img src="https://raw.githubusercontent.com/thoughtbot/refills/master/source/images/search-icon.png" alt="Search Icon">
+											<i class="fa fa-search" aria-hidden="true"></i>
 				            </button>
                 </div>
             </form>';
