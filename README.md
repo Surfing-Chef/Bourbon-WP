@@ -3,7 +3,7 @@
 
 > **TOO SAD!** I can't believe LuckyPeach.com is done May 1.  And just as heart-breaking is the last publication occurs this fall.
 
-## ***TODO***
+## **TODO**
 - Create a bookmarks page template to display my bookmarks as links
 ~~- Add meta tags to header - [Social Graph Object](http://ogp.me/)~~    
 - Adjust *comments* section in single posts  
@@ -17,6 +17,7 @@
 - Add animation:  start with [Animate.css](https://github.com/daneden/animate.css)
 
 ## **UPDATES**  
+-  [Reminder about .gitignore reset](http://blog.jonathanchannon.com/2012/11/18/gitignore-not-working-fixed/)  
 - After updating the main navigation layout, the logo/home line moves from center of site map and replaces the home button link.  Make these adjustments in the WordPress admin pages:  
 - Adjust *Primary Menu* in *admin > Appearance > Menus* under the *Edit Menus* tab  
 
