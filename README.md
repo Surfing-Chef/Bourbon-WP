@@ -7,20 +7,15 @@
 - Create a bookmarks page template to display my bookmarks as links
 ~~- Add meta tags to header - [Social Graph Object](http://ogp.me/)~~    
 - Adjust *comments* section in single posts  
-- Single posts to display feature images - adjust posts to contain them.  
+~~- Single posts to display feature images - adjust posts to contain them.~~  
+  - [Simple Image Sizes Plugin](https://en-ca.wordpress.org/plugins/simple-image-sizes/):  (1) Install and activate. (2)  Navigate to `Settings > Media`. (3) Create, modify or reference image sizes. (4) Click `**Regenerate Thumbnails**` to ensure changes.
 - Orange color for highlights  
-- 404 page styles and layout  
+~~- 404 page styles and layout ~~
 - Adjust Culinaria Page  
   ~~- responsive feeds~~
   ~~- function to randomly select 6 feed items only~~
-- Add *aside* content on pages - bookmarks (custom menus) perhaps...
+~~- Add *aside* content on pages - bookmarks (custom menus) perhaps...~~
 - Add animation:  start with [Animate.css](https://github.com/daneden/animate.css)  
-- [Auto-Update on Local machine](http://www.businesslegions.com/blog/2014/08/09/create-cron-jobs-wamp/)
-  - remember to change directories to the folder containing the php file to run in batch commands before running the actual php code:  
-  ```type
-    9   cd C:\wamp64\www\Bourbon-WP\wp-content\themes\bourbon-wp\bot
-    10  php -f feeds.php
-  ```  
 
 ## **UPDATES**  
 -  [Reminder about .gitignore reset](http://blog.jonathanchannon.com/2012/11/18/gitignore-not-working-fixed/)  
@@ -81,10 +76,11 @@
        return $html;
   }
   ```  
-- ~~[adjusted apifier.js to output images](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/src/js/apifier.js)
-- [google seach to crop and center](https://www.google.ca/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=how+to+crop+and+center+image+css&*)
+- ~~[adjusted apifier.js to output images](https://github.com/Surfing-Chef/Bourbon-WP/blob/2.3/src/js/apifier.js)  
+- [google seach to crop and center](https://www.google.ca/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=how+to+crop+and+center+image+css&*)  
 - [Adjust images so they crop to square](http://stackoverflow.com/questions/18673900/how-to-center-and-crop-an-image-to-square-with-css)~~  
-- Deleted Apifier and implemented a PHP driven feed gallery
+- Deleted Apifier and implemented a PHP driven feed gallery  
+- [Responsive Feature Images](https://www.lynda.com/articles/create-responsive-featured-images-wordpress)
 
 
 ### 1.3 Archives and Single Posts  
@@ -202,6 +198,15 @@ add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
   - Tested using [Test Mail Server Tool](http://www.toolheap.com/test-mail-server-tool/)  
 
 ### 5. TIPS TRICKS AND LINKS
+
+#### PHP
++ [Auto-Update on Local machine](http://www.businesslegions.com/blog/2014/08/09/create-cron-jobs-wamp/)
+  - remember to change directories to the folder containing the php file to run in batch commands before running the actual php code:  
+  ```type
+    9   cd C:\wamp64\www\Bourbon-WP\wp-content\themes\bourbon-wp\bot
+    10  php -f feeds.php
+  ```  
+
 #### GULP  
 + [Ensuring tasks complete](https://www.npmjs.com/package/run-sequence): The notes in the example code, I did not use the *run-sequence* package  
 
@@ -217,14 +222,14 @@ add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
 [Theme Guide](https://premium.wpmudev.org/blog/free-wordpress-themes-ultimate-guide/?utm_expid=3606929-97.J2zL7V7mQbSNQDPrXwvBgQ.0)    
 
 #### BOURBON CHEF TO DO's  
-- Ensure laptop project WordPress install and DB are caught up to desktop project install and DB.
-- How to add custom scripts to WordPress footer.
-- Implement Custom parts in Landing Page to edit from WordPress  
-- Ensure posts look is congruent with theme before going live.  
+~~- Ensure laptop project WordPress install and DB are caught up to desktop project install and DB.~~
+~~- How to add custom scripts to WordPress footer.~~
+~~- Implement Custom parts in Landing Page to edit from WordPress~~  
+~~- Ensure posts look is congruent with theme before going live.~~  
 
-- [PHP COMPOSER AND THEN THIS LINK](https://github.com/kbariotis/feedly-api)
+~~[PHP COMPOSER AND THEN THIS LINK](https://github.com/kbariotis/feedly-api)~~  
 
-- [Apifier login to Feedly](https://www.youtube.com/watch?v=kkHSsSpY2lk)  
+~~- [Apifier login to Feedly](https://www.youtube.com/watch?v=kkHSsSpY2lk)~~  
 
 [PROJECT](https://www.smashingmagazine.com/2015/04/building-custom-wordpress-archive-page/): New Archive Page  
 
