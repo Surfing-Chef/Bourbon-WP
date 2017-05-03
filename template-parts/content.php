@@ -26,14 +26,14 @@
 			</header><!-- .entry-header -->
 
 			<div class="entry-content">
-				<!-- <div class="post-thumbnail">
+				<div class="post-thumbnail">
 					<?php
 						// check if the post or page has a Featured Image assigned to it.
-						// if ( has_post_thumbnail() ) {
-						// 		the_post_thumbnail('full');
-						// }
+						if ( has_post_thumbnail() ) {
+								the_post_thumbnail('full');
+						}
 					?>
-				</div> -->
+				</div>
 
 				<?php the_content( sprintf(
 						/* translators: %s: Name of current post. */
