@@ -3,6 +3,91 @@
 section.error-404 {
   h1 {
     font-family: $sans-serif;
+    margin-top: 3em;
+    font-size: 2em;
+    text-align: left;
   }
 
+  h2 {
+    font-family: $sans-serif;
+    font-size: 1em;
+    text-transform: uppercase;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 5em;
+      border-bottom: 2px solid orange;
+      padding-bottom: .7em;
+    }
+  }
+
+  .search-bar {
+
+    form {
+      position: relative;
+
+      input[type=search] {
+        box-sizing: border-box;
+        color: shade($navigation-color,50%);
+        font-size: 0.9em;
+        font-style: italic;
+        margin: 0;
+        padding: 0.5em 0.8em;
+        width: 100%;
+      }
+
+      button[type=submit] {
+        bottom: 0;
+        left: auto;
+        outline: none;
+        position: absolute;
+        right: 0;
+        top:0;
+        padding-top: 8px;
+
+        &:hover {
+          background-color: orange;
+        }
+
+        img {
+          height: 12px;
+          opacity: 0.7;
+          padding: 1px;
+        }
+      }
+    }
+  }
+  // END .search-bar
+
+  section.section-404-links {
+    margin-top: 2em;
+
+    .widget {
+      display: table-row;
+      @include span-columns(4 of 8);
+      @include omega;
+      padding-right: 2em;
+
+      ul {
+        padding-left: 0;
+        padding-right: 3em;
+
+        li {
+          padding: .5em 0;
+          border-bottom: 1px solid $light-gray;
+        }
+      }
+
+      .tagcloud {
+        a {
+          display: inline-block;
+          padding: .3em;
+          background-color: $light-gray;
+          border-radius: 2px;
+          margin-bottom: .2em;
+        }
+      }
+    }
+  }
 }
