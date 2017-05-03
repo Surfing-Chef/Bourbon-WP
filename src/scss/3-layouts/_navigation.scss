@@ -35,12 +35,6 @@
   @include texture($bg1, $bg2, 85, 2);
   border-bottom: 1px solid transparentize(black, 0.7);
 
-  @include media (max-width 989px) {
-    background: $light-gray;
-    border: none;
-  }
-
-
   // Mobile view
 
   .mobile-logo {
