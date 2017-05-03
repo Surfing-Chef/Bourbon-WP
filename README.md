@@ -116,7 +116,7 @@
   - *Dashboard > Appearance > Widgets*  
 - Insert accordion-section *html* and *PHP* into _**Culinary Feeds > text widget**_ and insert a title, "Recent Feeds"
   - [Culinaria Feed Snippet no Logo BG](https://gist.github.com/Surfing-Chef/3db8facc6c6807e5ffa23d79735c35df#file-culinaria-feed-snippet-no-logo-bg)  
-
+- [`<?php the_widget( $widget, $instance, $args ); ?>`](https://codex.wordpress.org/Function_Reference/the_widget)  
 
 #### CSS
 - Responsive images: Various image sizes to same size, cropped and centered:  
