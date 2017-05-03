@@ -6,4 +6,5 @@ REM Cron job in WAMP
 REM -----
 REM IMPORTANT!!  CHANGE THE PATH TO REFLECT THE MACHINE
 REM -----
-php -f C:\wamp64\www\Bourbon-WP\wp-content\themes\bourbon-wp\bot\feeds.php
+cd C:\wamp64\www\Bourbon-WP\wp-content\themes\bourbon-wp\bot
+php -f feeds.php
