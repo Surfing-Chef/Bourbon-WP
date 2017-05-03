@@ -30,7 +30,8 @@
 					<?php
 						// check if the post or page has a Featured Image assigned to it.
 						if ( has_post_thumbnail() ) {
-								the_post_thumbnail('full');
+								the_post_thumbnail('medium_large');
+								//bourbon_wp_responsive_thumbnail(get_the_ID());
 						}
 					?>
 				</div>
