@@ -14,7 +14,15 @@
   ~~- responsive feeds~~
   ~~- function to randomly select 6 feed items only~~
 - Add *aside* content on pages - bookmarks (custom menus) perhaps...
-- Add animation:  start with [Animate.css](https://github.com/daneden/animate.css)
+- Add animation:  start with [Animate.css](https://github.com/daneden/animate.css)  
+- [Auto-Update on Local machine](http://www.businesslegions.com/blog/2014/08/09/create-cron-jobs-wamp/)
+  - remember to change directories to the folder containing the php file to run in batch commands before running the actual php code:  
+  ```type
+...
+9   cd C:\wamp64\www\Bourbon-WP\wp-content\themes\bourbon-wp\bot
+10  php -f feeds.php
+...
+  ```
 
 ## **UPDATES**  
 -  [Reminder about .gitignore reset](http://blog.jonathanchannon.com/2012/11/18/gitignore-not-working-fixed/)  
