@@ -9,10 +9,48 @@
  */
 
 ?>
-<section class="aside-most-used-categories">
-	<?php if ( bourbon_wp_categorized_blog() ) :   ?>
+<section class="aside-section-posts">
+	<h3>Recent Posts</h2>
+<?php
+$args = array( 'numberposts' => '3' );
+$recent_posts = wp_get_recent_posts( $args );
+
+foreach( $recent_posts as $recent ){
+	$thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($recent["ID"]), 'thumbnail', false );
+	$postdate = get_the_date('Y-m-d', $recent["ID"]);
+	?>
+	<div class="aside-post">
+		<a href="<?php echo get_permalink($recent["ID"]);?>">
+
+			<div class="aside-post-image">
+
+				<?php if ($thumbnail[0]) : ?>
+				<img src="<?php echo $thumbnail[0]; ?>" alt="<?php echo $recent["post_title"]; ?>">
+
+				<?php else : ?>
+				<img src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>
+				/src/images/logo.png" alt="<?php echo $recent["post_title"]; ?>">
+
+				<?php endif; ?>
+			</div>
+			<div class="aside-post-title">
+				<span><?php echo $recent["post_title"]; ?></span>
+			</div>
+			<div class="aside-post-date">
+				<span><i class="fa fa-clock-o" aria-hidden="true"></i><?php echo " ".$postdate; ?></span>
+			</div>
+
+		</a>
+	</div>
+	<?php
+}
+wp_reset_query();
+?>
+</section>
+
+<section class="aside-section-categories">
 	<div class="widget widget_categories">
-		<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'bourbon-wp' ); ?></h2>
+		<h3 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'bourbon-wp' ); ?></h3>
 		<ul>
 		<?php
 			wp_list_categories( array(
@@ -20,18 +58,10 @@
 				'order'      => 'DESC',
 				'show_count' => 1,
 				'title_li'   => '',
-				'number'     => 10,
+				'number'     => 5,
 			) );
 		?>
 		</ul>
-	</div><!-- .widget -->
-	<?php endif; ?>
-</section class="aside-archives">
-
-<section>
-	<?php the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>" ); ?>
-</section>
-
-<section class="aside-tag-cloud">
-	<?php the_widget( 'WP_Widget_Tag_Cloud' ); ?>
+	</div>
+	<!-- .widget_categories -->
 </section>
