@@ -19,47 +19,21 @@ get_header(); ?>
 				<!-- .page-header -->
 
 				<div class="page-content">
-					<h2><?php esc_html_e( 'Sorry, but it looks like what you were looking for was not found at this location. What were you looking for?', 'bourbon-wp' ); ?></h2>
+					<p><?php esc_html_e( 'Sorry, but it looks like what you were looking for was not found at this location. Maybe a search or one of the links below might help?', 'bourbon-wp' ); ?></p>
 
-					<?php
-						get_search_form();
-					?>
-					<br>
-					<h2><?php esc_html_e( 'Maybe you\'ll find it below...', 'bourbon-wp' ); ?></h2>
-					<?php
+					<div class="search-bar">
+	          <?php bourbon_wp_search_form(); ?>
+	        </div>
 
-						the_widget( 'WP_Widget_Recent_Posts' );
-
-						// Only show the widget if site has multiple categories.
-						if ( bourbon_wp_categorized_blog() ) :
-					?>
-					<br>
-					<div class="widget widget_categories">
-						<h2 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'bourbon-wp' ); ?></h2>
-						<ul>
+					<section class="section-404-links">
 						<?php
-							wp_list_categories( array(
-								'orderby'    => 'count',
-								'order'      => 'DESC',
-								'show_count' => 1,
-								'title_li'   => '',
-								'number'     => 10,
-							) );
+							the_widget( 'WP_Widget_Tag_Cloud' );
+
+							/* translators: %1$s: smiley */
+							$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives.', 'bourbon-wp' ) ) . '</p>';
+							the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
 						?>
-						</ul>
-					</div>
-					<!-- .widget_categories -->
-					<br>
-					<?php
-						endif;
-
-						/* translators: %1$s: smiley */
-						$archive_content = '<p>' . sprintf( esc_html__( 'Try looking in the monthly archives.', 'bourbon-wp' ) ) . '</p>';
-						the_widget( 'WP_Widget_Archives', 'dropdown=1', "after_title=</h2>$archive_content" );
-
-						the_widget( 'WP_Widget_Tag_Cloud' );
-					?>
-
+					</section>
 				</div>
 				<!-- .page-content -->
 			</section>
