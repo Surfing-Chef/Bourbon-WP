@@ -24,24 +24,18 @@
 				?>
 
 				<?php bourbon_wp_posted_on(); ?>
-			</header><!-- .entry-header -->
+			</header>
+			<!-- .entry-header -->
 
 			<div class="entry-content">
-				<?php
-				// Must be inside a loop.
-
-				if ( has_post_thumbnail() ) {
-					$thumb_id = get_post_thumbnail_id();
-					$thumb_url = wp_get_attachment_image_src($thumb_id,'thumbnail-size', true);
-					echo
-					'<div class="home-featured-image" style="background-image: url(' . $thumb_url[0]
-							. ')"></div>';
-				}
-				else {
-				    echo '<div class="home-featured-image not-set" style="background-image: url(\'' . get_bloginfo( 'stylesheet_directory' )
-				        . '/src/images/logo.png\')"></div>';
-				}				 ?>
-
+				<div class="post-thumbnail">
+					<?php
+						if ( has_post_thumbnail() ) {
+								the_post_thumbnail('medium_large');
+						}
+					?>
+				</div>
+				<!-- END .post-thumbnail -->
 				<?php the_excerpt(); ?>
 
 				<?php bourbon_wp_entry_footer(); ?>
