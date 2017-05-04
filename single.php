@@ -9,7 +9,7 @@
 
 get_header(); ?>
 
-	<section id="primary" class="content-area">
+	<section id="primary" class="content-area single-post">
 		<main id="main" class="site-main" role="main">
 
 		<?php
@@ -17,9 +17,9 @@ get_header(); ?>
 
 			get_template_part( 'template-parts/content', get_post_format() );
 
-			echo "<code>breadcrumbs</code>";
 			the_post_navigation();
-			echo "<code>breadcrumbs</code><br />";
+
+
 			// If comments are open or we have at least one comment, load up the comment template.
 			if ( comments_open() || get_comments_number() ) :
 				comments_template();
