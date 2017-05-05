@@ -62,10 +62,6 @@
       overflow-x: hidden;
       position: relative;
 
-      @include media(max-width 989px) {
-        //margin-bottom: 0;
-      }
-
       &:after {
         content:'';
         display: block;
