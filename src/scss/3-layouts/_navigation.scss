@@ -119,6 +119,13 @@
     width: 100%;
     z-index: 9999;
 
+    .current_page_item {
+      .menu-image-title-after {
+        color: orange;
+        @include text-shadow(0, 0, 1px, rgba(0,0,0,.7));
+      }
+    }
+
     &.show {
       display: block;
     }
