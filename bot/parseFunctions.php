@@ -175,12 +175,11 @@ function allrecipes($site_name, $site_url){
   $html = file_get_html($site_url);
 
   // Parse HTML
-  $img_att = "data-original-src";
-  $feed_base = $html->find("article", 0);
-  $feed_title = $feed_base->find("H3", 0)->plaintext;
+  $feed_base = $html->find("section[class=slider] article",0);
+  $feed_title = $feed_base->find("a div H3",0)->plaintext;
   $feed_title = trim(preg_replace('/\s\s+/', ' ', $feed_title));
-  $feed_url = $feed_base->find("a", 0)->href;
-  $feed_image = $feed_base->find("a img", 0)->$img_att;
+  $feed_url = $feed_base->find("a",0)->href;
+  $feed_image = $feed_base->find("a img",0)->src;
 
   // Return array of data
   return array ( $site_name, $site_url, $feed_title, $feed_url, $feed_image );
