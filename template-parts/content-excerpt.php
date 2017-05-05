@@ -17,8 +17,10 @@
 			<header class="entry-header">
 				<?php
 				if ( is_single() ) :
+					?><h4><?php the_category( '&bull;' ); ?></h4><?php
 					the_title( '<h1 class="entry-title">', '</h1>' );
 				else :
+					?><h4><?php the_category( '&bull;' ); ?></h4><?php
 					the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
 				endif;
 				?>
