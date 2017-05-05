@@ -11,11 +11,12 @@
   - [Simple Image Sizes Plugin](https://en-ca.wordpress.org/plugins/simple-image-sizes/):  (1) Install and activate. (2)  Navigate to `Settings > Media`. (3) Create, modify or reference image sizes. (4) Click `**Regenerate Thumbnails**` to ensure changes.
 - Orange color for highlights  
 ~~- 404 page styles and layout ~~
-- Adjust Culinaria Page  
+~~- Adjust Culinaria Page~~  
   ~~- responsive feeds~~
   ~~- function to randomly select 6 feed items only~~
 ~~- Add *aside* content on pages - bookmarks (custom menus) perhaps...~~
 - Add animation:  start with [Animate.css](https://github.com/daneden/animate.css)  
+- Add category specific posts on coding, culinary and projects pages using code from [ here](https://wordpress.org/plugins/category-posts/) and altering it  
 
 ## **UPDATES**  
 -  [Reminder about .gitignore reset](http://blog.jonathanchannon.com/2012/11/18/gitignore-not-working-fixed/)  

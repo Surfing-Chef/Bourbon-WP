@@ -16,6 +16,11 @@
 
 	<!-- Add page-slug-dependent widget areas  -->
 	<!-- that are defined in functions.php -->
+	<?php if ( is_page( 'culinaria' )) : ?>
+		<?php bourbon_wp_postsbycategory('culinary') ?>
+	<?php endif;?>
+
+
 	<?php if ( is_page( 'culinaria' ) && (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Culinaria Feeds")) ) : ?>
 	<?php endif;?>
 
