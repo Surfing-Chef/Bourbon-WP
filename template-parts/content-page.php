@@ -33,13 +33,14 @@
 	<?php if ( get_edit_post_link() ) : ?>
 		<footer class="entry-footer">
 			<?php
+			$icon_edit = '<i class="fa fa-pencil" aria-hidden="true"></i>';
 				edit_post_link(
 					sprintf(
 						/* translators: %s: Name of current post */
-						esc_html__( 'Edit %s', 'bourbon-wp' ),
+						esc_html__( ' Edit Page%s', 'bourbon-wp' ),
 						the_title( '<span class="screen-reader-text">"', '"</span>', false )
 					),
-					'<span class="edit-link">',
+					'<span class="edit-link">'.$icon_edit,
 					'</span>'
 				);
 			?>
