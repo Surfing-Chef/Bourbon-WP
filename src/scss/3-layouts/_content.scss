@@ -122,18 +122,11 @@
           display: block;
           line-height: 1.1em;
           margin-bottom: 1.4em;
-
-          time{
-            font-size: .8em;
-          }
         }
 
         @include outer-container;
         border: none !important;
 
-        @include media(min-width 320px max-width 989px) {
-          padding-bottom: 2.5em;
-        }
       }
       // .article-content
 
