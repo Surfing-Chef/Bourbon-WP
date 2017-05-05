@@ -104,48 +104,39 @@ if ( ! function_exists( 'bourbon_wp_entry_footer' ) ) :
  * Prints HTML with meta information for the categories, tags and comments.
  */
 function bourbon_wp_entry_footer() {
-	$icon_category = '<i class="fa fa-folder-open-o" aria-hidden="true"></i>';
+
 	$icon_tag = '<i class="fa fa-tags" aria-hidden="true"></i>';
 	$icon_comments = '<i class="fa fa-comments" aria-hidden="true"></i>';
+	$icon_edit = '<i class="fa fa-pencil" aria-hidden="true"></i>';
 
 	echo '<span class="post-meta-info">';
 
-	// Hide category and tag text for pages.
 	if ( 'post' === get_post_type() ) {
 		/* translators: used between list items, there is a space after the comma */
-		$categories_list = get_the_category_list( esc_html__( ', ', 'bourbon-wp' ) );
-		if ( $categories_list && bourbon_wp_categorized_blog() ) {
-			printf( '<span class="cat-links">' . $icon_category . ' %1$s' . '</span>', $categories_list ); // WPCS: XSS OK.
-		}
 
-		/* translators: used between list items, there is a space after the comma */
 		$tags_list = get_the_tag_list( '', esc_html__( ', ', 'bourbon-wp' ) );
 		if ( $tags_list ) {
 			printf( '<span class="tags-links">' . $icon_tag . ' %1$s' . '</span>', $tags_list ); // WPCS: XSS OK.
 		}
 	}
 
-	echo '</span>';
-	echo '<span class="comment-and-edit">';
-
 	if ( ! is_single() && ! post_password_required() && ( comments_open() || get_comments_number() ) ) {
 		echo '<span class="comments-link">' . $icon_comments;
 		/* translators: %s: post title */
 		comments_popup_link( sprintf( wp_kses( __( ' Leave a Comment<span class="screen-reader-text"> on %s</span>', 'bourbon-wp' ), array( 'span' => array( 'class' => array() ) ) ), get_the_title() ) );
-		echo '</span>';
+		echo '</span>'; // END comments-link
 	}
 
 	edit_post_link(
 		sprintf(
 			/* translators: %s: Name of current post */
-			esc_html__( 'Edit %s', 'bourbon-wp' ),
+			esc_html__( ' Edit Post%s', 'bourbon-wp' ),
 			the_title( '<span class="screen-reader-text">"', '"</span>', false )
 		),
-		'<span class="edit-link">',
-		'</span>'
+		'<span class="edit-link">'.$icon_edit,
+		'</span>' // END edit-link
 	);
-
-	echo '</span>';
+echo '</span>'; // END post-meta-info
 }
 endif;
 
