@@ -80,6 +80,16 @@
         }
       }
 
+      h1 {
+        text-align: center;
+        font-style: italic;
+        line-height: 1.2em;
+        margin-bottom: .6em;
+
+        a { font-family: $serif; }
+      }
+
+
       .article-content {
         header {
           h4 {
@@ -95,16 +105,6 @@
             }
           }
         }
-
-        h1 {
-          text-align: center;
-          font-style: italic;
-          line-height: 1.2em;
-          margin-bottom: .6em;
-
-          a { font-family: $serif; }
-        }
-
 
         .post-thumbnail {
           margin-bottom: 1.4em;
