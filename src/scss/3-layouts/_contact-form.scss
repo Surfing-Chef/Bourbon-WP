@@ -1,45 +1,21 @@
 /*! 3-layouts/_contact-form.scss */
 
-#contacts {
-  section {
-    @include span-columns(12);
-    padding-right: 0;
-    border: none;
-  }
-
-  .frm_description p {
-    font-family:  "Sanchez", serif;
-    font-size: 1.3em;
-    font-style: italic;
-  }
-
-  input {
-    color: $light-gray;
-  }
-
-  .contact-third {
-    @include span-columns(4);
-    clear: both;
-
-    @include media(min-width 568px max-width 900px) {
-      @include span-columns(6);
-    }
-
-    @include media(min-width 320px max-width 567px) {
-      @include span-columns(12);
+.sc-contact-form {
+  .frm_description {
+    &:before{
+      content: '';
+      display: block;
+      width: 5em;
+      border-bottom: 2px solid orange;
+      margin: -.2em auto .5em auto;
     }
   }
 
-  .contact-half {
-    @include span-columns(6);
-    clear: both;
-
-    @include media(min-width 320px max-width 567px) {
-      @include span-columns(12);
-    }
+  label {
+    font-size: .8em;
   }
-  .contact-full {
-    @include span-columns(12);
-    clear: both;
+
+  .contact-submit {
+    margin: 1em 0;
   }
 }
