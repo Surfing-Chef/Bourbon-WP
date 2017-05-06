@@ -9,7 +9,7 @@
 - Adjust *comments* section in single posts  
 ~~- Single posts to display feature images - adjust posts to contain them.~~  
   - [Simple Image Sizes Plugin](https://en-ca.wordpress.org/plugins/simple-image-sizes/):  (1) Install and activate. (2)  Navigate to `Settings > Media`. (3) Create, modify or reference image sizes. (4) Click `**Regenerate Thumbnails**` to ensure changes.
-- Orange color for highlights  
+~~ - Orange color for highlights ~~  
 ~~- 404 page styles and layout ~~
 ~~- Adjust Culinaria Page~~  
   ~~- responsive feeds~~
