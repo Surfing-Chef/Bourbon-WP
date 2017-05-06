@@ -44,10 +44,6 @@
     background: $base-background-color;
     @include span-columns(8 of 12);
     @include omega;
-    // @include media(320px){
-    //   @include span-columns(12 of 12);
-    // }
-
     @include padding(2em 1em 0 1em);
     border-bottom: none;
 
@@ -102,7 +98,6 @@
         }
       }
 
-
       .article-content {
         header {
           h4 {
@@ -145,10 +140,6 @@
       }
       // .article-content
 
-      .post-meta-info span {
-        @include span-columns(8 of 8);
-        margin-bottom: 0.5em;
-      }
     }
     // END article
 
@@ -161,10 +152,6 @@
     border-bottom: 0;
     margin-bottom: 1em;
     padding-bottom: 1em;
-  }
-
-  .sticky {
-    // sticky post styles
   }
 }
 // END #primary
