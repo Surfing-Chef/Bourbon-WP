@@ -40,7 +40,7 @@ get_header(); ?>
 							?>
 								<div class="grid-box-wrap">
 					        <div class="grid-box">
-					          <a href=<?php echo $c_feed[3] ?>>
+					          <a href=<?php echo $c_feed[3] ?> target="_blank">
 					            <div class="image-container" style="background-image: url(<?php echo $c_feed[4]; ?>);"></div>
 					            <span class="feed-meta">
 												<span class="feed-site"><?php echo strtolower($c_feed[0]); ?> - </span>
