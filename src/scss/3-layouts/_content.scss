@@ -80,13 +80,26 @@
         }
       }
 
-      h1 {
+      .entry-title, .widget-title {
         text-align: center;
         font-style: italic;
         line-height: 1.2em;
         margin-bottom: .6em;
 
         a { font-family: $serif; }
+      }
+
+      .widget-title {
+        font-size: 1.5em;
+        margin-top: -.1em;
+
+        &:after {
+          content: '';
+          display: block;
+          width: 5em;
+          border-bottom: 2px solid orange;
+          margin: .4em auto .7em auto;
+        }
       }
 
 
