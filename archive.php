@@ -44,70 +44,20 @@ get_header(); ?>
 
 		</main><!-- #main -->
 
-		<aside class="aside">
-      <section class="aside-section-posts">
-        <h3>Recent Posts</h2>
-      <?php
-      $args = array( 'numberposts' => '3' );
-      $recent_posts = wp_get_recent_posts( $args );
+		<aside class="">
+			<?php if ( is_page( 'culinaria' ) ) : ?>
+				<h3>Library of Culinaria</h3>
+				<?php wp_nav_menu(array(
+					'theme_location'  => 'culinary_menu',
+					'menu_class'      => 'aside-menu',
+					'menu_id'         => 'culinary-links'
+				)); ?>
 
-      foreach( $recent_posts as $recent ){
-        $thumbnail = wp_get_attachment_image_src( get_post_thumbnail_id($recent["ID"]), 'thumbnail', false );
-        $postdate = get_the_date('Y-m-d', $recent["ID"]);
-        ?>
-        <div class="aside-post">
-          <a href="<?php echo get_permalink($recent["ID"]);?>">
+			<?php else :?>
 
-            <div class="aside-post-image">
+			<?php get_template_part( 'template-parts/content', 'aside-meta' ); ?>
 
-              <?php if ($thumbnail[0]) : ?>
-              <img src="<?php echo $thumbnail[0]; ?>" alt="<?php echo $recent["post_title"]; ?>">
-
-              <?php else : ?>
-              <img src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>
-              /src/images/logo.png" alt="<?php echo $recent["post_title"]; ?>">
-
-              <?php endif; ?>
-            </div>
-            <div class="aside-post-title">
-              <span><?php echo $recent["post_title"]; ?></span>
-            </div>
-            <div class="aside-post-date">
-              <span><i class="fa fa-clock-o" aria-hidden="true"></i><?php echo " ".$postdate; ?></span>
-            </div>
-
-          </a>
-        </div>
-        <?php
-      }
-      wp_reset_query();
-      ?>
-      </section>
-
-      <section class="aside-section-categories">
-        <h3>Categories</h2>
-        <ul class="categories-list">
-        <?php
-        $categories = get_categories( array(
-        'orderby' => 'name',
-        'parent'  => 0
-        ) );
-
-        foreach ( $categories as $category ) {
-          printf( '<li>
-                    <a href="%1$s">
-                      <span class="category-name">%2$s</span>
-                      <span class="category-count">%3$s</span>
-                    </a>
-                  </li>',
-              esc_url( get_category_link( $category->term_id ) ),
-              esc_html( $category->name ),esc_html( $category->count )
-          );
-        }
-        ?>
-
-        </ul>
-      </section>
+			<?php endif;?>
     </aside>
 	</div><!-- #primary -->
 
