@@ -114,6 +114,34 @@
           }
         }
 
+        .entry-content {
+          p a,
+          ul li a {
+            color: $action-color;
+            font-style: italic;
+            font-weight: bold;
+          }
+
+          .post-meta-info {
+            span {
+              @include span-columns(8 of 8);
+              margin-bottom: 0.5em;
+              font-family: $sans-serif;
+              font-size: .8em;
+              letter-spacing: .1em;
+              text-transform: uppercase;
+            }
+
+            &:before {
+              content: '';
+              display: block;
+              width: 5em;
+              border-bottom: 2px solid orange;
+              margin: 0 0 1.2em 0;
+            }
+          }
+        }
+
         .post-thumbnail {
           margin-bottom: 1.4em;
         }
