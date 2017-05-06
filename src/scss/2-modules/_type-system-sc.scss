@@ -1,4 +1,5 @@
 .type-system-sc {
+
   $base-border-radius: 3px !default;
   $base-line-height: 1.5em !default;
   $base-spacing: 1.5em !default;
@@ -26,11 +27,7 @@
     border-right: 0;
     border-top: 0;
     margin: $base-spacing 0;
-  }
-
-  p {
-    color: $base-font-color;
-    line-height: $base-line-height;
+    width: 3em;
   }
 
   .type {
@@ -94,18 +91,13 @@
   }
 
   h4 {
+    font-family: $sans-serif;
     font-size: .8em;
     letter-spacing: .1em;
   }
 
-  p.date {
-    color: transparentize($base-font-color, 0.6);
-    font-family: $serif;
-    font-style: italic;
-    margin-bottom: 0.3em;
-  }
-
   p {
+    color: $base-font-color;
     font-family: $serif;
     line-height: 1.7em;
     margin-bottom: 1.5em;
@@ -115,10 +107,26 @@
       font-size: 1.2em;
       font-style: italic;
     }
-  }
 
-  a {
-    font-family: $sans-serif;
+    a {
+      color: $action-color;
+      font-style: italic;
+      font-weight: bold;
+    }
+
+    &.date {
+      color: transparentize($base-font-color, 0.6);
+      font-family: $serif;
+      font-style: italic;
+      margin-bottom: 0.3em;
+    }
+
+    &.author {
+      font-family: $serif;
+      font-size: 1.2em;
+      font-style: italic;
+    }
+
   }
 
   a.read-more {
@@ -139,13 +147,5 @@
     }
   }
 
-  hr {
-    width: 3em;
-  }
-
-  p.author {
-    font-family: $serif;
-    font-size: 1.2em;
-    font-style: italic;
-  }
 }
+// END .type-system-sc
