@@ -218,7 +218,7 @@ add_theme_support( 'admin-bar', array( 'callback' => '__return_false' ) );
 
 #### WordPress Custom Menus _(Bourbon Chef WP Custom Menus)_  
 + [Simplified Custom Menus](https://premium.wpmudev.org/blog/add-menus-to-wordpress/?utm_expid=3606929-97.J2zL7V7mQbSNQDPrXwvBgQ.0&utm_referrer=https%3A%2F%2Fwww.google.ca%2F)  
-
++ References to customized post navigation used on single post pages can be found [here](https://developer.wordpress.org/reference/functions/the_post_navigation/) and [here](https://developer.wordpress.org/reference/functions/get_the_post_navigation/).  
 #### Cheatsheets
 [Theme Guide](https://premium.wpmudev.org/blog/free-wordpress-themes-ultimate-guide/?utm_expid=3606929-97.J2zL7V7mQbSNQDPrXwvBgQ.0)    
 
