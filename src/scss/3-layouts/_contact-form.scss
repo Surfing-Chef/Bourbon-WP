@@ -11,8 +11,15 @@
     }
   }
 
-  label {
-    font-size: .8em;
+  .frm_primary_label {
+    color: shade($dark-gray, 40%) !important;
+    font-family: $sans-serif !important;
+    font-size: .8em !important;
+    font-weight: 400 !important;
+    text-transform: uppercase;
+    line-height: 3em;
+    letter-spacing: .1em;
+    margin-bottom: 0.4em;
   }
 
   .contact-submit {
