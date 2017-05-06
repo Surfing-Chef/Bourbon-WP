@@ -15,6 +15,10 @@
   font-family: $serif;
   text-align: left;
 
+  nav {
+    font-family: $sans-serif;
+  }
+
   h1, h2, h3, h4, h5, p {
     color: $base-font-color;
     margin: 0;
@@ -106,12 +110,6 @@
       font-family: $serif;
       font-size: 1.2em;
       font-style: italic;
-    }
-
-    a {
-      color: $action-color;
-      font-style: italic;
-      font-weight: bold;
     }
 
     &.date {
