@@ -16,7 +16,7 @@
   ~~- function to randomly select 6 feed items only~~
 ~~- Add *aside* content on pages - bookmarks (custom menus) perhaps...~~
 - Add animation:  start with [Animate.css](https://github.com/daneden/animate.css)  
-- Add category specific posts on coding, culinary and projects pages using code from [ here](https://wordpress.org/plugins/category-posts/) and altering it  
+- Add **category specific posts on pages** using code from [here](https://developer.wordpress.org/reference/classes/wp_query/): A great resource for altering The Loop.    
 
 ## **UPDATES**  
 -  [Reminder about .gitignore reset](http://blog.jonathanchannon.com/2012/11/18/gitignore-not-working-fixed/)  
