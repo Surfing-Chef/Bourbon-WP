@@ -7,51 +7,57 @@
 
     article {
       margin-bottom: 0;
+      padding-bottom: 2em;
+
+      &:after {
+        display: none;
+      }
     }
   }
 
   .post-navigation {
-    display: inline-block;
-    border-radius: 3px;
-    padding: 1em;
+    @include span-columns(8 of 8);
     margin-bottom: 1.5em;
-    background: $light-gray;
+    font-size: 1em;
+    letter-spacing: .1em;
+    font-weight: 700;
+    font-style: italic;
+    text-transform: uppercase;
 
     .nav-links {
-      font-size: 1em;
+      font-size: .8em;
 
-      ::before,
-      ::after {
-        font-family: $sans-serif;
-        font-weight: 700;
-      }
-
-      :hover {
+      &:hover {
         color: $action-color;
       }
-      .nav-previous {
-        @include span-columns(8 of 8);
-          margin-bottom: .75em;
 
-        @include media(600px){
-          @include span-columns(4 of 8);
+      &> div {
+        @include span-columns(4 of 8);
+
+        // @include media(600px){
+        //   @include span-columns(4 of 8);
+        // }
+
+        &:nth-child(2){
+          text-align: right;
         }
+      }
 
+      .nav-previous {
+        margin-bottom: .75em;
         &::before {
-          content: "Previous Post :: ";
+          content: "\f100";
+          font-family: FontAwesome;
         }
       }
 
       .nav-next{
-        @include span-columns(8 of 8);
-        @include media(600px){
-          @include span-columns(4 of 8);
-        }
-
-        &::before {
-          content: "Next Post :: ";
+        &::after {
+          content: "\f101";
+          font-family: FontAwesome;
         }
       }
     }
   }
 }
+// END .single-post
