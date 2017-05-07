@@ -95,5 +95,6 @@ apifier.json
 .ftp-settings.json
 bot/cache.txt
 
-# AUTO GENERATED STYLES
+# AUTO GENERATED/MINIFIED/COMPRESSED FILES
 *.css
+*.min.js
