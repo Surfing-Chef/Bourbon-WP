@@ -22,6 +22,9 @@
   $horizontal-bar-mode: 950px;
 
 nav {
+  .menu-image-title-after{
+    animation-duration:.4s;
+  }
   .current_page_item {
     .menu-image-title-after {
       color: $action-color !important;
