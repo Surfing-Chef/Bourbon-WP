@@ -70,7 +70,7 @@ gulp.task('default', ['serve']);
 //////// Tasks used to build deployment package ////////
 gulp.task('build:cleanfolder', function(){
   return del([
-    './build/**/*'
+    './bourbon-wp/**/*'
   ]);
 });
 
@@ -79,28 +79,28 @@ gulp.task('build:copy', ['build:cleanfolder'], function(){
   return gulp.src([
                   './**/*/',
                   '!./src/images/**/*',
-                  '!./build'
+                  '!./bourbon-wp'
                 ])
-  .pipe(gulp.dest('./build/'));
+  .pipe(gulp.dest('./bourbon-wp/'));
 });
 
 // minimize images in deployment directory
 gulp.task('build:imgMin', ['build:copy'], function(){
     return gulp.src('./src/images/**/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('./build/src/images'));
+        .pipe(gulp.dest('./bourbon-wp/src/images'));
 });
 
 // remove unwanted build files and directories
 gulp.task('build:remove', ['build:imgMin'], function(done){
   return del([  // list files and directories to delete
-    './build/gulpfile.js',
-    './build/.git*',
-    './build/node_modules',
-    './build/README.md',
-    './build/scss/',
-    './build/css/',
-    './build/css/*dev*',
+    './bourbon-wp/gulpfile.js',
+    './bourbon-wp/.git*',
+    './bourbon-wp/node_modules',
+    './bourbon-wp/README.md',
+    './bourbon-wp/scss/',
+    './bourbon-wp/css/',
+    './bourbon-wp/css/*dev*',
   ], done);
 });
 
