@@ -69,6 +69,9 @@
 
 ### 3. TIPS TRICKS AND LINKS
 
+#### GIT
+- [Reminder about .gitignore reset](http://blog.jonathanchannon.com/2012/11/18/gitignore-not-working-fixed/): Sometimes .gitignore isn't working properly.  Here's a fix that usually works.   
+
 #### LOCAL EMAIL TESTING
 - [Test Mail Server Tool](http://www.toolheap.com/test-mail-server-tool/): Small application to test email settings during development on a local machine  
 
@@ -83,7 +86,6 @@
 [YouTube Tut on CSS Animation](https://www.youtube.com/watch?v=CBQGl6zokMs): on simple css and jquery implementation on animate.css  
 [Animating the moments](https://www.youtube.com/watch?v=GeuNIOuIEDA): DevTips on the Whys of animation  
 
-
 #### WORDPRESS REFERENCE LINKS
 - [Wpmudev.org - Theme Guide](https://premium.wpmudev.org/blog/free-wordpress-themes-ultimate-guide/?utm_expid=3606929-97.J2zL7V7mQbSNQDPrXwvBgQ.0): The lowdown on wordpress themes.  
 - [WordPress.org on The Loop](https://developer.wordpress.org/reference/classes/wp_query/): A great resource for altering The Loop.  
@@ -94,7 +96,6 @@
 - [Categories](https://developer.wordpress.org/reference/functions/wp_list_categories/): Display or retrieve the HTML list of categories
 - [WordPress.org on arbitrary widgets](https://codex.wordpress.org/Function_Reference/the_widget): References for displaying widgets outside of a sidebar  
 - [Responsive Feature Images](https://www.lynda.com/articles/create-responsive-featured-images-wordpress): Great article about WordPress responsive images  
-- [Reminder about .gitignore reset](http://blog.jonathanchannon.com/2012/11/18/gitignore-not-working-fixed/): Sometimes .gitignore isn't working properly.  Here's a fix that usually works.   
 - [PHP in WordPress default Text Widget](http://www.emanueleferonato.com/2011/04/11/executing-php-inside-a-wordpress-widget-without-any-plugin/): Without plugin, run PHP in a standard Text Widget with this function  
 
 ### 4. BOURBON CHEF TO DO's  
