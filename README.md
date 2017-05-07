@@ -5,7 +5,7 @@
 
 ## **TODO**
 - Create a bookmarks page template to display my bookmarks as links
-- Add animation:  start with [Animate.css](https://github.com/daneden/animate.css)  
+- Fine tune the feed gallery
 
 ### 1. SITEMAP
 1. ***primary*** < LOGO _(home)_ >< CULINARIA >< PROJECTS >< CODING >< ABOUT >< CONTACTS >  
@@ -68,6 +68,9 @@
 - ensure steps 2.1 to 2.4 are completed before installing theme
 
 ### 3. TIPS TRICKS AND LINKS
+
+#### CDN
+[JSDeliver](http://www.jsdelivr.com/?query=anima): a fast reliable cdn script provider.  
 
 #### GIT
 - [Reminder about .gitignore reset](http://blog.jonathanchannon.com/2012/11/18/gitignore-not-working-fixed/): Sometimes .gitignore isn't working properly.  Here's a fix that usually works.   
