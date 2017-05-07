@@ -1,6 +1,6 @@
 <?php
 /**
- * Template Name: Categoried Page
+ * Template Name: Categorized Page
  *
  * This is the template uses a customized loop that displays
  * specific post based on categories related to the page.
