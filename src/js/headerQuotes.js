@@ -1,44 +1,7 @@
-// DOCUMENT READY
+// QUOTE FUNCTION
+
 $(document).ready(function() {
 
-  // BACK TO TOP BUTTON
-  //----------------------------------------------
-  var offset = $('.top-nav').height();
-  var duration = 300;
-
-  $('.back-to-top').css( "display", "none" );
-
-  jQuery(window).scroll(function() {
-    if (jQuery(this).scrollTop() > offset) {
-      jQuery('.back-to-top').fadeIn(duration);
-    } else {
-      jQuery('.back-to-top').fadeOut(duration);
-    }
-  });
-
-  jQuery('.back-to-top').click(function(event) {
-    event.preventDefault();
-    jQuery('html, body').animate({scrollTop: 0}, duration);
-    return false;
-  });
-// END BACK TO TOP BUTTON
-
-// ALT TOP MENU
-//----------------------------------------------
-$('.top-nav-alt').css( "display", "none" );
-
-jQuery(window).scroll(function() {
-  if (jQuery(this).scrollTop() > offset) {
-    jQuery('.top-nav-alt').fadeIn(duration);
-  } else {
-    jQuery('.top-nav-alt').fadeOut(duration);
-  }
-});
-// END ALT TOP MENU
-
-
-// QUOTE FUNCTION
-//----------------------------------------------
 // Define a quote library
   var quoteSource=[
   {
@@ -154,4 +117,4 @@ jQuery(window).scroll(function() {
     quoteContainer.append('<p class="quote">'+newQuoteText+'</p>'+'<p class="author">'+newQuoteGenius+'</p>');
   } //end for loop
 
-}); // END DOCUMENT READY
+}); // END QUOTE FUNCTION
