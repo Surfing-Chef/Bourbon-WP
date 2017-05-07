@@ -16,25 +16,14 @@
 
 <?php wp_head(); ?>
 
-<?php // drop Google Fonts ?>
-<!-- Geometric-Serif -->
-<!-- <link href='//fonts.googleapis.com/css?family=Questrial' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Sanchez:400italic,400' rel='stylesheet' type='text/css'> -->
-
-<!-- Slab-Serif -->
-<!-- <link href='//fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,800,700,600,300' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Roboto+Slab:400,300,100,700' rel='stylesheet' type='text/css'> -->
-
-<!-- Traditional -->
-<!-- <link href='//fonts.googleapis.com/css?family=Radley:400,400italic' rel='stylesheet' type='text/css'>
-<link href='//fonts.googleapis.com/css?family=Noto+Sans:400,700,400italic,700italic' rel='stylesheet' type='text/css'> -->
-
-<!-- SC -->
+<!-- Google Fonts -->
 <link href='//fonts.googleapis.com/css?family=Lora:400,400i,700,700i' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
-<?php // end fonts ?>
 
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<!-- Font-Awesome -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+<!-- Animate.css -->
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css" />
 
 </head>
 <body <?php body_class('type-system-sc'); ?>>
