@@ -2,6 +2,9 @@
 
 $().ready(function(){
 
+  var offset = $('.top-nav').height();
+  var duration = 300;
+
   $('.top-nav-alt').css( "display", "none" );
 
   jQuery(window).scroll(function() {
