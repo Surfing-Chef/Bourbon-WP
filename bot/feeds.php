@@ -1,8 +1,7 @@
 <?php
-// get the various site-specific feed functions
+// site specifics
 require_once("parseFunctions.php");
 
-// Location of the list of sites
 $sites ="./sites.json";
 
 // Location of the feed cache
@@ -10,16 +9,12 @@ $sites ="./sites.json";
 // as cronjob vs windows schedule may require different paths.
 $cache = "C:/wamp64/www/Bourbon-WP/wp-content/themes/bourbon-wp/bot/cache.txt";
 
-// Import JSON file
 $sites_json = file_get_contents($sites);
 
-// Convert JSON to array
 $sites_arr = json_decode($sites_json, true);
 
-// Create array to hold all site data
 $feed_container = array();
 
-// FUNCTION to get site header response code.
 function get_http_response_code($site_url) {
 
   $headers = get_headers($site_url);
@@ -27,15 +22,12 @@ function get_http_response_code($site_url) {
 
 }
 
-// FUNCTION to get details of site
 function get_details($site_name, $site_url){
-  // Create array for site-specific data
+
   $site_data = array();
-  // Ensure the contaner array is usable within the function
+
   global $feed_container;
 
-  // Logic to specify which site parser function to run.
-  // Each parser function return an array.
   switch ($site_name) {
     case "Epicurious" :
       $site_data = epicurious($site_name, $site_url);
@@ -75,7 +67,6 @@ function get_details($site_name, $site_url){
       break;
   }
 
-  // Add each site-specific data to the container-array
   $feed_container[] = array
   (
     $site_data[0],
@@ -86,7 +77,6 @@ function get_details($site_name, $site_url){
   );
 
 }
-// END get_details()
 
 function follow_links($sites_arr){
   global $feed_container;
@@ -98,47 +88,43 @@ function follow_links($sites_arr){
     $site_url =  $site['site-url'];
 
     echo $site_name."\n";
-    // Get site headers response code
+
     $response_code = get_http_response_code($site_url);
 
-    // check if site responds okay
     if ($response_code === "200"){
       get_details($site_name, $site_url);
-    } else { // skip site if not responsive
+    } else {
       continue;
     }
 
   }
 
-  // Serialize container for writing to file
   $feed_container_string = serialize($feed_container);
 
-  // Write contents to file
   file_put_contents($cache, $feed_container_string);
 
 }
-// END follow_links()
 
 function build_feed($sites_arr){
   global $cache;
-  // Get current time (in seconds)
+
   $current_time = time();
-  // Specify age of file before re-creating (in seconds)
-  $target_time = 60*60*12; // 12 hours
-  // Get time of file creation (in seconds)
+
+  $target_time = 60*60*12;
+
   @$cache_time = filemtime($cache);
-  // Get age file (in seconds)
+
   $age = $current_time - $cache_time;
-  // Decide how to procede
-  if (time() - $target_time > $cache_time || !$cache_time){
-    // Too old
+
+  $size = strlen(file_get_contents($cache));
+
+  if (time() - $target_time > $cache_time || !$cache_time || $size < 50 ){
+
     echo follow_links($sites_arr)."\n";
   } else {
-    // Too young
+
     exit;
   }
 }
-// END build_feed
 
-// Build it!
 build_feed($sites_arr);
