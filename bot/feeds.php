@@ -67,15 +67,19 @@ function get_details($site_name, $site_url){
       break;
   }
 
-  $feed_container[] = array
-  (
-    $site_data[0],
-    $site_data[1],
-    $site_data[2],
-    $site_data[3],
-    $site_data[4]
-  );
-
+  if(!is_null($site_data)){
+    $feed_container[] = array
+    (
+      $site_data[0],
+      $site_data[1],
+      $site_data[2],
+      $site_data[3],
+      $site_data[4]
+    );
+  } else {
+    //  send msg to log?
+  }
+  
 }
 
 function follow_links($sites_arr){
@@ -116,7 +120,7 @@ function build_feed($sites_arr){
 
   $age = $current_time - $cache_time;
 
-  $size = strlen(file_get_contents($cache));
+  $size = @strlen(file_get_contents($cache));
 
   if (time() - $target_time > $cache_time || !$cache_time || $size < 50 ){
 
