@@ -78,7 +78,7 @@ build/
 dist/
 .npm-debug.log
 tmp
-
+bourbon-wp
 
 # Ruby #
 ########
