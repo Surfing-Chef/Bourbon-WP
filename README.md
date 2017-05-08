@@ -13,7 +13,8 @@
 
 ### 2. SET UP SURFING-CHEF.COM FOR BOURBON-WP IMPLEMENTATION
 - install [Remote-FTP](https://atom.io/packages/remote-ftp) into Atom for ease of use. [Tutorial reminder](https://www.youtube.com/watch?v=YmSD2O85wx0)   
-- [Filezilla](https://filezilla-project.org/) will be a great back up plan  
+- [Filezilla](https://filezilla-project.org/) will be a great back up plan
+- Ensure all files are appropriately labelled with versions etc. 
 - Follow the next steps in order, before installing the Bourbon-WP theme
 
 ### 2.1 New Pages
