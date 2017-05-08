@@ -79,7 +79,14 @@ gulp.task('build:copy', ['build:cleanfolder'], function(){
   return gulp.src([
                   './**/*/',
                   '!./src/images/**/*',
-                  '!./bourbon-wp'
+                  '!./bourbon-wp',
+                  '!./cron.bat',
+                  '!./src/scss/**/*',
+                  '!./src/css/**/*',
+                  '!./README.md',
+                  '!./tester*',
+                  '!./rtl.css',
+                  '!./.ftpconfig'
                 ])
   .pipe(gulp.dest('./bourbon-wp/'));
 });
