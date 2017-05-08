@@ -1,8 +1,6 @@
 <?php
 require "simple_html_dom.php";
 
-// fopen and fwrite, the fclose
-
 // Epicurious
 function epicurious($site_name, $site_url){
 
