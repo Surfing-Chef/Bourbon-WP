@@ -40,10 +40,6 @@
       &> div {
         @include span-columns(4 of 8);
 
-        // @include media(600px){
-        //   @include span-columns(4 of 8);
-        // }
-
         &:nth-child(2){
           text-align: right;
         }
