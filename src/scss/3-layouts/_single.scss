@@ -10,8 +10,16 @@
       padding-bottom: 2em;
 
       &:after {
-        display: none;
+        content: '';
+        display: block;
+        width: 5em;
+        border-bottom: 2px solid orange;
+        margin: 0;
+        padding-top: 1em;
       }
+      // &:after {
+      //   display: none;
+      // }
     }
   }
 
