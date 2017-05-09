@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for displaying site meta on home page.
+ * Template part for displaying aside meta on home page.
  * Edit inc/template-tags.php to adjust layout markup
  *
  * @link https://codex.wordpress.org/Template_Hierarchy

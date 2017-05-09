@@ -1,6 +1,6 @@
 <?php
 /**
- * Template for displaying post excerpts on home page.
+ * Template part for displaying post excerpts.
  * Edit inc/template-tags.php to adjust layout markup
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
