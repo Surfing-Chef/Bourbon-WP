@@ -177,21 +177,15 @@
 
     .comments-area {
       display: inline-block;
+      width: 100%;
+      word-wrap: break-word;
 
-      h3 {
-        word-wrap: break-word;
-        span {
-          font-family: $serif;
-          text-transform: capitalize;
-          font-style: italic;
-        }
-      }
       &:before {
         content: '';
         display: block;
         width: 5em;
         border-bottom: 2px solid orange;
-        margin: -1em 0 1.2em 0;
+        margin: 0 0 1.2em 0;
       }
 
     }
