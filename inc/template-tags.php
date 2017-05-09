@@ -53,9 +53,6 @@ function bourbon_wp_posted_modified_on() {
 
 	echo '<span class="posted-on">' . $icon_posted . $posted_on . '</span>' ;
 
-	// echo '<span class="posted-on">' . $posted_on . '<span class="byline"> ' . $byline . '</span></span>'; // WPCS: XSS OK.
-
-
 	if ( get_the_time( 'U' ) !== get_the_modified_time( 'U' ) ) {
 		$time_string2 = '<time class="updated" datetime="%3$s">%4$s</time>';
 
