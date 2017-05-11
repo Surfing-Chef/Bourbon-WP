@@ -49,9 +49,12 @@ if ( post_password_required() ) {
 
 		<ol class="comment-list">
 			<?php
+
+				$icon_reply = '<i class="fa fa-reply" aria-hidden="true"></i>';
 				wp_list_comments( array(
 					'style'      => 'ol',
 					'short_ping' => true,
+					'reply_text' => "$icon_reply Reply",
 				) );
 			?>
 		</ol><!-- .comment-list -->
