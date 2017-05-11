@@ -1,5 +1,5 @@
 # Bourbon-WP (aka Bourbon-Chef-Site-2.5)
-> This branch refines the README documentation: It will outline deployment specific details, links to remember, and WordPress settings to implement from the local development environment to a remote hosted site.
+> This branch refines the README documentation: It will outline deployment specific details, links to remember, and WordPress settings to implement from the local development environment to a remote hosted site. It also formats comments and replies.  
 
 > **TOO SAD!** I can't believe LuckyPeach.com is done May 1.  And just as heart-breaking is the last publication occurs this fall.
 
@@ -108,6 +108,7 @@
 - [WordPress.org on arbitrary widgets](https://codex.wordpress.org/Function_Reference/the_widget): References for displaying widgets outside of a sidebar  
 - [Responsive Feature Images](https://www.lynda.com/articles/create-responsive-featured-images-wordpress): Great article about WordPress responsive images  
 - [PHP in WordPress default Text Widget](http://www.emanueleferonato.com/2011/04/11/executing-php-inside-a-wordpress-widget-without-any-plugin/): Without plugin, run PHP in a standard Text Widget with this function  
+- [Comments: *comment-form()*](https://codex.wordpress.org/Function_Reference/comment_form#.24args) and [*wp_list_comments()*](https://codex.wordpress.org/Function_Reference/wp_list_comments): useful links to formatting comment content    
 
 ### 4. BOURBON CHEF TO DO's  
 [PROJECT](https://www.lynda.com/PHP-tutorials/WordPress-Creating-Custom-Plugins-PHP/508212-2.html): Culinaria Feeds  
