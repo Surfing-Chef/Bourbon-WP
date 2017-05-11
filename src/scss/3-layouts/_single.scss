@@ -8,26 +8,15 @@
     article {
       margin-bottom: 0;
       padding-bottom: 2em;
-
-      &:after {
-        content: '';
-        display: block;
-        width: 5em;
-        border-bottom: 2px solid orange;
-        margin: 0;
-        padding-top: 1em;
-      }
     }
   }
 
   .post-navigation {
     @include span-columns(8 of 8);
     margin-top: 2em;
-    margin-bottom: 1.5em;
+    margin-bottom: .4em;
     font-size: 1em;
     letter-spacing: .1em;
-    font-weight: 700;
-    font-style: italic;
     text-transform: uppercase;
 
     .nav-links {
