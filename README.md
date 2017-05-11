@@ -109,6 +109,7 @@
 - [Responsive Feature Images](https://www.lynda.com/articles/create-responsive-featured-images-wordpress): Great article about WordPress responsive images  
 - [PHP in WordPress default Text Widget](http://www.emanueleferonato.com/2011/04/11/executing-php-inside-a-wordpress-widget-without-any-plugin/): Without plugin, run PHP in a standard Text Widget with this function  
 - [Comments: *comment-form()*](https://codex.wordpress.org/Function_Reference/comment_form#.24args) and [*wp_list_comments()*](https://codex.wordpress.org/Function_Reference/wp_list_comments): useful links to formatting comment content    
+- [Adding tweets to posts](https://en.support.wordpress.com/twitter/twitter-embeds/): super simple  
 
 ### 4. BOURBON CHEF TO DO's  
 [PROJECT](https://www.lynda.com/PHP-tutorials/WordPress-Creating-Custom-Plugins-PHP/508212-2.html): Culinaria Feeds  
