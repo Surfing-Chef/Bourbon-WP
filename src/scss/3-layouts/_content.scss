@@ -167,20 +167,6 @@
       margin: 0 auto;
     }
 
-    .comments-area {
-      display: inline-block;
-      width: 100%;
-      word-wrap: break-word;
-
-      &:before {
-        content: '';
-        display: block;
-        width: 5em;
-        border-bottom: 2px solid orange;
-        margin: 0 0 1.2em 0;
-      }
-
-    }
   }
   // END main
 
