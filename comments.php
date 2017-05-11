@@ -82,7 +82,23 @@ if ( post_password_required() ) {
 	<?php
 	endif;
 
-	comment_form();
+	$fields = array (
+		'comment_notes_before' 	=> '<h4 class="comment-notes">' . __( 'Your email address will not be published.' ) . ( $req ? $required_text : '' ) . '</h4>',
+		'email' 								=>
+	 '<p class="comment-form-email"><label for="email">' . __( 'Email', 'domainreference' ) . '</label> ' .
+	 ( $req ? '<span class="required">*</span>' : '' ) .
+	 '<input id="email" name="email" type="text" value="' . esc_attr(  $commenter['comment_author_email'] ) .
+	 '" size="30"' . $aria_req . ' /></p>',
+	 'logged_in_as' 					=> '<p class="logged-in-as">' .
+    sprintf(
+    __( '<h4>Logged in as <a href="%1$s">%2$s</a>. <a href="%3$s" title="Log out of this account">Log out?</a></h4>' ),
+      admin_url( 'profile.php' ),
+      $user_identity,
+      wp_logout_url( apply_filters( 'the_permalink', get_permalink( ) ) )
+    ) . '</p>',
+	);
+
+	comment_form($fields);
 	?>
 
 </div><!-- #comments -->
