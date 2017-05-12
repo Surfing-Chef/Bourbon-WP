@@ -1,6 +1,6 @@
 <?php
 /**
- * Custom template tags for this theme
+ * Custom template tag generators for this theme
  *
  * @package Bourbon-WP
  */
