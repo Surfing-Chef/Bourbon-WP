@@ -1,6 +1,14 @@
 /*! 3-layouts/_contact-form.scss */
 
 .sc-contact-form {
+  .frm_form_fields{
+    fieldset {
+      h3{
+        display: none;
+      }
+    }
+  }
+
   .frm_description {
     &:before{
       content: '';
