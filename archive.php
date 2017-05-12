@@ -1,6 +1,8 @@
 <?php
 /**
- * The template for displaying archive pages
+ * The archive template
+ *
+ * Used when a category, author, or date is queried.
  *
  * @link https://codex.wordpress.org/Template_Hierarchy
  *

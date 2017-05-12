@@ -1,6 +1,7 @@
 <?php
 /**
-	* This is an alternative index page.
+	* The home page template, front page by default
+	*
 	* The header is adjusted to display a hero section.
 	*
 	* @link https://codex.wordpress.org/Template_Hierarchy

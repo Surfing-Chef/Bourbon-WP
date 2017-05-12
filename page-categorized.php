@@ -2,8 +2,7 @@
 /**
  * Template Name: Categorized Page
  *
- * This is the template uses a customized loop that displays
- * specific post based on categories related to the page.
+ * Displays posts based on theme specific pages
  *
  *@link https://developer.wordpress.org/reference/classes/wp_query/
  *

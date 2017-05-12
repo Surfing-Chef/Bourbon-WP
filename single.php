@@ -1,6 +1,6 @@
 <?php
 /**
- * The template for displaying all single posts
+ * The single post template.
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#single-post
  *

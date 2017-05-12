@@ -1,6 +1,8 @@
 <?php
 /**
- * The template for displaying search results pages
+ * The search results template
+ *
+ * Used when a search is performed
  *
  * @link https://developer.wordpress.org/themes/basics/template-hierarchy/#search-result
  *

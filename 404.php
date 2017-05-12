@@ -1,6 +1,8 @@
 <?php
 /**
- * The template for displaying 404 pages (not found)
+ * The 404 Not Found template
+ *
+ * Used when WordPress cannot find a post or page that matches the query.
  *
  * @link https://codex.wordpress.org/Creating_an_Error_404_Page
  *

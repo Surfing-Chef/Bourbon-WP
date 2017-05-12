@@ -1,6 +1,6 @@
 <?php
 /**
-  * The header for the home page
+  * Header template for the home page
   *
   * Parallax content and callout container
   *
