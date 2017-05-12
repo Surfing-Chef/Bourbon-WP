@@ -11,6 +11,8 @@ footer#colophon {
   $bg2: transparentize(white, 0.5);
   @include texture($bg1, $bg2, 85, 1);
   bottom: 0;
+  -webkit-transform: translate3d(0,0,-3px);
+  transform: translate3d(0,0,-3px);
   z-index: -3;
 
   .footer-container {

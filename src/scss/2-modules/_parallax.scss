@@ -27,6 +27,8 @@ $parallax-background-height: $parallax-window-height * 2;
   position: absolute;
   top: - $parallax-window-height / 3;
   width: 100%;
+  -webkit-transform: translate3d(0,0,-2px);
+  transform: translate3d(0,0,-2px);
   z-index: -2;
 }
 
