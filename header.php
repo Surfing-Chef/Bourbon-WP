@@ -17,8 +17,6 @@
 	<link rel="profile" href="http://gmpg.org/xfn/11">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
 
-<?php wp_head(); ?>
-
 <!-- Google Fonts -->
 <link href='//fonts.googleapis.com/css?family=Lora:400,400i,700,700i' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
@@ -27,6 +25,8 @@
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
 <!-- Animate.css -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/animatecss/3.5.2/animate.min.css" />
+
+<?php wp_head(); ?>
 
 </head>
 <body <?php body_class('type-system-sc'); ?>>
