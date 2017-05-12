@@ -106,7 +106,9 @@ gulp.task('build:remove', ['build:imgMin'], function(done){
     './bourbon-wp/.git*',
     './bourbon-wp/node_modules',
     './bourbon-wp/src/scss',
-    './bourbon-wp/src/css'
+    './bourbon-wp/src/css',
+    './bourbon-wp/src/js/**/*',
+    '!./bourbon-wp/src/js/script.min.js'
   ], done);
 });
 
