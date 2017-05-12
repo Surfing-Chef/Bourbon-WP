@@ -87,6 +87,8 @@ gulp.task('build:copy', ['build:cleanfolder'], function(){
                   '!./README.md',
                   '!./tester*',
                   '!./rtl.css',
+                  '!./style.css',
+                  '!./package.json',
                   '!./.ftpconfig'
                 ])
   .pipe(gulp.dest('./bourbon-wp/'));
