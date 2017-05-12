@@ -189,12 +189,16 @@ aside {
   @include omega;
   padding: 2em 1em 1em 1em;
 
-  h3:after {
-    content: '';
-    display: block;
-    width: 5em;
-    border-bottom: 2px solid orange;
-    padding-bottom: .7em;
+  section h3 {
+    margin-top: .3em !important;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 5em;
+      border-bottom: 2px solid orange;
+      padding-bottom: .65em;
+    }
   }
 
   .aside-section-posts {
