@@ -34,17 +34,18 @@ gulp.task('sassDev', function() {
     .pipe(autoprefixer('last 2 versions'))
   .pipe(sourcemaps.write())
   .pipe(gulp.dest('src/css/'))
+  .pipe(sass({sourceComments: 'map', sourceMap: 'sass', outputStyle: 'compressed'}))
+  .pipe(gulp.dest('./'))
   .pipe(browserSync.stream());
 });
 
 // Sass Task - deployment css - nested/readable/mapped
-gulp.task('sassDep', function() {
-  gulp.src('src/scss/**/*.scss')
+gulp.task('sassDep', ['sassDev'], function() {
+  gulp.src('./style.css')
   .pipe(plumber())
-  .pipe(sourcemaps.init())
-    .pipe(sass({sourceComments: 'map', sourceMap: 'sass', outputStyle: 'compressed'}))
+    .pipe(cleanCSS())
+    .pipe(rename({suffix: '.min'}))
     .pipe(autoprefixer('last 2 versions'))
-  .pipe(sourcemaps.write())
   .pipe(gulp.dest('./'))
   .pipe(browserSync.stream());
 });
