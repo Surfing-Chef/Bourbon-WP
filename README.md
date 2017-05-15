@@ -4,7 +4,8 @@
 > **TOO SAD!** I can't believe LuckyPeach.com is done May 1.  And just as heart-breaking is the last publication occurs this fall.
 
 ## **TODO**
-- ~~resolve iphone bottom margin issue~~ Implemented media breakpoints at 600px to toggle ***footer*** position between fixed and relative.  Same breakpoint toggled the bottom margin on the preceding tag (***#content***)
+- ~~resolve iphone bottom margin issue~~ Implemented media breakpoints at 600px to toggle ***footer*** position between fixed and relative.  Same breakpoint toggled the bottom margin on the preceding tag (***#content***)  
+- captcha on contact page (Formidable) not allowing mail to be sent  
 - Create a bookmarks page template to display my bookmarks as links
 
 ### 1. SITEMAP
