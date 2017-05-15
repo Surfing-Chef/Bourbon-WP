@@ -4,8 +4,8 @@
 > **TOO SAD!** I can't believe LuckyPeach.com is done May 1.  And just as heart-breaking is the last publication occurs this fall.
 
 ## **TODO**
+- ~~resolve iphone bottom margin issue~~ Implemented media breakpoints at 600px to toggle ***footer*** position between fixed and relative.  Same breakpoint toggled the bottom margin on the preceding tag (***#content***)
 - Create a bookmarks page template to display my bookmarks as links
-- Fine tune the feed gallery
 
 ### 1. SITEMAP
 1. ***primary*** < LOGO _(home)_ >< CULINARIA >< PROJECTS >< CODING >< ABOUT >< CONTACTS >  
@@ -65,7 +65,7 @@
 - upload to server using Filezilla
 - ensure steps 2.1 to 2.4 are completed as much as possible before installing theme.  Incomplete steps to be finished as soon as possible after installing.
 
-### 2.5 IMPLEMENTATION  
+### 2.5 IMPLEMENTATION (WORDPRESS)
 #### Settings > Reading  
 - Front Page Displays: ***Your Latest Posts***  
 
