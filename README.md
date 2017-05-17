@@ -1,10 +1,14 @@
 # Bourbon-WP (aka Bourbon-Chef-Site-2.5)
-> This branch refines the README documentation: It will outline deployment specific details, links to remember, and WordPress settings to implement from the local development environment to a remote hosted site. It also formats comments and replies.  
+> This branch refines the README documentation: It will outline deployment specific details,
+links to remember, and WordPress settings to implement from the local development environment
+to a remote hosted site. It also formats comments and replies.  
 
-> **TOO SAD!** I can't believe LuckyPeach.com is done May 1.  And just as heart-breaking is the last publication occurs this fall.
+> **TOO SAD!** I can't believe LuckyPeach.com is done May 1.  
+And just as heart-breaking is the last publication occurs this fall.
 
 ## **TODO**
-- ~~resolve iphone bottom margin issue~~ Implemented media breakpoints at 600px to toggle ***footer*** position between fixed and relative.  Same breakpoint toggled the bottom margin on the preceding tag (***#content***)  
+- ~~resolve iphone bottom margin issue~~ ( Implemented media breakpoints at 600px to toggle ***footer*** position between fixed and relative.
+Same breakpoint toggled the bottom margin on the preceding tag (***#content***) )  
 - captcha on contact page (Formidable) not allowing mail to be sent  
 - Create a bookmarks page template to display my bookmarks as links
 
