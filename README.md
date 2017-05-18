@@ -9,7 +9,7 @@ And just as heart-breaking is the last publication occurs this fall.
 ## **TODO**
 - ~~resolve iphone bottom margin issue~~ ( Implemented media breakpoints at 600px to toggle ***footer*** position between fixed and relative.
 Same breakpoint toggled the bottom margin on the preceding tag (***#content***) )  
-- captcha on contact page (Formidable) not allowing mail to be sent  
+- ~~captcha on contact page (Formidable) not allowing mail to be sent~~ (I removed the ***I Am Not A Robot*** box from the form layout and made sure the captcha ran invisible (Global Formidable Features) ) 
 - Create a bookmarks page template to display my bookmarks as links
 
 ### 1. SITEMAP
