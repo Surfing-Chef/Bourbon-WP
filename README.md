@@ -10,7 +10,8 @@ And just as heart-breaking is the last publication occurs this fall.
 - ~~resolve iphone bottom margin issue~~ ( Implemented media breakpoints at 600px to toggle ***footer*** position between fixed and relative.
 Same breakpoint toggled the bottom margin on the preceding tag (***#content***) )  
 - ~~captcha on contact page (Formidable) not allowing mail to be sent~~ (I removed the ***I Am Not A Robot*** box from the form layout and made sure the captcha ran invisible (Global Formidable Features) )  
-- compare the local machine wordpress image settings (main machine) with live site for feature image sizes   
+- Investigate the *Related Posts* links in single posts
+- Compare the local machine wordpress image settings (main machine) with live site for feature image sizes   
 - About page should post blog entries not having to do with cooking or coding  
 - Create a bookmarks page template to display my bookmarks as links
 
