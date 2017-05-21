@@ -48,6 +48,11 @@ wp_reset_query();
 ?>
 </section>
 
+<section class="aside-section-twitter">
+	<?php if ( (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Twitter Feeds")) ) : ?>
+	<?php endif;?>
+</section>
+
 <section class="aside-section-categories">
 	<div class="widget widget_categories">
 		<h3 class="widget-title"><?php esc_html_e( 'Most Used Categories', 'bourbon-wp' ); ?></h3>
