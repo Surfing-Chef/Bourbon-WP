@@ -25,13 +25,19 @@
 
 		<div id="inner-footer" class="footer-container wrap cf">
 			<section class="sociocon">
-				<img class="icon" src="<?php echo get_template_directory_uri(); ?>/src/images/pinterest-sociocon.png" alt="link to Surfing Chef on Pinterest">
+				<a href="https://www.pinterest.com/SurfingChef/" target="_blank">
+					<img class="icon" src="<?php echo get_template_directory_uri(); ?>/src/images/pinterest-sociocon.png" alt="link to Surfing Chef on Pinterest">
+				</a>
 			</section>
 			<section class="sociocon">
-				<img class="icon" src="<?php echo get_template_directory_uri(); ?>/src/images/github-sociocon.png" alt="link to Surfing Chef on GitHub">
+				<a href="https://github.com/Surfing-Chef" target="_blank">
+					<img class="icon" src="<?php echo get_template_directory_uri(); ?>/src/images/github-sociocon.png" alt="link to Surfing Chef on GitHub">
+				</a>
 			</section>
 			<section class="sociocon">
-				<img class="icon" src="<?php echo get_template_directory_uri(); ?>/src/images/email-sociocon.png" alt="email Surfing Chef">
+				<a href="<?php echo site_url(); ?>/contacts/" >
+					<img class="icon" src="<?php echo get_template_directory_uri(); ?>/src/images/email-sociocon.png" alt="email Surfing Chef">
+				</a>
 			</section>
 			<section class="sc-copyright">
 				<p class="source-org copyright"><?php bloginfo( 'name' ); ?> is powered by WordPress and maintained with love. &copy; <?php echo date('Y'); ?> Surfing-Chef.</p>
