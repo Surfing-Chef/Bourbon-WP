@@ -7,12 +7,13 @@ to a remote hosted site. It also formats comments and replies.
 And just as heart-breaking is the last publication occurs this fall.
 
 ## **TODO**
-- ~~resolve iphone bottom margin issue~~ ( Implemented media breakpoints at 600px to toggle ***footer*** position between fixed and relative.
+- resolve iphone bottom margin issue ( Implemented media breakpoints at 600px to toggle ***footer*** position between fixed and relative.
 Same breakpoint toggled the bottom margin on the preceding tag (***#content***) )  
-- ~~captcha on contact page (Formidable) not allowing mail to be sent~~ (I removed the ***I Am Not A Robot*** box from the form layout and made sure the captcha ran invisible (Global Formidable Features) )  
-- Investigate the *Related Posts* links in single posts
-- Compare the local machine wordpress image settings (main machine) with live site for feature image sizes   
-- About page should post blog entries not having to do with cooking or coding  
+- Recaptcha on contact page (Formidable) not allowing mail to be sent - (I removed the ***I Am Not A Robot*** box from the form layout and made sure the captcha ran invisible (Global Formidable Features) )  
+- Investigate the *Related Posts* links in single posts - adjusted (Jetpack on wordpress.com)[https://wordpress.com/settings/traffic/]: Settings > Traffic > Related Posts  
+- Compare the local machine wordpress image settings (main machine) with live site for feature image sizes - disabled (Photon)[https://jetpack.com/support/photon/] in (Jetpack plugin on wordpress.com)[https://wordpress.com/settings/writing/]  
+- fade-in images on scroll  
+- About page should post blog entries after explaining the purpose of this site  
 - Create a bookmarks page template to display my bookmarks as links
 
 ### 1. SITEMAP
