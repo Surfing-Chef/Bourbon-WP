@@ -2,7 +2,7 @@
 
 $().ready(function(){
   var offset = $('.top-nav').height();
-  var duration = 300;
+  var duration = 900;
 
   $('.back-to-top').css( "display", "none" );
 
