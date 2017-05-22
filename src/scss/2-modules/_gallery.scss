@@ -5,6 +5,7 @@ $serif: 'Lora', serif;
 
 .grid.gallery {
   $grid-gutter: 0.1rem;
+  padding-top: 2em;
 
   display: flex;
   flex-flow: row wrap;
