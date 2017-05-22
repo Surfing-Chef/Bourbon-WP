@@ -144,6 +144,12 @@
 
         .post-thumbnail {
           margin-bottom: 1.4em;
+          height: 100%;
+          overflow: hidden;
+          
+          &.wp-post-image {
+            animation-delay:.5s;
+          }
         }
 
         .meta {
