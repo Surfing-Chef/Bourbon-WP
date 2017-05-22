@@ -14,7 +14,7 @@ header {
       @include padding(1em 1em 1em 1em);
       border-radius: $base-border-radius;
       border: 1px solid transparentize(black, 0.7);
-      //visibility: hidden;
+      visibility: hidden;
 
       @include media (max-width 989px){
         width: 60%;
