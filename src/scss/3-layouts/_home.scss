@@ -8,12 +8,13 @@ header {
     top: 40%;
 
     div {
-      background: transparentize(white, 0.6);
+      background: transparentize(white, 0.5);
       width: 50%;
       margin: 0 auto;
       @include padding(1em 1em 1em 1em);
       border-radius: $base-border-radius;
       border: 1px solid transparentize(black, 0.7);
+      visibility: hidden;
 
       @include media (max-width 989px){
         width: 60%;
