@@ -125,6 +125,11 @@
             font-weight: bold;
           }
 
+          ol {
+            list-style: decimal;
+            margin-bottom: .5em;
+          }
+
           .post-meta-info {
 
             span {
@@ -146,7 +151,7 @@
           margin-bottom: 1.4em;
           height: 100%;
           overflow: hidden;
-          
+
           &.wp-post-image {
             animation-delay:.5s;
           }
