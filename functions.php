@@ -126,6 +126,17 @@ register_sidebar( array(
 	'before_title'  => '<h2 class="widget-title">',
 	'after_title'   => '</h2>',
 ) );
+
+// Widget Area - Weather
+register_sidebar( array(
+	'name'          => esc_html__( 'Weather Feeds', 'bourbon-wp' ),
+	'id'            => 'widget-area-3',
+	'description'   => esc_html__( 'Add widgets here.', 'bourbon-wp' ),
+	'before_widget' => '<section id="%1$s" class="widget weather-widget-area">',
+	'after_widget'  => '</section>',
+	'before_title'  => '<h2 class="widget-title">',
+	'after_title'   => '</h2>',
+) );
 }
 
 add_action( 'widgets_init', 'bourbon_wp_widgets_init' );
