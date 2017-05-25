@@ -32,6 +32,13 @@ get_header(); ?>
 			 ?>
 			<!-- THE LOOP -->
 			<?php
+			if (is_page('projects')){ : ?>
+			<section class="aside-section-twitter">
+				<?php if ( (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Twitter Feeds")) ) : ?>
+				<?php endif;?>
+			</section>
+			<?php endif;
+
 			// The Query
 			$the_query = new WP_Query( array( 'category_name' => $cat, 'posts_per_page' => 3 ) );
 
