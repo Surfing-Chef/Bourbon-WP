@@ -15,6 +15,13 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 
 			<?php
+			if (is_page('projects')) : ?>
+			<section class="widget-section-weather">
+				<?php if ( (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Weather Feeds")) ) : ?>
+				<?php endif;?>
+			</section>
+			<?php endif;
+
 				// Select which category for posts to display
 				if (is_page('culinaria')){
 					$cat = 'culinary';
@@ -32,13 +39,6 @@ get_header(); ?>
 			 ?>
 			<!-- THE LOOP -->
 			<?php
-			if (is_page('projects')){ : ?>
-			<section class="aside-section-twitter">
-				<?php if ( (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Twitter Feeds")) ) : ?>
-				<?php endif;?>
-			</section>
-			<?php endif;
-
 			// The Query
 			$the_query = new WP_Query( array( 'category_name' => $cat, 'posts_per_page' => 3 ) );
 
