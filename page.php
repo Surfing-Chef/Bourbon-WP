@@ -15,7 +15,7 @@ get_header(); ?>
 		<main id="main" class="site-main" role="main">
 			<?php
 			if (is_page('projects')) : ?>
-			<section class="aside-section-weather">
+			<section class="widget-section-weather">
 				<?php if ( (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Weather Feeds")) ) : ?>
 				<?php endif;?>
 			</section>
