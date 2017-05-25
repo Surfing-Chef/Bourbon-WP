@@ -7,7 +7,10 @@ $sites ="./sites.json";
 // Location of the feed cache
 // Varies from local to remote environment,
 // as cronjob vs windows schedule may require different paths.
-$cache = "C:/wamp64/www/Bourbon-WP/wp-content/themes/bourbon-wp/bot/cache.txt";
+//LOCAL/DEVELOPMENT
+//$cache = "C:/wamp64/www/Bourbon-WP/wp-content/themes/bourbon-wp/bot/cache.txt";
+//remote
+$cache = echo home_url()."/bot/cache.txt";
 
 $sites_json = file_get_contents($sites);
 
@@ -79,7 +82,7 @@ function get_details($site_name, $site_url){
   } else {
     //  send msg to log?
   }
-  
+
 }
 
 function follow_links($sites_arr){
