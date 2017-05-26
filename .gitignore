@@ -98,3 +98,6 @@ bot/cache.txt
 # AUTO GENERATED/MINIFIED/COMPRESSED FILES
 *.css
 *.min.js
+
+# DO NOT IGNORE
+!jquery.viewportchecker.min.js
