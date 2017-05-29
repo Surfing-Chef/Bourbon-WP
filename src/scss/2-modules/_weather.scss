@@ -1,5 +1,88 @@
-.widget-section-weather {
-  height: 100%;
-  padding-top: 3px;
-  padding-bottom: 2em;
+.container-forecast {
+  @include row();
+  height: 250px;
+
+  figure:not(.no-border),
+  img:not(.no-border) {
+    border: none !important;
+  }
+
+  .container-currently {
+    @include span-columns(3);
+    height: 250px;
+
+    .container-icon-temp {
+      display: flex !important;
+      flex-direction: row;
+      width: 100%;
+      padding-bottom: 0 !important;
+      margin-bottom: 0 !important;
+
+      .icon-current {
+        height: 75px;
+        min-width: 75px;
+        background-position: center center;
+        background-size: cover;
+        background-repeat: no-repeat;
+        margin-right: 1em;
+      }
+    }
+
+    .container-icon-temp:after {
+      border: none !important;
+    }
+
+
+
+    .temp-current {
+      padding-top: 10px;
+      font-size: 3em;
+    }
+
+    .container-summary-wind {
+      display: block;
+      width: 100%;
+      text-align: center;
+    }
+
+    .summary-current {
+      font-weight: bold;
+    }
+
+  }
+  // .container-currently
+
+  .container-daily {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    height: 250px;
+    width: 60%;
+    float: right;
+
+    .daily-day {
+      display: flex;
+      flex-direction: column;
+      width: 4em;
+      flex: 1 1;
+
+      h4 {
+        margin-bottom: 0;
+      }
+
+      .icon-daily {
+        flex-grow: 0;
+        margin: 0;
+
+        img {
+          height: 2em;
+        }
+      }
+
+    }
+    //.daily-day
+  }
+  // .container-daily
+
 }
+// .container-forecast
