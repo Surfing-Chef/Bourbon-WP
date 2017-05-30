@@ -1,50 +1,96 @@
+$sc-weather-color: red;
+$sc-weather-background: black;
+$sc-icon-filter: invert(50%);
+
 .container-forecast {
   @include span-columns(12);
-  height: 250px;
+  padding-bottom: 1em;
+  height: 275px;
+  background: $sc-weather-background;
+  border-radius: 3px;
+
+  font-family: $sans-serif;
+  color: $sc-weather-color;
 
   figure:not(.no-border),
   img:not(.no-border) {
     border: none !important;
   }
 
+  header {
+    font-weight: 700;
+    margin-bottom: 1em;
+    padding: 1em;
+
+    &:after{
+      content: '';
+      overflow: hidden;
+      display: block;
+      width: 100%;
+      border-bottom: 2px solid $sc-weather-color;
+      height: 3px;
+      margin: 0 auto;
+    }
+    span, a {
+      @include span-columns(1 of 2);
+    }
+
+    a {
+      text-align: right;
+      font-size: .7em;
+    }
+  }
+
   .container-currently {
-    @include span-columns(4);
-    @include shift(4);
+    @include span-columns(4 of 4);
+    //@include shift(4);
     height: 250px;
 
     @include media($tab){
-      @include shift(0);
+      @include span-columns(4 of 12);
     }
 
     .container-icon-temp {
+      //@include span-columns(4 of 4);
       display: flex !important;
-      flex-direction: row;
+      flex-flow: row;
+      justify-content: center;
       overflow: visible !important;;
       padding-bottom: 0 !important;
       margin-bottom: 0 !important;
+      margin: 0 auto !important;
+
+      @include media($tab){
+        @include span-columns(12);
+      };
 
       .icon-current {
+
         height: 75px;
         min-width: 75px;
         background-position: center center;
         background-size: cover;
         background-repeat: no-repeat;
         margin-right: 1em;
+        margin-left: .5em;
+        -webkit-filter: $sc-icon-filter; /* Safari */
+        filter: $sc-icon-filter;
       }
+
+      .temp-current {
+        padding-top: 10px;
+        font-size: 3em;
+        font-weight: 700;
+      }
+
     }
 
     .container-icon-temp:after {
       border: none !important;
     }
 
-    .temp-current {
-      padding-top: 10px;
-      font-size: 3em;
-    }
-
     .container-summary-wind {
-      display: block;
-      width: 100%;
+      @include span-columns(4 of 4);
       text-align: center;
     }
 
@@ -67,10 +113,13 @@
     .daily-day {
       @include span-columns(1 of 8);
       min-width: 20px;
+      position: relative;
 
       h4 {
         margin-bottom: 0;
         text-align: center;
+        font-weight: 700;
+        color: $sc-weather-color;
       }
 
       .icon-daily {
@@ -81,14 +130,25 @@
           height: 1.5em;
           min-width: 1.5em;
           margin: 0 auto;
+          -webkit-filter: $sc-icon-filter; /* Safari */
+          filter: $sc-icon-filter;
         }
       }
 
       div {
         display: block;
         margin: 0 auto;
-        width: 1em !important;
-        border-radius: .5em;
+        border-radius: 1em;
+      }
+
+      .temp-daily-container {
+        position: absolute;
+        left: 30%;
+        right: 30%;
+      }
+
+      .temp-graph {
+        background-color: $sc-weather-color !important;
       }
 
       .temp-daily {
