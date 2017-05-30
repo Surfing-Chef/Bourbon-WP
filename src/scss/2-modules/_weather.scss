@@ -1,5 +1,5 @@
 .container-forecast {
-  @include row();
+  @include span-columns(12);
   height: 250px;
 
   figure:not(.no-border),
@@ -8,13 +8,18 @@
   }
 
   .container-currently {
-    @include span-columns(3);
+    @include span-columns(4);
+    @include shift(4);
     height: 250px;
+
+    @include media($tab){
+      @include shift(0);
+    }
 
     .container-icon-temp {
       display: flex !important;
       flex-direction: row;
-      width: 100%;
+      overflow: visible !important;;
       padding-bottom: 0 !important;
       margin-bottom: 0 !important;
 
@@ -31,8 +36,6 @@
     .container-icon-temp:after {
       border: none !important;
     }
-
-
 
     .temp-current {
       padding-top: 10px;
