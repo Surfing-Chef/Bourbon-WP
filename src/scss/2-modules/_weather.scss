@@ -56,30 +56,45 @@
   // .container-currently
 
   .container-daily {
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
+    @include span-columns(8);
+    display: none;
     height: 250px;
-    width: 60%;
-    float: right;
+
+    @include media($tab){
+      display: block;
+    };
 
     .daily-day {
-      display: flex;
-      flex-direction: column;
-      width: 4em;
-      flex: 1 1;
+      @include span-columns(1 of 8);
+      min-width: 20px;
 
       h4 {
         margin-bottom: 0;
+        text-align: center;
       }
 
       .icon-daily {
         flex-grow: 0;
-        margin: 0;
+        margin: .3em 0;
 
         img {
-          height: 2em;
+          height: 1.5em;
+          min-width: 1.5em;
+          margin: 0 auto;
         }
+      }
+
+      div {
+        display: block;
+        margin: 0 auto;
+        width: 1em !important;
+        border-radius: .5em;
+      }
+
+      .temp-daily {
+        display: block;
+        text-align: center;
+        font-size: .8em;
       }
 
     }
