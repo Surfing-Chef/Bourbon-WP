@@ -59,8 +59,7 @@
       <!-- callout -->
       <section class="callout">
         <div class="callout-container">
-          <p class="quote">Everyday carry crucifix meditation, ethical chicharrones godard gluten-free meditation, ethical chicharrones godard gluten-free meh meditation, ethical chicharrones godard gluten-free occupy bitters cliche tousled mustache master cleanse DIY. Cred tattooed vinyl.</p>
-          <p class="author">Hipster O'Leary</p>
+          <?php echo do_shortcode('[sc_weather]');  ?>
         </div>
       </section>
       <!-- End callout -->
