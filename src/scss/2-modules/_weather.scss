@@ -33,6 +33,7 @@ $sc-icon-filter: invert(50%);
     }
     span, a {
       @include span-columns(1 of 2);
+      text-align: left;
     }
 
     a {
