@@ -49,6 +49,9 @@ section.container-forecast {
       div.icon-current{
         flex: 1 50%;
         padding: 0 .5em 0 1em;
+        -webkit-filter: $sc-invert;
+        filter: $sc-invert;
+
       }
 
       div.temp-current {
@@ -96,6 +99,9 @@ section.container-forecast {
         img {
           max-height: 2em;
           margin: 0 auto;
+          -webkit-filter: $sc-invert;
+          filter: $sc-invert;
+
         }
       }
 
@@ -109,6 +115,9 @@ section.container-forecast {
           margin: 0 auto;
           border-radius: 3em;
           background-color: $base-font-color;
+          -webkit-filter: $sc-invert;
+          filter: $sc-invert;
+
         }
         span.min.daily-temp{}
       }
