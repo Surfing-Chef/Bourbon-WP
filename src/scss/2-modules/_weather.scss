@@ -1,19 +1,20 @@
-$sc-icon-filter: invert(50%);
+$sc-shadow: drop-shadow(1px 1px 0px rgba(171,171,171,.95));
+$sc-invert: invert(33%);
 
 //WIDGET
 section.container-forecast {
-  color: black;
+  color: #555;
   display: flex;
   flex-flow: row wrap;
   font-family: $sans-serif;
-  -webkit-filter: $sc-icon-filter; /*Safari*/
-  filter: $sc-icon-filter;
+  -webkit-filter: $sc-shadow;
+  filter: $sc-shadow;
 
   header.sc-weather-header {
     display: flex;
     flex: 1 100%;
     flex-direction: row;
-    border-bottom: 2px solid #000;
+    border-bottom: 2px solid #555;
     padding: 0 .5em .1em;
     margin-bottom: 1em;
 
