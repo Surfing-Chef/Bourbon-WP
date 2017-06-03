@@ -21,13 +21,18 @@ header {
 
     div.callout-container {
       background: transparentize(white, 0.5);
-      width: 80%;
+      width: 70%;
       min-width: 250px;
+      max-width: 1000px;
       margin: 0 auto;
       @include padding(1em 1em 1em 1em);
       border-radius: $base-border-radius;
       border: 1px solid transparentize(black, 0.7);
       visibility: hidden;
+
+      @include media (768px) {
+        min-height: 300px;
+      };
 
       p {
         color: shade($dark-gray, 15%);
