@@ -1,6 +1,7 @@
-// Adds animation effects to images using
+// ANIMATION EFFECTS
 
 $().ready(function() {
+  // Home page header animation
   $( '.callout-container' ).css( "visibility", "visible" );
 
   $('.callout-container').addClass("hidden").viewportChecker({
@@ -8,6 +9,7 @@ $().ready(function() {
     offset: 0
    });
 
+   //Post image animation
   $('.wp-post-image').addClass("hidden").viewportChecker({
     classToAdd: 'visible animated fadeInUp',
     offset: 0
