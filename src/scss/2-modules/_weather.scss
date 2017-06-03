@@ -1,167 +1,111 @@
-$sc-weather-color: red;
-$sc-weather-background: black;
 $sc-icon-filter: invert(50%);
 
-.container-forecast {
-  @include span-columns(12);
-  padding-bottom: 1em;
-  height: 275px;
-  background: $sc-weather-background;
-  border-radius: 3px;
-
+//WIDGET
+section.container-forecast {
+  color: black;
+  display: flex;
+  flex-flow: row wrap;
   font-family: $sans-serif;
-  color: $sc-weather-color;
+  -webkit-filter: $sc-icon-filter; /*Safari*/
+  filter: $sc-icon-filter;
 
-  figure:not(.no-border),
-  img:not(.no-border) {
-    border: none !important;
-  }
-
-  header {
-    font-weight: 700;
+  header.sc-weather-header {
+    display: flex;
+    flex: 1 100%;
+    flex-direction: row;
+    border-bottom: 2px solid #000;
+    padding: 0 .5em .1em;
     margin-bottom: 1em;
-    padding: 1em;
 
-    &:after{
-      content: '';
-      overflow: hidden;
-      display: block;
-      width: 100%;
-      border-bottom: 2px solid $sc-weather-color;
-      height: 3px;
-      margin: 0 auto;
-    }
-    span, a {
-      @include span-columns(1 of 2);
-      text-align: left;
-    }
-
+    span {}
     a {
-      text-align: right;
+      margin-left: auto;
       font-size: .7em;
     }
   }
 
-  .container-currently {
-    @include span-columns(4 of 4);
-    //@include shift(4);
-    height: 250px;
+  div.container-currently {
+    display: flex;
+    flex-direction: column;
+    width: 30%;
+    min-width: 200px;
 
-    @include media($tab){
-      @include span-columns(4 of 12);
-    }
-
-    .container-icon-temp {
-      //@include span-columns(4 of 4);
+    article.container-icon-temp {
       display: flex !important;
-      flex-flow: row;
+      flex-direction: row;
       justify-content: center;
-      overflow: visible !important;;
-      padding-bottom: 0 !important;
+      text-align: center;
+      max-width: 250px;
       margin-bottom: 0 !important;
-      margin: 0 auto !important;
+      padding-bottom: 0 !important;
 
-      @include media($tab){
-        @include span-columns(12);
-      };
-
-      .icon-current {
-
-        height: 75px;
-        min-width: 75px;
-        background-position: center center;
-        background-size: cover;
-        background-repeat: no-repeat;
-        margin-right: 1em;
-        margin-left: .5em;
-        -webkit-filter: $sc-icon-filter; /* Safari */
-        filter: $sc-icon-filter;
+      &:after{
+        display: none !important;
       }
 
-      .temp-current {
-        padding-top: 10px;
-        font-size: 3em;
+      div.icon-current{
+        flex: 1 35%;
+      }
+
+      div.temp-current {
+        flex: 1 50%;
+        font-size: 3.5em;
         font-weight: 700;
       }
-
     }
-
-    .container-icon-temp:after {
-      border: none !important;
-    }
-
-    .container-summary-wind {
-      @include span-columns(4 of 4);
+    article.container-summary-wind {
+      flex: 1 auto;
       text-align: center;
+      max-width: 250px;
+      margin: 0 auto;
     }
 
-    .summary-current {
-      font-weight: bold;
+    div.summary-current {
+      font-weight: 700;
     }
 
   }
-  // .container-currently
+  // END .container-currently
 
-  .container-daily {
-    @include span-columns(8);
+  div.container-daily {
     display: none;
-    height: 250px;
+    width: 60%;
+    margin-left: auto;
 
-    @include media($tab){
-      display: block;
+    @include media ($tab) {
+      display: flex;
     };
 
-    .daily-day {
-      @include span-columns(1 of 8);
-      min-width: 20px;
-      position: relative;
+    div.daily-day {
+      flex-direction: column;
+      flex-grow: 1;
+      text-align: center;
 
       h4 {
-        margin-bottom: 0;
-        text-align: center;
-        font-weight: 700;
-        color: $sc-weather-color;
+        margin: 0 auto .5em auto;
       }
 
-      .icon-daily {
-        flex-grow: 0;
-        margin: .3em 0;
+      div.icon-daily{
+        margin-bottom: .5em;
 
         img {
-          height: 1.5em;
-          min-width: 1.5em;
+          max-height: 2em;
           margin: 0 auto;
-          -webkit-filter: $sc-icon-filter; /* Safari */
-          filter: $sc-icon-filter;
         }
       }
 
-      div {
-        display: block;
-        margin: 0 auto;
-        border-radius: 1em;
+      div.temp-daily-container {
+        span.max.daily-temp{}
+        div.temp-graph{
+          margin: 0 auto;
+          border-radius: 3em;
+          background-color: $base-font-color;
+        }
+        span.min.daily-temp{}
       }
-
-      .temp-daily-container {
-        position: absolute;
-        left: 30%;
-        right: 30%;
-      }
-
-      .temp-graph {
-        background-color: $sc-weather-color !important;
-      }
-
-      .temp-daily {
-        display: block;
-        text-align: center;
-        font-size: .8em;
-      }
-
     }
-    //.daily-day
   }
-  // .container-daily
-
+  // END .container-daily
 }
-// .container-forecast
+// END section.container-forecast
+// END WIDGET
