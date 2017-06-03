@@ -3,26 +3,31 @@
 header {
 
   section.callout {
-    width: 100%;
+    width: 50%;
+    min-width: 320px;
     position: absolute;
     top: 40%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
 
-    div {
+    @include media ($tab) {
+      width: 100%;
+    };
+
+    > div {
+      overflow: hidden;
+    }
+
+    div.callout-container {
       background: transparentize(white, 0.5);
-      width: 50%;
+      width: 80%;
+      min-width: 250px;
       margin: 0 auto;
       @include padding(1em 1em 1em 1em);
       border-radius: $base-border-radius;
       border: 1px solid transparentize(black, 0.7);
       visibility: hidden;
-
-      @include media (max-width 989px){
-        width: 60%;
-      }
-
-      @include media (max-width 500px){
-        width: 70%;
-      }
 
       p {
         color: shade($dark-gray, 15%);
