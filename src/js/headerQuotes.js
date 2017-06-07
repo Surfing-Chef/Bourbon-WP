@@ -1,4 +1,4 @@
-// // QUOTE FUNCTION
+// // QUOTE FUNCTION 
 //
 // $(document).ready(function() {
 //
