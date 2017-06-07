@@ -32,7 +32,7 @@ get_header(); ?>
 				} elseif (is_page('coding')){
 					$cat = 'design, development';
 				} elseif (is_page('projects')){
-					$cat = 'design, development';
+					$cat = 'projects, development';
 				} elseif (is_page('about')){
 					$cat = 'about';
 				}
