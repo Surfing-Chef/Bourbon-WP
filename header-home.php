@@ -59,7 +59,7 @@
       <!-- callout -->
       <section class="callout">
         <div class="callout-container">
-          <?php echo do_shortcode('[sc_weather]');  ?>
+          <?php echo do_shortcode('[sc_dark_weather]');  ?>
         </div>
       </section>
       <!-- End callout -->
