@@ -58,9 +58,12 @@
     <div class="parallax-static-content">
       <!-- callout -->
       <section class="callout">
+
         <div class="callout-container">
-          <?php echo do_shortcode('[sc_dark_weather]');  ?>
+          <?php if ( !function_exists('dynamic_sidebar') || !dynamic_sidebar("Header Callout Content") ) : ?>
+          <?php endif;?>
         </div>
+
       </section>
       <!-- End callout -->
     </div>
