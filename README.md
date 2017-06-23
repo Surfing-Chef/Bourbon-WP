@@ -6,13 +6,16 @@ to a remote hosted site. It also formats comments and replies.
 > **TOO SAD!** I can't believe LuckyPeach.com is done May 1.  
 And just as heart-breaking is the last publication occurs this fall.
 
+## CHANGELOG ##
+> 1.5.1 - implements styles and layouts for new plugins including SC Dark weather
+
 ## **TODO**
 - resolve iphone bottom margin issue ( Implemented media breakpoints at 600px to toggle ***footer*** position between fixed and relative.
 Same breakpoint toggled the bottom margin on the preceding tag (***#content***) )  
 - Recaptcha on contact page (Formidable) not allowing mail to be sent - (I removed the ***I Am Not A Robot*** box from the form layout and made sure the captcha ran invisible (Global Formidable Features) )  
 - Investigate the *Related Posts* links in single posts - adjusted (Jetpack on wordpress.com)[https://wordpress.com/settings/traffic/]: Settings > Traffic > Related Posts  
 - Compare the local machine wordpress image settings (main machine) with live site for feature image sizes - disabled (Photon)[https://jetpack.com/support/photon/] in (Jetpack plugin on wordpress.com)[https://wordpress.com/settings/writing/]  
-- fade-in images on scroll - (a tutorial)[http://www.web2feel.com/tutorial-for-animated-scroll-loading-effects-with-animate-css-and-jquery/] 
+- fade-in images on scroll - (a tutorial)[http://www.web2feel.com/tutorial-for-animated-scroll-loading-effects-with-animate-css-and-jquery/]
 - About page should post blog entries after explaining the purpose of this site  
 - Create a bookmarks page template to display my bookmarks as links
 
