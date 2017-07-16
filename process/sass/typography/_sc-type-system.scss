@@ -8,8 +8,8 @@
   $light-gray: #DDD !default;
   $medium-screen: 40em !default;
   $base-font-color: $dark-gray !default;
-  $serif: 'Lora', serif;
-  $sans-serif: 'Montserrat', sans-serif;
+  // $serif: 'Lora', serif;
+  // $sans-serif: 'Montserrat', sans-serif;
 
   @include clearfix;
   font-family: $serif;
