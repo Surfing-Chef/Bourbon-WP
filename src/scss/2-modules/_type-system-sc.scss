@@ -84,7 +84,8 @@
     font-size: 0.65em;
   }
 
-  h3 {
+  h3,
+  h2.widget-title  {
     color: shade($dark-gray, 40%);
     font-family: $sans-serif;
     font-size: 1em;
@@ -145,6 +146,5 @@
       top: -1px;
     }
   }
-
 }
 // END .type-system-sc
