@@ -59,7 +59,7 @@
 	<!-- +++++ All SCRIPTS AFTER THIS COMMENT +++++ -->
 
 	<!-- IMPORTS -->
-	<script src="<?php echo get_template_directory_uri(); ?>/src/js/script.min.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js"></script>
 
 	<!-- CUSTOM -->
 
