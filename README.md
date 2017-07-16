@@ -1,11 +1,11 @@
 # Bourbon-WP
-[![GitHub version](https://badge.fury.io/gh/surfing-chef%2Fbourbon-wp.svg)](https://badge.fury.io/gh/surfing-chef%2Fbourbon-wp) *2.6.0*  
+[![GitHub version](https://badge.fury.io/gh/surfing-chef%2Fbourbon-wp.svg)](https://badge.fury.io/gh/surfing-chef%2Fbourbon-wp) *2.6.1*  
 
 ## CHANGELOG ##
 2.6.0 Restructures the development files
 - [ ] better organized build, process, development and production structure
-  - [x] migrate structure
-  - [ ] migrate files
+  - [x] 2.6.1 migrate structure
+  - [x] 2.6.1 migrate files from 
   - [ ] implement new package.json and gulpfile.js
 - [ ] implements a custom post page for consistent posts including links for users
 - [ ] implement a bookmarks widget or page template for chrome bookmarks
