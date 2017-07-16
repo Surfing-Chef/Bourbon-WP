@@ -1,0 +1,12 @@
+/*! 3-layouts/_body.scss */
+
+body {
+  position: relative;
+  background-color: transparentize(black, 0.5);
+}
+.sc-post-links>span>a {
+  font-family: $sans-serif;
+  font-size: .8em;
+  letter-spacing: .1em;
+  text-transform: uppercase;
+}

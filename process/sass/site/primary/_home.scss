@@ -1,0 +1,135 @@
+/*! scss/3-layouts/_home.scss */
+
+header {
+
+  section.callout {
+    width: 50%;
+    min-width: 320px;
+    position: absolute;
+    top: 40%;
+    left: 0;
+    right: 0;
+    margin: 0 auto;
+
+    @include media ($tab) {
+      width: 100%;
+    };
+
+    > div {
+      overflow: hidden;
+    }
+
+    div.callout-container {
+      background: transparentize(white, 0.5);
+      width: 70%;
+      min-width: 250px;
+      max-width: 1000px;
+      margin: 0 auto;
+      @include padding(1em 1em 1em 1em);
+      border-radius: $base-border-radius;
+      border: 1px solid transparentize(black, 0.7);
+      visibility: hidden;
+
+      @include media (768px) {
+        min-height: 300px;
+      };
+
+      p {
+        color: shade($dark-gray, 15%);
+        text-shadow: 1px 1px tint($dark-gray, 55%);
+        line-height: 1.6em;
+        margin-bottom: .8em;
+      }
+
+      .quote {
+        font-size: $base-font-size * 1.2;
+        font-family: $sans-serif;
+
+      }
+      .author {
+        text-align: right;
+        margin-bottom: 0;
+      }
+      .author:before {
+        content:"\2013  ";
+      }
+    } // section.callout > div
+  }  // section.callout
+} // header
+//<< END: header
+
+main.home {
+
+  article {
+    border-bottom: 0;
+
+    div.article-content {
+
+      section {
+        width: 100% !important;
+        border: none !important;
+
+        .home-featured-image {
+          @include span-columns(12);
+          height: 60vh;
+          float: left;
+          margin: 0 1em 20px 0;
+          background-position: center center;
+          background-size: cover;
+          background-repeat: no-repeat;
+          border: 1px solid #ccc;
+          border-radius: 3px;
+
+          @include media (max-width 500px){
+            height: 40vh;
+          }
+        }
+
+        .not-set {
+          height: 75px;
+          width: 75px;
+          border: none;
+        }
+      }
+    }
+    // END div.article-content
+  }
+  // END article
+
+  article:last-child {
+    @include padding(null null 1em null);
+  }
+  // END article:last-child
+}
+//<< END main.home
+
+#primary > aside > section {
+  @include border-width(null 0 0 null);
+  @include span-columns (12);
+  padding-bottom: 1em;
+  margin-bottom: 2em;
+
+  a {
+    color: $dark-gray;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $action-color;
+      text-decoration:underline;
+    }
+  }
+
+  .aside-post{
+    a {
+      font-family: $serif;
+    }
+  }
+}
+// END #primary > aside > section
+
+#primary > aside > section:first-child {
+  @include media(min-width 320px max-width 949px) {
+    border-bottom: 1px solid #ccc;
+  }
+}

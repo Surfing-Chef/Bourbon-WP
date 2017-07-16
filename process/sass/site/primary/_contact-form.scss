@@ -1,0 +1,36 @@
+/*! 3-layouts/_contact-form.scss */
+
+.sc-contact-form {
+  .frm_form_fields{
+    fieldset {
+      h3{
+        display: none;
+      }
+    }
+  }
+
+  .frm_description {
+    &:before{
+      content: '';
+      display: block;
+      width: 5em;
+      border-bottom: 2px solid orange;
+      margin: -.2em auto .5em auto;
+    }
+  }
+
+  .frm_primary_label {
+    color: shade($dark-gray, 40%) !important;
+    font-family: $sans-serif !important;
+    font-size: .8em !important;
+    font-weight: 400 !important;
+    text-transform: uppercase;
+    line-height: 3em;
+    letter-spacing: .1em;
+    margin-bottom: 0.4em;
+  }
+
+  .contact-submit {
+    margin: 1em 0;
+  }
+}

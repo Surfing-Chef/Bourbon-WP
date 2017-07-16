@@ -1,6 +1,153 @@
-.comment-content a {
-	word-wrap: break-word;
+// .comment-content a {
+// 	word-wrap: break-word;
+// }
+// .bypostauthor {
+// 	display: block;
+// }
+//
+// comments-area
+#comments {
+  display: inline-block;
+  width: 100%;
+  word-wrap: break-word;
+
+  h3 {
+    margin-top: 1em;
+
+    &:after {
+      content: '';
+      display: block;
+      width: 5em;
+      border-bottom: 2px solid orange;
+      margin: .5em 0;
+    }
+  }
+
+  h4,
+  .reply {
+    font-family: $sans-serif;
+    font-size: .8em;
+    letter-spacing: .1em;
+    text-transform: uppercase;
+  }
+
+  > ol.comment-list {
+    padding-left: 0;
+
+    > li.depth-1 {
+
+      > article {
+        margin-top: 1em;
+        background: tint($light-gray, 50%);
+        border-radius: .3em;
+      }
+
+      ol.children {
+        padding: 0;
+
+        li {
+          padding-left: 1em;
+        }
+
+       article {
+        border: 1px solid tint($light-gray, 50%);
+        border-radius: .3em;
+        padding-left: 1em;
+        }
+      }
+    }
+  }
+
+
+  .comment-body {
+    padding: .5em;
+
+    &:after {
+      display: none !important;
+    }
+
+    .comment-meta {
+
+      .comment-author {
+        clear: both;
+        img {
+          border-radius: 50%;
+          height: 2em;
+          display: block;
+          float: left;
+          margin: 0 .5em 0 0;
+        }
+
+        b {
+          line-height: 2em;
+        }
+      }
+
+      .comment-metadata {
+        margin: .5em 0 2em 0;
+        font-family: $sans-serif;
+        font-size: .8em;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+      }
+
+
+      span{
+        display: none;
+      }
+    }
+
+    .comment-content {
+      padding: 0 1em;
+    }
+
+    .reply {
+      margin-top: 2.5em;
+    }
+  }
+  // END .comment-body
+
+  .comment-respond {
+    display: inline-block;
+    margin-top: 1em;
+
+    form {
+      label {
+        font-family: $sans-serif;
+        font-size: .8em;
+        letter-spacing: .1em;
+        text-transform: uppercase;
+
+        .required {
+          font-family: $serif;
+          font-size: .8em;
+          font-weight: 700;
+          color: #B94A48;
+        }
+      }
+
+      > h4 {
+        margin-bottom: 1em;
+      }
+      .comment-form-comment {
+        margin-bottom: 0;
+
+        > label {
+            display: none;
+        }
+
+        textarea {
+          margin-bottom: 0;
+          padding-bottom: 0;
+        }
+      }
+
+      .form-submit {
+        margin: 1em 0;
+      }
+    }
+    // END form
+  }
+  // END .comment-respond
 }
-.bypostauthor {
-	display: block;
-}
+// END #comments

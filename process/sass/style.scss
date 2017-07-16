@@ -94,6 +94,16 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 @import "site/secondary/widgets";
 
 /*--------------------------------------------------------------
+# Custom Modules
+--------------------------------------------------------------*/
+@import "site/secondary/back-to-top";
+@import "site/secondary/calloutAnim";
+@import "site/secondary/gallery";
+@import "site/secondary/parallax";
+@import "site/secondary/recently-tabbed";
+@import "site/secondary/weather";
+
+/*--------------------------------------------------------------
 # Content
 --------------------------------------------------------------*/
 @import "site/site";

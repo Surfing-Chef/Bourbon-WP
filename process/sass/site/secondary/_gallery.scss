@@ -1,0 +1,84 @@
+$serif: 'Lora', serif;
+
+.grid.gallery {
+  $grid-gutter: 0.1rem;
+  padding-top: 2em;
+
+  display: flex;
+  flex-flow: row wrap;
+  margin: 0 - $grid-gutter;
+
+  .grid-box-wrap {
+    flex-basis: 100%;
+    flex-grow: 1;
+    flex-shrink: 0;
+    overflow: hidden;
+    padding: 0 $grid-gutter ($grid-gutter * 10);
+
+    @include media($tab){
+      flex-basis: 50%;
+    }
+
+  }
+
+  .grid-box {
+
+    span.feed-meta {
+      display: block;
+      line-height: 1.25;
+      font-family: $serif;
+      text-align: center;
+      width: 70%;
+      margin:0 auto;
+
+      @include media($tab) {
+        padding: 0 5px 0 105px;
+        text-align: left;
+        width: 100%;
+        margin: none;
+
+      }
+
+      @include media($lrg) {
+        //padding: 1em 0 0 135px;
+      }
+
+    }
+
+    span.feed-site {
+      text-transform: uppercase;
+    }
+
+    span.feed-caption {
+      text-transform: capitalize;
+    }
+
+    .image-container {
+      float: none;
+      min-height: 100px;
+      max-width: 70%;
+      background-position: center center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border: 1px solid #ccc;
+      border-radius: 2px;
+      margin: 0 auto;
+
+      @include media($tab) {
+        float: left;
+        height: 100px;
+        width: 100px;
+      }
+
+      @include media($lrg) {
+        float: left;
+        height: 100px;
+        width: 100px;
+      }
+
+    }
+  }
+}
+
+
+// Based on code by http://codepen.io/heydon/

@@ -1,0 +1,150 @@
+.type-system-sc {
+
+  $base-border-radius: 3px !default;
+  $base-line-height: 1.5em !default;
+  $base-spacing: 1.5em !default;
+  $action-color: #477DCA !default;
+  $dark-gray: #333 !default;
+  $light-gray: #DDD !default;
+  $medium-screen: 40em !default;
+  $base-font-color: $dark-gray !default;
+  $serif: 'Lora', serif;
+  $sans-serif: 'Montserrat', sans-serif;
+
+  @include clearfix;
+  font-family: $serif;
+  text-align: left;
+
+  nav {
+    font-family: $sans-serif;
+  }
+
+  h1, h2, h3, h4, h5, p {
+    color: $base-font-color;
+    margin: 0;
+    font-weight: normal;
+  }
+
+  hr {
+    border-bottom: 1px solid $light-gray;
+    border-left: 0;
+    border-right: 0;
+    border-top: 0;
+    margin: $base-spacing 0;
+    width: 3em;
+  }
+
+  .type {
+    border-bottom: 2px solid;
+    display: inline-block;
+    font-family: $sans-serif;
+    font-size: 0.7em;
+    font-weight: 800;
+    margin-bottom: 2em;
+    padding: 0.1em 0;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  h1 {
+    color: shade($dark-gray, 40%);
+    font-family: $serif;
+    font-size: 1.5em;
+    font-weight: 400;
+    margin-bottom: 0.3em;
+    text-align: center;
+  }
+
+  h2 {
+    color: shade($dark-gray, 40%);
+    font-family: $serif;
+    font-size: 1.3em;
+    font-weight: 400;
+    line-height: 1.25em;
+    margin-bottom: 0.9em;
+
+    @include media($medium-screen) {
+      font-size: 1.3em;
+    }
+  }
+
+  code,
+  pre {
+    background: #F7F7F7;
+    border-radius: $base-border-radius * 1.5;
+    border: 1px solid #E0E0E0;
+    font-size: 0.75em;
+    font-style: normal;
+    padding: 0.1em 0.4em;
+    white-space: wrap;
+    overflow-x: scroll;
+  }
+
+  h2 code {
+    font-size: 0.65em;
+  }
+
+  h3,
+  h2.widget-title  {
+    color: shade($dark-gray, 40%);
+    font-family: $sans-serif;
+    font-size: 1em;
+    font-weight: 400;
+    text-transform: uppercase;
+    line-height: 1.3em;
+    letter-spacing: .1em;
+    margin-bottom: 0.4em;
+  }
+
+  h4 {
+    font-family: $sans-serif;
+    font-size: .8em;
+    letter-spacing: .1em;
+  }
+
+  p {
+    color: $base-font-color;
+    font-family: $serif;
+    line-height: 1.7em;
+    margin-bottom: .75em;
+
+    span {
+      font-family: $serif;
+      font-size: 1.2em;
+      font-style: italic;
+    }
+
+    &.date {
+      color: transparentize($base-font-color, 0.6);
+      font-family: $serif;
+      font-style: italic;
+      margin-bottom: 0.3em;
+    }
+
+    &.author {
+      font-family: $serif;
+      font-size: 1.2em;
+      font-style: italic;
+    }
+
+  }
+
+  a.read-more {
+    display: inline-block;
+    font-size: 0.8em;
+    font-weight: 700;
+    margin-left: 0.2em;
+    position: relative;
+    text-transform: uppercase;
+
+    span {
+      font-family: $sans-serif;
+      font-size: 1.5em;
+      font-style: normal;
+      position: absolute;
+      right: -12px;
+      top: -1px;
+    }
+  }
+}
+// END .type-system-sc

@@ -3,9 +3,26 @@
 /*--------------------------------------------------------------
 ## Posts and pages
 --------------------------------------------------------------*/
-@import "primary/posts-and-pages";
+//@import "primary/posts-and-pages";
 
 /*--------------------------------------------------------------
 ## Comments
 --------------------------------------------------------------*/
 @import "primary/comments";
+
+/*--------------------------------------------------------------
+## Tags and Structure
+--------------------------------------------------------------*/
+
+@import "primary/body";
+@import "primary/header";
+@import "primary/navigation";
+@import "primary/content";
+@import "primary/footer";
+
+@import "primary/home";
+@import "primary/404";
+
+@import "primary/single";
+@import "primary/archive";
+@import "primary/contact-form";
