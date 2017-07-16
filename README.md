@@ -1,27 +1,19 @@
-# Bourbon-WP (aka Bourbon-Chef-Site-2.5)
-> This branch refines the README documentation: It will outline deployment specific details,
-links to remember, and WordPress settings to implement from the local development environment
-to a remote hosted site. It also formats comments and replies.  
-
-> **TOO SAD!** I can't believe LuckyPeach.com is done May 1.  
-And just as heart-breaking is the last publication occurs this fall.
+# Bourbon-WP
+[![GitHub version](https://badge.fury.io/gh/surfing-chef%2Fbourbon-wp.svg)](https://badge.fury.io/gh/surfing-chef%2Fbourbon-wp) *2.6.0*  
 
 ## CHANGELOG ##
-> 1.5.1 - implements styles and layouts for new plugins including SC Dark weather
-
-## **TODO**
-- resolve iphone bottom margin issue ( Implemented media breakpoints at 600px to toggle ***footer*** position between fixed and relative.
-Same breakpoint toggled the bottom margin on the preceding tag (***#content***) )  
-- Recaptcha on contact page (Formidable) not allowing mail to be sent - (I removed the ***I Am Not A Robot*** box from the form layout and made sure the captcha ran invisible (Global Formidable Features) )  
-- Investigate the *Related Posts* links in single posts - adjusted (Jetpack on wordpress.com)[https://wordpress.com/settings/traffic/]: Settings > Traffic > Related Posts  
-- Compare the local machine wordpress image settings (main machine) with live site for feature image sizes - disabled (Photon)[https://jetpack.com/support/photon/] in (Jetpack plugin on wordpress.com)[https://wordpress.com/settings/writing/]  
-- fade-in images on scroll - (a tutorial)[http://www.web2feel.com/tutorial-for-animated-scroll-loading-effects-with-animate-css-and-jquery/]
-- About page should post blog entries after explaining the purpose of this site  
-- Create a bookmarks page template to display my bookmarks as links
+2.6.0 Restructures the development files
+- [ ] better organized build, process, development and production structure
+  - [x] migrate structure
+  - [ ] migrate files
+  - [ ] implement new package.json and gulpfile.js
+- [ ] implements a custom post page for consistent posts including links for users
+- [ ] implement a bookmarks widget or page template for chrome bookmarks
+- [ ] move culinary plugin to projects
 
 ### 1. SITEMAP
-1. ***primary*** < LOGO _(home)_ >< CULINARIA >< PROJECTS >< CODING >< ABOUT >< CONTACTS >  
-2. ***alt main*** < HOME >< CULINARIA >< PROJECTS >< CODING >< ABOUT >< CONTACTS >  
+1. ***PRIMARY*** < LOGO _(home)_ >< CULINARIA >< PROJECTS >< CODING >< ABOUT >< CONTACTS >  
+2. ***ALT MAIN*** < HOME >< CULINARIA >< PROJECTS >< CODING >< ABOUT >< CONTACTS >  
 
 ### 2. SET UP SURFING-CHEF.COM FOR BOURBON-WP IMPLEMENTATION
 - install [Remote-FTP](https://atom.io/packages/remote-ftp) into Atom for ease of use. [Tutorial reminder](https://www.youtube.com/watch?v=YmSD2O85wx0)   
@@ -122,6 +114,3 @@ Same breakpoint toggled the bottom margin on the preceding tag (***#content***) 
 - [PHP in WordPress default Text Widget](http://www.emanueleferonato.com/2011/04/11/executing-php-inside-a-wordpress-widget-without-any-plugin/): Without plugin, run PHP in a standard Text Widget with this function  
 - [Comments: *comment-form()*](https://codex.wordpress.org/Function_Reference/comment_form#.24args) and [*wp_list_comments()*](https://codex.wordpress.org/Function_Reference/wp_list_comments): useful links to formatting comment content    
 - [Adding tweets to posts](https://en.support.wordpress.com/twitter/twitter-embeds/): super simple  
-
-### 4. BOURBON CHEF TO DO's  
-[PROJECT](https://www.lynda.com/PHP-tutorials/WordPress-Creating-Custom-Plugins-PHP/508212-2.html): Culinaria Feeds  
