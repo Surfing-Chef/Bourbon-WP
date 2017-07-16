@@ -13,12 +13,13 @@
 #primary {
   @include outer-container;
   padding: 2em;
+  padding-top: 1.1em;
 
   section {
 
-    img:not(.no-border),
-    figure:not(.no-border) {
-      border: 1px solid #ccc;
+    img,
+    figure {
+      border: 1px solid #ddd;
       border-radius: 3px;
     }
 
