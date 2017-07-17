@@ -15,14 +15,30 @@ var gulp        = require('gulp'),
 // DEVELOPMENT TASKS
 // Scripts Task - tasks related to js
 gulp.task('scripts', function(){
-  gulp.src(['process/js/**/*.js', '!process/js/**/*min.js'])
+  gulp.src(['process/js/**/*.js',
+            '!process/js/customizer.js',
+            '!process/js/jquery.viewportchecker.min.js',
+            '!process/js/navigation.js',
+            '!process/js/skip-link-focus-fix.js'
+          ])
   .pipe(plumber())
   .pipe(babel({
             presets: ['es2015']
         }))
   .pipe(concat('scripts.js'))
   .pipe(gulp.dest('./js'))
+  .pipe(browserSync.stream());
 
+  gulp.src(['process/js/customizer.js',
+            'process/js/jquery.viewportchecker.min.js',
+            'process/js/navigation.js',
+            'process/js/skip-link-focus-fix.js'
+          ])
+  .pipe(plumber())
+  .pipe(babel({
+            presets: ['es2015']
+        }))
+  .pipe(gulp.dest('./js'))
   .pipe(browserSync.stream());
 });
 
