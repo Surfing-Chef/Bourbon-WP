@@ -6,15 +6,12 @@ $sc-invert: invert(33%);
 //WIDGET
 section.container-forecast {
   color: #555;
-  display: flex;
-  flex-flow: row wrap;
   font-family: $sans-serif;
   -webkit-filter: $sc-shadow;
   filter: $sc-shadow;
 
   header.sc-weather-header {
     display: flex;
-    flex: 1 100%;
     flex-direction: row;
     border-bottom: 2px solid #555;
     padding: 0 .5em .1em;
@@ -25,6 +22,13 @@ section.container-forecast {
       margin-left: auto;
       font-size: .7em;
     }
+  }
+
+  article.sc-weather-forecast {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+
   }
 
   div.container-currently {
@@ -77,23 +81,27 @@ section.container-forecast {
 
   div.container-daily {
     display: none;
-    width: 60%;
-    margin-left: auto;
+    width: 70%;
+    //margin-left: auto;
 
     @include media ($tab) {
       display: flex;
+      margin-left: 0;
+      padding: 0;
+      justify-content: space-around;
     };
 
     div.daily-day {
-      flex-direction: column;
-      flex-grow: 1;
-      text-align: center;
+      justify-content: center;
 
       h4 {
         margin: 0 auto .5em auto;
       }
 
-      div.icon-daily{
+      div.icon-daily {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
         margin-bottom: .5em;
 
         img {
@@ -106,13 +114,12 @@ section.container-forecast {
       }
 
       div.temp-daily-container {
-        position: absolute;
-        margin-top: 5.5em;
-        padding: 0 1.6em;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
 
         div.temp-graph{
-          margin: 0 auto;
-          margin-left: 2px;
           border-radius: 3em;
           background-color: $base-font-color;
           -webkit-filter: $sc-invert;
