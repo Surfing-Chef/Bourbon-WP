@@ -140,13 +140,5 @@ gulp.task('prod:copy', ['prod:imgMin'], function(){
   .pipe(gulp.dest('./builds/prod'));
 });
 
-// remove unwanted build files and directories
-gulp.task('prod:remove', ['prod:copy'], function(done){
-  return del([  // list files and directories to delete
-    // list of sneaky files to delete
-    // 'builds/prod/target.xxx'
-  ], done);
-});
-
 // main build task
 gulp.task('prod', ['prod:cleanfolder', 'prod:imgMin', 'prod:sass', 'prod:scripts', 'prod:copy', 'prod:remove']);
