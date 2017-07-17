@@ -123,10 +123,19 @@ gulp.task('prod:scripts', ['prod:sass'], function(){
 // copy development files not requiring processing
 gulp.task('prod:copy', ['prod:imgMin'], function(){
   return gulp.src([
-                  'builds/dev/**/*/',
-                  '!builds/dev/css{,/**}',
-                  '!builds/dev/js{,/**}',
-                  '!builds/dev/img{,/**}'
+                  './**/*/',
+                  '!./builds{,/**}',
+                  '!./js{,/**}',
+                  '!./img{,/**}',
+                  '!./node_modules{,/**}',
+                  '!./process{,/**}',
+                  '!./src{,/**}',
+                  '!./.*',
+                  '!./gulpfile.js',
+                  '!./package.json',
+                  '!./package-lock.json',
+                  '!./README.md',
+                  '!./style.css',
                 ])
   .pipe(gulp.dest('./builds/prod'));
 });
