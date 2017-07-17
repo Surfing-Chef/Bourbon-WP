@@ -76,7 +76,7 @@ gulp.task('default', ['serve']);
 // delete previous production build
 gulp.task('prod:cleanfolder', function(){
   return del([
-    'builds/prod/**/*'
+    'build/**/*'
   ]);
 });
 
@@ -84,7 +84,7 @@ gulp.task('prod:cleanfolder', function(){
 gulp.task('prod:imgMin', ['prod:cleanfolder'], function(){
     return gulp.src('./img/**/*')
         .pipe(imagemin())
-        .pipe(gulp.dest('builds/prod/img'));
+        .pipe(gulp.dest('build/img'));
 });
 
 // minify css
@@ -92,7 +92,7 @@ gulp.task('prod:sass', ['prod:cleanfolder'], function() {
   gulp.src('process/sass/style.scss')
   .pipe(plumber())
   .pipe(sass({outputStyle: 'compressed'}))
-  .pipe(gulp.dest('builds/prod/'));
+  .pipe(gulp.dest('build/'));
 });
 
 // uglify and mangle js
@@ -107,7 +107,7 @@ gulp.task('prod:scripts', ['prod:sass'], function(){
   .pipe(plumber())
   .pipe(concat('script.js'))
   .pipe(uglify())
-  .pipe(gulp.dest('builds/prod/js'));
+  .pipe(gulp.dest('build/js'));
 
   gulp.src([
             './js/customizer.js',
@@ -116,7 +116,7 @@ gulp.task('prod:scripts', ['prod:sass'], function(){
             './js/skip-link-focus-fix.js'
           ])
   .pipe(plumber())
-  .pipe(gulp.dest('builds/prod/js'));
+  .pipe(gulp.dest('build/js'));
 
 });
 
@@ -124,7 +124,7 @@ gulp.task('prod:scripts', ['prod:sass'], function(){
 gulp.task('prod:copy', ['prod:imgMin'], function(){
   return gulp.src([
                   './**/*/',
-                  '!./builds{,/**}',
+                  '!./build{,/**}',
                   '!./js{,/**}',
                   '!./img{,/**}',
                   '!./node_modules{,/**}',
@@ -137,8 +137,8 @@ gulp.task('prod:copy', ['prod:imgMin'], function(){
                   '!./README.md',
                   '!./style.css',
                 ])
-  .pipe(gulp.dest('./builds/prod'));
+  .pipe(gulp.dest('./build'));
 });
 
 // main build task
-gulp.task('prod', ['prod:cleanfolder', 'prod:imgMin', 'prod:sass', 'prod:scripts', 'prod:copy', 'prod:remove']);
+gulp.task('build', ['prod:cleanfolder', 'prod:imgMin', 'prod:sass', 'prod:scripts', 'prod:copy']);
