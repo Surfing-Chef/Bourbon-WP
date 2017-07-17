@@ -97,8 +97,15 @@ gulp.task('prod:sass', ['prod:cleanfolder'], function() {
 
 // uglify and mangle js
 gulp.task('prod:scripts', ['prod:sass'], function(){
-  gulp.src(['builds/dev/js/**/*.js'])
+  gulp.src([
+            './js/**/*.js',
+            '!./js/customizer.js',
+            '!./js/jquery.viewportchecker.min.js',
+            '!./js/navigation.js',
+            '!./js/skip-link-focus-fix.js'
+          ])
   .pipe(plumber())
+  .pipe(concat('script.js'))
   .pipe(uglify())
   .pipe(gulp.dest('builds/prod/js'));
 });
