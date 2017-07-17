@@ -65,7 +65,7 @@ get_header(); ?>
 
 							<?php else : ?>
 							<img src="<?php echo get_bloginfo( 'stylesheet_directory' ); ?>
-							/src/images/logo.png" alt="<?php echo $recent["post_title"]; ?>">
+							/img/logo.png" alt="<?php echo $recent["post_title"]; ?>">
 
 							<?php endif; ?>
 						</div>

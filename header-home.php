@@ -73,7 +73,7 @@
 
 	    <div class="navigation-wrapper">
 	      <a href="<?php echo home_url(); ?>" class="mobile-logo">
-	        <img src="<?php echo get_template_directory_uri(); ?>/src/images/mountain.svg" alt="Logo image">
+	        <img src="<?php echo get_template_directory_uri(); ?>/img/mountain.svg" alt="Logo image">
 	      </a>
 
 	      <a href="javascript:void(0)" class="navigation-menu-button" id="js-mobile-menu">MENU</a>

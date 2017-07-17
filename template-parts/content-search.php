@@ -31,7 +31,7 @@
 				}
 				else {
 				    echo '<div class="home-featured-image not-set" style="background-image: url(\'' . get_bloginfo( 'stylesheet_directory' )
-				        . '/src/images/logo.png\')"></div>';
+				        . '/img/logo.png\')"></div>';
 				}				 ?>
 
 				<?php the_excerpt(); ?>

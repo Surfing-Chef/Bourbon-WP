@@ -26,17 +26,17 @@
 		<div id="inner-footer" class="footer-container wrap cf">
 			<section class="sociocon">
 				<a href="https://www.pinterest.com/SurfingChef/" target="_blank">
-					<img class="icon" src="<?php echo get_template_directory_uri(); ?>/src/images/pinterest-sociocon.png" alt="link to Surfing Chef on Pinterest">
+					<img class="icon" src="<?php echo get_template_directory_uri(); ?>/img/pinterest-sociocon.png" alt="link to Surfing Chef on Pinterest">
 				</a>
 			</section>
 			<section class="sociocon">
 				<a href="https://github.com/Surfing-Chef" target="_blank">
-					<img class="icon" src="<?php echo get_template_directory_uri(); ?>/src/images/github-sociocon.png" alt="link to Surfing Chef on GitHub">
+					<img class="icon" src="<?php echo get_template_directory_uri(); ?>/img/github-sociocon.png" alt="link to Surfing Chef on GitHub">
 				</a>
 			</section>
 			<section class="sociocon">
 				<a href="<?php echo site_url(); ?>/contacts/" >
-					<img class="icon" src="<?php echo get_template_directory_uri(); ?>/src/images/email-sociocon.png" alt="email Surfing Chef">
+					<img class="icon" src="<?php echo get_template_directory_uri(); ?>/img/email-sociocon.png" alt="email Surfing Chef">
 				</a>
 			</section>
 			<section class="sc-copyright">
