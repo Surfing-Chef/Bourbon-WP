@@ -92,7 +92,7 @@ gulp.task('prod:sass', ['prod:cleanfolder'], function() {
   gulp.src('process/sass/style.scss')
   .pipe(plumber())
   .pipe(sass({outputStyle: 'compressed'}))
-  .pipe(gulp.dest('builds/prod/css/'));
+  .pipe(gulp.dest('builds/prod/'));
 });
 
 // uglify and mangle js
