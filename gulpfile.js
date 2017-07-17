@@ -108,6 +108,16 @@ gulp.task('prod:scripts', ['prod:sass'], function(){
   .pipe(concat('script.js'))
   .pipe(uglify())
   .pipe(gulp.dest('builds/prod/js'));
+
+  gulp.src([
+            './js/customizer.js',
+            './js/jquery.viewportchecker.min.js',
+            './js/navigation.js',
+            './js/skip-link-focus-fix.js'
+          ])
+  .pipe(plumber())
+  .pipe(gulp.dest('builds/prod/js'));
+
 });
 
 // copy development files not requiring processing
