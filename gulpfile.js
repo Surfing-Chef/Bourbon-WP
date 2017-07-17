@@ -82,7 +82,7 @@ gulp.task('prod:cleanfolder', function(){
 
 // minimize images
 gulp.task('prod:imgMin', ['prod:cleanfolder'], function(){
-    return gulp.src('dev/img/**/*')
+    return gulp.src('./img/**/*')
         .pipe(imagemin())
         .pipe(gulp.dest('builds/prod/img'));
 });
