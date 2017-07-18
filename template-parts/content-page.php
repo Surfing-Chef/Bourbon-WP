@@ -14,8 +14,8 @@
 		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
 	</header><!-- .entry-header -->
 
-	<?php if ( is_page( 'culinaria' ) && (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Culinaria Feeds")) ) : ?>
-	<?php endif;?>
+	<?php // if ( is_page( 'culinaria' ) && (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Culinaria Feeds")) ) : ?>
+	<?php //endif;?>
 
 	<div class="entry-content">
 		<?php
