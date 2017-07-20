@@ -3,14 +3,23 @@
 
 ## CHANGELOG ##
 2.6.0 Restructures the development files
-- [ ] better organized build, process, development and production structure
+- [x] better organized build, process, development and production structure
   - [x] 2.6.1 migrate structure
   - [x] 2.6.1 migrate files from
   - [x] 2.6.2 implement new package.json and gulpfile.js (dev)
   - [x] 2.6.3 implement new gulpfile.js (prod)
-- [ ] implements a custom post page for consistent posts including links for users
+- [ ] implement a custom post page for consistent posts including links for users
+  - Using [Advanced Custom Fields Pro](https://www.advancedcustomfields.com/) plugin  
+  - Plugin requires a [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/get-api-key) for [implementation](https://www.advancedcustomfields.com/resources/google-map/)
+  - Add Google API Key to Dashboard and database:
+    - [Understanding and Working with The WordPress Options Table](https://code.tutsplus.com/tutorials/understanding-and-working-with-the-wordpress-options-table--cms-21119)  
+    - [How to Create a Settings Page in WordPress](https://www.youtube.com/watch?v=B-tvZAC-eik)
+    - [How to Make a WordPress Admin Options Page (Without Using the Settings API)](https://wpshout.com/wordpress-options-page/)
 - [ ] implement a bookmarks widget or page template for chrome bookmarks
-- [ ] move culinary plugin to projects
+- [x] move culinary plugin to projects
+
+
+
 
 ### 1. SITEMAP
 1. ***PRIMARY*** < LOGO _(home)_ >< CULINARIA >< PROJECTS >< CODING >< ABOUT >< CONTACTS >  
