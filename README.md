@@ -12,6 +12,7 @@
   - Using [Advanced Custom Fields Pro](https://www.advancedcustomfields.com/) plugin  
   - Plugin requires a [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/get-api-key) for [implementation](https://www.advancedcustomfields.com/resources/google-map/)
   - Add Google API Key to Dashboard and database:
+    - - [Exceprt From: How to create a Premium WordPress Theme](https://www.youtube.com/watch?v=ViZLtFIcSfo&list=PLriKzYyLb28kpEnFFi9_vJWPf5-_7d3rX)  
     - [Understanding and Working with The WordPress Options Table](https://code.tutsplus.com/tutorials/understanding-and-working-with-the-wordpress-options-table--cms-21119)  
     - [How to Create a Settings Page in WordPress](https://www.youtube.com/watch?v=B-tvZAC-eik)
     - [How to Make a WordPress Admin Options Page (Without Using the Settings API)](https://wpshout.com/wordpress-options-page/)
