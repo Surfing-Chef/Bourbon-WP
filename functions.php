@@ -170,6 +170,13 @@ function bourbon_wp_scripts() {
 }
 add_action( 'wp_enqueue_scripts', 'bourbon_wp_scripts' );
 
+
+/**
+ * Implement the Bourbon-WP custom admin page
+ */
+require get_template_directory() .
+'/inc/function-admin.php';
+
 /**
  * Implement the Custom Header feature.
  */
