@@ -1,7 +1,26 @@
 /*! secondary/_acf-styles.scss */
 
 // Post Links
+#post-links {
+  display: flex;
+  flex-flow: row wrap;
 
+  section {
+    display: flex;
+    flex-flow: row wrap
+  }
+
+  div {
+    background: $light-gray;
+    width: 48%;
+    margin: 1%;
+    border: 1px solid transparentize(gray, 0.7);
+    border-radius: 3px;
+    padding: .75em;
+    font-size: .8em;
+    font-family: $sans-serif;
+  }
+}
 
 // Post Maps
 .acf-map {
@@ -11,6 +30,7 @@
 	height: 150px;
 	border: #ccc solid 1px;
 	margin: 20px 0;
+  border-radius: 3px;
 
   @include media ($landscape) {
     height: 275px;
