@@ -1,5 +1,5 @@
 # **Bourbon-WP** #
-[![GitHub version](https://badge.fury.io/gh/surfing-chef%2Fbourbon-wp.svg)](https://badge.fury.io/gh/surfing-chef%2Fbourbon-wp) *2.7*  
+[![GitHub version](https://badge.fury.io/gh/surfing-chef%2Fbourbon-wp.svg)](https://badge.fury.io/gh/surfing-chef%2Fbourbon-wp)
 
 ## **CHANGELOG** ##
 ### **2.6 - Restructured Development Files** ###   
