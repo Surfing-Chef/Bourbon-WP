@@ -43,25 +43,37 @@
 				?>
 
 				<!-- ACF Content Calls -->
-				<?php if( have_rows('post_links') ): ?>
+
+				<?php
+				// Post Map
+				if( get_field('post_map') ): ?>
+					<?php $location = get_field('post_map'); ?>
+					<div class="acf-map">
+						<div class="marker" data-lat="<?php echo $location['lat']; ?>" data-lng="<?php echo $location['lng']; ?>"></div>
+					</div>
+				<?php endif; // if( get_field('post_map') ):
+
+				include_once get_template_directory() . '/inc/acf/display-map.php';
+				?>
+
+				<?php
+				// Post Links
+				if( have_rows('post_links') ): ?>
 					<div id="post-links">
 						<ul>
-					    <?php while( have_rows('post_links') ): the_row(); ?>
-				        <li>
+							<?php while( have_rows('post_links') ): the_row(); ?>
+								<li>
 									<a href="<?php the_sub_field('link_url'); ?>"
 										 alt="<?php the_sub_field('link_title'); ?>"
 										 target="_blank" >
 										<?php the_sub_field('link_title'); ?></a>
 									<span> - <?php the_sub_field('link_description'); ?> </span>
 								</li>
-					    <?php endwhile; ?>
-				    </ul>
+							<?php endwhile; ?>
+						</ul>
 					</div>
 				<?php endif; // if( get_field('post_links') ): ?>
 
-				<?php if( get_field('post_map') ): ?>
-					<!-- Code to display Google Maps -->
-				<?php endif; // if( get_field('post_links') ): ?>
 				<!-- ACF Content Calls -->
 
 				<?php bourbon_wp_entry_footer(); ?>
