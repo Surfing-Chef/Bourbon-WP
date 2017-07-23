@@ -60,17 +60,17 @@
 				// Post Links
 				if( have_rows('post_links') ): ?>
 					<div id="post-links">
-						<ul>
+						<section>
 							<?php while( have_rows('post_links') ): the_row(); ?>
-								<li>
+								<div>
 									<a href="<?php the_sub_field('link_url'); ?>"
 										 alt="<?php the_sub_field('link_title'); ?>"
 										 target="_blank" >
 										<?php the_sub_field('link_title'); ?></a>
 									<span> - <?php the_sub_field('link_description'); ?> </span>
-								</li>
+								</div>
 							<?php endwhile; ?>
-						</ul>
+						</section>
 					</div>
 				<?php endif; // if( get_field('post_links') ): ?>
 
