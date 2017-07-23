@@ -15,7 +15,8 @@ Implement a custom settings and options page as well as installing and implement
   - [Custom Pages, Subpages, Custom Options and the WordPress Settings API](https://www.youtube.com/playlist?list=PLriKzYyLb28kpEnFFi9_vJWPf5-_7d3rX)
   - [x] Add Google Map API to WordPress database via Settings API
 
-- [ ] 2.7.2a Implement [Advanced Custom Fields Pro](https://www.advancedcustomfields.com/) plugin
+- [x] 2.7.2a Implement [Advanced Custom Fields Pro](https://www.advancedcustomfields.com/) plugin
+  - [ ] display Google Map data in post content
 - [Lynda.com Advanced Custom Fields](https://www.lynda.com/WordPress-tutorials/Welcome/169877/183109-4.html)
 - Use of the Google Maps Field requires a [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/get-api-key)
 - ACF implemetation instructions for the API can be found [here](https://www.advancedcustomfields.com/resources/google-map/)
