@@ -43,14 +43,22 @@
 				?>
 
 				<!-- ACF Content Calls -->
-				<?php
-					if(get_field('info_box_content') ) {
-						echo '<div class="acf-links">';
-						  echo '<a href="' . get_field('link_url') . '" target="_blank" alt="'. get_field('link_title') .'">'. get_field('link_title') .'</a> - ';
-						  echo '<span>' . get_field('link_description') . '</span>';
-						echo '</div>';
-					}
-				 ?>
+				<?php if( have_rows('post_links') ): ?>
+					<div id="post-links">
+						<ul>
+					    <?php while( have_rows('post_links') ): the_row(); ?>
+				        <li>
+									<a href="<?php the_sub_field('link_url'); ?>"
+										 alt="<?php the_sub_field('link_title'); ?>"
+										 target="_blank" >
+										<?php the_sub_field('link_title'); ?></a>
+									<span> - <?php the_sub_field('link_description'); ?> </span>
+								</li>
+					    <?php endwhile; ?>
+				    </ul>
+					</div>
+				<?php endif; // if( get_field('post_links') ): ?>
+				<!-- ACF Content Calls -->
 
 				<?php bourbon_wp_entry_footer(); ?>
 
