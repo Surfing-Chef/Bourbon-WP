@@ -55,6 +55,13 @@ Ideas or thoughts that might be projects for a rainy days...
 [YouTube Tut on CSS Animation](https://www.youtube.com/watch?v=CBQGl6zokMs): on simple css and jquery implementation on animate.css  
 [Animating the moments](https://www.youtube.com/watch?v=GeuNIOuIEDA): DevTips on the Whys of animation  
 
+
+### THEME PLUGINS ###
+- [Advanced Custom Fields Pro](https://www.advancedcustomfields.com/): A better user interface for adding custom fields, or meta data, to WordPress
+  - [Documentation](https://www.advancedcustomfields.com/resources/)  
+  - [Code Examples](https://www.advancedcustomfields.com/resources/code-examples/)
+  - [Lynda.com Tutorial](https://www.lynda.com/WordPress-tutorials/Welcome/169877/183109-4.html)
+
 ### WORDPRESS REFERENCE LINKS ###
 - [WordPress Developer Resources](https://developer.wordpress.org/)
 - [WordPress Codex](https://codex.wordpress.org/)
