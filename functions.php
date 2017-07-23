@@ -319,26 +319,9 @@ function randomizer($how_many, $of_how_many){
 * Register Google API key for Advanced Custom Fields
 */
 function sc_acf_init() {
-
-	acf_update_setting('google_api_key', 'xxx');
+	// Pulls value from Bourbon-WP custom options menu in the dashboard
+	$api = esc_attr(get_option( 'google_api' ) );
+	acf_update_setting('google_api_key', $api);
 }
 
 add_action('acf/init', 'sc_acf_init');
-
-
-// MAKE THE FOLLOWING INTO A PLUGIN
-function sc_dash_settings (){
-	add_submenu_page(
-		'options-general.php',
-		'SC Custom Settings',
-		'SC Custom Settings',
-		'administrator',
-		'sc-custom-settings',
-		'sc_custom_settings_callback'
-	);
-}
-add_action( 'admin_menu', 'sc_dash_settings');
-
-function sc_custom_settings_callback(){
-	echo "This is the SC Custom Settings admin page.";
-}

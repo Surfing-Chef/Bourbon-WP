@@ -42,6 +42,16 @@
 					) );
 				?>
 
+				<!-- ACF Content Calls -->
+				<?php
+					if(get_field('info_box_content') ) {
+						echo '<div class="acf-links">';
+						  echo '<a href="' . get_field('link_url') . '" target="_blank" alt="'. get_field('link_title') .'">'. get_field('link_title') .'</a> - ';
+						  echo '<span>' . get_field('link_description') . '</span>';
+						echo '</div>';
+					}
+				 ?>
+
 				<?php bourbon_wp_entry_footer(); ?>
 
 				<?php
