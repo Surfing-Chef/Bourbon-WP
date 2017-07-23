@@ -11,7 +11,8 @@ Better organized build, process, development and production structure
 
 ### **2.7 - Improve Theme's Backend Workflow** ###   
 Implement a custom settings and options page as well as installing and implementing the Advanced Custom Fields Pro plugin
-- [x] 2.7.1a Create a Custom Settings and Options Page  
+- [x] 2.7.1a Create a Custom Settings and Options Page
+  - [x] @ ./inc/function-admin.php
   - [Custom Pages, Subpages, Custom Options and the WordPress Settings API](https://www.youtube.com/playlist?list=PLriKzYyLb28kpEnFFi9_vJWPf5-_7d3rX)
   - [x] Add Google Map API to WordPress database via Settings API
 - [x] 2.7.2a Implement [Advanced Custom Fields Pro](https://www.advancedcustomfields.com/) plugin
