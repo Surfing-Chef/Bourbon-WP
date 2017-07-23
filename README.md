@@ -1,5 +1,5 @@
 # **Bourbon-WP** #
-[![GitHub version](https://badge.fury.io/gh/surfing-chef%2Fbourbon-wp.svg)](https://badge.fury.io/gh/surfing-chef%2Fbourbon-wp)
+[![GitHub version](https://badge.fury.io/gh/surfing-chef%2Fbourbon-wp.svg)](https://badge.fury.io/gh/surfing-chef%2Fbourbon-wp) v2.7.2
 
 ## **CHANGELOG** ##
 ### **2.6 - Restructured Development Files** ###   
@@ -15,10 +15,12 @@ Implement a custom settings and options page as well as installing and implement
   - [Custom Pages, Subpages, Custom Options and the WordPress Settings API](https://www.youtube.com/playlist?list=PLriKzYyLb28kpEnFFi9_vJWPf5-_7d3rX)
   - [x] Add Google Map API to WordPress database via Settings API
 - [x] 2.7.2a Implement [Advanced Custom Fields Pro](https://www.advancedcustomfields.com/) plugin
-  - [x] display Google Map data in post content
+  - [x] display links using ACF repeater field
+  - [x] display map using ACF Google Map field
   - [Lynda.com Advanced Custom Fields](https://www.lynda.com/WordPress-tutorials/Welcome/169877/183109-4.html)
-  - Use of the Google Maps Field requires a [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/get-api-key)
   - ACF implemetation instructions for the API can be found [here](https://www.advancedcustomfields.com/resources/google-map/)
+  - Use of the Google Maps Field requires a [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/get-api-key)
+- [ ] Style and layout ACF *post_links* and *post_map* with SCSS
 - [ ] Refine Custom Settings and Options Page
 
 ### **2.8 - "Bundle" Theme Dependencies** ###
