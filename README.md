@@ -13,18 +13,16 @@ Better organized build, process, development and production structure
 Implement a custom settings and options page as well as installing and implementing the Advanced Custom Fields Pro plugin
 - [x] 2.7.1a Create a Custom Settings and Options Page  
   - [Custom Pages, Subpages, Custom Options and the WordPress Settings API](https://www.youtube.com/playlist?list=PLriKzYyLb28kpEnFFi9_vJWPf5-_7d3rX)
-  - [x] Add Google Map API
-  - [ ] Refine Custom Settings and Options Page
-
+  - [x] Add Google Map API to WordPress database via Settings API
 
 - [ ] 2.7.2a Implement [Advanced Custom Fields Pro](https://www.advancedcustomfields.com/) plugin
 - [Lynda.com Advanced Custom Fields](https://www.lynda.com/WordPress-tutorials/Welcome/169877/183109-4.html)
 - Use of the Google Maps Field requires a [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/get-api-key)
 - ACF implemetation instructions for the API can be found [here](https://www.advancedcustomfields.com/resources/google-map/)
-- Add Google API Key to Dashboard and database:
+- [ ] Refine Custom Settings and Options Page
 
-### **2.7 - "Bundle" Theme Dependencies** ###
-When a user installs Bourbon-WP, the theme should be packaged with all its plugins, dependencies and installation insturctions
+### **2.8 - "Bundle" Theme Dependencies** ###
+When a user installs Bourbon-WP, the theme should be packaged with all its plugins, dependencies and installation instructions
 
 
 ### **Projects** ###   
