@@ -58,6 +58,10 @@
 				    </ul>
 					</div>
 				<?php endif; // if( get_field('post_links') ): ?>
+
+				<?php if( get_field('post_map') ): ?>
+					<!-- Code to display Google Maps -->
+				<?php endif; // if( get_field('post_links') ): ?>
 				<!-- ACF Content Calls -->
 
 				<?php bourbon_wp_entry_footer(); ?>
