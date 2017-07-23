@@ -1,118 +1,65 @@
-# Bourbon-WP
-[![GitHub version](https://badge.fury.io/gh/surfing-chef%2Fbourbon-wp.svg)](https://badge.fury.io/gh/surfing-chef%2Fbourbon-wp) *2.6.3*  
+# **Bourbon-WP** #
+[![GitHub version](https://badge.fury.io/gh/surfing-chef%2Fbourbon-wp.svg)](https://badge.fury.io/gh/surfing-chef%2Fbourbon-wp) *2.7*  
 
-## CHANGELOG ##
-2.6.0 Restructures the development files
-- [x] better organized build, process, development and production structure
-  - [x] 2.6.1 migrate structure
-  - [x] 2.6.1 migrate files from
-  - [x] 2.6.2 implement new package.json and gulpfile.js (dev)
-  - [x] 2.6.3 implement new gulpfile.js (prod)
-- [ ] implement a custom post page for consistent posts including links for users
-  - Using [Advanced Custom Fields Pro](https://www.advancedcustomfields.com/) plugin  
-  - Plugin requires a [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/get-api-key) for [implementation](https://www.advancedcustomfields.com/resources/google-map/)
-  - Add Google API Key to Dashboard and database:
-    - - [Exceprt From: How to create a Premium WordPress Theme](https://www.youtube.com/watch?v=ViZLtFIcSfo&list=PLriKzYyLb28kpEnFFi9_vJWPf5-_7d3rX)  
-    - [Understanding and Working with The WordPress Options Table](https://code.tutsplus.com/tutorials/understanding-and-working-with-the-wordpress-options-table--cms-21119)  
-    - [How to Create a Settings Page in WordPress](https://www.youtube.com/watch?v=B-tvZAC-eik)
-    - [How to Make a WordPress Admin Options Page (Without Using the Settings API)](https://wpshout.com/wordpress-options-page/)
-- [ ] implement a bookmarks widget or page template for chrome bookmarks
-- [x] move culinary plugin to projects
+## **CHANGELOG** ##
+### **2.6 - Restructured Development Files** ###   
+Better organized build, process, development and production structure
+  - [x] 2.6.1a migrate structure and files
+  - [x] 2.6.2a implement new package.json and gulpfile.js (dev)
+  - [x] 2.6.3a implement new gulpfile.js (prod)
+  - [x] 2.6.3a move culinary plugin to projects
+
+### **2.7 - Improve Theme's Backend Workflow** ###   
+Implement a custom settings and options page as well as installing and implementing the Advanced Custom Fields Pro plugin
+- [x] 2.7.1a Create a Custom Settings and Options Page  
+  - [Custom Pages, Subpages, Custom Options and the WordPress Settings API](https://www.youtube.com/playlist?list=PLriKzYyLb28kpEnFFi9_vJWPf5-_7d3rX)
+  - [x] Add Google Map API
+  - [ ] Refine Custom Settings and Options Page
 
 
+- [ ] 2.7.2a Implement [Advanced Custom Fields Pro](https://www.advancedcustomfields.com/) plugin
+- [Lynda.com Advanced Custom Fields](https://www.lynda.com/WordPress-tutorials/Welcome/169877/183109-4.html)
+- Use of the Google Maps Field requires a [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/get-api-key)
+- ACF implemetation instructions for the API can be found [here](https://www.advancedcustomfields.com/resources/google-map/)
+- Add Google API Key to Dashboard and database:
+
+### **2.7 - "Bundle" Theme Dependencies** ###
+When a user installs Bourbon-WP, the theme should be packaged with all its plugins, dependencies and installation insturctions
 
 
-### 1. SITEMAP
-1. ***PRIMARY*** < LOGO _(home)_ >< CULINARIA >< PROJECTS >< CODING >< ABOUT >< CONTACTS >  
-2. ***ALT MAIN*** < HOME >< CULINARIA >< PROJECTS >< CODING >< ABOUT >< CONTACTS >  
+### **Projects** ###   
+Ideas or thoughts that might be projects for a rainy days...
+- [ ] Create a bookmarks widget or page template for chrome bookmarks
+- [ ] Learn Webpack and convert gulp workflow
+- [ ] Learn React
 
-### 2. SET UP SURFING-CHEF.COM FOR BOURBON-WP IMPLEMENTATION
-- install [Remote-FTP](https://atom.io/packages/remote-ftp) into Atom for ease of use. [Tutorial reminder](https://www.youtube.com/watch?v=YmSD2O85wx0)   
-- [Filezilla](https://filezilla-project.org/) will be a great back up plan
-- Check all files for appropriate code authoring - syntax, comments, etc.
-- Follow the next steps in order, before installing the Bourbon-WP theme
 
-### 2.1 New Pages
-- Create the following pages.  Come back here for changing page templates in step 2.5:
-  - Culinaria > Template: Categorized Page    
-  - Coding > Template: Categorized Page    
-  - Projects  > Template: Categorized Page   
-  - About > Template: Categorized Page    
-  - Contacts > Template: Default Template    
+## TIPS TRICKS AND LINKS ##
 
-### 2.2 Navigation
-- Adjust *Primary Menu* in *admin > Appearance > Menus* under the *Edit Menus* tab:  
-  - Main Menu:  (Primary menu location)  
-  1. Custom Link > Navigation Label: Logo, CSS Classes: nav-link logo, image: logo, size: thumbnail, title position: hide    
-  2. Page: Culinaria, Navigation Label: Culinaria, CSS Classes: nav-link  
-  3. Page: Coding, Navigation Label: Coding, CSS Classes: nav-link  
-  4. Page: Projects, Navigation Label: Projects, CSS Classes: nav-link  
-  5. Page: About, Navigation Label: About, CSS Classes: nav-link  
-  6. Page: Contacts, Navigation Label: Contacts, CSS Classes: nav-link   
-  - Click the *Primary Menu* box and **save**.  
-- Create/Adjust *Alt Main Menu* in *admin > Appearance > Menus* under the *Manage Locations* tab:  
-  - Alt Main: select *Alt Main* from the drop down, or ***Use New Menu*** option  
-  1. Custom Link > Navigation Label: Home, URL: /bourbon-wp, CSS Classes: nav-link  
-  2. Page: Culinaria, Navigation Label: Culinaria, CSS Classes: nav-link  
-  3. Page: Coding, Navigation Label: Coding, CSS Classes: nav-link  
-  4. Page: Projects, Navigation Label: Projects, CSS Classes: nav-link  
-  5. Page: About, Navigation Label: About, CSS Classes: nav-link  
-  6. Page: Contacts, Navigation Label: Contacts, CSS Classes: nav-link  
-
-### 2.3 WORDPRESS WIDGETS THAT BOURBON-WP USES
-- [Simple Image Sizes](https://en-ca.wordpress.org/plugins/simple-image-sizes/): (1) Install and activate. (2)  Navigate to `Settings > Media`. (3) Create, modify or reference image sizes. (4) Click `**Regenerate Thumbnails**` to ensure changes.  Se the link below for a great guide to saetting up feature images in WordPress.  
-- [Formidable Forms](https://en-ca.wordpress.org/plugins/planso-forms/) plug-in to create contact form and PHP shortcode to place directly into php page templates or shortcode for WordPress pages or posts.  
-  - Created contact form using the template offered, used only 5 generated fields plus submit button
-    - Refined the auto-generated *classes*: navigate to Settings tab: Form Settings > Customize HTML  
-      - **Name** - replaced non-braced classes with _contact-name_  
-      - **Email** - cleared default and added class _contact-email_
-      - **Subject** - cleared default and added class _contact-subject_
-      - **Message** - cleared default and added class _contact-message_  
-      - **Captcha** - cleared default and added class _contact-captcha_  
-      - **Aftyer Fields** - blank
-      - **Submit** - cleared default and added class _contact-submit_  
-  - Used the shortcode generated by the plugin from the Build tab: top-right corner "Form Shortcodes" ***show***
-  - Use Formidable styling: in the created Contact Form, navigate to Settings tab: General > Styling & Buttons > Style Template: select _Formidable Style(default)_  
-  - [Menu Image by Alex Davyskiba aka Zviryatko](https://wordpress.org/plugins/menu-image/): A simple plugin to simplify the display of images in menus  
-
-### 2.4 GULP BUILD AND DEPLOY
-- in console, enter `gulp build` while in theme directory to create a deployable theme folder
-- upload to server using Filezilla
-- ensure steps 2.1 to 2.4 are completed as much as possible before installing theme.  Incomplete steps to be finished as soon as possible after installing.
-
-### 2.5 IMPLEMENTATION (WORDPRESS)
-#### Settings > Reading  
-- Front Page Displays: ***Your Latest Posts***  
-
-#### Pages > Quick Edit
-
-#### Appearance > Widgets   
-- Drag and drop the default WP *text widget* to the *Culinaria Feeds* widget area: *Dashboard > Appearance > Widgets* and set the title
-- Copy and paste *html* and *PHP* into _**Culinary Feeds > text widget**_ from [Culinaria Feed Gallery](https://gist.github.com/Surfing-Chef/3db8facc6c6807e5ffa23d79735c35df#file-culinaria-feed-gallery)  
-
-### 3. TIPS TRICKS AND LINKS
-
-#### CDN
+### CDN ###
 [JSDeliver](http://www.jsdelivr.com/?query=anima): a fast reliable cdn script provider.  
 
-#### GIT
+### GIT ###
 - [Reminder about .gitignore reset](http://blog.jonathanchannon.com/2012/11/18/gitignore-not-working-fixed/): Sometimes .gitignore isn't working properly.  Here's a fix that usually works.   
 
-#### LOCAL EMAIL TESTING
+### LOCAL EMAIL TESTING ###
 - [Test Mail Server Tool](http://www.toolheap.com/test-mail-server-tool/): Small application to test email settings during development on a local machine  
 
-#### PHP
+### PHP ###
 + [Auto-Update (cronjob) on a local Windows machine](http://www.businesslegions.com/blog/2014/08/09/create-cron-jobs-wamp/)
   - remember to change directories in the batch file to the folder containing the php file **(9)** to run **before** running the actual php command **(10)**:  
   ```type
     9   cd C:\wamp64\www\Bourbon-WP\wp-content\themes\bourbon-wp\bot
     10  php -f feeds.php
   ```  
-#### CSS ANIMATION
+
+### CSS ANIMATION ###
 [YouTube Tut on CSS Animation](https://www.youtube.com/watch?v=CBQGl6zokMs): on simple css and jquery implementation on animate.css  
 [Animating the moments](https://www.youtube.com/watch?v=GeuNIOuIEDA): DevTips on the Whys of animation  
 
-#### WORDPRESS REFERENCE LINKS
+### WORDPRESS REFERENCE LINKS ###
+- [WordPress Developer Resources](https://developer.wordpress.org/)
+- [WordPress Codex](https://codex.wordpress.org/)
 - [Wpmudev.org - Theme Guide](https://premium.wpmudev.org/blog/free-wordpress-themes-ultimate-guide/?utm_expid=3606929-97.J2zL7V7mQbSNQDPrXwvBgQ.0): The lowdown on wordpress themes.  
 - [WordPress.org on The Loop](https://developer.wordpress.org/reference/classes/wp_query/): A great resource for altering The Loop.  
 - [Simplified Custom Menus](https://premium.wpmudev.org/blog/add-menus-to-wordpress/?utm_expid=3606929-97.J2zL7V7mQbSNQDPrXwvBgQ.0&utm_referrer=https%3A%2F%2Fwww.google.ca%2F): How to add More Navigation Menus to a WordPress Theme   
@@ -125,3 +72,7 @@
 - [PHP in WordPress default Text Widget](http://www.emanueleferonato.com/2011/04/11/executing-php-inside-a-wordpress-widget-without-any-plugin/): Without plugin, run PHP in a standard Text Widget with this function  
 - [Comments: *comment-form()*](https://codex.wordpress.org/Function_Reference/comment_form#.24args) and [*wp_list_comments()*](https://codex.wordpress.org/Function_Reference/wp_list_comments): useful links to formatting comment content    
 - [Adding tweets to posts](https://en.support.wordpress.com/twitter/twitter-embeds/): super simple  
+- [Excerpt From: How to create a Premium WordPress Theme](https://www.youtube.com/watch?v=ViZLtFIcSfo&list=PLriKzYyLb28kpEnFFi9_vJWPf5-_7d3rX)  
+- [Understanding and Working with The WordPress Options Table](https://code.tutsplus.com/tutorials/understanding-and-working-with-the-wordpress-options-table--cms-21119)  
+- [How to Create a Settings Page in WordPress](https://www.youtube.com/watch?v=B-tvZAC-eik)
+- [How to Make a WordPress Admin Options Page (Without Using the Settings API)](https://wpshout.com/wordpress-options-page/)
