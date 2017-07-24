@@ -21,10 +21,12 @@ Implement a custom settings and options page as well as installing and implement
   - [Lynda.com Advanced Custom Fields](https://www.lynda.com/WordPress-tutorials/Welcome/169877/183109-4.html)
   - ACF implemetation instructions for the API can be found [here](https://www.advancedcustomfields.com/resources/google-map/)
   - Use of the Google Maps Field requires a [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/get-api-key)
-- [x] Style and layout ACF *post_links* and *post_map* with SCSS
-- [ ] Create recipe card with ACF
-- [ ] Refine Custom Settings and Options Page
-- [ ] Break out high use SCSS properties into variables
+  - [x] Style and layout ACF *post_links* and *post_map* with SCSS
+  - [ ] Refine Custom Settings and Options Page
+  - [ ] Break out high use SCSS properties into variables
+- [ ] 2.7.3a Remove Bourbon, Bitters and Neat
+  - [ ] Replace with flexbox
+  - [ ] Replace with CSS Grid
 
 ### **2.8 - "Bundle" Theme Dependencies** ###
 When a user installs Bourbon-WP, the theme should be packaged with all its plugins, dependencies and installation instructions
@@ -32,6 +34,7 @@ When a user installs Bourbon-WP, the theme should be packaged with all its plugi
 
 ### **Projects** ###   
 Ideas or thoughts that might be projects for a rainy days...
+- [ ] Create recipe card with ACF - Plugin currently used is deprecated?
 - [ ] Create a bookmarks widget or page template for chrome bookmarks
 - [ ] Learn Webpack and convert gulp workflow
 - [ ] Learn React
