@@ -4,16 +4,18 @@ Theme URI: https://github.com/Surfing-Chef/Bourbon-WP
 Author: Surfing-Chef
 Author URI: https://github.com/Surfing-Chef
 Description: Responsive Theme built using Underscores Dev Theme, Bourbon and many helpful tutorials
+Version: 2.7
 License: GNU General Public License v2 or later
 License URI: LICENSE
 Text Domain: bourbon-wp
 Tags: parallax, responsive
 
 ******
--
-- THIS IS AN AUTO GENERATED STYLESHEET FROM SCSS TO CSS.
-- ALL EDITS WILL BE OVERWRITTEN BY GULPFILE.JS WHEN USING THE SYSTEM.
--
+*
+* THIS IS AN AUTO GENERATED STYLESHEET FROM SCSS TO CSS.
+* ALL EDITS WILL BE OVERWRITTEN BY GULPFILE.JS DURING DEVELOPMENT
+*  AND WHEN COMPILING FOR DEPLOYMENT.
+*
 ******
 
 This theme, like WordPress, is licensed under the GPL.
@@ -28,24 +30,19 @@ Nicolas Gallagher and Jonathan Neal http://necolas.github.io/normalize.css/
 /*--------------------------------------------------------------
 >>> TABLE OF CONTENTS:
 ----------------------------------------------------------------
-# Normalize
+# Variables, Mixins and Bourbon
 # Typography
 # Elements
 # Forms
 # Navigation
-	## Links
-	## Menus
 # Accessibility
 # Alignments
 # Clearings
 # Widgets
+# Custom Modules
 # Content
-	## Posts and pages
-	## Comments
-# Infinite scroll
+# Infinite Scroll
 # Media
-	## Captions
-	## Galleries
 --------------------------------------------------------------*/
 @import "variables-site/variables-site";
 @import "mixins/mixins-master";
