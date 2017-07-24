@@ -12,7 +12,7 @@ Better organized build, process, development and production structure
 ### **2.7 - Improve Theme's Backend Workflow** ###   
 Implement a custom settings and options page as well as installing and implementing the Advanced Custom Fields Pro plugin
 - [x] 2.7.1a Create a Custom Settings and Options Page
-  - [x] @ ./inc/function-admin.php
+  - [x] @ `./inc/function-admin.php`
   - [Custom Pages, Subpages, Custom Options and the WordPress Settings API](https://www.youtube.com/playlist?list=PLriKzYyLb28kpEnFFi9_vJWPf5-_7d3rX)
   - [x] Add Google Map API to WordPress database via Settings API
 - [x] 2.7.2a Implement [Advanced Custom Fields Pro](https://www.advancedcustomfields.com/) plugin
@@ -23,6 +23,7 @@ Implement a custom settings and options page as well as installing and implement
   - Use of the Google Maps Field requires a [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/get-api-key)
 - [ ] Style and layout ACF *post_links* and *post_map* with SCSS
 - [ ] Refine Custom Settings and Options Page
+- [ ] Break out high use SCSS properties into variables
 
 ### **2.8 - "Bundle" Theme Dependencies** ###
 When a user installs Bourbon-WP, the theme should be packaged with all its plugins, dependencies and installation instructions
