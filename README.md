@@ -21,7 +21,8 @@ Implement a custom settings and options page as well as installing and implement
   - [Lynda.com Advanced Custom Fields](https://www.lynda.com/WordPress-tutorials/Welcome/169877/183109-4.html)
   - ACF implemetation instructions for the API can be found [here](https://www.advancedcustomfields.com/resources/google-map/)
   - Use of the Google Maps Field requires a [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/get-api-key)
-- [ ] Style and layout ACF *post_links* and *post_map* with SCSS
+- [x] Style and layout ACF *post_links* and *post_map* with SCSS
+- [ ] Create recipe card with ACF
 - [ ] Refine Custom Settings and Options Page
 - [ ] Break out high use SCSS properties into variables
 
