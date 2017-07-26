@@ -136,6 +136,7 @@ gulp.task('prod:copy', ['prod:imgMin'], function(){
                   '!./package-lock.json',
                   '!./README.md',
                   '!./style.css',
+                  '!./cron.bat'
                 ])
   .pipe(gulp.dest('./build'));
 });
