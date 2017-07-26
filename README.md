@@ -28,6 +28,12 @@ Implement a custom settings and options page as well as installing and implement
   - [ ] Replace with flexbox
   - [ ] Replace with CSS Grid
 
+
+**OF NOTE:**  After building and deploying to host, I had to adjust or fix the following:
+  - ~~`template-parts/content-aside-meta.php` - adjusted link to logo on line 32~~
+  - **Single post pages displayed no sidebar** - Advanced Custom Field Plugin had to be installed
+  - **Homepage weather report layout misaligned** - Ensured *Header Callout Content* widget area contained Darksky plugin and appropriate info
+
 ### **2.8 - "Bundle" Theme Dependencies** ###
 When a user installs Bourbon-WP, the theme should be packaged with all its plugins, dependencies and installation instructions
 
