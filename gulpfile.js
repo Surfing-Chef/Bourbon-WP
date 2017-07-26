@@ -105,7 +105,7 @@ gulp.task('prod:scripts', ['prod:sass'], function(){
             '!./js/skip-link-focus-fix.js'
           ])
   .pipe(plumber())
-  .pipe(concat('script.js'))
+  .pipe(concat('scripts.js'))
   .pipe(uglify())
   .pipe(gulp.dest('build/js'));
 
