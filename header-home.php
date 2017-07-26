@@ -15,7 +15,6 @@
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
 
 <!-- Google Fonts -->
-<link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
 <link
  href='//fonts.googleapis.com/css?family=Lora:400,400i,700,700i' rel='stylesheet' type='text/css'>
 <link href='//fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
