@@ -22,6 +22,7 @@ Implement a custom settings and options page as well as installing and implement
   - ACF implemetation instructions for the API can be found [here](https://www.advancedcustomfields.com/resources/google-map/)
   - Use of the Google Maps Field requires a [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/get-api-key)
   - [x] Style and layout ACF *post_links* and *post_map* with SCSS
+  - [ ] Investigate `_gallery.scss` and the reason for the specified weather-widget selector 
   - [ ] Refine Custom Settings and Options Page
   - [ ] Break out high use SCSS properties into variables
 - [ ] 2.7.3a Remove Bourbon, Bitters and Neat
