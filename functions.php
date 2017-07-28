@@ -96,8 +96,8 @@ add_action( 'after_setup_theme', 'bourbon_wp_content_width', 0 );
 function bourbon_wp_widgets_init() {
 	// Default sidebar/widget area
 	register_sidebar( array(
-		'name'          => esc_html__( 'Home Page Sidebar', 'bourbon-wp' ),
-		'id'            => 'sidebar-home',
+		'name'          => esc_html__( 'Sidebar Content', 'bourbon-wp' ),
+		'id'            => 'widget-area-0',
 		'description'   => esc_html__( 'Add widgets here.', 'bourbon-wp' ),
 		'before_widget' => '<section id="%1$s" class="widget %2$s">',
 		'after_widget'  => '</section>',
