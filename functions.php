@@ -149,6 +149,9 @@ register_sidebar( array(
 	'after_title'   => '</h2>',
 ) );
 
+}
+
+
 add_action( 'widgets_init', 'bourbon_wp_widgets_init' );
 
 /**
