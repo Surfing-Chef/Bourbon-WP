@@ -84,6 +84,16 @@ Ideas or thoughts that might be projects for a rainy days...
   - [Documentation](https://www.advancedcustomfields.com/resources/)  
   - [Code Examples](https://www.advancedcustomfields.com/resources/code-examples/)
   - [Lynda.com Tutorial](https://www.lynda.com/WordPress-tutorials/Welcome/169877/183109-4.html)
+- [amr shortcode any widget](https://en-ca.wordpress.org/plugins/amr-shortcode-any-widget/): Insert a widget or multiple widgets or a entire widget area (sidebar) into a page using a shortcode
+- [Custom Twitter Feeds](https://en-ca.wordpress.org/plugins/custom-twitter-feeds/): Display completely customizable, responsive and search engine crawlable versions of Twitter feeds
+- [Formidable Forms](https://en-ca.wordpress.org/plugins/formidable/): form plugin with simple drag and drop form building, a form style generator, and unlimited email notifications
+- [Jetpack by WordPress.com](https://en-ca.wordpress.org/plugins/jetpack/): The one plugin you need for stats, related posts, search engine optimization, social sharing, protection, backups, speed, and email list management
+- [Menu Image](https://en-ca.wordpress.org/plugins/menu-image/): Adds a field to load the image in a menu item and displays the image inside the link in the menu before the text
+- [Recent Posts Widget With Thumbnails](https://en-ca.wordpress.org/plugins/recent-posts-widget-with-thumbnails/): extends WordPress default 'Recent Posts' widget to display more informations about the posts like e.g. thumbnails, excerpts and assigned categories
+- [SC Admin Style](https://github.com/Surfing-Chef/sc-style-admin): allows users to edit the styles and layout of the admin pages
+- [SC Dark Weather](https://github.com/Surfing-Chef/sc-dark-weather/tree/1.6.1): a wrapper for Dark Sky weather service
+- [Simple Image Sizes](https://en-ca.wordpress.org/plugins/simple-image-sizes/): allow create custom image sizes for your site
+- [WP Maintenance Mode](https://en-ca.wordpress.org/plugins/wp-maintenance-mode/): adds a maintenance page that lets visitors know site is down for maintenance, or adds a coming soon page for a new website
 
 ### WORDPRESS REFERENCE LINKS ###
 - [WordPress Developer Resources](https://developer.wordpress.org/)
