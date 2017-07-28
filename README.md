@@ -23,12 +23,13 @@ Implement a custom settings and options page as well as installing and implement
   - Use of the Google Maps Field requires a [Google Maps JavaScript API](https://developers.google.com/maps/documentation/javascript/get-api-key)
   - [x] Style and layout ACF *post_links* and *post_map* with SCSS
   - [x] Investigate `_gallery.scss` and the reason for the specified weather-widget selector  
-    - Adjusted *Culinaria Feeds* widget properties and corresponding selector
-    - Moved widget area definition into widget_init()
+    - [x] adjust *Culinaria Feeds* widget properties and corresponding selector
+    - [x] move widget area definition into widget_init()
   - [x] Investigate misaligned homepage weather report layout
-    - ensured *Header Callout Content* widget area in wp_admin contained SC Dark Weather widget and appropriate info
+    - [x] ensure *Header Callout Content* widget area in wp_admin contained SC Dark Weather widget and appropriate info
   - [x] Fix Private and Drafts appearance to public view
-    - installed [Recent Posts Widget With Thumbnails](https://en-ca.wordpress.org/plugins/recent-posts-widget-with-thumbnails/) plugin and replaced custom script with widget area
+    - [x] install [Recent Posts Widget With Thumbnails](https://en-ca.wordpress.org/plugins/recent-posts-widget-with-thumbnails/) plugin and replace custom script with widget area
+    - [ ] adjust style and layout accordingly
   - [ ] Refine Custom Settings and Options Page
   - [ ] Break out high use SCSS properties into variables
 - [ ] 2.7.3a Remove Bourbon, Bitters and Neat
