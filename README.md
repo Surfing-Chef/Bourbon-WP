@@ -29,8 +29,8 @@ Implement a custom settings and options page as well as installing and implement
     - [x] ensure *Header Callout Content* widget area in wp_admin contained SC Dark Weather widget and appropriate info
   - [x] Fix Private and Drafts appearance to public view
     - [x] install [Recent Posts Widget With Thumbnails](https://en-ca.wordpress.org/plugins/recent-posts-widget-with-thumbnails/) plugin and replace custom script with widget area
-    - [ ] adjust style and layout accordingly
-  - [ ] Add/Update "Plugins Used" section of this documentation
+    - [x] adjust style and layout accordingly
+  - [x] Add/Update "Plugins Used" section of this documentation
   - [ ] Refine Custom Settings and Options Page
   - [ ] Break out high use SCSS properties into variables
 - [ ] 2.7.3a Remove Bourbon, Bitters and Neat
