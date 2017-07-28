@@ -1,0 +1,31 @@
+/*! primary/_sidebar.scss */
+
+#primary > aside > section {
+  @include border-width(null 0 0 null);
+  @include span-columns (12);
+  padding-bottom: 1em;
+
+  a {
+    color: $dark-gray;
+
+    &:active,
+    &:focus,
+    &:hover {
+      color: $action-color;
+      text-decoration:underline;
+    }
+  }
+
+  .aside-post{
+    a {
+      font-family: $serif;
+    }
+  }
+}
+// END #primary > aside > section
+
+#primary > aside > section:first-child {
+  @include media(min-width 320px max-width 949px) {
+    border-bottom: 1px solid #ccc;
+  }
+}
