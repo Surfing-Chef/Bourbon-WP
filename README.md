@@ -31,6 +31,7 @@ Implement a custom settings and options page as well as installing and implement
     - [x] install [Recent Posts Widget With Thumbnails](https://en-ca.wordpress.org/plugins/recent-posts-widget-with-thumbnails/) plugin and replace custom script with widget area
     - [x] adjust style and layout accordingly
   - [x] Add/Update "Plugins Used" section of this documentation
+  - [ ] Change out Formidable and Custom Twitter plugins for Jetpack versions
   - [ ] Refine Custom Settings and Options Page
   - [ ] Break out high use SCSS properties into variables
 - [ ] 2.7.3a Remove Bourbon, Bitters and Neat
