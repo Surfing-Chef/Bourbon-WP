@@ -91,7 +91,8 @@ Ideas or thoughts that might be projects for a rainy days...
 - [Simplified Custom Menus](https://premium.wpmudev.org/blog/add-menus-to-wordpress/?utm_expid=3606929-97.J2zL7V7mQbSNQDPrXwvBgQ.0&utm_referrer=https%3A%2F%2Fwww.google.ca%2F): How to add More Navigation Menus to a WordPress Theme   
 - [WordPress.org on post navigation](https://developer.wordpress.org/reference/functions/the_post_navigation/) and [here](https://developer.wordpress.org/reference/functions/get_the_post_navigation/): References for customized post navigation  
 - [Easy Custom Widget Areas](https://buckleupstudios.com/add-a-new-widget-area-to-a-wordpress-theme/), [Creating Custom Widgets](https://premium.wpmudev.org/blog/create-custom-wordpress-widget), [More on Custom Widgets](https://www.templatemonster.com/blog/add-widget-areas-to-wordpress-guide/): Three useful links about custom widget implementation  
-- [Recent Posts](https://codex.wordpress.org/Function_Reference/wp_get_recent_posts): Retrieve the most recent post     
+- [Recent Posts](https://codex.wordpress.org/Function_Reference/wp_get_recent_posts): Retrieve the most recent post    
+  - WP Query: [Class Reference/WP Query](https://codex.wordpress.org/Class_Reference/WP_Query), *get_post_status*:  [get_post_status](https://codex.wordpress.org/Function_Reference/get_post_status)
 - [Categories](https://developer.wordpress.org/reference/functions/wp_list_categories/): Display or retrieve the HTML list of categories
 - [WordPress.org on arbitrary widgets](https://codex.wordpress.org/Function_Reference/the_widget): References for displaying widgets outside of a sidebar  
 - [Responsive Feature Images](https://www.lynda.com/articles/create-responsive-featured-images-wordpress): Great article about WordPress responsive images  
