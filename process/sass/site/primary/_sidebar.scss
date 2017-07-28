@@ -1,9 +1,115 @@
 /*! primary/_sidebar.scss */
 
+aside {
+  @include span-columns(4 of 12);
+  @include omega;
+  padding: 2em 1em 1em 1em;
+
+  section h3 {
+    margin-top: .3em !important;
+    //
+    // &:after {
+    //   content: '';
+    //   display: block;
+    //   width: 5em;
+    //   border-bottom: 2px solid orange;
+    //   padding-bottom: .65em;
+    //   margin: 0 auto;
+    // }
+  }
+
+  .widget-title:after {
+    content: '';
+    display: block;
+    width: 5em;
+    border-bottom: 2px solid orange;
+    padding-bottom: .65em;
+    margin: 0 auto;
+  }
+
+  .aside-section-posts {
+
+    .aside-post {
+      @include span-columns(12);
+      padding: 0.5em;
+
+      @include media(min-width 500px max-width 989px) {
+        @include span-columns(4 of 12);
+      }
+
+      .aside-post-image {
+        @include span-columns(4);
+        min-width: 85px;
+      }
+
+      .aside-post-title {
+        @include span-columns(8);
+        padding-left: 0.5em;
+        @include omega;
+        font-style: italic;
+      }
+
+      .aside-post-date {
+        @include span-columns(8);
+        padding-left: 0.5em;
+        font-size: .8em;
+        line-height: 2em;
+      }
+    }
+  }
+
+  .aside-section-categories {
+    ul {
+      padding-left: 1em;
+
+      li{
+        line-height: 2em;
+        border-bottom: 1px solid $light-gray;
+      }
+    }
+
+    a {
+      font-family: $serif;
+      font-style: italic;
+    }
+    .category-name {
+      @include span-columns(10);
+    }
+
+    .category-count {
+      @include span-columns(2);
+      text-align: right;
+    }
+
+  }
+
+  @include media(max-width 989px) {
+    @include span-columns(12);
+    padding-top: 0;
+  }
+
+  .entry-meta,
+  .entry-footer span {
+    padding-bottom: 0.5em;
+    line-height: 1.3;
+  }
+
+  .modified-on {
+    display: block;
+    padding-top: 0.5em;
+    line-height: 1.3;
+  }
+}
+// END ASIDE
+
 #primary > aside > section {
   @include border-width(null 0 0 null);
   @include span-columns (12);
   padding-bottom: 1em;
+
+  .widget-title {
+    text-align: center;
+  }
 
   a {
     color: $dark-gray;
@@ -21,11 +127,22 @@
       font-family: $serif;
     }
   }
-}
-// END #primary > aside > section
 
-#primary > aside > section:first-child {
-  @include media(min-width 320px max-width 949px) {
-    border-bottom: 1px solid #ccc;
+  @include media($landscape) {
+
+  }
+
+  @include media($tab) {
+
+  }
+
+  @include media(989px) {
+    .widget-title {
+      text-align: left;
+    }
+    .widget-title:after {
+      margin: 0;
+    }
   }
 }
+// END #primary > aside > section
