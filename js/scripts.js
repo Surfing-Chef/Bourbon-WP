@@ -70,8 +70,8 @@ $().ready(function () {
     offset: 0
   });
 
-  //Post image animation
-  $('.wp-post-image').addClass("hidden").viewportChecker({
+  // Post image animation
+  $('.post-thumbnail .wp-post-image').addClass("hidden").viewportChecker({
     classToAdd: 'visible animated fadeInUp',
     offset: 0
   });
