@@ -87,8 +87,16 @@ gulp.task('prod:imgMin', ['prod:cleanfolder'], function(){
         .pipe(gulp.dest('build/img'));
 });
 
-// minify css
+// minify css for build
 gulp.task('prod:sass', ['prod:cleanfolder'], function() {
+  gulp.src('process/sass/style.scss')
+  .pipe(plumber())
+  .pipe(sass({outputStyle: 'compressed'}))
+  .pipe(gulp.dest('build/'));
+});
+
+// minify css on the fly
+gulp.task('prod:css', function() {
   gulp.src('process/sass/style.scss')
   .pipe(plumber())
   .pipe(sass({outputStyle: 'compressed'}))
