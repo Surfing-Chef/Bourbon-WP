@@ -14,13 +14,6 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 			<?php
-			if (is_page('projects')) : ?>
-			<section class="widget-section-weather">
-				<?php if ( (!function_exists('dynamic_sidebar') || !dynamic_sidebar("Weather Feeds")) ) : ?>
-				<?php endif;?>
-			</section>
-			<?php endif;
-
 			// Start the loop.
 			while ( have_posts() ) : the_post();
 
