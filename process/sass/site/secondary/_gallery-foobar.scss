@@ -1,0 +1,25 @@
+// Foobar Gallery
+
+.foogallery-image-viewer {
+  display: flex;
+  font-family: $sans-serif;
+}
+
+.foogallery-image-viewer > .fiv-inner > .fiv-ctrls {
+  display: flex;
+  flex-flow: row;
+  justify-content: space-between;
+  width: 100%;
+
+  &::after {
+    display: none;
+  }
+}
+
+.foogallery-image-viewer .foogallery-caption-title {
+  font-size: .7em;
+
+  @include media ($landscape) {
+    font-size: 1em;
+  }
+}
