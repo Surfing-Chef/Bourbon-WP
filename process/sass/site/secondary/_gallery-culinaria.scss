@@ -2,14 +2,14 @@
 
 .widget.culinaria-widget-area { // wordpress generated classes
 
-// reset font-size
-section, article, div, p, span, a, h2 {
-  font-size: 1em !important;
-  font-style: normal !important;
-  font-weight: normal !important;
-  color: $base-font-color !important;
-  font-family: $sans-serif;
-}
+  // reset font-size
+  section, article, div, p, span, a, h2 {
+    font-size: 1em !important;
+    font-style: normal !important;
+    font-weight: normal !important;
+    color: $base-font-color !important;
+    font-family: $sans-serif;
+  }
 
   display: flex;
   flex-direction: column;
@@ -60,4 +60,5 @@ section, article, div, p, span, a, h2 {
       }
     }
   }
+
 }
