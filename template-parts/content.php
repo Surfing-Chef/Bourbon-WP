@@ -72,9 +72,26 @@
 							<?php endwhile; ?>
 						</section>
 					</div>
-				<?php endif; // if( get_field('post_links') ): ?>
+				<?php endif;
+				// if( get_field('post_links') ):
 
-				<!-- ACF Content Calls -->
+				$images = get_field('gallery');?>
+				<div class="sc-post-gallery">
+					<section>
+					<?php if( $images ): ?>
+		        <?php foreach( $images as $image ): ?>
+	            <figure>
+                <a href="<?php echo $image['url']; ?>">
+									<img src="<?php echo $image['sizes']['thumbnail']; ?>" alt="<?php echo $image['alt']; ?>" />
+                </a>
+                <figcaption><?php echo $image['caption']; ?></figcaption>
+	            </figure>
+		        <?php endforeach; ?>
+					<?php endif; ?>
+				</section>
+				</div>
+
+				<!-- END :: ACF Content Calls -->
 
 				<?php bourbon_wp_entry_footer(); ?>
 
