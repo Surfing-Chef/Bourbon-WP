@@ -39,6 +39,8 @@
 }
 
 /* fixes potential theme css conflict */
-.acf-map img {
-   max-width: inherit !important;
-}
+// .acf-map img {
+//    max-width: inherit !important;
+// }
+//
+.gm-style img { max-width: none; max-height: none;}
