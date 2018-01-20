@@ -43,8 +43,59 @@
 				?>
 
 				<!-- ACF Content Calls -->
+				<?php //Tester  ?>
+					<!-- <div class="expander">
+					<a href="javascript:void(0)" class="expander-trigger expander-hidden">Expandable section</a>
+					<div class="expander-content">
+					  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Distinctio mollitia fugiat facilis enim accusamus quisquam aut, repellendus incidunt quod optio facere labore illo numquam ipsum beatae vero debitis, fugit excepturi.</p>
+					</div>
+				  </div> -->
+				
 
 				<?php
+				// Wine Pairing
+				if ( have_rows('pairing_sections') ): ?>
+					<section class="afc-pairing-sections">
+					
+						<?php while ( have_rows('pairing_sections') ): the_row(); ?>
+							<div class="expander">
+							<a href="javascript:void(0)" class="expander-trigger expander-hidden food-class"><?php the_sub_field('section_title'); ?></a>
+								<div class="expander expander-content food-item">
+								<?php if ( have_rows('section_items') ): ?>
+								
+									<?php while ( have_rows('section_items') ): the_row(); ?>
+										<div class="expander">
+										<a href="javascript:void(0)" class="expander-trigger expander-hidden"><?php the_sub_field('main'); ?></a>
+
+											<?php if ( have_rows('preparation') ): ?>
+												<div class="expander expander-content food-prep  horz">
+
+													<?php while ( have_rows('preparation') ): the_row(); ?>	
+													<div class="expander">
+													<a href="javascript:void(0)" class="expander-trigger expander-hidden"><?php the_sub_field('prep'); ?></a>
+
+														<?php if ( have_rows('wine') ): ?>
+															<div class="expander-content varietal">
+
+																<?php while ( have_rows('wine') ): the_row(); ?>
+																	<h4><?php the_sub_field('varietal'); ?></h4>
+												
+																<?php endwhile; ?>
+															</div>	
+															<?php endif;?>
+														</div>
+													<?php endwhile; ?>
+												</div>	
+											<?php endif;?>
+										</div>	
+									<?php endwhile; ?>
+								<?php endif; ?>
+								</div>
+							</div>
+						<?php endwhile; ?>
+					</section>
+				<?php endif;
+
 				// Post Map
 				if( get_field('post_map') ): ?>
 					<?php $location = get_field('post_map'); ?>
