@@ -60,6 +60,7 @@
 
 	<!-- IMPORTS -->
 	<script src="<?php echo get_template_directory_uri(); ?>/js/scripts.js"></script>
+	<script src="<?php echo get_template_directory_uri(); ?>/js/expander.js"></script>
 
 	<!-- CUSTOM -->
 
