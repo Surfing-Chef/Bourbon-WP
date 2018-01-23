@@ -59,6 +59,16 @@ $().ready(function () {
 }); // END BACK TO TOP BUTTON
 "use strict";
 
+// EXPANDER
+$().ready(function () {
+  $(document).ready(function () {
+    $('.expander-trigger').click(function () {
+      $(this).toggleClass("expander-hidden");
+    });
+  });
+}); // END EXPANDER
+"use strict";
+
 // ANIMATION EFFECTS
 
 $().ready(function () {
