@@ -1,0 +1,18 @@
+#accordion-container {
+    .ui-accordion-content {
+        padding-top: 5px;
+        padding-bottom: 5px;
+    }
+    .ui-accordion .ui-accordion-header,
+    h3 {
+        font-size: 75%;
+    }
+
+    .ui-accordion-content ul {
+        list-style-type: none;
+        padding: 0 0 0 0 !important;
+        li {
+            font-size: 75%;
+        }
+    }
+}
