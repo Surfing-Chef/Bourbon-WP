@@ -159,6 +159,11 @@ add_action( 'widgets_init', 'bourbon_wp_widgets_init' );
  */
 function bourbon_wp_scripts() {
 
+	// jquery-ui stylesheet
+	wp_enqueue_style( 'bourbon-wp-jq-ui-style', get_template_directory_uri() . '/js/jquery-ui/jquery-ui.min.css' );
+	wp_enqueue_style( 'bourbon-wp-jq-ui-strc-style', get_template_directory_uri() . '/js/jquery-ui/jquery-ui.structure.min.css' );
+	wp_enqueue_style( 'bourbon-wp-jq-ui-thm-style', get_template_directory_uri() . '/js/jquery-ui/jquery-ui.theme.min.css' );	
+	
 	// theme stylesheet
 	wp_enqueue_style( 'bourbon-wp-style', get_template_directory_uri() . '/style.css' );
 
