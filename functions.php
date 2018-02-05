@@ -167,15 +167,13 @@ function bourbon_wp_scripts() {
 	// theme stylesheet
 	wp_enqueue_style( 'bourbon-wp-style', get_template_directory_uri() . '/style.css' );
 
-	// jquery-ui stylesheet
-	wp_enqueue_style( 'bourbon-wp-jq-ui-style', get_template_directory_uri() . '/js/jquery-ui/jquery-ui.css' );
-	wp_enqueue_style( 'bourbon-wp-jq-ui-strc-style', get_template_directory_uri() . '/js/jquery-ui/jquery-ui.structure.css' );
-	wp_enqueue_style( 'bourbon-wp-jq-ui-thm-style', get_template_directory_uri() . '/js/jquery-ui/jquery-ui.theme.css' );	
-	
+	// jquery-ui ACCORDION
+	wp_enqueue_script( 'bourbon-wp-accordion', get_template_directory_uri() . '/js/accordion.js', array(), '20151215', true );
+
 	wp_enqueue_script( 'bourbon-wp-navigation', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true );
 
 	wp_enqueue_script( 'bourbon-wp-skip-link-focus-fix', get_template_directory_uri() . '/js/skip-link-focus-fix.js', array(), '20151215', true );
-
+	
 	if ( is_singular() && comments_open() && get_option( 'thread_comments' ) ) {
 		wp_enqueue_script( 'comment-reply' );
 	}
